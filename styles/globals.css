@@ -5,11 +5,14 @@
 /* Custom styles */
 @layer components {
   .btn-primary {
-    @apply bg-primary  font-medium  py-[10px] px-[42px] rounded-lg;
+    @apply bg-primary text-black font-medium  py-[10px] px-[42px] rounded-lg;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-white font-bold py-2 px-4 rounded;
+    @apply  text-primary font-bold py-2 px-4 rounded-lg border border-primary;
+  }
+  .bento-box {
+    @apply bg-black shadow-md rounded-lg px-14 py-20 text-white flex flex-col gap-[14px];
   }
 }
 

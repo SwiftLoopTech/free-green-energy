@@ -7,7 +7,11 @@ const Navbar: React.FC = () => {
         {/* Company logo */}
         <div>
           <Link href="/">
-            <img src="/logo.svg" alt="Company Logo" className="h-8" />
+            <img
+              src="/images/fge-logo.png"
+              alt="Company Logo"
+              className="h-8"
+            />
           </Link>
         </div>
 
