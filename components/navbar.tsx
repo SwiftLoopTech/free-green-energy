@@ -73,14 +73,14 @@ const Navbar: React.FC = () => {
         {/* Navigation links - Desktop */}
         <ul className="hidden md:flex gap-12">
           <li>
-            <Link href="/" className="hover:text-blue-600 transition-colors">
+            <Link href="/" className="hover:text-secondary transition-colors">
               Home
             </Link>
           </li>
           <li>
             <Link
               href="/homeowners"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-secondary transition-colors"
             >
               Homeowners
             </Link>
@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/business-owners"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-secondary transition-colors"
             >
               Business owners
             </Link>
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               href="/support"
-              className="hover:text-blue-600 transition-colors"
+              className="hover:text-secondary transition-colors"
             >
               Support
             </Link>
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/"
                   onClick={toggleMenu}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-secondary transition-colors"
                 >
                   Home
                 </Link>
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/homeowners"
                   onClick={toggleMenu}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-secondary transition-colors"
                 >
                   Homeowners
                 </Link>
@@ -140,7 +140,7 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/business-owners"
                   onClick={toggleMenu}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-secondary transition-colors"
                 >
                   Business owners
                 </Link>
@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
                 <Link
                   href="/support"
                   onClick={toggleMenu}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-secondary transition-colors"
                 >
                   Support
                 </Link>
