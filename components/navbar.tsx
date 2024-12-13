@@ -1,8 +1,49 @@
+import React, { useState } from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    open: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const hamburgerVariants = {
+    closed: {
+      rotate: 0,
+      scale: 1,
+      transition: { duration: 0.3 },
+    },
+    open: {
+      rotate: 90,
+      scale: 1.1,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
-    <nav className="py-4 px-6">
+    <nav className="py-4 px-6 relative z-50">
       <div className="flex items-center justify-between">
         {/* Company logo */}
         <div>
@@ -15,25 +56,113 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        {/* Navigation links */}
-        <ul className="flex gap-12">
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden">
+          <motion.button
+            onClick={toggleMenu}
+            className="text-black focus:outline-none"
+            variants={hamburgerVariants}
+            animate={isMenuOpen ? "open" : "closed"}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </motion.button>
+        </div>
+
+        {/* Navigation links - Desktop */}
+        <ul className="hidden md:flex gap-12">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/homeowners">Homeowners</Link>
+            <Link
+              href="/homeowners"
+              className="hover:text-blue-600 transition-colors"
+            >
+              Homeowners
+            </Link>
           </li>
           <li>
-            <Link href="/business-owners">Business owners</Link>
+            <Link
+              href="/business-owners"
+              className="hover:text-blue-600 transition-colors"
+            >
+              Business owners
+            </Link>
           </li>
           <li>
-            <Link href="/support">Support</Link>
+            <Link
+              href="/support"
+              className="hover:text-blue-600 transition-colors"
+            >
+              Support
+            </Link>
           </li>
         </ul>
 
-        {/* Get our product button */}
-        <button className="btn-primary">Get our product</button>
+        {/* Get our product button - Desktop */}
+        <button className="hidden md:block btn-primary">Get our product</button>
       </div>
+
+      {/* Mobile Menu Overlay with Framer Motion Animation */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="absolute top-full left-0 w-full bg-white md:hidden shadow-lg overflow-hidden"
+          >
+            <ul className="flex flex-col items-center py-4 space-y-4">
+              <li>
+                <Link
+                  href="/"
+                  onClick={toggleMenu}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/homeowners"
+                  onClick={toggleMenu}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Homeowners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/business-owners"
+                  onClick={toggleMenu}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Business owners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/support"
+                  onClick={toggleMenu}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Support
+                </Link>
+              </li>
+              <li>
+                <button className="btn-primary" onClick={toggleMenu}>
+                  Get our product
+                </button>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
