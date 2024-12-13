@@ -4,15 +4,16 @@
   "description": "Website for a solar panel business",
   "main": "index.js",
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "framer-motion": "^11.14.1",
     "next": "^15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

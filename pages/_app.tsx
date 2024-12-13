@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Solar Agency</title>
+        <title>Free Green Energy</title>
         <meta
           name="description"
           content="We provide the best solar solutions for your home and business."

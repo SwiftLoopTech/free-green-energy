@@ -10,10 +10,9 @@ module.exports = {
         satoshi: ["Satoshi", "sans-serif"],
       },
       colors: {
-        primary: "#E16A38", // Example primary color
-        secondary: "#2d3748", // Example secondary color
-        accent: "#38b2ac", // Example accent color
-        // Add more custom colors here
+        primary: "#0ab55f",
+        secondary: "#06b19e",
+        accent: "#38b2ac",
       },
       fontSize: {
         xs: ".75rem",
