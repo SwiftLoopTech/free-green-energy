@@ -170,7 +170,7 @@ const HomeOwners: React.FC = () => {
             className="w-1/2 bg-cover bg-center h-full rounded-r-lg"
             style={{
               backgroundImage:
-                "linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.3)), url('/images/solar-2-bg.jpg')",
+                "linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.3)), url('/images/owners.jpg')",
             }}
           />
         </motion.div>
