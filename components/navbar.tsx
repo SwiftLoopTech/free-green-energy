@@ -93,14 +93,6 @@ const Navbar: React.FC = () => {
               Business owners
             </Link>
           </li>
-          <li>
-            <Link
-              href="/support"
-              className="hover:text-secondary transition-colors"
-            >
-              Support
-            </Link>
-          </li>
         </ul>
 
         {/* Get our product button - Desktop */}
@@ -143,15 +135,6 @@ const Navbar: React.FC = () => {
                   className="hover:text-secondary transition-colors"
                 >
                   Business owners
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/support"
-                  onClick={toggleMenu}
-                  className="hover:text-secondary transition-colors"
-                >
-                  Support
                 </Link>
               </li>
               <li>

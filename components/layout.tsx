@@ -1,17 +1,23 @@
+import React from "react";
+import { useRouter } from "next/router";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
-import { ReactNode } from "react";
-
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const router = useRouter();
+  const { pathname } = router;
+
+  // Determine the margin class based on the current route
+  const marginClass = pathname === "/" ? "mx-0" : "mx-5";
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="mx-5 ">{children}</main>
+      <main className={`flex-1 ${marginClass}`}>{children}</main>
       <Footer />
     </div>
   );

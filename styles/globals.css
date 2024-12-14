@@ -9,22 +9,31 @@
   }
 
   .btn-secondary {
-    @apply  text-primary font-bold py-2 px-4 rounded-lg border border-primary;
+    @apply text-primary font-bold py-2 px-4 rounded-lg border border-primary;
   }
   .bento-box {
     @apply bg-black shadow-md rounded-lg px-14 py-20 text-white flex flex-col gap-[14px];
+  }
+  .landing-sections {
+    @apply container mx-auto text-white flex flex-col text-center w-1/2 gap-8;
+  }
+  .landing-sections p {
+    @apply text-3xl;
+  }
+  .landing-sections h1 {
+    @apply text-8xl font-medium;
   }
 }
 
 /* Custom Font */
 @font-face {
-    font-family: 'Satoshi';
-    src: url('/fonts/Satoshi-Variable.woff2') format('woff2'),
-         url('/fonts/Satoshi-Variable.woff') format('woff');
-    font-weight: 100 900; /* Adjust according to the font's weight range */
-    font-style: normal;
-  }
-  
-  body {
-    font-family: 'Satoshi', sans-serif;
-  }
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("/fonts/Satoshi-Variable.woff") format("woff");
+  font-weight: 100 900; /* Adjust according to the font's weight range */
+  font-style: normal;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+}

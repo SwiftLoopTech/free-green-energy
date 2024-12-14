@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/fge-logo.png" />
-        <meta property="og:title" content="Solar Agency" />
+        <meta property="og:title" content="Free Green Energy" />
         <meta
           property="og:description"
           content="We provide the best solar solutions for your home and business."
