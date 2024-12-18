@@ -39,11 +39,11 @@ const Footer: React.FC = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
                 <div className="space-y-2">
-                  <p>Solar Solutions Consulting</p>
-                  <p>123 Green Energy Lane</p>
-                  <p>Sustainability City, SC 12345</p>
-                  <p>Phone: (555) 123-4567</p>
-                  <p>Email: info@solarsolutions.com</p>
+                  <p>Free Green Energy</p>
+                  <p>Near Sabarigiri International School </p>
+                  <p>Sreekariyam, Trivandrum-695584</p>
+                  <p>Phone: +91 77363-94030</p>
+                  <p>Email: vishnutvm@gmail.com</p>
                 </div>
               </div>
 

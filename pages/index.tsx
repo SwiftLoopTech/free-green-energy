@@ -15,7 +15,7 @@ const Landing: React.FC = () => {
           <h1>It’s a new day for solar power</h1>
           <p>Make, use and sell your own power</p>
           <div>
-            <button className=" btn-primary">Get Product</button>
+            <button className=" btn-primary ">Get Product</button>
           </div>
         </div>
       </div>
@@ -57,38 +57,40 @@ const Landing: React.FC = () => {
       </div>
 
       {/* Section 3 */}
-      <div className=" mx-auto flex justify-between gap-3 w-full p-4">
-        <div className="w-1/2">
-          {" "}
+      <div className="mx-auto flex flex-col md:flex-row justify-between gap-3 w-full p-4">
+        <div className="w-full md:w-1/2 mb-4 md:mb-0">
           <div
-            className="bg-cover bg-center flex items-center rounded-xl"
+            className="bg-cover bg-center flex items-center rounded-xl p-4 h-full"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('/images/person.jpg')",
             }}
           >
             <div className="landing-sections">
-              <h1>Energy 101</h1>
-              <p>Your frequently asked questions, answered</p>
-
-              <button className=" btn-primary">Learn More</button>
+              <h1 className="text-white text-2xl font-bold mb-2">Energy 101</h1>
+              <p className="text-white mb-4">
+                Your frequently asked questions, answered
+              </p>
+              <button className="btn-primary mx-auto ">Learn More</button>
             </div>
           </div>
         </div>
-        <div className="w-1/2 ">
-          {" "}
+        <div className="w-full md:w-1/2">
           <div
-            className="bg-cover bg-center flex items-center rounded-xl"
+            className="bg-cover bg-center flex items-center rounded-xl p-4 h-full"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('/images/worker.jpg')",
             }}
           >
             <div className="landing-sections">
-              <h1>Installer Centre</h1>
-              <p>All the information you need in one place</p>
-
-              <button className=" btn-primary ">Learn More</button>
+              <h1 className="text-white text-2xl font-bold mb-2">
+                Installer Centre
+              </h1>
+              <p className="text-white mb-4">
+                All the information you need in one place
+              </p>
+              <button className="btn-primary mx-auto">Learn More</button>
             </div>
           </div>
         </div>
