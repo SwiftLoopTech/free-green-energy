@@ -15,13 +15,13 @@
     @apply bg-black shadow-md rounded-lg px-14 py-20 text-white flex flex-col gap-[14px];
   }
   .landing-sections {
-    @apply container mx-auto text-white flex flex-col text-center w-1/2 gap-8;
+    @apply container mx-auto text-white flex flex-col text-center sm:w-1/2 gap-8;
   }
   .landing-sections p {
-    @apply text-3xl;
+    @apply text-xl sm:text-3xl font-thin sm:font-normal;
   }
   .landing-sections h1 {
-    @apply text-8xl font-medium;
+    @apply text-5xl sm:text-8xl font-medium;
   }
 }
 

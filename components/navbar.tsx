@@ -43,8 +43,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="py-4 px-6 relative z-50">
-      <div className="flex items-center justify-between">
+    <nav className="sticky top-0 left-0 w-full bg-white z-50 shadow-md">
+      <div className="py-4 px-6 flex items-center justify-between">
         {/* Company logo */}
         <div>
           <Link href="/">
