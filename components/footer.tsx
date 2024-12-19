@@ -31,6 +31,18 @@ const Footer: React.FC = () => {
             </p>
           </div>
         );
+      case "/business-owners":
+        return (
+          <div className="">
+            <h2 className="text-6xl font-medium mb-4">Start Saving Today</h2>
+            <p className="text-lg font-medium mb-8">
+              Whether you’d like to be carbon neutral, want to reduce sky-high
+              electricity bills, or need to fulfill building mandates, Enphase
+              and our solar installation partners can design a system that will
+              meet the unique demands of your property and business.
+            </p>
+          </div>
+        );
       default:
         return (
           <div className="container mx-auto px-4 py-8 text-black ">

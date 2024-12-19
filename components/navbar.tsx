@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,10 +49,11 @@ const Navbar: React.FC = () => {
         {/* Company logo */}
         <div>
           <Link href="/">
-            <img
+            <Image
+              height={32}
+              width={64}
               src="/images/fge-logo.png"
               alt="Company Logo"
-              className="h-8"
             />
           </Link>
         </div>
