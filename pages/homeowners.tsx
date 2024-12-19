@@ -126,7 +126,7 @@ const HomeOwners: React.FC = () => {
         initial="hidden"
         animate={bentoGridInView ? "visible" : "hidden"}
         variants={sectionVariants}
-        className="container mx-auto flex flex-col sm:grid-cols-2 gap-4 py-16  "
+        className="container mx-auto flex flex-col sm:grid sm:grid-cols-2 gap-4 py-16  "
       >
         {bentoGridContent.map((item, index) => (
           <motion.div
