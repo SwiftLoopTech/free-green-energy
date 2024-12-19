@@ -12,7 +12,7 @@
     @apply text-primary font-bold py-2 px-4 rounded-lg border border-primary;
   }
   .bento-box {
-    @apply bg-black shadow-md rounded-lg px-14 py-20 text-white flex flex-col gap-[14px];
+    @apply bg-black shadow-md rounded-lg px-10 sm:px-14 sm:py-20 py-10 text-white flex flex-col gap-[14px];
   }
   .landing-sections {
     @apply container mx-auto text-white flex flex-col text-center sm:w-1/2 gap-8;

@@ -47,7 +47,7 @@ const Landing: React.FC = () => {
         }}
       >
         <div className="landing-sections">
-          <h1>The revolutionary IQ8 Series</h1>
+          <h1>The Revolutionary IQ8 Series</h1>
           <p>Our smartest microinverter ever</p>
           <div className="flex gap-2 mx-auto">
             <button className=" btn-primary">Learn More</button>
