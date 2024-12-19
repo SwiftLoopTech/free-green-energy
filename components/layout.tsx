@@ -15,9 +15,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const marginClass = pathname === "/" ? "mx-0" : "mx-5";
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Navbar />
-      <main className={`flex-1 ${marginClass}`}>{children}</main>
+      <main className={`flex-1 ${marginClass} mt-4`}>{children}</main>
       <Footer />
     </div>
   );
