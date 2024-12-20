@@ -68,7 +68,7 @@ const Business: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: heroInView ? 1 : 0, scale: heroInView ? 1 : 0.9 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-8xl font-medium mb-4 w-1/2 text-center leading-[107px]"
+          className="text-5xl md:text-8xl font-medium mb-4 sm:w-1/2 text-center sm:leading-[107px]"
         >
           We're perfect for your business
         </motion.h1>
@@ -78,8 +78,7 @@ const Business: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex space-x-4"
         >
-          <button className="btn-primary">System estimator</button>
-          <button className="btn-secondary">Watch Video</button>
+          <button className="btn-primary">System Estimator</button>
         </motion.div>
       </motion.div>
 
@@ -121,7 +120,7 @@ const Business: React.FC = () => {
         initial="hidden"
         animate={bentoGridInView ? "visible" : "hidden"}
         variants={sectionVariants}
-        className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 py-16"
+        className="container mx-auto flex flex-col sm:grid sm:grid-cols-2 gap-4 py-16  "
       >
         {bentoGridContent.map((item, index) => (
           <motion.div
@@ -152,17 +151,17 @@ const Business: React.FC = () => {
             y: bentoGridInView ? 0 : 50,
           }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-black rounded-lg text-white px-14 flex pr-0 py-0 col-span-2 h-[443px]"
+          className="bg-black rounded-lg text-white px-10 sm:px-14 flex sm:pr-0 py-10 sm:py-0 col-span-2 h-fit sm:h-[443px]"
         >
-          <div className="w-1/2 py-20">
+          <div className="sm:w-1/2 sm:py-20">
             <h3 className="text-5xl font-medium mb-4">Better over time</h3>
-            <p className="text-[16px] font-medium w-3/5">
+            <p className="text-[16px] font-medium sm:w-3/5">
               Get free over-the-air software updates that bring innovative new
               features to your solar system and the Enphase App.
             </p>
           </div>
           <div
-            className="w-1/2 bg-cover bg-center h-full rounded-r-lg"
+            className="hidden sm:block w-1/2 bg-cover bg-center h-full rounded-r-lg"
             style={{
               backgroundImage:
                 "linear-gradient(to right, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.3)), url('/images/solar-2-bg.jpg')",
