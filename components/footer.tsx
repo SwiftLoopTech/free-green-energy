@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
                 <div className="space-y-2">
-                  <p>Free Green Energy</p>
+                  <p>Future Green Energy</p>
                   <p>Near Sabarigiri International School </p>
                   <p>Sreekariyam, Trivandrum-695584</p>
                   <p>Phone: +91 77363-94030</p>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
             {/* Copyright */}
             <div className="text-center mt-8 pt-4 border-t border-gray-700">
               <p className="text-sm">
-                &copy; {new Date().getFullYear()} Free Green Energy. All Rights
+                &copy; {new Date().getFullYear()} Future Green Energy. All Rights
                 Reserved.
               </p>
             </div>

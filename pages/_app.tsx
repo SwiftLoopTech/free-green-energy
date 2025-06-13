@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Free Green Energy",
+    name: "Future Green Energy",
     image: "https://www.fgesolar.in/images/fge-logo.png",
     description:
       "Leading solar solutions provider in Kochi, Kerala, offering comprehensive solar panel installation for homes and businesses",
@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>Free Green Energy - Solar Solutions in Kochi, Kerala</title>
+        <title>Future Green Energy - Solar Solutions in Kochi, Kerala</title>
         <meta
           name="description"
           content="Expert solar panel installation in Kochi. We provide top-tier residential and commercial solar solutions across Kerala. Sustainable energy made affordable and efficient."
@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="business.business" />
         <meta
           property="og:title"
-          content="Free Green Energy - Solar Solutions in Kochi"
+          content="Future Green Energy - Solar Solutions in Kochi"
         />
         <meta
           property="og:description"
@@ -90,7 +90,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Free Green Energy - Solar Solutions in Kochi"
+          content="Future Green Energy - Solar Solutions in Kochi"
         />
         <meta
           name="twitter:description"
