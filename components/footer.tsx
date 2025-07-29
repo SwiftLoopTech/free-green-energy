@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                   <p>Near Sabarigiri International School </p>
                   <p>Sreekariyam, Trivandrum-695584</p>
                   <p>Phone: +91 77363-94030</p>
-                  <p>Email: vishnutvm@gmail.com</p>
+                  <p>Email: fgesolarteam@gmail.com</p>
                 </div>
               </div>
 
