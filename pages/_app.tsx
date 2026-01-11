@@ -60,8 +60,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Favicon */}
-        <link rel="icon" href="/images/fge-logo.png" />
-        <link rel="apple-touch-icon" href="/images/fge-logo.png" />
+        <link rel="icon" href="/images/logo2.png" />
+        <link rel="apple-touch-icon" href="/images/logo2.png" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="business.business" />
@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://www.fgesolar.in/images/fge-logo.png"
+          content="https://www.fgesolar.in/images/logo2.png"
         />
         <meta property="og:url" content="https://www.fgesolar.in" />
         <meta
@@ -98,7 +98,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           name="twitter:image"
-          content="https://www.fgesolar.in/images/fge-logo.png"
+          content="https://www.fgesolar.in/images/logo2.png"
         />
 
         {/* Canonical URL */}

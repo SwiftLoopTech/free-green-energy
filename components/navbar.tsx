@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
             <Image
               height={32}
               width={64}
-              src="/images/fge-logo.png"
+              src="/images/logo2.png"
               alt="Company Logo"
             />
           </Link>
