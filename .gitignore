@@ -1,0 +1,47 @@
+# Claude Code
+.claude/
+
+# Planning & strategy docs (internal use only)
+fge-content-strategy.txt
+fge-lead-funnel.txt
+fge-seo-strategy.txt
+fge-sitemap.txt
+fge-technical-decisions.txt
+
+# Image generation prompts (internal use only)
+image-generation-prompts.json
+image-prompts-v2.json
+image-prompts-v3-content.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE
+.vscode/
+*.code-workspace
+.idea/
+
+# Logs & temp files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Environment files
+.env
+.env.*
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build output (if added later)
+dist/
+build/
+.cache/
