@@ -47,8 +47,8 @@
 
   document.querySelectorAll('form[data-lead]').forEach((form) => {
     const btn = form.querySelector('[type="submit"]');
-    const successMsg = form.querySelector('.form-success');
-    const errorMsg = form.querySelector('.form-error');
+    const successMsg = form.querySelector('.form-success, .lead-form-status.form-success');
+    const errorMsg = form.querySelector('.form-error, .lead-form-status.form-error');
     const accessKeyInput = form.querySelector('input[name="access_key"]');
     const subjectInput = form.querySelector('input[name="subject"]');
     const fromNameInput = form.querySelector('input[name="from_name"]');
@@ -129,6 +129,10 @@
           errorMsg,
           err && err.message ? err.message : 'We could not send your request. Please try again or contact us on WhatsApp.'
         );
+
+        if (errorMsg) {
+          errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       } finally {
         if (btn) {
           btn.disabled = false;

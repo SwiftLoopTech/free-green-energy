@@ -206,8 +206,7 @@
     }
 
     // Show results
-    results.style.display = 'block';
-    results.classList.add('fade-up', 'visible');
+    results.classList.add('is-visible', 'fade-up', 'visible');
   }
 
   function setEl(id, text) {

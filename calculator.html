@@ -1,35 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>Solar Savings Calculator Kerala — Estimate Your KSEB Bill Savings | FGE Solar</title>
-  <meta name="description" content="Free solar savings calculator for Kerala homes. Enter your monthly KSEB bill and instantly get your recommended system size, PM Surya Ghar subsidy amount, and 25-year savings estimate.">
+  <title>Solar Savings Calculator Kerala | Estimate Bill Savings &amp; Subsidy</title>
+  <meta name="description" content="Use the FGE Solar calculator to estimate rooftop solar system size, PM Surya Ghar subsidy, monthly bill savings, and long-term return for a Kerala home.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fgesolar.in/calculator.html">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Solar Savings Calculator — See Exactly What Solar Saves You in Kerala">
-  <meta property="og:description" content="Enter your monthly KSEB bill. Get your personalized solar recommendation, subsidy amount, and 25-year savings in under 30 seconds.">
+  <meta property="og:title" content="Solar Savings Calculator Kerala | Estimate Bill Savings &amp; Subsidy">
+  <meta property="og:description" content="Use the FGE Solar calculator to estimate rooftop solar system size, PM Surya Ghar subsidy, monthly bill savings, and long-term return for a Kerala home.">
   <meta property="og:url" content="https://fgesolar.in/calculator.html">
-  <meta property="og:image" content="https://fgesolar.in/assets/images/og/calculator-og.jpg">
+  <meta property="og:image" content="https://fgesolar.in/assets/images/og/calculator-og.webp">
+  <meta property="og:image:alt" content="Solar Savings Calculator Kerala | Estimate Bill Savings &amp; Subsidy">
   <meta property="og:site_name" content="FGE Solar">
   <meta property="og:locale" content="en_IN">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Solar Savings Calculator Kerala | FGE Solar">
-  <meta name="twitter:description" content="Free solar savings calculator. Instant estimate for system size, subsidy, and monthly savings.">
-
-  <!-- Geo -->
+  <meta name="twitter:title" content="Solar Savings Calculator Kerala | Estimate Bill Savings &amp; Subsidy">
+  <meta name="twitter:description" content="Use the FGE Solar calculator to estimate rooftop solar system size, PM Surya Ghar subsidy, monthly bill savings, and long-term return for a Kerala home.">
+  <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/calculator-og.webp">
+  <meta name="theme-color" content="#172219">
+  <meta name="author" content="FGE Solar">
   <meta name="geo.region" content="IN-KL">
   <meta name="geo.placename" content="Thiruvananthapuram, Kerala">
   <meta name="geo.position" content="8.5241;76.9366">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
 
   <!-- Fonts -->
@@ -380,6 +376,18 @@
     #calc-results {
       background: #EEF2EF;
       padding: 80px 0;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #calc-results.is-visible {
+      opacity: 1;
+      max-height: none;
+      overflow: visible;
+      visibility: visible;
+      pointer-events: auto;
     }
     .results-header {
       text-align: center;
@@ -594,6 +602,46 @@
       margin: 0 auto;
     }
   </style>
+  <!-- codex-seo-generated:start -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Solar Savings Calculator Kerala | Estimate Bill Savings & Subsidy",
+  "headline": "Solar Savings Calculator Kerala | Estimate Bill Savings & Subsidy",
+  "description": "Use the FGE Solar calculator to estimate rooftop solar system size, PM Surya Ghar subsidy, monthly bill savings, and long-term return for a Kerala home.",
+  "url": "https://fgesolar.in/calculator.html",
+  "inLanguage": "en-IN",
+  "dateModified": "2026-03-23",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "FGE Solar",
+    "url": "https://fgesolar.in/"
+  }
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://fgesolar.in/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculator",
+      "item": "https://fgesolar.in/calculator.html"
+    }
+  ]
+}
+  </script>
+  <!-- codex-seo-generated:end -->
 </head>
 <body>
 
@@ -631,6 +679,7 @@
               <li><a href="/services/amc.html"><span class="icon"><svg>
                       <use href="#i-wrench" />
                     </svg></span>AMC &amp; Maintenance</a></li>
+              <li><a href="/services/solar-water-heater.html"><span class="icon"><svg><use href="#i-sun" /></svg></span>Solar Water Heater</a></li>
             </ul>
           </li>
           <li><a href="/subsidy/">Subsidy <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -681,6 +730,7 @@
           <li><a href="/services/off-grid.html">Off-Grid Systems</a></li>
           <li><a href="/services/hybrid.html">Hybrid Systems</a></li>
           <li><a href="/services/amc.html">AMC &amp; Maintenance</a></li>
+          <li><a href="/services/solar-water-heater.html">Solar Water Heater</a></li>
         </ul>
       </li>
       <li><a href="/subsidy/" class="mobile-sub-toggle" aria-expanded="false">Subsidy <svg class="chevron" width="18"
@@ -871,7 +921,7 @@
     </section>
 
     <!-- ── RESULTS ────────────────────────────────────────────── -->
-    <section id="calc-results" style="display:none;">
+    <section id="calc-results">
       <div class="container">
         <div class="results-header fade-up">
           <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Your Personalised Estimate</span>
@@ -1058,6 +1108,35 @@
       </div>
     </section>
 
+  
+    <!-- codex-seo-body:start -->
+    <section class="section" aria-label="Next steps for solar planning">
+      <div class="container">
+        <div style="border:1px solid #E5E7E5;border-radius:24px;padding:clamp(1.25rem,3vw,2rem);background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 14px 38px rgba(23,34,25,0.06);">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:start;">
+            <div>
+              <div style="display:inline-flex;align-items:center;padding:0.35rem 0.8rem;border-radius:999px;background:#eef7f0;color:#18B85C;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Solar Planning Hub</div>
+              <h2 style="margin:1rem 0 0.75rem;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.15;color:#172219;font-family:var(--font-heading,inherit);">Next step after Solar Savings Calculator Kerala</h2>
+              <p style="margin:0;color:#565D56;line-height:1.75;">Use these next steps to move from research to a working solar decision.</p>
+            </div>
+            <div>
+              <ul style="margin:0;padding-left:1.1rem;display:grid;gap:0.8rem;">
+              <li style="margin:0;padding:0;"><a href="/services/" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Explore all solar services in Kerala</a></li>
+              <li style="margin:0;padding:0;"><a href="/subsidy/" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Understand subsidy and net metering</a></li>
+              <li style="margin:0;padding:0;"><a href="/solar-in/" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Find your district service page</a></li>
+              <li style="margin:0;padding:0;"><a href="/blog/" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Read practical solar buying guides</a></li>
+              </ul>
+              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.25rem;">
+                <a href="/contact.html" class="btn btn-primary">Book Free Site Visit</a>
+                <a href="/calculator.html" class="btn btn-outline-dark">Use Solar Calculator</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- codex-seo-body:end -->
+
   </main>
 
   <!-- ── FOOTER ─────────────────────────────────────────────── -->
@@ -1123,6 +1202,7 @@
             <li><a href="/services/off-grid.html">Off-Grid Systems</a></li>
             <li><a href="/services/hybrid.html">Hybrid Systems</a></li>
             <li><a href="/services/amc.html">AMC &amp; Maintenance</a></li>
+            <li><a href="/services/solar-water-heater.html">Solar Water Heater</a></li>
           </ul>
         </div>
 
@@ -1174,7 +1254,6 @@
   <script src="/assets/js/global.js" defer></script>
   <script src="/assets/js/calculator.js" defer></script>
   <script src="https://web3forms.com/client/script.js" async defer></script>
-  <script src="/assets/js/forms.js" defer></script>
+  <script src="/assets/js/forms.js?v=20260323" defer></script>
 </body>
 </html>
-
