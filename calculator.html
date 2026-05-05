@@ -31,7 +31,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
 
   <!-- CSS -->
   <script src="/assets/js/icons.js"></script>
@@ -182,7 +184,7 @@
       padding: 0.85rem 1rem;
       border: 1.5px solid #d4ddd5;
       border-radius: 10px;
-      font-family: 'DM Sans', sans-serif;
+      font-family: var(--font-body);
       font-size: 1rem;
       color: #172219;
       background: #fafbfa;
@@ -261,7 +263,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.75rem;
-      color: #9aab9c;
+      color: #565d56;
       margin-top: 0.35rem;
     }
     .calc-submit-btn {
@@ -580,7 +582,19 @@
       color: #6b7c6e;
     }
     @media (max-width: 540px) {
+      .calculator-page .lead-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .calculator-page .lead-form-grid .form-field,
+      .calculator-page .lead-form-grid .form-field:last-child {
+        grid-column: 1 / -1 !important;
+        min-width: 0;
+      }
       .lead-form-grid .form-field:last-child { grid-column: span 1; }
+      .lead-captcha-wrap .h-captcha {
+        max-width: 100%;
+        overflow: hidden;
+      }
       .lead-captcha-wrap .h-captcha iframe { max-width: 100%; }
     }
 
@@ -600,6 +614,80 @@
     .calc-faq-list {
       max-width: 680px;
       margin: 0 auto;
+    }
+
+    /* Page-scoped responsive polish against the FGE design-system rails. */
+    .calculator-page .calc-hero {
+      padding-bottom: clamp(2.75rem, 5vw, 4rem);
+    }
+    .calculator-page .calc-section {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+    }
+    .calculator-page .calc-hero h1 .accent {
+      background: none !important;
+      -webkit-text-fill-color: var(--fge-green-600) !important;
+      color: var(--fge-green-600) !important;
+    }
+    .calculator-page .bill-amount-display,
+    .calculator-page .result-card-value,
+    .calculator-page .result-card.featured .result-card-value {
+      color: var(--fge-green-600);
+    }
+    .calculator-page input[type="range"] {
+      background: linear-gradient(to right, var(--fge-green-600) 0%, var(--fge-green-600) var(--pct, 0%), #d4ddd5 var(--pct, 0%), #d4ddd5 100%);
+    }
+    .calculator-page input[type="range"]::-webkit-slider-thumb {
+      background: var(--fge-green-600);
+      box-shadow: 0 2px 8px rgba(45, 106, 79, 0.34);
+    }
+    .calculator-page input[type="range"]::-moz-range-thumb {
+      background: var(--fge-green-600);
+      box-shadow: 0 2px 8px rgba(45, 106, 79, 0.34);
+    }
+    .calculator-page .calc-submit-btn,
+    .calculator-page .res-wa-btn,
+    .calculator-page .payback-bar-fill,
+    .calculator-page .result-card[style*="#18B85C"] {
+      background: var(--fge-green-600) !important;
+    }
+    .calculator-page .calc-submit-btn:hover,
+    .calculator-page .res-wa-btn:hover {
+      background: var(--fge-green-700) !important;
+      box-shadow: 0 8px 28px rgba(27, 67, 50, 0.24);
+    }
+
+    @media (max-width: 900px) {
+      .calculator-page .calc-section {
+        padding: 3.5rem 0;
+      }
+      .calculator-page .calc-info-panel {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .calculator-page .calc-hero {
+        padding-bottom: 2.5rem !important;
+      }
+      .calculator-page .calc-section,
+      .calculator-page #calc-results,
+      .calculator-page .calc-faq-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .calculator-page .results-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+      .calculator-page .result-card,
+      .calculator-page .payback-section,
+      .calculator-page .lead-capture-box {
+        border-radius: 14px;
+      }
+      .calculator-page .calc-submit-btn,
+      .calculator-page .res-wa-btn {
+        min-height: 52px;
+        line-height: 1.25;
+      }
     }
   </style>
   <!-- codex-seo-generated:start -->
@@ -642,8 +730,10 @@
 }
   </script>
   <!-- codex-seo-generated:end -->
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css">
+
 </head>
-<body>
+<body class="calculator-page">
 
   <!-- ── HEADER ─────────────────────────────────────────────── -->
   <!-- component:site-header theme=dark -->
@@ -1107,7 +1197,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- codex-seo-body:start -->
     <section class="section" aria-label="Next steps for solar planning">

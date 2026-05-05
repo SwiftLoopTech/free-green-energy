@@ -28,10 +28,11 @@
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
   <script src="/assets/js/icons.js" defer></script>
+  <link rel="preload" as="image" href="/assets/images/hero/updated_hero-1360.webp" imagesrcset="/assets/images/hero/updated_hero-640.webp 640w, /assets/images/hero/updated_hero-960.webp 960w, /assets/images/hero/updated_hero-1360.webp 1360w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
 
@@ -121,8 +122,8 @@
        CSS VARIABLES
     ============================================================ */
     :root {
-      --font-heading: 'Syne', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --clr-green: #18B85C;
       --clr-teal: #1FC7C0;
       --clr-dark: #172219;
@@ -812,7 +813,7 @@
       font-weight: 700;
       color: #172219;
       margin-bottom: 0.625rem;
-      font-family: 'Syne', sans-serif;
+      font-family: var(--font-heading);
     }
 
     .service-card-copy {
@@ -2030,9 +2031,11 @@
 }
   </script>
   <!-- codex-seo-generated:end -->
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css">
+
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- HEADER -->
   <header id="site-header">
@@ -2175,6 +2178,12 @@
       <div class="hero-content">
         <div class="container">
           <div class="hero-inner">
+            <picture class="hero-bg-picture" aria-hidden="true">
+              <source type="image/webp" media="(max-width: 640px)" srcset="/assets/images/hero/updated_hero-640.webp">
+              <source type="image/webp" media="(max-width: 1180px)" srcset="/assets/images/hero/updated_hero-960.webp">
+              <source type="image/webp" srcset="/assets/images/hero/updated_hero-1360.webp">
+              <img src="/assets/images/hero/updated_hero.png" alt="" width="1360" height="650" decoding="async" fetchpriority="high">
+            </picture>
 
             <!-- Left: Text -->
             <div class="hero-text fade-up">
@@ -2182,93 +2191,78 @@
                 <span class="badge badge-white">
                   <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                     <use href="#i-check" />
-                  </svg>MNRE Empanelled
+                  </svg>MNRE EMPANELLED
                 </span>
                 <span class="badge badge-white">
                   <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                     <use href="#i-check" />
-                  </svg>KSEB Approved Vendor
+                  </svg>KSEB APPROVED
                 </span>
                 <span class="badge badge-white">
                   <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                     <use href="#i-check" />
-                  </svg>PM Surya Ghar Registered
+                  </svg>PM SURYA GHAR
                 </span>
               </div>
 
               <h1 class="hero-h1">
-                Stop Paying More to<br>
-                <span class="accent">KSEB Every Year.</span>
+                Stop Paying<br>
+                More to KSEB<br>
+                <span class="accent">Every Year.</span>
               </h1>
 
               <p class="hero-sub">
-                FGE Solar installs premium solar systems across Kerala - and handles everything. Subsidy paperwork. KSEB
-                net metering. The whole process, start to finish.
+                FGE Solar installs premium solar systems across Kerala and handles everything. Subsidy paperwork, KSEB
+                net metering, and the full process from site visit to commissioning.
               </p>
 
               <p class="hero-trust-line">
-                <span>₹78,000 government subsidy</span> · 50+ installations · 700 kW deployed
+                <span>₹78,000 government subsidy</span> • 50+ installations • 700 kW deployed
               </p>
 
               <div class="hero-ctas">
                 <a href="/calculator.html" class="btn btn-primary btn-lg">
                   Calculate My Savings
-                  <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2.5">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
+                  <svg class="icon arrow" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-arrow-right" />
                   </svg>
                 </a>
                 <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit."
                   class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                      d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                    <use href="#i-whatsapp" />
                   </svg>
                   Get Free Site Visit
                 </a>
               </div>
             </div>
-            <!-- Right: Image-led visual -->
-          <div class="hero-visual fade-in">
-              <div class="hero-photo-stack">
-                <div class="hero-main-photo">
-                  <img src="/assets/images/hero/hero-home.webp" alt="Rooftop solar installation on a Kerala home"
-                    loading="eager" width="1200" height="900">
-                  <div class="hero-photo-caption">
-                    <div class="hero-photo-copy">
-                      <span class="hero-photo-kicker">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                          <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        Kerala Rooftop Installations
-                      </span>
-                      <h3>Solar that looks clean on the roof and on your bill.</h3>
-                      <p>Premium components, neat mounting, and end-to-end execution from survey to subsidy claim.</p>
-                    </div>
-                    <div class="hero-photo-bill">
-                      <span class="label">Typical Home Outcome</span>
-                      <span class="value">80-90% lower bill</span>
-                      <span class="meta">With subsidy and KSEB net metering</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="hero-mini-strip" aria-label="Featured installations across Kerala">
-                  <div class="hero-mini-card"><img src="/assets/images/locations/thiruvananthapuram.webp" alt="Solar-ready homes in Thiruvananthapuram" loading="lazy" width="480" height="320"><div class="hero-mini-label"><strong>Thiruvananthapuram</strong><span>Fast payback for urban homes</span></div></div>
-                  <div class="hero-mini-card"><img src="/assets/images/locations/kochi-ernakulam.webp" alt="Residential and commercial rooftops in Kochi" loading="lazy" width="480" height="320"><div class="hero-mini-label"><strong>Kochi / Ernakulam</strong><span>High-consumption homes and businesses</span></div></div>
-                  <div class="hero-mini-card"><img src="/assets/images/locations/wayanad.webp" alt="Hybrid and off-grid solar projects in Wayanad" loading="lazy" width="480" height="320"><div class="hero-mini-label"><strong>Wayanad</strong><span>Hybrid and backup-focused systems</span></div></div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
-      <!-- Stats bar -->
-      <div class="hero-stats">
-        <div class="container">
+    </section>
+
+    <section class="home-proof-section" aria-label="Featured solar locations and FGE Solar proof points">
+      <div class="container">
+        <div class="home-proof-heading">
+          <p>Featured service areas</p>
+          <a href="/solar-in/">View all districts</a>
+        </div>
+        <div class="hero-mini-strip" aria-label="Featured installations across Kerala">
+          <a href="/solar-in/thiruvananthapuram.html" class="hero-mini-card">
+            <img src="/assets/images/locations/thiruvananthapuram.webp" alt="Solar-ready homes in Thiruvananthapuram" loading="eager" width="480" height="320">
+            <div class="hero-mini-label"><strong>Thiruvananthapuram</strong><span>Fast payback for urban homes</span></div>
+          </a>
+          <a href="/solar-in/ernakulam.html" class="hero-mini-card">
+            <img src="/assets/images/locations/kochi-ernakulam.webp" alt="Residential and commercial rooftops in Kochi and Ernakulam" loading="eager" width="480" height="320">
+            <div class="hero-mini-label"><strong>Ernakulam / Kochi</strong><span>High-consumption homes and businesses</span></div>
+          </a>
+          <a href="/solar-in/malappuram.html" class="hero-mini-card">
+            <img src="/assets/images/og/district-generic-og.webp" alt="Solar rooftops for homes and businesses in Malappuram" loading="eager" width="480" height="320">
+            <div class="hero-mini-label"><strong>Malappuram</strong><span>Reliable rooftop solar for growing homes</span></div>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="home-proof-stats-label">FGE Solar at a glance</div>
           <div class="hero-stats-inner">
             <div class="hero-stat">
               <div class="num"><span class="g">50</span>+</div>
@@ -2291,777 +2285,214 @@
       </div>
     </section>
 
-    <!-- SECTION 2: THE PROBLEM -->
-    <section class="problem-section">
-      <div class="container">
-        <div class="problem-grid">
-          <div class="problem-copy fade-up">
-            <div class="section-label">The Problem</div>
-            <h2 class="h2">Your KSEB Bill Is Going to Keep Rising.</h2>
-            <p class="section-subtitle" style="margin-bottom:1.5rem">
-              Kerala uses a telescopic tariff system - the more you consume, the more you pay per unit. High-usage homes
-              pay the most expensive slab rates. And those rates go up almost every year.
-            </p>
-            <p style="font-size:clamp(0.9rem,1.6vw,1.05rem);color:#374037;line-height:1.7;margin-bottom:1.5rem">
-              Solar doesn't just reduce your bill. It <strong>eliminates the most expensive units you consume
-                first</strong> - cutting your bill by 80-90% in most cases.
-            </p>
-            <p style="font-size:clamp(0.9rem,1.6vw,1.05rem);color:#374037;line-height:1.7;margin-bottom:2rem">
-              And right now, the government pays <strong style="color:#18B85C">₹78,000 of the cost for you.</strong>
-            </p>
-            <a href="/calculator.html" class="btn btn-primary btn-lg">
-              See what solar saves you specifically
-              <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+    <!-- FIGMA REDESIGN: PROBLEM -->
+    <section class="fge-problem-section">
+      <div class="fge-page-shell">
+        <div class="fge-problem-layout">
+          <div class="fge-problem-copy fade-up">
+            <div class="fge-kicker">The Problem</div>
+            <h2>Your KSEB Bill Is Going to Keep Rising.</h2>
+            <p>Kerala uses a telescopic tariff system - the more you consume, the more you pay per unit. High-usage homes get pushed into the most expensive slab rates, and those rates continue to rise.</p>
+            <div class="fge-note-card">
+              <p>Solar doesn't just reduce your bill. It eliminates the most expensive units first, cutting your bill by 80-90% in most cases.</p>
+              <strong>And right now, the government pays ₹78,000 of the cost for you.</strong>
+            </div>
+            <div class="fge-tariff-card" aria-label="KSEB telescopic tariff slabs">
+              <div class="fge-card-label">KSEB Telescopic Tariff Slabs</div>
+              <div class="fge-tariff-row"><span>0-50 units</span><strong>₹3.15/unit</strong></div>
+              <div class="fge-tariff-row"><span>51-100 units</span><strong>₹4.50/unit</strong></div>
+              <div class="fge-tariff-row"><span>101-150 units</span><strong>₹5.80/unit</strong></div>
+              <div class="fge-tariff-row"><span>151-300 units</span><strong>₹6.40/unit</strong></div>
+              <div class="fge-tariff-row"><span>Above 300 units</span><strong>₹7.50/unit</strong></div>
+              <small>Solar attacks these expensive slabs first.</small>
+            </div>
           </div>
-
-          <div class="problem-visual-stack fade-up">
-            <div class="problem-photo-card">
-              <img src="/assets/images/projects/project-1-residential-thrissur.webp"
-                alt="Completed residential rooftop solar installation by FGE Solar" loading="lazy" width="1200"
-                height="800">
-              <div class="problem-photo-caption">
-                <strong>High bills are fixable.</strong>
-                <span>Kerala homes with usable roof space can turn rising KSEB tariffs into long-term savings.</span>
-              </div>
+          <div class="fge-problem-media fade-up">
+            <div class="fge-image-card">
+              <img src="/assets/images/projects/project-1-residential-thrissur.webp" alt="Residential rooftop solar installation in Kerala" loading="eager" width="1200" height="800">
+              <div class="fge-image-caption"><strong>High bills are fixable</strong><span>Kerala homes with usable roof space can turn rising KSEB tariffs into long-term savings.</span></div>
             </div>
-
-            <div class="tariff-visual">
-              <p style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.65);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem">KSEB Telescopic Tariff Slabs</p>
-              <div class="tariff-bars">
-                <div class="tariff-bar-row"><span class="tariff-bar-label">0-50 units</span><div class="tariff-bar-fill" style="width:30%"></div><span class="tariff-bar-val">₹3.15/unit</span></div>
-                <div class="tariff-bar-row"><span class="tariff-bar-label">51-100 units</span><div class="tariff-bar-fill" style="width:45%"></div><span class="tariff-bar-val">₹4.50/unit</span></div>
-                <div class="tariff-bar-row"><span class="tariff-bar-label">101-150 units</span><div class="tariff-bar-fill" style="width:60%"></div><span class="tariff-bar-val">₹5.80/unit</span></div>
-                <div class="tariff-bar-row"><span class="tariff-bar-label">151-300 units</span><div class="tariff-bar-fill" style="width:78%"></div><span class="tariff-bar-val">₹6.40/unit</span></div>
-                <div class="tariff-bar-row"><span class="tariff-bar-label">Above 300</span><div class="tariff-bar-fill" style="width:100%"></div><span class="tariff-bar-val">₹7.50/unit</span></div>
-              </div>
-              <div class="tariff-arrow">↑ Solar attacks these expensive slabs first</div>
-              <div style="background:rgba(24,184,92,0.1);border:1px solid rgba(24,184,92,0.2);border-radius:12px;padding:1rem;margin-top:0.5rem"><p style="font-size:clamp(0.78rem,1.2vw,0.85rem);color:#18B85C;font-weight:600;margin:0">With solar, your highest-rate units disappear first. Most homes cut 80-90% of their bill.</p></div>
-            </div>
+            <a href="/calculator.html" class="fge-wide-cta">See what solar saves you specifically <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 3: SERVICES -->
-    <section style="padding:clamp(2.5rem,6vw,5rem) 0;background:#EEF2EF;">
-      <div class="container">
-        <div class="section-header centered fade-up">
-          <div class="section-label">Services</div>
-          <h2 class="h2">Everything Solar. One Company.</h2>
-          <p class="section-subtitle">From installation to subsidy to maintenance - we handle the entire journey.</p>
+    <!-- FIGMA REDESIGN: SERVICES -->
+    <section class="fge-services-section">
+      <div class="fge-page-shell">
+        <div class="fge-section-heading fade-up">
+          <div class="fge-kicker">Services</div>
+          <h2>Everything Solar. One Company.</h2>
+          <p>From installation to subsidy to maintenance - the full journey under one roof.</p>
         </div>
-
-        <div class="homepage-card-grid">
-          <a href="/services/residential.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/projects/project-4-residential-calicut.webp"
-                alt="Residential rooftop solar system installed for a Kerala home" loading="lazy" width="1200"
-                height="800">
-              <span class="service-card-tag">Homeowners</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">Residential Solar</h3>
-              <p class="service-card-copy">For homes paying ₹3,000+ monthly on electricity. Reduce your bill by 80-90%.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+        <div class="fge-service-grid">
+          <a href="/services/residential.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-home" /></svg></span>
+            <h3>Residential Solar</h3>
+            <p>For homes paying ₹3,000+ monthly on electricity. Reduce your bill by 80-90%.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/commercial.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/projects/project-2-commercial-ernakulam.webp"
-                alt="Commercial solar installation on a business facility in Kerala" loading="lazy" width="1200"
-                height="800">
-              <span class="service-card-tag">Businesses</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="7" width="20" height="15" rx="1" />
-                  <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">Commercial Solar</h3>
-              <p class="service-card-copy">For factories, offices, schools, and hospitals. Cut business electricity costs by 60%+.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/commercial.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-building" /></svg></span>
+            <h3>Commercial Solar</h3>
+            <p>For factories, offices, schools, and hospitals. Cut business electricity costs by 60%+.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/on-grid.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/og/on-grid-og.webp" alt="On-grid rooftop solar connected to the utility"
-                loading="lazy" width="1200" height="630">
-              <span class="service-card-tag">KSEB Connected</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">On-Grid Systems</h3>
-              <p class="service-card-copy">Connect to the KSEB grid. Earn credits for excess power you export.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/on-grid.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-zap" /></svg></span>
+            <h3>On-Grid Systems</h3>
+            <p>Connect to the KSEB grid and earn credits for excess power you export.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/off-grid.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/projects/project-6-offgrid-idukki.webp"
-                alt="Off-grid solar project with battery backup in a remote Kerala location" loading="lazy" width="1200"
-                height="800">
-              <span class="service-card-tag">Independent Power</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="7" width="16" height="10" rx="2" />
-                  <line x1="22" y1="11" x2="22" y2="13" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">Off-Grid Systems</h3>
-              <p class="service-card-copy">Full energy independence. No grid needed. Ideal for remote areas.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/off-grid.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-battery" /></svg></span>
+            <h3>Off-Grid Systems</h3>
+            <p>Full energy independence for remote properties and backup-focused sites.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/hybrid.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/projects/project-3-hybrid-wayanad.webp"
-                alt="Hybrid solar installation with battery backup in Wayanad" loading="lazy" width="1200"
-                height="800">
-              <span class="service-card-tag">Backup Ready</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="23 4 23 10 17 10" />
-                  <polyline points="1 20 1 14 7 14" />
-                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">Hybrid Systems</h3>
-              <p class="service-card-copy">Battery backup + grid savings. Best of both worlds - power cuts solved.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/hybrid.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-refresh" /></svg></span>
+            <h3>Hybrid Systems</h3>
+            <p>Battery backup plus grid savings. A practical setup for power-cut-prone homes.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/amc.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/hero/hero-services.webp" alt="Solar maintenance and service team at work"
-                loading="lazy" width="1200" height="900">
-              <span class="service-card-tag">Long-Term Care</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">AMC &amp; Maintenance</h3>
-              <p class="service-card-copy">Keep your system performing at full capacity. Annual service contracts available.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/amc.html" class="fge-service-tile fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-wrench" /></svg></span>
+            <h3>AMC &amp; Maintenance</h3>
+            <p>Annual service and performance checks to keep systems generating properly.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
-
-          <a href="/services/solar-water-heater.html" class="homepage-service-card fade-up">
-            <div class="service-card-media">
-              <img src="/assets/images/og/solar-water-heater-og.webp" alt="Solar water heater system for Kerala homes and businesses"
-                loading="lazy" width="1200" height="630">
-              <span class="service-card-tag">Hot Water Savings</span>
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-icon-wrap">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="5" />
-                  <line x1="12" y1="1" x2="12" y2="3" />
-                  <line x1="12" y1="21" x2="12" y2="23" />
-                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                  <line x1="1" y1="12" x2="3" y2="12" />
-                  <line x1="21" y1="12" x2="23" y2="12" />
-                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                </svg>
-              </div>
-              <h3 class="service-card-title">Solar Water Heater</h3>
-              <p class="service-card-copy">Cut water heating costs for homes, hotels, hostels, and institutions with solar thermal systems.</p>
-              <span class="service-card-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
+          <a href="/services/solar-water-heater.html" class="fge-service-tile fge-service-wide fade-up">
+            <span class="fge-service-icon"><svg><use href="#i-sun" /></svg></span>
+            <h3>Solar Water Heater</h3>
+            <p>Cut water-heating costs for homes, hotels, hostels, and institutions with solar thermal systems.</p>
+            <span>Learn more <svg><use href="#i-arrow-right" /></svg></span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: WHY FGE SOLAR -->
-    <section class="section bg-dark">
-      <div class="container">
-        <div class="section-header centered fade-up">
-          <div class="section-label" style="justify-content:center">Why FGE Solar</div>
-          <h2 class="h2" style="color:#fff">The Difference Between Installing Solar and Doing Solar Right</h2>
-        </div>
-
-        <div class="grid grid-2 stagger">
-          <div class="diff-card">
-            <div class="num">01</div>
-            <div>
-              <h3>We Handle Everything</h3>
-              <p>From KSEB net metering application to PM Surya Ghar subsidy claim - you never have to deal with
-                government portals or paperwork. We do it all.</p>
+    <!-- FIGMA REDESIGN: WHY FGE -->
+    <section class="fge-why-section">
+      <div class="fge-page-shell">
+        <div class="fge-why-layout">
+          <div class="fge-why-copy fade-up">
+            <div class="fge-kicker">Why FGE Solar</div>
+            <h2>The Difference Between Installing Solar and Doing Solar Right.</h2>
+            <p>Four commitments that protect your investment - from the first site visit to 27 years of performance.</p>
+            <div class="fge-process-list">
+              <div><strong>01</strong><span><b>We Handle Everything</b>From MNRE net metering application to PM Surya Ghar subsidy claim - no paperwork headache for you.</span></div>
+              <div><strong>02</strong><span><b>Triple Certified</b>MNRE empanelled, KSEB approved, and registered on the PM Surya Ghar portal.</span></div>
+              <div><strong>03</strong><span><b>Real Warranties</b>27-year panel warranty, inverter coverage, and workmanship assurance you can trust.</span></div>
+              <div><strong>04</strong><span><b>Post-Install Support</b>Maintenance scans, annual performance, and responsive service long after commissioning.</span></div>
             </div>
           </div>
-
-          <div class="diff-card">
-            <div class="num">02</div>
-            <div>
-              <h3>Triple Certified</h3>
-              <p>MNRE empanelled. KSEB approved vendor. Registered on the PM Surya Ghar portal. Three certifications
-                that protect your subsidy and your investment.</p>
-            </div>
-          </div>
-
-          <div class="diff-card">
-            <div class="num">03</div>
-            <div>
-              <h3>Real Warranties, Not Just Claims</h3>
-              <p>27-year panel warranty. 8-10 year inverter warranty. 5-year workmanship warranty. If anything fails, we
-                come back. No questions.</p>
-            </div>
-          </div>
-
-          <div class="diff-card">
-            <div class="num">04</div>
-            <div>
-              <h3>Post-Install Support Built In</h3>
-              <p>Monitoring app access. Annual maintenance. Performance reports. We're not done when the panels go up -
-                we're invested in your results.</p>
-            </div>
+          <div class="fge-estimate-card fade-up">
+            <div class="fge-card-label">Savings Estimate</div>
+            <h3>Find Out Exactly What Solar Saves You</h3>
+            <p>Sample result based on a ₹4,500 monthly KSEB bill.</p>
+            <div class="fge-estimate-row"><span>Monthly KSEB bill</span><strong>₹4,500</strong></div>
+            <div class="fge-estimate-row"><span>Recommended system size</span><strong>5 kW</strong></div>
+            <div class="fge-estimate-row"><span>Estimated subsidy support</span><strong>₹78,000</strong></div>
+            <div class="fge-estimate-row fge-estimate-save"><span>Possible monthly saving</span><strong>₹5,200</strong></div>
+            <div class="fge-estimate-row"><span>Approximate payback period</span><strong>3.8 years</strong></div>
+            <a href="/calculator.html" class="fge-wide-cta">Open Solar Calculator <svg class="icon" width="16" height="16" aria-hidden="true"><use href="#i-arrow-right" /></svg></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 5: CALCULATOR BANNER -->
-    <section class="section">
-      <div class="container">
-        <div class="calc-banner fade-up">
-          <div class="calc-banner-content">
-            <p class="caption" style="color:rgba(255,255,255,0.85);margin-bottom:0.5rem">Free Tool · 30 seconds</p>
-            <h2>Find Out Exactly What Solar Saves You</h2>
-            <p>Enter your monthly KSEB bill. See your recommended system size, estimated cost after subsidy, monthly
-              savings, and how many years until the system pays for itself.</p>
-            <a href="/calculator.html" class="btn btn-lg">
-              Open Solar Calculator
-              <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
-          </div>
-          <div class="calc-banner-visual" aria-hidden="true">
-            <div class="calc-visual-card">
-              <div class="calc-visual-top">
-                <span class="calc-visual-eyebrow">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 20V10" />
-                    <path d="M18 20V4" />
-                    <path d="M6 20v-4" />
-                  </svg>
-                  Sample Result
-                </span>
-                <div class="calc-visual-bill">
-                  <strong>₹6,500</strong>
-                  <span>Monthly KSEB bill</span>
-                </div>
-              </div>
-              <div class="calc-results-grid">
-                <div class="calc-result">
-                  <span class="calc-result-value">5 kW</span>
-                  <span class="calc-result-label">Recommended system size</span>
-                </div>
-                <div class="calc-result">
-                  <span class="calc-result-value">₹78K</span>
-                  <span class="calc-result-label">Estimated subsidy support</span>
-                </div>
-                <div class="calc-result">
-                  <span class="calc-result-value">₹5,200</span>
-                  <span class="calc-result-label">Possible monthly savings</span>
-                </div>
-                <div class="calc-result">
-                  <span class="calc-result-value">3.8 yrs</span>
-                  <span class="calc-result-label">Approximate payback period</span>
-                </div>
-              </div>
-              <ul class="calc-visual-note">
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Based on your monthly bill and Kerala subsidy eligibility
-                </li>
-                <li>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Quick estimate before the free site visit and exact quote
-                </li>
-              </ul>
+    <!-- FIGMA REDESIGN: SUBSIDY -->
+    <section class="fge-subsidy-section">
+      <div class="fge-page-shell">
+        <div class="fge-subsidy-layout">
+          <div class="fge-subsidy-copy fade-up">
+            <div class="fge-kicker">Government Subsidy</div>
+            <div class="fge-subsidy-value">₹78K</div>
+            <h2>Under PM Surya Ghar, the subsidy gets paid directly into your bank account.</h2>
+            <p>This subsidy is for homes. Once approved, Once capacity is fitted in your name, FGE gets your MNRE and KSEB paperwork started.</p>
+            <ul class="fge-check-list">
+              <li><svg><use href="#i-check" /></svg>No private documents - Aadhaar, KSEB bill, and bank details</li>
+              <li><svg><use href="#i-check" /></svg>FGE registers your application through the PM Surya Ghar portal</li>
+              <li><svg><use href="#i-check" /></svg>Net metering approval, installation, inspection, and commissioning</li>
+              <li><svg><use href="#i-check" /></svg>₹78,000 reaches your account within 30-45 days of commissioning</li>
+            </ul>
+            <div class="fge-inline-actions">
+              <a href="/subsidy/pm-surya-ghar.html" class="btn btn-primary">Read Full Subsidy Guide</a>
+              <a href="/contact.html" class="btn btn-outline">Claim Subsidy Now</a>
             </div>
+          </div>
+          <div class="fge-subsidy-photo fade-up">
+            <img src="/assets/images/og/pm-surya-ghar-og.webp" alt="FGE Solar engineer explaining subsidy paperwork" loading="eager" width="1200" height="630">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 6: SUBSIDY -->
-    <section class="subsidy-section">
-      <div class="container">
-        <div class="subsidy-inner">
-          <div class="subsidy-copy fade-up">
-            <div class="section-label">Government Subsidy</div>
-            <h2 class="h2" style="color:#fff">Government Subsidy - Available Now, Not Forever</h2>
-            <div class="subsidy-amount">₹78,000</div>
-            <p
-              style="color:rgba(255,255,255,0.8);font-size:clamp(0.9rem,1.5vw,1.05rem);line-height:1.7;margin-bottom:0.75rem">
-              Under PM Surya Ghar Muft Bijli Yojana, the Government of India pays ₹78,000 directly into your bank
-              account for a 3 kW system.
-            </p>
-            <p
-              style="color:rgba(255,255,255,0.8);font-size:clamp(0.9rem,1.5vw,1.05rem);line-height:1.7;margin-bottom:0.5rem">
-              This subsidy is <strong style="color:#fff">first-come-first-served.</strong> Once capacity is filled in
-              your area, it's gone.
-            </p>
-            <p style="color:#18B85C;font-size:0.9rem;font-weight:600;margin-bottom:2rem">
-              FGE Solar is MNRE-empanelled - you don't file anything yourself.
-            </p>
-            <div class="subsidy-ctas">
-              <a href="/subsidy/pm-surya-ghar.html" class="btn btn-outline">Read Full Subsidy Guide</a>
-              <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27d%20like%20to%20claim%20the%20PM%20Surya%20Ghar%20subsidy.%20Can%20you%20help?"
-                class="btn btn-primary btn-wa" target="_blank" rel="noopener noreferrer">
-                Claim Subsidy Now
-              </a>
-            </div>
-          </div>
-
-          <div class="subsidy-card fade-up">
-            <div class="subsidy-card-visual"><img src="/assets/images/og/pm-surya-ghar-og.webp" alt="PM Surya Ghar rooftop solar subsidy support" loading="lazy" width="1200" height="630"><div class="subsidy-card-visual-copy"><strong>Subsidy support, fully managed.</strong><span>Application, inspection, commissioning, and reimbursement tracking handled by FGE Solar.</span></div></div>
-            <p
-              style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.65);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem">
-              How We Handle It For You
-            </p>
-            <div class="subsidy-steps">
-              <div class="subsidy-step">
-                <div class="num">1</div>
-                <p>You provide documents - Aadhaar, KSEB bill, bank details</p>
-              </div>
-              <div class="subsidy-step">
-                <div class="num">2</div>
-                <p>FGE registers your PM Surya Ghar application using our MNRE empanelment</p>
-              </div>
-              <div class="subsidy-step">
-                <div class="num">3</div>
-                <p>We manage KSEB coordination, inspection, and commissioning</p>
-              </div>
-              <div class="subsidy-step">
-                <div class="num">4</div>
-                <p>₹78,000 lands in your bank account within 30-60 days of commissioning</p>
-              </div>
-            </div>
-          </div>
+    <!-- FIGMA REDESIGN: TESTIMONIALS -->
+    <section class="fge-testimonials-section">
+      <div class="fge-page-shell">
+        <div class="fge-section-heading fade-up">
+          <div class="fge-kicker">Customer Stories</div>
+          <h2>50+ Families Saving Every Month.</h2>
+          <p>Real results from residential solar in Kerala.</p>
+        </div>
+        <div class="fge-testimonial-grid">
+          <article class="fge-testimonial-card fade-up"><span>5 kW Residential</span><strong>"My KSEB bill went from ₹3,500 to under ₹300. FGE handled everything - I only had to provide documents."</strong><div><b>Rajan Thomas</b><small>Thiruvananthapuram · 5 kW system</small></div></article>
+          <article class="fge-testimonial-card fade-up"><span>3 kW Rooftop</span><strong>"We were worried about the monsoon affecting performance. The system has done better than expected."</strong><div><b>Ashna Menon</b><small>Kottayam · 3 kW system</small></div></article>
+          <article class="fge-testimonial-card fade-up"><span>Subsidy Claimed</span><strong>"Got ₹78,000 in my bank account within 45 days. Clean installation, professional team, no mess."</strong><div><b>Suresh Nair</b><small>Kollam · 3 kW system</small></div></article>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 7: TESTIMONIALS -->
-    <section style="padding:clamp(2.5rem,6vw,5rem) 0;background:#ffffff;">
-      <div class="container">
-        <div class="section-header centered fade-up">
-          <div class="section-label">Customer Stories</div>
-          <h2 class="h2">50+ Families Saving Every Month</h2>
-          <p class="section-subtitle">Real results from real installations across Kerala.</p>
+    <!-- FIGMA REDESIGN: KNOWLEDGE -->
+    <section class="fge-knowledge-section">
+      <div class="fge-page-shell">
+        <div class="fge-section-heading fade-up">
+          <div class="fge-kicker">Knowledge Hub</div>
+          <h2>Everything You Need to Know Before Going Solar.</h2>
         </div>
-
-        <div class="testimonial-grid-home">
-          <div class="testimonial-card-home fade-up">
-            <div class="testimonial-media">
-              <img src="/assets/images/projects/project-1-residential-thrissur.webp"
-                alt="Residential rooftop solar project for a family home in Kerala" loading="lazy" width="1200"
-                height="800">
-              <span class="testimonial-pill">5 kW Residential</span>
-            </div>
-            <div class="testimonial-content">
-              <div style="color:#F59E0B;font-size:1.1rem;letter-spacing:3px;margin-bottom:1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p style="font-size:clamp(0.85rem,1.4vw,0.975rem);color:#434843;line-height:1.75;font-style:italic;flex:1;margin:0 0 1.25rem 0;">
-                "My KSEB bill went from ₹8,500 to under ₹900. FGE handled everything - the subsidy paperwork, the net meter,
-                all of it. I didn't have to do anything except provide documents."
-              </p>
-              <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid #F3F4F3;">
-                <div style="width:44px;height:44px;min-width:44px;background:#E6F7EE;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;color:#18B85C;font-size:1.1rem;">R</div>
-                <div>
-                  <div style="font-weight:700;font-size:0.95rem;color:#172219;line-height:1.3;">Rajesh Kumar</div>
-                  <div style="font-size:0.8rem;color:#737A73;margin-top:2px;">Thiruvananthapuram · 5 kW system</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card-home fade-up">
-            <div class="testimonial-media">
-              <img src="/assets/images/projects/project-2-commercial-ernakulam.webp"
-                alt="Solar installation example in Ernakulam showing clean panel layout" loading="lazy" width="1200"
-                height="800">
-              <span class="testimonial-pill">3 kW Rooftop</span>
-            </div>
-            <div class="testimonial-content">
-              <div style="color:#F59E0B;font-size:1.1rem;letter-spacing:3px;margin-bottom:1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p style="font-size:clamp(0.85rem,1.4vw,0.975rem);color:#434843;line-height:1.75;font-style:italic;flex:1;margin:0 0 1.25rem 0;">
-                "We were worried about the monsoon affecting performance. FGE explained everything clearly, and honestly
-                the system has performed better than we expected even during rainy months."
-              </p>
-              <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid #F3F4F3;">
-                <div style="width:44px;height:44px;min-width:44px;background:#E6F7EE;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;color:#18B85C;font-size:1.1rem;">A</div>
-                <div>
-                  <div style="font-weight:700;font-size:0.95rem;color:#172219;line-height:1.3;">Anitha Menon</div>
-                  <div style="font-size:0.8rem;color:#737A73;margin-top:2px;">Ernakulam · 3 kW system</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card-home fade-up">
-            <div class="testimonial-media">
-              <img src="/assets/images/projects/project-3-hybrid-wayanad.webp"
-                alt="Hybrid solar installation with backup solution by FGE Solar" loading="lazy" width="1200"
-                height="800">
-              <span class="testimonial-pill">Subsidy Claimed</span>
-            </div>
-            <div class="testimonial-content">
-              <div style="color:#F59E0B;font-size:1.1rem;letter-spacing:3px;margin-bottom:1rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-              <p style="font-size:clamp(0.85rem,1.4vw,0.975rem);color:#434843;line-height:1.75;font-style:italic;flex:1;margin:0 0 1.25rem 0;">
-                "Got ₹78,000 in my bank account within 45 days. The whole process from first call to money in account was
-                handled by FGE. Professional team, clean installation, no mess."
-              </p>
-              <div style="display:flex;align-items:center;gap:0.75rem;padding-top:1rem;border-top:1px solid #F3F4F3;">
-                <div style="width:44px;height:44px;min-width:44px;background:#E6F7EE;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;color:#18B85C;font-size:1.1rem;">S</div>
-                <div>
-                  <div style="font-weight:700;font-size:0.95rem;color:#172219;line-height:1.3;">Suresh Nair</div>
-                  <div style="font-size:0.8rem;color:#737A73;margin-top:2px;">Kollam · 3 kW system</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="fge-article-grid">
+          <a href="/subsidy/pm-surya-ghar.html" class="fge-article-card fade-up"><img src="/assets/images/og/pm-surya-ghar-og.webp" alt="PM Surya Ghar subsidy guide" loading="eager"><div><span>Government Scheme · 2026</span><h3>PM Surya Ghar Kerala: Complete Step-by-Step Guide 2026</h3><p>Everything you need to know about the ₹78,000 subsidy - eligibility, documents, and how to apply.</p><b>Read guide <svg><use href="#i-arrow-right" /></svg></b></div></a>
+          <a href="/subsidy/kseb-net-metering.html" class="fge-article-card fade-up"><img src="/assets/images/og/net-metering-og.webp" alt="KSEB net metering guide" loading="eager"><div><span>KSEB Regulations · 2026</span><h3>KSEB Net Metering 2026 - What the New Rules Mean for You</h3><p>The new KSERC 2025 regulation explained clearly. What changed, what it means, and how to move.</p><b>Read guide <svg><use href="#i-arrow-right" /></svg></b></div></a>
+          <a href="/blog/savings/how-much-can-you-save-solar-kerala.html" class="fge-article-card fade-up"><img src="/assets/images/blog/blog-savings-kerala.webp" alt="Solar savings in Kerala" loading="eager"><div><span>ROI &amp; Savings · 2026</span><h3>How Much Can You Really Save with Solar in Kerala?</h3><p>Real numbers, real KSEB tariffs, and realistic ROI - with and without subsidy support.</p><b>Read guide <svg><use href="#i-arrow-right" /></svg></b></div></a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 8: BLOG -->
-    <section class="section bg-sage">
-      <div class="container">
-        <div class="section-header fade-up">
-          <div class="section-label">Knowledge Hub</div>
-          <h2 class="h2">Everything You Need to Know Before Going Solar</h2>
-        </div>
-
-        <div class="grid grid-3">
-
-          <a href="/subsidy/pm-surya-ghar.html" class="blog-card fade-up">
-            <div class="blog-card-image">
-              <img src="/assets/images/og/pm-surya-ghar-og.webp" alt="PM Surya Ghar solar subsidy Kerala" loading="lazy">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">Government Schemes</span>
-                <span class="blog-date">2026</span>
-              </div>
-              <h3 class="blog-title">PM Surya Ghar Kerala: Complete Step-by-Step Guide 2026</h3>
-              <p class="blog-excerpt">The updated Kerala rooftop subsidy guide covering eligibility, documents, portal
-                steps, and what to prepare before you apply.</p>
-              <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
-          </a>
-
-          <a href="/subsidy/kseb-net-metering.html" class="blog-card fade-up">
-            <div class="blog-card-image">
-              <img src="/assets/images/og/net-metering-og.webp" alt="KSEB net metering guide Kerala" loading="lazy">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">KSEB Regulations</span>
-                <span class="blog-date">2026</span>
-              </div>
-              <h3 class="blog-title">KSEB Net Metering Kerala 2026 Update</h3>
-              <p class="blog-excerpt">A clear 2026 update on how the KSERC 2025 net metering changes affect new rooftop
-                solar applications in Kerala.</p>
-              <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
-          </a>
-
-          <a href="/blog/savings/how-much-can-you-save-solar-kerala.html" class="blog-card fade-up">
-            <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-savings-kerala.webp" alt="Solar savings Kerala 2026" loading="lazy">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">Savings &amp; ROI</span>
-                <span class="blog-date">2026</span>
-              </div>
-              <h3 class="blog-title">How Much Can You Really Save with Solar in Kerala?</h3>
-              <p class="blog-excerpt">Real numbers, real KSEB tariffs, real ROI. What solar actually saves - with and
-                without subsidy.</p>
-              <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg></span>
-            </div>
-          </a>
-
-        </div>
-
-        <div style="text-align:center;margin-top:2.5rem">
-          <a href="/blog/" class="btn btn-outline-dark btn-lg">View All Articles</a>
+    <!-- FIGMA REDESIGN: BRANDS -->
+    <section class="fge-brands-section">
+      <div class="fge-page-shell">
+        <p>Premium brands. No compromise on quality.</p>
+        <div class="fge-brand-grid">
+          <img src="assets/images/icons/waree.webp" alt="Waaree" loading="eager"><img src="assets/images/icons/adani.webp" alt="Adani Solar" loading="eager"><img src="assets/images/icons/vikram.webp" alt="Vikram Solar" loading="eager"><img src="assets/images/icons/tata.webp" alt="Tata Power Solar" loading="eager"><img src="assets/images/icons/goldi.webp" alt="Goldi Solar" loading="eager"><img src="assets/images/icons/renewsys.webp" alt="RenewSys" loading="eager"><img src="assets/images/icons/longi.webp" alt="LONGi" loading="eager"><img src="assets/images/icons/luminous.webp" alt="Luminous" loading="eager"><img src="assets/images/icons/solis.webp" alt="Solis" loading="eager"><img src="assets/images/icons/growatt.webp" alt="Growatt" loading="eager"><img src="assets/images/icons/sma.webp" alt="SMA" loading="eager"><img src="assets/images/icons/havells.webp" alt="Havells" loading="eager"><img src="assets/images/icons/enphase.webp" alt="Enphase" loading="eager">
         </div>
       </div>
     </section>
 
-    <!-- SECTION 9: BRANDS -->
-    <section class="section-sm">
-      <div class="container">
-        <p class="caption text-center text-muted" style="margin-bottom:2rem">Premium brands. No compromise on quality.
-        </p>
-        <div class="brands-row-wrap">
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/waree.webp" type="image/webp">
-              <img src="assets/images/icons/waree.jpg" alt="Waaree logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Waaree</span>
+    <!-- FIGMA REDESIGN: FINAL CTA -->
+    <section class="fge-final-section">
+      <div class="fge-page-shell">
+        <div class="fge-final-copy fade-up">
+          <div class="fge-kicker">Get Started</div>
+          <h2>Ready to Stop Overpaying for Electricity?</h2>
+          <p>Get a free site visit. An engineer assesses your roof, checks KSEB transformer capacity, and gives you an exact quote with subsidy calculation.</p>
+          <div class="fge-inline-actions">
+            <a href="/contact.html" class="btn btn-primary">Schedule Free Site Visit</a>
+            <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27d%20like%20to%20book%20a%20free%20site%20visit." class="btn btn-wa" target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/adani.webp" type="image/webp">
-              <img src="assets/images/icons/adani.jpg" alt="Adani Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Adani Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/vikram.webp" type="image/webp">
-              <img src="assets/images/icons/vikram.jpg" alt="Vikram Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Vikram Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/tata.webp" type="image/webp">
-              <img src="assets/images/icons/tata.jpg" alt="Tata Power Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Tata Power Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/goldi.webp" type="image/webp">
-              <img src="assets/images/icons/goldi.jpg" alt="Goldi Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Goldi Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/renewsys.webp" type="image/webp">
-              <img src="assets/images/icons/renewsys.jpg" alt="RenewSys logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>RenewSys</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/longi.webp" type="image/webp">
-              <img src="assets/images/icons/longi.jpg" alt="LONGi logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>LONGi</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/luminous.webp" type="image/webp">
-              <img src="assets/images/icons/luminous.jpg" alt="Luminous logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Luminous</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/solis.webp" type="image/webp">
-              <img src="assets/images/icons/solis.jpg" alt="Solis logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Solis</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/growatt.webp" type="image/webp">
-              <img src="assets/images/icons/growatt.jpg" alt="Growatt logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Growatt</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/sma.webp" type="image/webp">
-              <img src="assets/images/icons/sma.jpg" alt="SMA logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>SMA</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/havells.webp" type="image/webp">
-              <img src="assets/images/icons/havells.jpg" alt="Havells logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Havells</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/enphase.webp" type="image/webp">
-              <img src="assets/images/icons/enphase.jpg" alt="Enphase logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Enphase</span>
-          </div>
+          <ul>
+            <li><b>WhatsApp</b><span>+91 80890 73029</span></li>
+            <li><b>Email</b><span>info@fgesolar.in</span></li>
+            <li><b>Response</b><span>Within 24 hours</span></li>
+          </ul>
         </div>
       </div>
     </section>
-
-    <!-- SECTION 10: FINAL CTA -->
-    <section class="section bg-dark">
-      <div class="container">
-        <div style="max-width:720px;margin:0 auto;text-align:center" class="fade-up">
-          <div class="section-label" style="justify-content:center">Get Started</div>
-          <h2 class="h2" style="color:#fff;margin-bottom:1.25rem">Ready to Stop Overpaying for Electricity?</h2>
-          <p
-            style="color:rgba(255,255,255,0.8);font-size:clamp(0.9rem,1.5vw,1.1rem);line-height:1.7;margin-bottom:2.5rem">
-            Get a free site visit. No commitment. Our engineer visits your property, assesses your roof, checks KSEB
-            transformer capacity, and gives you an exact quote with subsidy calculation.
-          </p>
-
-          <div class="stat3" style="margin-bottom:2.5rem">
-            <div
-              style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:clamp(0.875rem,2.5vw,1.5rem);text-align:center">
-              <div style="margin-bottom:0.5rem;color:rgba(255,255,255,0.75)">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.98-.98a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </div>
-              <div
-                style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem">
-                WhatsApp</div>
-              <a href="https://wa.me/918089073029"
-                style="font-weight:600;color:#fff;font-size:clamp(0.78rem,1.2vw,0.9rem)">+91 80890 73029</a>
-            </div>
-            <div
-              style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:clamp(0.875rem,2.5vw,1.5rem);text-align:center">
-              <div style="margin-bottom:0.5rem;color:rgba(255,255,255,0.75)">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </div>
-              <div
-                style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem">
-                Email</div>
-              <a href="mailto:info@fgesolar.in"
-                style="font-weight:600;color:#fff;font-size:clamp(0.72rem,1.2vw,0.9rem);word-break:break-all">info@fgesolar.in</a>
-            </div>
-            <div
-              style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:clamp(0.875rem,2.5vw,1.5rem);text-align:center">
-              <div style="margin-bottom:0.5rem;color:rgba(255,255,255,0.75)">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                  <rect x="8" y="2" width="8" height="4" rx="1" />
-                </svg>
-              </div>
-              <div
-                style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem">
-                Form</div>
-              <a href="/contact.html" style="font-weight:600;color:#fff;font-size:clamp(0.78rem,1.2vw,0.9rem)">Schedule
-                Visit</a>
-            </div>
-          </div>
-
-          <div class="final-cta-btns" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-            <a href="/contact.html" class="btn btn-primary btn-lg">Schedule Free Site Visit</a>
-            <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I'm%20interested%20in%20solar%20for%20my%20home.%20Can%20we%20discuss?"
-              class="btn btn-wa btn-lg" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-              </svg>
-              Chat on WhatsApp
-            </a>
-          </div>
-
-          <p style="font-size:0.85rem;color:rgba(255,255,255,0.4);margin-top:1.25rem">Response within 24 hours ·
-            Kerala-wide service</p>
-        </div>
-      </div>
-    </section>
-
 
     <!-- codex-seo-body:start -->
-    <section class="section" aria-label="Next steps for solar planning">
+    <section class="section" hidden aria-label="Next steps for solar planning">
       <div class="container">
         <div style="border:1px solid #E5E7E5;border-radius:24px;padding:clamp(1.25rem,3vw,2rem);background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 14px 38px rgba(23,34,25,0.06);">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:start;">

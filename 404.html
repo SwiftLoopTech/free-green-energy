@@ -24,19 +24,21 @@
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
   <script src="/assets/js/icons.js"></script>
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <style>
     .error-page {
-      min-height: 100vh;
+      min-height: 100svh;
       background: linear-gradient(160deg, #172219 0%, #1E2D22 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem;
+      padding: 7rem 2rem 2.5rem;
     }
 
     .error-content {
@@ -80,6 +82,7 @@
       .error-links { grid-template-columns: 1fr; }
       .error-num { font-size: 5rem; }
       .error-title { font-size: 1.5rem; }
+      body.not-found-page .wa-float { display: none; }
     }
 
     .error-link {
@@ -87,7 +90,7 @@
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 12px;
       padding: 1rem;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.78) !important;
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
@@ -119,8 +122,127 @@
 }
   </script>
   <!-- codex-seo-generated:end -->
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css">
+
 </head>
-<body>
+<body class="not-found-page">
+  <!-- component:site-header theme=dark -->
+<header id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="/" class="nav-logo"><img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38"
+            height="38" loading="eager">
+          <div class="logo-text"><span class="logo-name">FGE Solar</span><span class="logo-tagline">Future Green
+              Energy</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="/services/">Services <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></a>
+            <ul class="nav-dropdown">
+              <li><a href="/services/residential.html"><span class="icon"><svg>
+                      <use href="#i-home" />
+                    </svg></span>Residential Solar</a></li>
+              <li><a href="/services/commercial.html"><span class="icon"><svg>
+                      <use href="#i-building" />
+                    </svg></span>Commercial Solar</a></li>
+              <li><a href="/services/on-grid.html"><span class="icon"><svg>
+                      <use href="#i-zap" />
+                    </svg></span>On-Grid Systems</a></li>
+              <li><a href="/services/off-grid.html"><span class="icon"><svg>
+                      <use href="#i-battery" />
+                    </svg></span>Off-Grid Systems</a></li>
+              <li><a href="/services/hybrid.html"><span class="icon"><svg>
+                      <use href="#i-refresh" />
+                    </svg></span>Hybrid Systems</a></li>
+              <li><a href="/services/amc.html"><span class="icon"><svg>
+                      <use href="#i-wrench" />
+                    </svg></span>AMC &amp; Maintenance</a></li>
+              <li><a href="/services/solar-water-heater.html"><span class="icon"><svg><use href="#i-sun" /></svg></span>Solar Water Heater</a></li>
+            </ul>
+          </li>
+          <li><a href="/subsidy/">Subsidy <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9" />
+              </svg></a>
+            <ul class="nav-dropdown">
+              <li><a href="/subsidy/pm-surya-ghar.html"><span class="icon"><svg>
+                      <use href="#i-sun" />
+                    </svg></span>PM Surya Ghar</a></li>
+              <li><a href="/subsidy/kseb-net-metering.html"><span class="icon"><svg>
+                      <use href="#i-zap" />
+                    </svg></span>KSEB Net Metering</a></li>
+              <li><a href="/subsidy/anert.html"><span class="icon"><svg>
+                      <use href="#i-clipboard" />
+                    </svg></span>ANERT Schemes</a></li>
+            </ul>
+          </li>
+          <li><a href="/calculator.html">Calculator</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="tel:+918089073029" class="nav-phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.73 9.83 19.79 19.79 0 01.67 1.19 2 2 0 012.66 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>+91 80890 73029</a>
+          <a href="/contact.html" class="btn btn-primary btn-sm">Get Free Quote</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+          aria-controls="site-mobile-nav"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <nav id="site-mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+    <ul class="nav-mobile-links">
+      <li><a href="/services/" class="mobile-sub-toggle" aria-expanded="false">Services <svg class="chevron" width="18"
+            height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></a>
+        <ul class="nav-mobile-sub">
+          <li><a href="/services/residential.html">Residential Solar</a></li>
+          <li><a href="/services/commercial.html">Commercial Solar</a></li>
+          <li><a href="/services/on-grid.html">On-Grid Systems</a></li>
+          <li><a href="/services/off-grid.html">Off-Grid Systems</a></li>
+          <li><a href="/services/hybrid.html">Hybrid Systems</a></li>
+          <li><a href="/services/amc.html">AMC &amp; Maintenance</a></li>
+          <li><a href="/services/solar-water-heater.html">Solar Water Heater</a></li>
+        </ul>
+      </li>
+      <li><a href="/subsidy/" class="mobile-sub-toggle" aria-expanded="false">Subsidy <svg class="chevron" width="18"
+            height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></a>
+        <ul class="nav-mobile-sub">
+          <li><a href="/subsidy/pm-surya-ghar.html">PM Surya Ghar</a></li>
+          <li><a href="/subsidy/kseb-net-metering.html">KSEB Net Metering</a></li>
+          <li><a href="/subsidy/anert.html">ANERT Schemes</a></li>
+        </ul>
+      </li>
+      <li><a href="/calculator.html">Calculator</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-mobile-cta">
+      <a href="/contact.html" class="btn btn-primary w-full">Get Free Quote</a>
+      <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27m%20interested%20in%20solar%20for%20my%20home."
+        class="btn btn-wa w-full" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+  </nav>
+<!-- /component:site-header -->
+
   <div class="error-page">
     <div class="error-content">
       <div class="error-num">404</div>
@@ -129,7 +251,7 @@
       <p class="error-body">The page you're looking for doesn't exist or has been moved. Don't let this stop your solar journey — here are some helpful links.</p>
 
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="/" class="btn btn-primary btn-lg">? Go to Homepage</a>
+        <a href="/" class="btn btn-primary btn-lg">Go to Homepage</a>
         <a href="/calculator.html" class="btn btn-outline btn-lg">Try the Calculator</a>
       </div>
 

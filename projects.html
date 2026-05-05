@@ -31,7 +31,9 @@
   <meta name="geo.region" content="IN-KL">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
   <script src="/assets/js/icons.js"></script>
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
@@ -178,6 +180,57 @@
       .filter-btn { width: 100%; }
       .project-stats { flex-direction: column; }
     }
+
+    /* Projects-page responsive refinements. */
+    .projects-page .cta-banner.fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .projects-page .section.bg-dark .cta-banner .btn-outline {
+      background: transparent !important;
+      border-color: rgba(255, 255, 255, 0.55) !important;
+      color: #fff !important;
+    }
+    .projects-page .section.bg-dark .cta-banner .btn-outline:hover,
+    .projects-page .section.bg-dark .cta-banner .btn-outline:focus-visible {
+      background: #fff !important;
+      border-color: #fff !important;
+      color: var(--fge-green-800) !important;
+    }
+
+    @media (min-width: 641px) and (max-width: 900px) {
+      .projects-page .filter-bar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+      .projects-page .filter-btn {
+        width: auto;
+      }
+      .projects-page .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1rem;
+      }
+      .projects-page .project-stats {
+        flex-direction: row;
+        gap: 0.75rem;
+      }
+      .projects-page .project-stat .lbl {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-page .projects-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+      .projects-page .section.bg-dark .cta-banner-content > div:last-child {
+        width: 100%;
+      }
+      .projects-page .section.bg-dark .cta-banner .btn {
+        width: 100%;
+      }
+    }
   </style>
   <!-- codex-seo-generated:start -->
   <script type="application/ld+json">
@@ -219,8 +272,10 @@
 }
   </script>
   <!-- codex-seo-generated:end -->
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css">
+
 </head>
-<body>
+<body class="projects-page">
 
   <!-- component:site-header theme=dark -->
 <header id="site-header">
@@ -530,7 +585,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- codex-seo-body:start -->
     <section class="section" aria-label="Next steps for solar planning">
