@@ -7,11 +7,11 @@
   <title>PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026 | FGE Solar</title>
   <meta name="description" content="Updated 2026 guide to PM Surya Ghar subsidy in Kerala. Understand the current rooftop subsidy structure, eligibility, documents, portal steps, and what to prepare before you apply.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://fgesolar.in/subsidy/pm-surya-ghar.html">
+  <link rel="canonical" href="https://fgesolar.in/subsidy/pm-surya-ghar">
   <meta property="og:type" content="article">
   <meta property="og:title" content="PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026 | FGE Solar">
   <meta property="og:description" content="Updated 2026 guide to PM Surya Ghar subsidy in Kerala. Understand the current rooftop subsidy structure, eligibility, documents, portal steps, and what to prepare before you apply.">
-  <meta property="og:url" content="https://fgesolar.in/subsidy/pm-surya-ghar.html">
+  <meta property="og:url" content="https://fgesolar.in/subsidy/pm-surya-ghar">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/pm-surya-ghar-og.webp">
   <meta property="og:image:alt" content="PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026 | FGE Solar">
   <meta property="og:site_name" content="FGE Solar">
@@ -56,7 +56,7 @@
     "itemListElement": [
       {"@type":"ListItem","position":1,"name":"Home","item":"https://fgesolar.in/"},
       {"@type":"ListItem","position":2,"name":"Subsidy","item":"https://fgesolar.in/subsidy/"},
-      {"@type":"ListItem","position":3,"name":"PM Surya Ghar","item":"https://fgesolar.in/subsidy/pm-surya-ghar.html"}
+      {"@type":"ListItem","position":3,"name":"PM Surya Ghar","item":"https://fgesolar.in/subsidy/pm-surya-ghar"}
     ]
   }
   </script>
@@ -694,9 +694,29 @@
       transform: none;
     }
 
-    .lead-captcha-wrap .h-captcha {
+    .lead-captcha-wrap .captcha-box {
+      display: grid;
+      gap: 0.65rem;
+      border: 1px solid #dbe4dc;
+      border-radius: 12px;
+      background: #f7faf7;
+      padding: 1rem;
       width: 100%;
-      overflow-x: auto;
+    }
+
+    .lead-captcha-wrap .captcha-label {
+      font-size: 0.9rem;
+      color: #314033;
+      font-weight: 700;
+    }
+
+    .lead-captcha-wrap .captcha-label strong {
+      color: #172219;
+      font-weight: 900;
+    }
+
+    .lead-captcha-wrap .captcha-input {
+      max-width: 180px;
     }
 
     .lead-captcha-note {
@@ -1021,7 +1041,7 @@
   "name": "PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026 | FGE Solar",
   "headline": "PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026 | FGE Solar",
   "description": "Updated 2026 guide to PM Surya Ghar subsidy in Kerala. Understand the current rooftop subsidy structure, eligibility, documents, portal steps, and what to prepare before you apply.",
-  "url": "https://fgesolar.in/subsidy/pm-surya-ghar.html",
+  "url": "https://fgesolar.in/subsidy/pm-surya-ghar",
   "inLanguage": "en-IN",
   "dateModified": "2026-03-23",
   "isPartOf": {
@@ -1053,7 +1073,7 @@
       "@type": "ListItem",
       "position": 3,
       "name": "PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026",
-      "item": "https://fgesolar.in/subsidy/pm-surya-ghar.html"
+      "item": "https://fgesolar.in/subsidy/pm-surya-ghar"
     }
   ]
 }
@@ -1565,8 +1585,11 @@
               <input type="tel" name="phone" placeholder="WhatsApp number" required autocomplete="tel"
                 pattern="[0-9]{10}">
               <div class="lead-captcha-wrap">
-                <div class="h-captcha" data-captcha="true"></div>
-                <p class="lead-captcha-note">Complete the CAPTCHA so we can protect this checklist request from spam.</p>
+                <div class="captcha-box" data-captcha="simple">
+                  <label class="captcha-label" for="subsidy-captcha">Type the answer: <strong data-captcha-question></strong></label>
+                  <input type="text" id="subsidy-captcha" name="captcha_answer" class="captcha-input" required data-captcha-input>
+                </div>
+                <p class="lead-captcha-note">Type the answer so we can protect this checklist request from spam.</p>
               </div>
               <button type="submit">
                 <svg viewBox="0 0 24 24">
@@ -1845,7 +1868,6 @@
   </a>
 
   <script src="/assets/js/global.js" defer></script>
-  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="/assets/js/forms.js?v=20260323" defer></script>
 </body>
 

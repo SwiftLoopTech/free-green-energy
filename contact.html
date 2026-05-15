@@ -6,11 +6,11 @@
   <title>Get a Free Solar Quote in Kerala | Site Visit &amp; Consultation | FGE Solar</title>
   <meta name="description" content="Book a free solar site visit in Kerala. FGE Solar checks your roof, KSEB connection, system size, subsidy eligibility, and provides a detailed quote.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://fgesolar.in/contact.html">
+  <link rel="canonical" href="https://fgesolar.in/contact">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Get a Free Solar Quote in Kerala | Site Visit &amp; Consultation | FGE Solar">
   <meta property="og:description" content="Book a free solar site visit in Kerala. FGE Solar checks your roof, KSEB connection, system size, subsidy eligibility, and provides a detailed quote.">
-  <meta property="og:url" content="https://fgesolar.in/contact.html">
+  <meta property="og:url" content="https://fgesolar.in/contact">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/contact-og.webp">
   <meta property="og:image:alt" content="Get a Free Solar Quote in Kerala | Site Visit &amp; Consultation | FGE Solar">
   <meta property="og:site_name" content="FGE Solar">
@@ -110,13 +110,29 @@
       gap: 0.65rem;
     }
 
-    .captcha-wrap .h-captcha {
-      min-height: 78px;
-      width: min(100%, 303px);
+    .captcha-box {
+      display: grid;
+      gap: 0.65rem;
+      width: 100%;
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-md);
       background: var(--gray-50);
-      overflow: hidden;
+      padding: 1rem;
+    }
+
+    .captcha-label {
+      font-size: 0.9rem;
+      color: var(--gray-700);
+      font-weight: 600;
+    }
+
+    .captcha-label strong {
+      color: var(--dark);
+      font-weight: 800;
+    }
+
+    .captcha-input {
+      max-width: 180px;
     }
 
     .captcha-note {
@@ -302,7 +318,7 @@
     @media (max-width: 480px) {
       .contact-form-card { padding: 1.5rem; }
       .contact-card { padding: 1.5rem; }
-      .captcha-wrap .h-captcha iframe { max-width: 100%; }
+      .captcha-input { max-width: 100%; }
     }
   </style>
   <!-- codex-seo-generated:start -->
@@ -313,13 +329,40 @@
   "name": "Get a Free Solar Quote in Kerala | Site Visit & Consultation | FGE Solar",
   "headline": "Get a Free Solar Quote in Kerala | Site Visit & Consultation | FGE Solar",
   "description": "Book a free solar site visit in Kerala. FGE Solar checks your roof, KSEB connection, system size, subsidy eligibility, and provides a detailed quote.",
-  "url": "https://fgesolar.in/contact.html",
+  "url": "https://fgesolar.in/contact",
   "inLanguage": "en-IN",
   "dateModified": "2026-03-23",
   "isPartOf": {
     "@type": "WebSite",
     "name": "FGE Solar",
     "url": "https://fgesolar.in/"
+  },
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "name": "FGE Solar",
+    "legalName": "Future Green Energy Group",
+    "url": "https://fgesolar.in/",
+    "logo": "https://fgesolar.in/assets/images/logo/logo.png",
+    "image": "https://fgesolar.in/assets/images/og/contact-og.webp",
+    "telephone": "+918089073029",
+    "email": "info@fgesolar.in",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thiruvananthapuram",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Kerala"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+918089073029",
+      "contactType": "customer service",
+      "areaServed": "IN-KL",
+      "availableLanguage": ["English", "Malayalam"]
+    }
   }
 }
   </script>
@@ -339,7 +382,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Contact",
-      "item": "https://fgesolar.in/contact.html"
+      "item": "https://fgesolar.in/contact"
     }
   ]
 }
@@ -624,8 +667,11 @@
                 </div>
 
                 <div class="captcha-wrap">
-                  <div class="h-captcha" data-captcha="true"></div>
-                  <p class="captcha-note">Complete the CAPTCHA so we can block spam and protect your enquiry.</p>
+                  <div class="captcha-box" data-captcha="simple">
+                    <label class="captcha-label" for="contact-captcha">Type the answer: <strong data-captcha-question></strong></label>
+                    <input type="text" id="contact-captcha" name="captcha_answer" class="form-input captcha-input" required data-captcha-input>
+                  </div>
+                  <p class="captcha-note">Type the answer so we can block spam and protect your enquiry.</p>
                 </div>
 
                 <button type="submit" id="submit-btn" data-label="Book My Free Site Visit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
@@ -886,7 +932,6 @@
   </a>
 <!-- /component:site-whatsapp -->
   <script src="/assets/js/global.js" defer></script>
-  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="/assets/js/forms.js?v=20260323" defer></script>
 </body>
 </html>

@@ -30,19 +30,38 @@
     element.textContent = message || '';
   }
 
-  function getCaptchaResponse(form) {
-    const field = form.querySelector('textarea[name="h-captcha-response"]');
-    return field ? field.value.trim() : '';
+  function setupSimpleCaptcha(form) {
+    const captcha = form.querySelector('[data-captcha="simple"]');
+    if (!captcha) {
+      return null;
+    }
+
+    const question = captcha.querySelector('[data-captcha-question]');
+    const input = captcha.querySelector('[data-captcha-input]');
+    const firstNumber = Math.floor(Math.random() * 8) + 2;
+    const secondNumber = Math.floor(Math.random() * 7) + 3;
+    const answer = String(firstNumber + secondNumber);
+
+    if (question) {
+      question.textContent = `${firstNumber} + ${secondNumber}`;
+    }
+
+    if (input) {
+      input.value = '';
+      input.dataset.captchaAnswer = answer;
+      input.setAttribute('autocomplete', 'off');
+      input.setAttribute('inputmode', 'numeric');
+    }
+
+    return input;
   }
 
-  function resetCaptcha() {
-    if (window.hcaptcha && typeof window.hcaptcha.reset === 'function') {
-      try {
-        window.hcaptcha.reset();
-      } catch (error) {
-        // Ignore captcha reset failures so they do not break form UX.
-      }
+  function isCaptchaValid(input) {
+    if (!input) {
+      return true;
     }
+
+    return input.value.trim() === input.dataset.captchaAnswer;
   }
 
   document.querySelectorAll('form[data-lead]').forEach((form) => {
@@ -52,8 +71,8 @@
     const accessKeyInput = form.querySelector('input[name="access_key"]');
     const subjectInput = form.querySelector('input[name="subject"]');
     const fromNameInput = form.querySelector('input[name="from_name"]');
-    const hasCaptcha = Boolean(form.querySelector('.h-captcha[data-captcha="true"]'));
     const originalButtonHtml = btn ? btn.innerHTML : '';
+    let captchaInput = setupSimpleCaptcha(form);
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -72,8 +91,11 @@
         return;
       }
 
-      if (hasCaptcha && !getCaptchaResponse(form)) {
-        setMessage(errorMsg, 'Please complete the CAPTCHA before sending your request.');
+      if (!isCaptchaValid(captchaInput)) {
+        setMessage(errorMsg, 'Please type the correct CAPTCHA answer before sending your request.');
+        if (captchaInput) {
+          captchaInput.focus();
+        }
         return;
       }
 
@@ -111,7 +133,7 @@
         }
 
         form.reset();
-        resetCaptcha();
+        captchaInput = setupSimpleCaptcha(form);
         setMessage(successMsg, successMsg ? successMsg.dataset.message : '');
 
         if (successMsg) {
