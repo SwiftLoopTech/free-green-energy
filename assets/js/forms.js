@@ -12,6 +12,7 @@
     'YOUR_WEB3FORMS_ACCESS_KEY',
     'YOUR_ACCESS_KEY_HERE'
   ]);
+  const WEB3FORMS_HCAPTCHA_SITEKEY = '50b2fe65-b00b-4b9e-ad62-3ba471098be2';
 
   function setMessage(element, message) {
     if (!element) {
@@ -64,6 +65,89 @@
     return input.value.trim() === input.dataset.captchaAnswer;
   }
 
+  function getHcaptchaResponse(form) {
+    const field = form.querySelector('textarea[name="h-captcha-response"]');
+    return field ? field.value.trim() : '';
+  }
+
+  function renderInvisibleHcaptcha(form, container) {
+    if (!window.hcaptcha || typeof window.hcaptcha.render !== 'function') {
+      return null;
+    }
+
+    if (container.dataset.widgetId) {
+      return Number(container.dataset.widgetId);
+    }
+
+    let widgetId = null;
+    try {
+      widgetId = window.hcaptcha.render(container, {
+        sitekey: container.dataset.sitekey || WEB3FORMS_HCAPTCHA_SITEKEY,
+        size: 'invisible',
+        callback: () => {
+          if (container._resolveCaptcha) {
+            container._resolveCaptcha(true);
+            container._resolveCaptcha = null;
+          }
+        },
+        'error-callback': () => {
+          if (container._resolveCaptcha) {
+            container._resolveCaptcha(false);
+            container._resolveCaptcha = null;
+          }
+        },
+        'expired-callback': () => {
+          if (container._resolveCaptcha) {
+            container._resolveCaptcha(false);
+            container._resolveCaptcha = null;
+          }
+        },
+        'close-callback': () => {
+          if (container._resolveCaptcha) {
+            container._resolveCaptcha(false);
+            container._resolveCaptcha = null;
+          }
+        }
+      });
+    } catch (error) {
+      return null;
+    }
+
+    container.dataset.widgetId = String(widgetId);
+    return widgetId;
+  }
+
+  function ensureHcaptchaToken(form) {
+    const container = form.querySelector('[data-captcha="hcaptcha"]');
+    if (!container || getHcaptchaResponse(form)) {
+      return Promise.resolve(true);
+    }
+
+    const widgetId = renderInvisibleHcaptcha(form, container);
+    if (widgetId === null || !window.hcaptcha || typeof window.hcaptcha.execute !== 'function') {
+      return Promise.resolve(false);
+    }
+
+    return new Promise((resolve) => {
+      container._resolveCaptcha = resolve;
+      try {
+        window.hcaptcha.execute(widgetId);
+      } catch (error) {
+        container._resolveCaptcha = null;
+        resolve(false);
+      }
+    });
+  }
+
+  function resetHcaptcha(form) {
+    const container = form.querySelector('[data-captcha="hcaptcha"]');
+    if (!container || !container.dataset.widgetId || !window.hcaptcha || typeof window.hcaptcha.reset !== 'function') {
+      return;
+    }
+
+    window.hcaptcha.reset(Number(container.dataset.widgetId));
+  }
+
   document.querySelectorAll('form[data-lead]').forEach((form) => {
     const btn = form.querySelector('[type="submit"]');
     const successMsg = form.querySelector('.form-success, .lead-form-status.form-success');
@@ -96,6 +180,12 @@
         if (captchaInput) {
           captchaInput.focus();
         }
+        return;
+      }
+
+      const hcaptchaReady = await ensureHcaptchaToken(form);
+      if (!hcaptchaReady) {
+        setMessage(errorMsg, 'Please complete the hCaptcha verification before sending your request.');
         return;
       }
 
@@ -133,6 +223,7 @@
         }
 
         form.reset();
+        resetHcaptcha(form);
         captchaInput = setupSimpleCaptcha(form);
         setMessage(successMsg, successMsg ? successMsg.dataset.message : '');
 

@@ -1589,7 +1589,8 @@
                   <label class="captcha-label" for="subsidy-captcha">Type the answer: <strong data-captcha-question></strong></label>
                   <input type="text" id="subsidy-captcha" name="captcha_answer" class="captcha-input" required data-captcha-input>
                 </div>
-                <p class="lead-captcha-note">Type the answer so we can protect this checklist request from spam.</p>
+                <div data-captcha="hcaptcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"></div>
+                <p class="lead-captcha-note">Type the answer so we can protect this checklist request from spam. This site is protected by hCaptcha and its <a href="https://www.hcaptcha.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://www.hcaptcha.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
               </div>
               <button type="submit">
                 <svg viewBox="0 0 24 24">
@@ -1868,6 +1869,7 @@
   </a>
 
   <script src="/assets/js/global.js" defer></script>
+  <script src="https://js.hcaptcha.com/1/api.js?render=explicit&recaptchacompat=off" async defer></script>
   <script src="/assets/js/forms.js?v=20260323" defer></script>
 </body>
 
