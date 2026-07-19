@@ -676,3 +676,159 @@ svg.icon, .icon svg {
   width: 1em;
   height: 1em;
 }
+
+
+/* ── Global Estimate Modal ────────────────────────────────── */
+.fge-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(7, 30, 18, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.fge-modal-overlay.fge-modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fge-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 840px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(7, 30, 18, 0.16);
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fge-modal-overlay.fge-modal-show .fge-modal-content {
+  transform: translateY(0) scale(1);
+}
+
+.fge-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--fge-ink);
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.fge-modal-close:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+.fge-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.fge-modal-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.fge-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fge-modal-text {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.fge-modal-badge {
+  display: inline-block;
+  background: rgba(64, 145, 108, 0.1);
+  color: var(--fge-green-600);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.fge-modal-text h3 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--fge-ink);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.fge-modal-text p {
+  font-size: 1rem;
+  color: var(--fge-ink-soft);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fge-modal-cta {
+  display: inline-flex;
+  min-height: 52px;
+  padding: 0 2.5rem;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (min-width: 769px) {
+  .fge-modal-body {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .fge-modal-image {
+    flex: 0 0 45%;
+    height: auto;
+    min-height: 400px;
+  }
+  .fge-modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    text-align: left;
+  }
+  .fge-modal-text p {
+    margin-left: 0;
+  }
+  .fge-modal-cta {
+    width: auto;
+  }
+}
+

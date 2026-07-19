@@ -447,3 +447,94 @@ function buildDistrictWA(district) {
 
 window.buildWAUrl = buildWAUrl;
 window.buildDistrictWA = buildDistrictWA;
+
+
+// --- Global Estimate Modal Logic ---
+function initEstimateModal() {
+  const STORAGE_KEY = 'fge_estimate_modal_closed';
+  const COOLDOWN_DAYS = 3;
+  
+  const lastClosed = localStorage.getItem(STORAGE_KEY);
+  if (lastClosed) {
+    const daysSinceClosed = (Date.now() - parseInt(lastClosed, 10)) / (1000 * 60 * 60 * 24);
+    if (daysSinceClosed < COOLDOWN_DAYS) {
+      return; // Do not show modal
+    }
+  }
+
+  // Inject modal HTML
+  const modalHTML = `
+    <div id="fge-estimate-modal" class="fge-modal-overlay">
+      <div class="fge-modal-content">
+        <button id="fge-modal-close" class="fge-modal-close" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+        </button>
+        <div class="fge-modal-body">
+          <div class="fge-modal-image">
+            <img src="/assets/images/hero/updated_hero-640.webp" alt="Solar roof" />
+          </div>
+          <div class="fge-modal-text">
+            <div class="fge-modal-badge">Limited Time Offer</div>
+            <h3>Slash Your Electricity Bill by 90%</h3>
+            <p>Get a free, custom solar estimate for your home. See how much you can save with PM Surya Ghar subsidy.</p>
+            <a href="/contact.html?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta">
+              Get Free Estimate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  const modal = document.getElementById('fge-estimate-modal');
+  const closeBtn = document.getElementById('fge-modal-close');
+  const ctaBtn = document.getElementById('fge-modal-cta');
+  
+  let modalShown = false;
+
+  const showModal = () => {
+    if (modalShown) return;
+    modalShown = true;
+    modal.classList.add('fge-modal-show');
+    if (typeof gtag === 'function') {
+      gtag('event', 'modal_view', { modal_name: 'estimate_modal', page: window.location.pathname });
+    }
+  };
+
+  const closeModal = (isClick = false) => {
+    modal.classList.remove('fge-modal-show');
+    localStorage.setItem(STORAGE_KEY, Date.now().toString());
+    if (isClick && typeof gtag === 'function') {
+      gtag('event', 'modal_click', { modal_name: 'estimate_modal', page: window.location.pathname });
+    }
+    setTimeout(() => { modal.remove(); }, 300);
+  };
+
+  closeBtn.addEventListener('click', () => closeModal(false));
+  ctaBtn.addEventListener('click', () => closeModal(true));
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal(false);
+  });
+
+  // Trigger after 10 seconds or 50% scroll
+  setTimeout(showModal, 10000);
+  
+  const scrollTrigger = () => {
+    if (modalShown) return;
+    const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled > 0.5) {
+      showModal();
+      window.removeEventListener('scroll', scrollTrigger);
+    }
+  };
+  window.addEventListener('scroll', scrollTrigger, { passive: true });
+}
+
+// Ensure the modal initializes after the main initialization
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initEstimateModal);
+} else {
+  initEstimateModal();
+}
+
