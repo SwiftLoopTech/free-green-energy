@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
 
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
-  <script src="/assets/js/icons.js"></script>
+  <script src="/assets/js/icons.js" defer></script>
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
 
@@ -640,7 +640,7 @@
   <header id="site-header">
     <div class="container">
       <nav class="nav-inner">
-        <a href="/" class="nav-logo"><img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38"
+        <a href="/" class="nav-logo" aria-label="FGE Solar home"><img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38"
             height="38" loading="eager">
           <div class="logo-text"><span class="logo-name">FGE Solar</span><span class="logo-tagline">Future Green
               Energy</span></div>
@@ -756,8 +756,7 @@
 
     <!-- HERO -->
     <section class="page-hero">
-      <div class="hero-photo"><img src="/assets/images/hero/hero-services.webp" alt="" aria-hidden="true" loading="eager"
-          width="1920" height="1080"></div>
+      <div class="hero-photo"><img src="/assets/images/hero/off-grid-solar-kerala.webp" alt="" aria-hidden="true" loading="eager" width="1600" height="900" decoding="async" fetchpriority="high"></div>
       <div class="container">
         <div class="breadcrumb"><a href="/">Home</a><span>/</span><a href="/services/">Services</a><span>/</span><span
             style="color:rgba(255,255,255,0.75)">Off-Grid Solar</span></div>
@@ -787,7 +786,7 @@
         </div>
         <div class="hero-cta-row">
           <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27m%20interested%20in%20an%20off-grid%20solar%20system.%20Can%20we%20discuss%3F"
-            class="btn btn-primary btn-lg" target="_blank" aria-label="Chat with FGE Solar on WhatsApp">Get Off-Grid Quote</a>
+            class="btn btn-primary btn-lg" target="_blank" rel="noopener" aria-label="Chat with FGE Solar on WhatsApp">Get Off-Grid Quote</a>
           <a href="/services/hybrid" class="btn btn-outline btn-lg">Learn About Hybrid</a>
         </div>
       </div>
@@ -1091,7 +1090,7 @@
             more.</p>
           <div class="cta-btn-row">
             <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27m%20interested%20in%20an%20off-grid%20solar%20system.%20Can%20we%20discuss%3F"
-              class="btn btn-primary btn-lg" target="_blank" aria-label="Chat with FGE Solar on WhatsApp">Chat on WhatsApp</a>
+              class="btn btn-primary btn-lg" target="_blank" rel="noopener" aria-label="Chat with FGE Solar on WhatsApp">Chat on WhatsApp</a>
             <a href="/contact" class="btn btn-outline btn-lg">Request Consultation</a>
           </div>
         </div>
@@ -1195,7 +1194,7 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h2 class="footer-heading">Services</h2>
           <ul class="footer-links">
             <li><a href="/services/residential">Residential Solar</a></li>
             <li><a href="/services/commercial">Commercial Solar</a></li>
@@ -1207,7 +1206,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Subsidy &amp; Guides</h4>
+          <h2 class="footer-heading">Subsidy &amp; Guides</h2>
           <ul class="footer-links">
             <li><a href="/subsidy/pm-surya-ghar">PM Surya Ghar Guide</a></li>
             <li><a href="/subsidy/kseb-net-metering">KSEB Net Metering</a></li>
@@ -1217,7 +1216,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Locations</h4>
+          <h2 class="footer-heading">Locations</h2>
           <ul class="footer-links">
             <li><a href="/solar-in/thiruvananthapuram">Thiruvananthapuram</a></li>
             <li><a href="/solar-in/ernakulam">Ernakulam / Kochi</a></li>

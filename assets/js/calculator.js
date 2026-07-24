@@ -7,15 +7,84 @@
   'use strict';
 
   /* ── Constants ────────────────────────────────────────── */
-  const KSEB_RATE_HIGH      = 7.50;   // ₹/unit (highest slab)
   const SYSTEM_COST_PER_KW  = 65000;  // ₹ avg installed cost
-  const SUBSIDY_PER_KW      = 18000;  // ₹/kW (PM Surya Ghar)
   const SUBSIDY_MAX         = 78000;  // ₹ cap at 3kW
-  const BILL_REDUCTION      = 0.85;   // 85% of bill eliminated
   const PANEL_LIFE          = 25;     // years
   const DEGRADATION         = 0.005;  // 0.5%/yr
-  const TARIFF_HIKE         = 0.05;   // 5% annual increase
   const CO2_PER_KW          = 1.4;    // tonnes/yr/kW
+
+  /*
+   * KSERC LT-I domestic energy charges effective 01 Apr 2025–31 Mar 2027.
+   * Up to 250 units is telescopic. Above 250 units, the applicable
+   * non-telescopic rate is charged on the full monthly consumption.
+   * The calculator deliberately excludes duty, fuel surcharge, meter rent,
+   * ToD effects and other bill-specific adjustments.
+   */
+  const DOMESTIC_TELESCOPIC_SLABS = [
+    { limit: 50,  rate: 3.35 },
+    { limit: 100, rate: 4.25 },
+    { limit: 150, rate: 5.35 },
+    { limit: 200, rate: 7.20 },
+    { limit: 250, rate: 8.50 }
+  ];
+
+  function domesticEnergyCharge(units) {
+    const value = Math.max(0, units);
+
+    if (value > 500) return value * 9.20;
+    if (value > 400) return value * 8.25;
+    if (value > 350) return value * 7.95;
+    if (value > 300) return value * 7.60;
+    if (value > 250) return value * 6.75;
+
+    let remaining = value;
+    let previousLimit = 0;
+    let total = 0;
+    DOMESTIC_TELESCOPIC_SLABS.forEach(({ limit, rate }) => {
+      const slabUnits = Math.max(0, Math.min(remaining, limit - previousLimit));
+      total += slabUnits * rate;
+      remaining -= slabUnits;
+      previousLimit = limit;
+    });
+    return total;
+  }
+
+  function domesticFixedCharge(units) {
+    if (units <= 50) return 50;
+    if (units <= 100) return 85;
+    if (units <= 150) return 105;
+    if (units <= 200) return 140;
+    if (units <= 250) return 160;
+    if (units <= 300) return 220;
+    if (units <= 350) return 240;
+    if (units <= 400) return 260;
+    if (units <= 500) return 285;
+    return 310;
+  }
+
+  function estimateDomesticUnits(monthlyBill) {
+    let bestUnits = 1;
+    let smallestDifference = Infinity;
+
+    for (let units = 1; units <= 2000; units += 1) {
+      const modelledBill = domesticEnergyCharge(units) + domesticFixedCharge(units);
+      const difference = Math.abs(modelledBill - monthlyBill);
+      if (difference < smallestDifference) {
+        bestUnits = units;
+        smallestDifference = difference;
+      }
+    }
+    return bestUnits;
+  }
+
+  function pmSuryaGharSubsidy(systemKW) {
+    const firstTwoKW = Math.min(Math.max(systemKW, 0), 2);
+    const thirdKW = Math.min(Math.max(systemKW - 2, 0), 1);
+    return Math.min(
+      Math.round((firstTwoKW * 30000) + (thirdKW * 18000)),
+      SUBSIDY_MAX
+    );
+  }
 
   /* Peak sun hours by district */
   const SUN_HOURS = {
@@ -56,8 +125,8 @@
   function calculate(monthlyBill, district, roofType, homeType) {
     const sunHrs = SUN_HOURS[district] || SUN_HOURS.other;
 
-    // Step 1: Estimate monthly units consumed
-    const unitsPerMonth = monthlyBill / KSEB_RATE_HIGH;
+    // Step 1: Infer domestic monthly consumption from current LT-I charges.
+    const unitsPerMonth = estimateDomesticUnits(monthlyBill);
 
     // Step 2: Recommended system size
     const dailyUnitsNeeded = unitsPerMonth / 30;
@@ -70,24 +139,27 @@
     // Step 3: System cost
     const grossCost = systemKW * SYSTEM_COST_PER_KW;
 
-    // Step 4: Subsidy
-    const subsidyKW = Math.min(systemKW, 3);
-    const subsidy = Math.min(subsidyKW * SUBSIDY_PER_KW, SUBSIDY_MAX);
+    // Step 4: PM Surya Ghar CFA: ₹30k/kW for first 2 kW + ₹18k for third kW.
+    const subsidy = pmSuryaGharSubsidy(systemKW);
     const netCost = grossCost - subsidy;
 
-    // Step 5: Monthly savings
-    const monthlySavings = monthlyBill * BILL_REDUCTION * roofMod;
+    // Step 5: Indicative avoided domestic energy charge at current tariff.
+    const estimatedMonthlyGeneration = systemKW * sunHrs * 30 * 0.8 * roofMod;
+    const solarOffsetUnits = Math.min(unitsPerMonth, estimatedMonthlyGeneration);
+    const remainingGridUnits = Math.max(0, unitsPerMonth - solarOffsetUnits);
+    const monthlySavings = Math.max(
+      0,
+      domesticEnergyCharge(unitsPerMonth) - domesticEnergyCharge(remainingGridUnits)
+    );
     const annualSavings = monthlySavings * 12;
 
     // Step 6: Payback
     const paybackYears = netCost / annualSavings;
 
-    // Step 7: 25-year total savings (with compound tariff hike + degradation)
+    // Step 7: 25-year savings in today's tariff terms; no tariff-hike promise.
     let totalSavings = 0;
     for (let yr = 1; yr <= PANEL_LIFE; yr++) {
-      const yearSaving = annualSavings
-        * Math.pow(1 + TARIFF_HIKE, yr)
-        * (1 - DEGRADATION * yr);
+      const yearSaving = annualSavings * Math.max(0, 1 - DEGRADATION * (yr - 1));
       totalSavings += yearSaving;
     }
     const netTotalSavings = totalSavings - netCost;
@@ -106,7 +178,8 @@
       totalSavings:   Math.round(totalSavings),
       netTotalSavings: Math.round(netTotalSavings),
       co2PerYear:     co2PerYear.toFixed(1),
-      sunHours:       sunHrs
+      sunHours:       sunHrs,
+      unitsPerMonth:  unitsPerMonth
     };
   }
 
@@ -147,6 +220,11 @@
 
     if (bill < 500) {
       showError('Please enter a monthly bill of at least ₹500 to get accurate results.');
+      return;
+    }
+
+    if (home === 'commercial') {
+      showError('This calculator uses KSEB domestic tariffs and residential subsidy rules. Please request a commercial load-profile assessment.');
       return;
     }
 

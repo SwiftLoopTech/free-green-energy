@@ -946,11 +946,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: filter 0.3s ease;
 }
 
 .blog-card:hover .blog-card-image img {
-  transform: scale(1.05);
+  filter: brightness(1.03) saturate(1.03);
 }
 
 .blog-card-placeholder {
@@ -1654,6 +1654,7 @@
 }
 
 .footer-col h4,
+.footer-col h3,
 .footer-heading {
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -2932,7 +2933,9 @@
 }
 
 /* ── Nav columns ── */
-.footer-col h4 {
+.footer-col h4,
+.footer-col h3,
+.footer-heading {
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;

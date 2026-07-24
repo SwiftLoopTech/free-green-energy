@@ -25,12 +25,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Commercial Solar Installation in Kerala | FGE Solar</title>
-  <meta name="description" content="FGE Solar installs commercial solar systems for businesses, factories, hospitals, schools, and institutions across Kerala. MNRE empanelled. Custom designs. Free consultation.">
+  <meta name="description" content="Commercial solar systems for Kerala businesses, factories, hospitals, schools, and institutions, with site-specific design and consultation from FGE Solar.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fgesolar.in/services/commercial">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Commercial Solar Installation in Kerala | FGE Solar">
-  <meta property="og:description" content="FGE Solar installs commercial solar systems for businesses, factories, hospitals, schools, and institutions across Kerala. MNRE empanelled. Custom designs. Free consultation.">
+  <meta property="og:description" content="Commercial solar systems for Kerala businesses, factories, hospitals, schools, and institutions, with site-specific design and consultation from FGE Solar.">
   <meta property="og:url" content="https://fgesolar.in/services/commercial">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/commercial-og.webp">
   <meta property="og:image:alt" content="Commercial Solar Installation in Kerala | FGE Solar">
@@ -38,7 +38,7 @@
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Commercial Solar Installation in Kerala | FGE Solar">
-  <meta name="twitter:description" content="FGE Solar installs commercial solar systems for businesses, factories, hospitals, schools, and institutions across Kerala. MNRE empanelled. Custom designs. Free consultation.">
+  <meta name="twitter:description" content="Commercial solar systems for Kerala businesses, factories, hospitals, schools, and institutions, with site-specific design and consultation from FGE Solar.">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/commercial-og.webp">
   <meta name="theme-color" content="#172219">
   <meta name="author" content="FGE Solar">
@@ -48,7 +48,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
 
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
-  <script src="/assets/js/icons.js"></script>
+  <script src="/assets/js/icons.js" defer></script>
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
 
@@ -95,7 +95,7 @@
         "name": "How does KSEB net metering work for businesses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Commercial net metering works the same as residential — excess solar electricity is exported to KSEB grid and credited against your consumption. FGE Solar handles all KSEB documentation for commercial net metering."
+          "text": "Commercial treatment is category-specific. Under the final KSERC 2025 regulations, eligible industrial consumers may opt for net metering from 1 kW to 500 kW subject to the stated conditions, while net billing is available to all consumers/prosumers. The correct option depends on tariff category, connected load or contract demand, plant size, storage thresholds and load profile."
         }
       },
       {
@@ -385,6 +385,76 @@
       margin-bottom: 3rem;
     }
 
+    .commercial-proof {
+      background: var(--sage);
+    }
+
+    .commercial-proof-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+      gap: clamp(1.5rem, 4vw, 4rem);
+      align-items: center;
+    }
+
+    .commercial-proof-media {
+      margin: 0;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      background: #dce5de;
+    }
+
+    .commercial-proof-media img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .commercial-proof-copy h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      line-height: 1.15;
+      color: var(--dark);
+      margin: 0.55rem 0 1rem;
+    }
+
+    .commercial-proof-copy>p {
+      color: var(--gray-700);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .commercial-proof-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      margin: 1.5rem 0;
+      background: #ccd8cf;
+      border: 1px solid #ccd8cf;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .commercial-proof-facts div {
+      background: #fff;
+      padding: 1rem;
+    }
+
+    .commercial-proof-facts dt {
+      color: var(--gray-600);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .commercial-proof-facts dd {
+      margin: 0.35rem 0 0;
+      color: var(--dark);
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 800;
+    }
+
     /* SECTOR GRID */
     .sector-grid {
       display: grid;
@@ -405,6 +475,7 @@
       border-color: rgba(24, 184, 92, 0.25);
     }
 
+    .sector-card h3,
     .sector-card h4 {
       font-family: var(--font-heading);
       font-size: clamp(0.875rem, 1.4vw, 1rem);
@@ -763,6 +834,14 @@
         grid-template-columns: 1fr;
       }
 
+      .commercial-proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .commercial-proof-facts {
+        grid-template-columns: 1fr;
+      }
+
       .hero-cta-row {
         flex-direction: column;
         align-items: stretch;
@@ -969,7 +1048,7 @@
   "description": "FGE Solar installs commercial solar systems for businesses, factories, hospitals, schools, and institutions across Kerala. MNRE empanelled. Custom designs. Free consultation.",
   "url": "https://fgesolar.in/services/commercial",
   "inLanguage": "en-IN",
-  "dateModified": "2026-03-23",
+  "dateModified": "2026-07-24",
   "isPartOf": {
     "@type": "WebSite",
     "name": "FGE Solar",
@@ -1015,7 +1094,7 @@
   <header id="site-header">
     <div class="container">
       <nav class="nav-inner">
-        <a href="/" class="nav-logo">
+        <a href="/" class="nav-logo" aria-label="FGE Solar home">
           <img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38" height="38"
             loading="eager">
           <div class="logo-text">
@@ -1141,8 +1220,7 @@
 
     <!-- HERO -->
     <section class="page-hero">
-      <div class="hero-photo"><img src="/assets/images/hero/hero-services.webp" alt="" aria-hidden="true" loading="eager"
-          width="1920" height="1080"></div>
+      <div class="hero-photo"><img src="/assets/images/hero/commercial-solar-kerala.webp" alt="" aria-hidden="true" loading="eager" width="1600" height="900" decoding="async" fetchpriority="high"></div>
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
       <div class="container">
@@ -1255,8 +1333,8 @@
                 <line x1="22" y1="11" x2="22" y2="13" />
               </svg></div>
             <h3>Energy Independence</h3>
-            <p>Reduce dependence on KSEB during peak hours and insulate your business from future tariff hike cycles and
-              grid instability.</p>
+            <p>Reduce daytime grid consumption and make long-term energy costs more predictable, subject to your tariff
+              category, load profile and current utility rules.</p>
           </div>
 
           <div class="benefit-card fade-up" style="animation-delay:0.30s;">
@@ -1274,6 +1352,38 @@
       </div>
     </section>
 
+    <section class="section commercial-proof" aria-labelledby="commercial-proof-title">
+      <div class="container">
+        <div class="commercial-proof-grid">
+          <figure class="commercial-proof-media fade-up">
+            <img src="/assets/images/projects/project-2-commercial-ernakulam.webp"
+              alt="25 kW commercial rooftop solar installation on an Ernakulam warehouse"
+              loading="lazy" decoding="async" width="512" height="512">
+          </figure>
+          <div class="commercial-proof-copy fade-up">
+            <span class="section-label">Published Project Snapshot</span>
+            <h2 id="commercial-proof-title">25 kW Warehouse Solar in Ernakulam</h2>
+            <p>FGE Solar's published Projects page documents this commercial on-grid installation for a logistics warehouse, using Adani Solar panels with an SMA inverter.</p>
+            <dl class="commercial-proof-facts">
+              <div>
+                <dt>System size</dt>
+                <dd>25 kW</dd>
+              </div>
+              <div>
+                <dt>Monthly savings</dt>
+                <dd>₹35,000</dd>
+              </div>
+              <div>
+                <dt>Payback</dt>
+                <dd>3.2 years</dd>
+              </div>
+            </dl>
+            <a href="/projects" class="btn btn-primary">View Published Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTORS WE SERVE -->
     <section class="section section-dark" style="background:var(--dark);">
       <div class="container">
@@ -1285,49 +1395,49 @@
         <div class="sector-grid">
 
           <div class="sector-card fade-up">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="7" width="20" height="15" rx="1" />
                 <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-              </svg> Factories &amp; Manufacturing</h4>
+              </svg> Factories &amp; Manufacturing</h3>
             <p>Offset high daytime industrial loads with on-grid solar. High ROI for shift-based operations where
               daytime consumption is maximum.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.06s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 21H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2z" />
                 <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
                 <path d="M12 10v6" />
                 <path d="M9 13h6" />
-              </svg> Hospitals &amp; Clinics</h4>
+              </svg> Hospitals &amp; Clinics</h3>
             <p>Ensure reliable, low-cost power for critical equipment. Solar reduces OpEx significantly for healthcare
               facilities with round-the-clock consumption.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.12s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 10 12 5 2 10l10 5 10-5Z" />
                 <path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5" />
-              </svg> Schools &amp; Colleges</h4>
+              </svg> Schools &amp; Colleges</h3>
             <p>Educational institutions qualify for special solar incentives. Lower electricity costs free up budget for
               more learning resources and infrastructure.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.18s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 21h18" />
                 <path d="M5 21V7l7-4 7 4v14" />
-              </svg> Hotels &amp; Resorts</h4>
+              </svg> Hotels &amp; Resorts</h3>
             <p>High energy consumers — air conditioning, heating, lighting. Solar dramatically reduces hotel electricity
               costs and improves guest sustainability ratings.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.24s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 21h18" />
                 <path d="M5 21V7l7-4 7 4v14" />
@@ -1335,40 +1445,40 @@
                 <path d="M9 14h.01" />
                 <path d="M15 10h.01" />
                 <path d="M15 14h.01" />
-              </svg> Commercial Buildings</h4>
+              </svg> Commercial Buildings</h3>
             <p>Office complexes, shopping centres, and retail buildings with large rooftops are ideal solar candidates
               with strong daytime demand profiles.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.30s;">
-            <h4><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <use href="#i-leaf" />
-              </svg> Agricultural &amp; Agro-processing</h4>
+              </svg> Agricultural &amp; Agro-processing</h3>
             <p>Pumping, processing, cold storage. Solar is the most cost-effective power source for agri operations,
               with special government incentives available.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.36s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3v18" />
                 <path d="M8 7h8" />
                 <path d="M5 21h14" />
                 <path d="M7 21V11h10v10" />
-              </svg> Religious Institutions</h4>
+              </svg> Religious Institutions</h3>
             <p>Churches, temples, and mosques benefit from low-cost power and potential CSR solar grant availability
               from corporate donors and trusts.</p>
           </div>
 
           <div class="sector-card fade-up" style="animation-delay:0.42s;">
-            <h4><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 6h19l-2 7H6L3 6Z" />
                 <path d="M6 13v5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-5" />
                 <circle cx="9" cy="20" r="1" />
                 <circle cx="17" cy="20" r="1" />
-              </svg> Supermarkets &amp; Retail</h4>
+              </svg> Supermarkets &amp; Retail</h3>
             <p>Consistent daytime operation, refrigeration, lighting, and HVAC make retail outlets excellent solar
               candidates with fast payback periods.</p>
           </div>
@@ -1479,10 +1589,11 @@
               How does KSEB net metering work for businesses?
             </button>
             <div class="faq-answer">
-              Commercial net metering works the same as residential — excess solar electricity is exported to the KSEB
-              grid and credited against your consumption. Commercial tariff rates and net metering regulations may
-              differ from domestic rates. FGE Solar handles all KSEB documentation for commercial net metering and
-              ensures the most favourable setup for your tariff category.
+              Commercial treatment is not the same as residential. Under the final KSERC 2025 regulations, eligible
+              industrial consumers may opt for net metering from 1 kW to 500 kW subject to the stated capacity,
+              storage, connected-load/contract-demand and technical conditions. Net billing is available to all
+              consumers/prosumers. FGE reviews the tariff category and load profile before recommending a metering
+              option and can support the KSEB documentation.
             </div>
           </div>
 
@@ -1622,7 +1733,7 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h2 class="footer-heading">Services</h2>
           <ul class="footer-links">
             <li><a href="/services/residential">Residential Solar</a></li>
             <li><a href="/services/commercial">Commercial Solar</a></li>
@@ -1634,7 +1745,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Subsidy &amp; Guides</h4>
+          <h2 class="footer-heading">Subsidy &amp; Guides</h2>
           <ul class="footer-links">
             <li><a href="/subsidy/pm-surya-ghar">PM Surya Ghar Guide</a></li>
             <li><a href="/subsidy/kseb-net-metering">KSEB Net Metering</a></li>
@@ -1644,7 +1755,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Locations</h4>
+          <h2 class="footer-heading">Locations</h2>
           <ul class="footer-links">
             <li><a href="/solar-in/thiruvananthapuram">Thiruvananthapuram</a></li>
             <li><a href="/solar-in/ernakulam">Ernakulam / Kochi</a></li>

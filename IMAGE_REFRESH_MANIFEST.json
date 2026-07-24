@@ -1,0 +1,1141 @@
+{
+  "generator": "gpt-image-2 built-in image generation for masters; deterministic Pillow typography/logo compositing",
+  "branding": "Official assets/images/logo/fge-horizontal.png only",
+  "rules": {
+    "homepage_hero_changed": false,
+    "model_generated_text_used": false,
+    "model_generated_logo_used": false,
+    "district_primary_text_free": true,
+    "generated_scenes_claimed_as_real_projects": false
+  },
+  "assets": [
+    {
+      "file": "assets/images/blog/solar-panel-price-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Solar Panel Price in Kerala",
+      "source_master": "tmp/image-refresh/blog-masters/solar-panel-price-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 118432,
+      "sha256": "1a59c8fa21ccaf2fe773d4dca6e7ef2e5ab9a80f304adbbf1242de38afbc5886",
+      "html_references": [
+        "blog/buying-guide/solar-panel-price-kerala-2025.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala tiled-roof home with a credible residential solar array and tropical vegetation. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Panel Price in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-panel-price-kerala.webp",
+      "kind": "blog-og",
+      "headline": "Solar Panel Price in Kerala",
+      "source_master": "tmp/image-refresh/blog-masters/solar-panel-price-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 117238,
+      "sha256": "f9756fd91c3b1f1c5ad3f5fb3ad461e0b190214f400e48be712081c8628bcb6e",
+      "html_references": [
+        "blog/buying-guide/solar-panel-price-kerala-2025.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala tiled-roof home with a credible residential solar array and tropical vegetation. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Panel Price in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/choose-solar-company-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "How to Choose a Solar Company",
+      "source_master": "tmp/image-refresh/blog-masters/choose-solar-company-kerala-v2.png",
+      "dimensions": "1200x675",
+      "bytes": 72968,
+      "sha256": "b6f7feb6cf877d25ca5271cbd24781288a144fd5b91a4d2949c2e07491616f1a",
+      "html_references": [
+        "blog/buying-guide/how-to-choose-solar-company-kerala.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Safely equipped solar surveyor inspecting a completed Kerala rooftop array from a stable terrace walkway; closed electrical equipment. Text (verbatim, intended for deterministic post-generation overlay): \"How to Choose a Solar Company\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-choose-solar-company-kerala.webp",
+      "kind": "blog-og",
+      "headline": "How to Choose a Solar Company",
+      "source_master": "tmp/image-refresh/blog-masters/choose-solar-company-kerala-v2.png",
+      "dimensions": "1200x630",
+      "bytes": 69938,
+      "sha256": "7b498a00e9a7c4bce9f069518870b7c3a8e79bc7e33606890573a8550100cf56",
+      "html_references": [
+        "blog/buying-guide/how-to-choose-solar-company-kerala.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Safely equipped solar surveyor inspecting a completed Kerala rooftop array from a stable terrace walkway; closed electrical equipment. Text (verbatim, intended for deterministic post-generation overlay): \"How to Choose a Solar Company\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/solar-documents-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Solar Documents Checklist",
+      "source_master": "tmp/image-refresh/blog-masters/solar-documents-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 67586,
+      "sha256": "f7172d18e289f5b182ec69aabb52c3052c991bdafd1e5f8d1e4589da0fbe9016",
+      "html_references": [
+        "blog/buying-guide/kerala-solar-documents-checklist-2026.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Blank generic solar paperwork on a Kerala veranda with rooftop panels visible; no readable private data. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Documents Checklist\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-documents-kerala.webp",
+      "kind": "blog-og",
+      "headline": "Solar Documents Checklist",
+      "source_master": "tmp/image-refresh/blog-masters/solar-documents-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 64604,
+      "sha256": "4d0d451c27f659df0ff092f9071587e02453b881ff0dce2957144e7d14bb27bb",
+      "html_references": [
+        "blog/buying-guide/kerala-solar-documents-checklist-2026.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Blank generic solar paperwork on a Kerala veranda with rooftop panels visible; no readable private data. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Documents Checklist\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/solar-system-size-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Choose the Right Solar System Size",
+      "source_master": "tmp/image-refresh/blog-masters/solar-system-size-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 171908,
+      "sha256": "854f273ffbbcc7fc1eb5235454bcce39870ce134ff07c62b4a80c40b8fa2102d",
+      "html_references": [
+        "blog/buying-guide/which-solar-system-size-kerala-home-2026.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home with visually distinct, technically plausible rooftop array sizes and no numerical claims. Text (verbatim, intended for deterministic post-generation overlay): \"Choose the Right Solar System Size\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-system-size-kerala.webp",
+      "kind": "blog-og",
+      "headline": "Choose the Right Solar System Size",
+      "source_master": "tmp/image-refresh/blog-masters/solar-system-size-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 165150,
+      "sha256": "00d2d323dee17bd1f0bddfb3aeaadf539a10c0e13e3241c87f674ff394664999",
+      "html_references": [
+        "blog/buying-guide/which-solar-system-size-kerala-home-2026.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home with visually distinct, technically plausible rooftop array sizes and no numerical claims. Text (verbatim, intended for deterministic post-generation overlay): \"Choose the Right Solar System Size\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/kerala-rooftop-solar-rules.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Kerala Rooftop Solar Rules 2026",
+      "source_master": "tmp/image-refresh/blog-masters/kerala-rooftop-solar-rules-v2.png",
+      "dimensions": "1200x675",
+      "bytes": 67680,
+      "sha256": "44a80c2c17f8cd40dcaf2b2ebbd0f71930c532be5418b49c4bdbf50e939b5ffa",
+      "html_references": [
+        "blog/govt/kerala-rooftop-solar-rules-2026.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Orderly Kerala flat-terrace array with consistent panel geometry, access walkway, closed inverter and enclosed conduit. Text (verbatim, intended for deterministic post-generation overlay): \"Kerala Rooftop Solar Rules 2026\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-kerala-rooftop-solar-rules.webp",
+      "kind": "blog-og",
+      "headline": "Kerala Rooftop Solar Rules 2026",
+      "source_master": "tmp/image-refresh/blog-masters/kerala-rooftop-solar-rules-v2.png",
+      "dimensions": "1200x630",
+      "bytes": 63954,
+      "sha256": "28ff61794df1889709248a031aea1cce013eebb245e0ddbf7ddda3730fb219cf",
+      "html_references": [
+        "blog/govt/kerala-rooftop-solar-rules-2026.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Orderly Kerala flat-terrace array with consistent panel geometry, access walkway, closed inverter and enclosed conduit. Text (verbatim, intended for deterministic post-generation overlay): \"Kerala Rooftop Solar Rules 2026\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/pm-kusum-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "PM-KUSUM Solar for Kerala Farms",
+      "source_master": "tmp/image-refresh/blog-masters/pm-kusum-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 135550,
+      "sha256": "007f124e785b5c8c33a2681ec2cfb18baf500aa5196b449c1b051592eec494de",
+      "html_references": [
+        "blog/govt/pm-kusum-kerala-2026.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala agricultural solar-pump scene with realistic structure, crops and irrigation channel; no government marks. Text (verbatim, intended for deterministic post-generation overlay): \"PM-KUSUM Solar for Kerala Farms\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-pm-kusum-kerala.webp",
+      "kind": "blog-og",
+      "headline": "PM-KUSUM Solar for Kerala Farms",
+      "source_master": "tmp/image-refresh/blog-masters/pm-kusum-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 128328,
+      "sha256": "326069f3c68e4da6b383263ce26b581698f7bcaf75a25162de06a66de7c170d0",
+      "html_references": [
+        "blog/govt/pm-kusum-kerala-2026.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala agricultural solar-pump scene with realistic structure, crops and irrigation channel; no government marks. Text (verbatim, intended for deterministic post-generation overlay): \"PM-KUSUM Solar for Kerala Farms\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/pm-surya-ghar-status-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Check PM Surya Ghar Application Status",
+      "source_master": "tmp/image-refresh/blog-masters/pm-surya-ghar-status-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 61466,
+      "sha256": "36a4a4f4dfaa68d9fc3bd96e08f658308e952057f5b18c33e94a784fb22ac0c5",
+      "html_references": [
+        "blog/govt/pm-surya-ghar-application-status-kerala.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala homeowner checking an intentionally unreadable application screen, with rooftop solar visible outside. Text (verbatim, intended for deterministic post-generation overlay): \"Check PM Surya Ghar Application Status\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-pm-surya-ghar-status-kerala.webp",
+      "kind": "blog-og",
+      "headline": "Check PM Surya Ghar Application Status",
+      "source_master": "tmp/image-refresh/blog-masters/pm-surya-ghar-status-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 59114,
+      "sha256": "6b2496308a61e36b43d8fbec62b319f4e18d3ab61098086eb65a7d8f3ad301de",
+      "html_references": [
+        "blog/govt/pm-surya-ghar-application-status-kerala.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala homeowner checking an intentionally unreadable application screen, with rooftop solar visible outside. Text (verbatim, intended for deterministic post-generation overlay): \"Check PM Surya Ghar Application Status\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/on-grid-off-grid-hybrid-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "On-Grid vs Off-Grid vs Hybrid",
+      "source_master": "tmp/image-refresh/blog-masters/on-grid-off-grid-hybrid-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 86990,
+      "sha256": "9df9879df63245378282c78c306f6c1201ac687efc792a74da5d22221d49abd3",
+      "html_references": [
+        "blog/how-solar/on-grid-vs-off-grid-vs-hybrid.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Coherent Kerala home scene showing credible grid meter, closed inverter and battery equipment without labels. Text (verbatim, intended for deterministic post-generation overlay): \"On-Grid vs Off-Grid vs Hybrid\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-on-grid-off-grid-hybrid-kerala.webp",
+      "kind": "blog-og",
+      "headline": "On-Grid vs Off-Grid vs Hybrid",
+      "source_master": "tmp/image-refresh/blog-masters/on-grid-off-grid-hybrid-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 83454,
+      "sha256": "475c0957792f626ba18633bad29b9dcb312ebde608351c50aad91777e39b5f63",
+      "html_references": [
+        "blog/how-solar/on-grid-vs-off-grid-vs-hybrid.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Coherent Kerala home scene showing credible grid meter, closed inverter and battery equipment without labels. Text (verbatim, intended for deterministic post-generation overlay): \"On-Grid vs Off-Grid vs Hybrid\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/solar-kerala-monsoon.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Solar in the Kerala Monsoon",
+      "source_master": "tmp/image-refresh/blog-masters/solar-kerala-monsoon.png",
+      "dimensions": "1200x675",
+      "bytes": 141412,
+      "sha256": "c8e5a5f8945b911332e8191d54de21f7a7678b7a5c7652671987b643e3c0271e",
+      "html_references": [
+        "blog/how-solar/solar-during-kerala-monsoon.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Wet but safely installed rooftop panels in gentle Kerala monsoon rain; no flooding, lightning or exposed wiring. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in the Kerala Monsoon\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-kerala-monsoon.webp",
+      "kind": "blog-og",
+      "headline": "Solar in the Kerala Monsoon",
+      "source_master": "tmp/image-refresh/blog-masters/solar-kerala-monsoon.png",
+      "dimensions": "1200x630",
+      "bytes": 136308,
+      "sha256": "be06aab3fe490f148c0047a9b682d969dfcc7aa66c6140e7a28dae59fdc83496",
+      "html_references": [
+        "blog/how-solar/solar-during-kerala-monsoon.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Wet but safely installed rooftop panels in gentle Kerala monsoon rain; no flooding, lightning or exposed wiring. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in the Kerala Monsoon\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/solar-ev-charging-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "Solar EV Charging at Home",
+      "source_master": "tmp/image-refresh/blog-masters/solar-ev-charging-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 104744,
+      "sha256": "e5e879eafe28354a6bdae8ff0bc786274bd83046c404dabd5217b0a021bd06de",
+      "html_references": [
+        "blog/how-solar/solar-for-ev-charging-kerala.html",
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Unbadged EV charging safely at a Kerala solar home with realistic cable connection and no visible licence plate. Text (verbatim, intended for deterministic post-generation overlay): \"Solar EV Charging at Home\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-ev-charging-kerala.webp",
+      "kind": "blog-og",
+      "headline": "Solar EV Charging at Home",
+      "source_master": "tmp/image-refresh/blog-masters/solar-ev-charging-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 101382,
+      "sha256": "bd93dba6bab17c00f40f1c32ab06867d9f996aae1eea027985597397ce9f9de5",
+      "html_references": [
+        "blog/how-solar/solar-for-ev-charging-kerala.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Unbadged EV charging safely at a Kerala solar home with realistic cable connection and no visible licence plate. Text (verbatim, intended for deterministic post-generation overlay): \"Solar EV Charging at Home\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/solar-savings-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "How Much Can Solar Save You?",
+      "source_master": "tmp/image-refresh/blog-masters/solar-savings-kerala.png",
+      "dimensions": "1200x675",
+      "bytes": 78604,
+      "sha256": "53474d83d9651932e546ee9c05d8cb983f8d2beb958bac647fae05a4a86151f7",
+      "html_references": [
+        "blog/savings/how-much-can-you-save-solar-kerala.html",
+        "blog/index.html",
+        "index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala solar home at dusk conveying energy confidence without rupee figures, bills, graphs or invented claims. Text (verbatim, intended for deterministic post-generation overlay): \"How Much Can Solar Save You?\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-solar-savings-kerala.webp",
+      "kind": "blog-og",
+      "headline": "How Much Can Solar Save You?",
+      "source_master": "tmp/image-refresh/blog-masters/solar-savings-kerala.png",
+      "dimensions": "1200x630",
+      "bytes": 75512,
+      "sha256": "3981c91773b58922fa69a0bd66e5fb188230658a4ed3e59dd2f2470693aa86f8",
+      "html_references": [
+        "blog/savings/how-much-can-you-save-solar-kerala.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala solar home at dusk conveying energy confidence without rupee figures, bills, graphs or invented claims. Text (verbatim, intended for deterministic post-generation overlay): \"How Much Can Solar Save You?\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/residential-solar-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/residential-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 183780,
+      "sha256": "656336c5927e0a5cb965d449169901cfdbca0f7e792e6fc207cc2597a7732be4",
+      "html_references": [
+        "services/residential.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala tiled-roof residential home with a neat, credible rooftop array. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/residential-og.webp",
+      "kind": "service-og",
+      "headline": "Residential Solar in Kerala",
+      "source_master": "tmp/image-refresh/residential-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 108236,
+      "sha256": "693d5be6dd04bafe41a8d393682d65ebee6a1df6ce436838b78923988dbaa20b",
+      "html_references": [
+        "services/residential.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala tiled-roof residential home with a neat, credible rooftop array. Text (verbatim, intended for deterministic post-generation overlay): \"Residential Solar in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/commercial-solar-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/commercial-rooftop-master.png",
+      "dimensions": "1600x900",
+      "bytes": 187014,
+      "sha256": "eba9ba0de5219c19680e85651e3b2507a9507cf1f7f8a087518e998469a18b71",
+      "html_references": [
+        "services/commercial.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Large Kerala commercial rooftop with an orderly high-capacity solar array. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/commercial-og.webp",
+      "kind": "service-og",
+      "headline": "Commercial Solar in Kerala",
+      "source_master": "tmp/image-refresh/commercial-rooftop-master.png",
+      "dimensions": "1200x630",
+      "bytes": 97918,
+      "sha256": "0e5f5db4741baefba860d12d626a56f5e92f05497358adff255c46c22658a3a1",
+      "html_references": [
+        "services/commercial.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Large Kerala commercial rooftop with an orderly high-capacity solar array. Text (verbatim, intended for deterministic post-generation overlay): \"Commercial Solar in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/on-grid-solar-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/on-grid-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 84842,
+      "sha256": "11a6de283f7b96f70d20e20bbe96dfc2c7fab62711dc50bd6fc02afaea573f08",
+      "html_references": [
+        "services/on-grid.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home rooftop array paired with a closed inverter and grid distribution equipment. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/on-grid-og.webp",
+      "kind": "service-og",
+      "headline": "On-Grid Solar in Kerala",
+      "source_master": "tmp/image-refresh/on-grid-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 51380,
+      "sha256": "abf42c4bf67bdf7b9317ec1d3c05f4198529ad6efbf815dd05a5363afb0aedfa",
+      "html_references": [
+        "services/on-grid.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home rooftop array paired with a closed inverter and grid distribution equipment. Text (verbatim, intended for deterministic post-generation overlay): \"On-Grid Solar in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/off-grid-solar-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/off-grid-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 241570,
+      "sha256": "2b763a42c44c409d22a9a29dcb8e156e827901b226a0563511fc981aba05c5ff",
+      "html_references": [
+        "services/off-grid.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Remote Kerala hillside home with standalone solar and safely enclosed battery equipment. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/off-grid-og.webp",
+      "kind": "service-og",
+      "headline": "Off-Grid Solar in Kerala",
+      "source_master": "tmp/image-refresh/off-grid-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 128626,
+      "sha256": "bb4471bed2d21d6910bb00d5c96c8b8d41de1140b5049088014db112f1ef2162",
+      "html_references": [
+        "services/off-grid.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Remote Kerala hillside home with standalone solar and safely enclosed battery equipment. Text (verbatim, intended for deterministic post-generation overlay): \"Off-Grid Solar in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/hybrid-solar-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/hybrid-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 72848,
+      "sha256": "37ff897b36d0cacfa0ed6662eb07e17aacd55ca0150c8aa8c0274cd53820874a",
+      "html_references": [
+        "services/hybrid.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home with rooftop solar, closed hybrid inverter and battery backup at evening. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/hybrid-og.webp",
+      "kind": "service-og",
+      "headline": "Hybrid Solar in Kerala",
+      "source_master": "tmp/image-refresh/hybrid-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 49018,
+      "sha256": "d3e4d724cbbec4a8058729ff8916e0fa891afd3fd00cd746303437727dee22d4",
+      "html_references": [
+        "services/hybrid.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala home with rooftop solar, closed hybrid inverter and battery backup at evening. Text (verbatim, intended for deterministic post-generation overlay): \"Hybrid Solar in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/amc-solar-inspection-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/amc-inspection-master.png",
+      "dimensions": "1600x900",
+      "bytes": 72044,
+      "sha256": "ab6880d178d1d352a4b2f60522e520701c58c6440e6ef55100f6808d6e6f414e",
+      "html_references": [
+        "services/amc.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Safe professional inspection of rooftop solar hardware in Kerala. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/amc-og.webp",
+      "kind": "service-og",
+      "headline": "Solar AMC in Kerala",
+      "source_master": "tmp/image-refresh/amc-inspection-master.png",
+      "dimensions": "1200x630",
+      "bytes": 50942,
+      "sha256": "58de91325274318277bca439593e60c8b2a22e2b16c0dd68124d3922c1f9cb82",
+      "html_references": [
+        "services/amc.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Safe professional inspection of rooftop solar hardware in Kerala. Text (verbatim, intended for deterministic post-generation overlay): \"Solar AMC in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/solar-water-heater-kerala.webp",
+      "kind": "service-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/solar-water-heater-master.png",
+      "dimensions": "1600x900",
+      "bytes": 149836,
+      "sha256": "1b83ed322de99c5b92abd7b93c457a4726fbfe16bf5b244fe4f34a4783309faf",
+      "html_references": [
+        "services/solar-water-heater.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Technically credible rooftop solar water-heating installation at a Kerala home. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/solar-water-heater-og.webp",
+      "kind": "service-og",
+      "headline": "Solar Water Heaters in Kerala",
+      "source_master": "tmp/image-refresh/solar-water-heater-master.png",
+      "dimensions": "1200x630",
+      "bytes": 85416,
+      "sha256": "921e725dcc9dee076da001724d8fd48fc1bf3ef6e2d1dd3be7538014632b241c",
+      "html_references": [
+        "services/solar-water-heater.html",
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: service-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Technically credible rooftop solar water-heating installation at a Kerala home. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Water Heaters in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/services-hub-kerala.webp",
+      "kind": "support-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/services-hub-master.png",
+      "dimensions": "1600x900",
+      "bytes": 91620,
+      "sha256": "77914315e8ac37445e86f7e265a3538b8193545619099b3f7003c9a58e9b11b6",
+      "html_references": [
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Broad Kerala rooftop-solar service scene with tropical landscape. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/services-og.webp",
+      "kind": "support-og",
+      "headline": "Solar Services Across Kerala",
+      "source_master": "tmp/image-refresh/services-hub-master.png",
+      "dimensions": "1200x630",
+      "bytes": 55126,
+      "sha256": "fe6cd783e6c38f4602b21811364b5fb8439312c0e5440d8b0ecf7bdcc63e5148",
+      "html_references": [
+        "services/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Broad Kerala rooftop-solar service scene with tropical landscape. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Services Across Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/about-fge-solar-kerala.webp",
+      "kind": "support-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/about-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 140822,
+      "sha256": "77a2a7d011fbf02fb625a884a55e5b8f109bd54e03a3e9964aec2d3561c038b0",
+      "html_references": [
+        "about.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Two non-identifiable adult solar advisers viewing a Kerala home rooftop array; not represented as named staff or customers. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/about-og.webp",
+      "kind": "support-og",
+      "headline": "About FGE Solar",
+      "source_master": "tmp/image-refresh/about-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 79726,
+      "sha256": "eb00a2b59205c5bf355d719ec69ed760b0d79a4d5823232dbdb8e973ae429715",
+      "html_references": [
+        "about.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Two non-identifiable adult solar advisers viewing a Kerala home rooftop array; not represented as named staff or customers. Text (verbatim, intended for deterministic post-generation overlay): \"About FGE Solar\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/anert-solar-kerala.webp",
+      "kind": "support-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/anert-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 111894,
+      "sha256": "1df9700dded138714859a2b2c77b067f28f1163455d011dd99875cae00231602",
+      "html_references": [
+        "subsidy/anert.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Generic Kerala solar-planning documents with a rooftop array outside; no ANERT seal, logo or implied approval. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/anert-og.webp",
+      "kind": "support-og",
+      "headline": "ANERT Solar Schemes in Kerala",
+      "source_master": "tmp/image-refresh/anert-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 70216,
+      "sha256": "376a5f05e70e59df0b177fd789355c08150a0b82309578647e83498b99cb9864",
+      "html_references": [
+        "subsidy/anert.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Generic Kerala solar-planning documents with a rooftop array outside; no ANERT seal, logo or implied approval. Text (verbatim, intended for deterministic post-generation overlay): \"ANERT Solar Schemes in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/solar-subsidy-kerala.webp",
+      "kind": "support-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/subsidy-solar-master.png",
+      "dimensions": "1600x900",
+      "bytes": 112704,
+      "sha256": "31d29c5af81f412635e4ce76444f08245822c34636c9ca131052763944af2beb",
+      "html_references": [
+        "subsidy/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala rooftop solar and generic paperwork without readable private data or invented subsidy figures. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/subsidy-og.webp",
+      "kind": "support-og",
+      "headline": "Solar Subsidy in Kerala",
+      "source_master": "tmp/image-refresh/subsidy-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 78506,
+      "sha256": "ab11ed6cbcd00e26bb3fb21de0bfd4245193321caeff5626aaf4930e5ca3d391",
+      "html_references": [
+        "subsidy/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala rooftop solar and generic paperwork without readable private data or invented subsidy figures. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Subsidy in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/solar-across-kerala.webp",
+      "kind": "support-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/kerala-rooftops-master.png",
+      "dimensions": "1600x900",
+      "bytes": 165880,
+      "sha256": "4c2c18b9129fcd098289fb683241a0697c057f7bcc064d4008cc7f1fd5429d39",
+      "html_references": [
+        "solar-in/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Multiple distinct Kerala rooftops with credible solar arrays across a tropical landscape. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/solar-in-kerala-og.webp",
+      "kind": "support-og",
+      "headline": "Solar Across Kerala",
+      "source_master": "tmp/image-refresh/kerala-rooftops-master.png",
+      "dimensions": "1200x630",
+      "bytes": 87254,
+      "sha256": "ca66c472ab97c4cc3988c98fb72c3a03d1faa636bbb0e0cc6cddecb4986da7f6",
+      "html_references": [
+        "solar-in/index.html",
+        "subsidy/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Multiple distinct Kerala rooftops with credible solar arrays across a tropical landscape. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Across Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/blog-og.webp",
+      "kind": "support-og",
+      "headline": "Kerala Solar Guides",
+      "source_master": "tmp/image-refresh/kerala-rooftops-master.png",
+      "dimensions": "1200x630",
+      "bytes": 87302,
+      "sha256": "c452b5d3c96373af90a7e16e1de49c815afe21cf8e1d58a017ae5fef905a843b",
+      "html_references": [
+        "blog/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: support-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Multiple Kerala solar rooftops with broad editorial negative space. Text (verbatim, intended for deterministic post-generation overlay): \"Kerala Solar Guides\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/alappuzha-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-alappuzha.png",
+      "dimensions": "1600x900",
+      "bytes": 198206,
+      "sha256": "1475cd07acb9956ccf0bf69a8d2293df0dc3b596de3449a21fb8e281d2a53dcc",
+      "html_references": [
+        "solar-in/alappuzha.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Alappuzha backwater-side tiled-roof home, canal and coconut palms. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-alappuzha-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Alappuzha",
+      "source_master": "tmp/image-refresh/district-masters/district-alappuzha.png",
+      "dimensions": "1200x630",
+      "bytes": 94094,
+      "sha256": "d2549fb6839676695926eb72982ba7f250b8007f7fb1091cebd330e20e927de9",
+      "html_references": [
+        "solar-in/alappuzha.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Alappuzha backwater-side tiled-roof home, canal and coconut palms. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Alappuzha\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/ernakulam-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-ernakulam.png",
+      "dimensions": "1600x900",
+      "bytes": 116338,
+      "sha256": "bf2243f5c968067103e6ba4e96dc658b0cd177b098c23f782418836b163d8ddc",
+      "html_references": [
+        "solar-in/ernakulam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Ernakulam urban-edge flat terrace and dense low-rise Kerala neighbourhood. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-ernakulam-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Ernakulam",
+      "source_master": "tmp/image-refresh/district-masters/district-ernakulam.png",
+      "dimensions": "1200x630",
+      "bytes": 67610,
+      "sha256": "ddf4c96bb565264559b6dec57d8b7535fed002c46800dd512b7066e32101e870",
+      "html_references": [
+        "solar-in/ernakulam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Ernakulam urban-edge flat terrace and dense low-rise Kerala neighbourhood. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Ernakulam\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/idukki-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-idukki.png",
+      "dimensions": "1600x900",
+      "bytes": 148988,
+      "sha256": "1727b6fc25958dd8192467ce6e5019bac458834c6506c2164cfe40c47f9221dc",
+      "html_references": [
+        "solar-in/idukki.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Idukki hillside home in a misty green highland plantation setting. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-idukki-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Idukki",
+      "source_master": "tmp/image-refresh/district-masters/district-idukki.png",
+      "dimensions": "1200x630",
+      "bytes": 64708,
+      "sha256": "436fbacfbbe54811bb801412421f4c3c928972acfedbbd6bfdb6b82d36653542",
+      "html_references": [
+        "solar-in/idukki.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Idukki hillside home in a misty green highland plantation setting. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Idukki\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/kannur-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-kannur.png",
+      "dimensions": "1600x900",
+      "bytes": 202232,
+      "sha256": "496f9ccc2362a323a3a6de1010363f5e8eed5f005be4cc0e9b9e164cc40e90d6",
+      "html_references": [
+        "solar-in/kannur.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kannur laterite coastal Kerala house and coconut-grove horizon. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-kannur-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Kannur",
+      "source_master": "tmp/image-refresh/district-masters/district-kannur.png",
+      "dimensions": "1200x630",
+      "bytes": 106070,
+      "sha256": "2ac4c7bd9d2266e6b2b01ed5696595515768ab58f831b0d52e2af5e982a8d9f2",
+      "html_references": [
+        "solar-in/kannur.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kannur laterite coastal Kerala house and coconut-grove horizon. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Kannur\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/kasaragod-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-kasaragod.png",
+      "dimensions": "1600x900",
+      "bytes": 416384,
+      "sha256": "2548f8bb365d63c31926eaff1b371e716dbf2179c9fbc1a29d246f57d5deee2e",
+      "html_references": [
+        "solar-in/kasaragod.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kasaragod inland red-tile home with areca garden and red-earth paths. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-kasaragod-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Kasaragod",
+      "source_master": "tmp/image-refresh/district-masters/district-kasaragod.png",
+      "dimensions": "1200x630",
+      "bytes": 194238,
+      "sha256": "f648b184ecb114d1edce3a03f31af2cb19c8b45a28bd48946774e720a2c6f83e",
+      "html_references": [
+        "solar-in/kasaragod.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kasaragod inland red-tile home with areca garden and red-earth paths. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Kasaragod\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/kollam-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-kollam.png",
+      "dimensions": "1600x900",
+      "bytes": 130722,
+      "sha256": "3df564272d7bd5f6084ab6701f10247e9a80a3245c95655c4e16d2dfcf91dcec",
+      "html_references": [
+        "solar-in/kollam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kollam rooftop array with a broad coastal-backwater view. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-kollam-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Kollam",
+      "source_master": "tmp/image-refresh/district-masters/district-kollam.png",
+      "dimensions": "1200x630",
+      "bytes": 61682,
+      "sha256": "fef080f908755ec4fe15a76272a9c92fc2d44598b5869bd1b4b62da4dc520293",
+      "html_references": [
+        "solar-in/kollam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kollam rooftop array with a broad coastal-backwater view. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Kollam\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/kottayam-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-kottayam.png",
+      "dimensions": "1600x900",
+      "bytes": 238878,
+      "sha256": "51b347d2e48efe18a7c74a936826cab2d58667df950066acdfeea2b0f6a4355a",
+      "html_references": [
+        "solar-in/kottayam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kottayam hipped-roof home in a rubber-and-pepper plantation landscape. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-kottayam-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Kottayam",
+      "source_master": "tmp/image-refresh/district-masters/district-kottayam.png",
+      "dimensions": "1200x630",
+      "bytes": 130076,
+      "sha256": "eb5db73fd36546f0d7804845037318518d29637be9c8ce7604ebd8fcb8f36c9d",
+      "html_references": [
+        "solar-in/kottayam.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kottayam hipped-roof home in a rubber-and-pepper plantation landscape. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Kottayam\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/kozhikode-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-kozhikode.png",
+      "dimensions": "1600x900",
+      "bytes": 210958,
+      "sha256": "9cf2cfbfd2392366cbdad0104d42ae36b45edd4e2ee66f43b816745ee0cb0ed3",
+      "html_references": [
+        "solar-in/kozhikode.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kozhikode suburban Kerala rooftop among coconut palms and low green hills. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-kozhikode-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Kozhikode",
+      "source_master": "tmp/image-refresh/district-masters/district-kozhikode.png",
+      "dimensions": "1200x630",
+      "bytes": 109928,
+      "sha256": "9862dd70cfaf7dd238c28ee5601c28cedfa8f11b7f4e8bcc959a0e451805434b",
+      "html_references": [
+        "solar-in/kozhikode.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kozhikode suburban Kerala rooftop among coconut palms and low green hills. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Kozhikode\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/malappuram-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-malappuram.png",
+      "dimensions": "1600x900",
+      "bytes": 258756,
+      "sha256": "b174f5b7112ee4716ea10a9d20536fece95f5117a0a1642b080010700f548eef",
+      "html_references": [
+        "solar-in/malappuram.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Malappuram home beside an open paddy landscape and coconut trees. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-malappuram-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Malappuram",
+      "source_master": "tmp/image-refresh/district-masters/district-malappuram.png",
+      "dimensions": "1200x630",
+      "bytes": 135852,
+      "sha256": "f226a138f0e4fde24b74fb9e739f084dc3cc6f2508566b59f241ee8417880c2b",
+      "html_references": [
+        "solar-in/malappuram.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Malappuram home beside an open paddy landscape and coconut trees. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Malappuram\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/palakkad-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-palakkad.png",
+      "dimensions": "1600x900",
+      "bytes": 166734,
+      "sha256": "4ffcd0dc5fbbb2abc49784fa39e51cf47251288d34ce56d81d160dbdda250633",
+      "html_references": [
+        "solar-in/palakkad.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Palakkad home in a dry-green foothill setting with an orderly rooftop array. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-palakkad-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Palakkad",
+      "source_master": "tmp/image-refresh/district-masters/district-palakkad.png",
+      "dimensions": "1200x630",
+      "bytes": 104278,
+      "sha256": "1465561a1ace249179b07729842e7a62acd5758857090c19ebb2bad3d51d40b2",
+      "html_references": [
+        "solar-in/palakkad.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Palakkad home in a dry-green foothill setting with an orderly rooftop array. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Palakkad\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/pathanamthitta-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-pathanamthitta.png",
+      "dimensions": "1600x900",
+      "bytes": 245606,
+      "sha256": "cfc0404f4b9567d7e2c3f62972954a7c9ea99542b2fed658a26a4c1244159e6a",
+      "html_references": [
+        "solar-in/pathanamthitta.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Pathanamthitta hillside home in dense tropical greenery. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-pathanamthitta-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Pathanamthitta",
+      "source_master": "tmp/image-refresh/district-masters/district-pathanamthitta.png",
+      "dimensions": "1200x630",
+      "bytes": 124194,
+      "sha256": "4055cac4a230358504d24d344db0880e93e05ed806b207aaf8ded88329e74867",
+      "html_references": [
+        "solar-in/pathanamthitta.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Pathanamthitta hillside home in dense tropical greenery. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Pathanamthitta\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/thiruvananthapuram-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-thiruvananthapuram.png",
+      "dimensions": "1600x900",
+      "bytes": 135280,
+      "sha256": "be479e1048457d1f892436d0435dc4ee53bf5d92da9aeb0f3ce095cdac852933",
+      "html_references": [
+        "solar-in/thiruvananthapuram.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Thiruvananthapuram urban-fringe rooftop in warm coastal light. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-thiruvananthapuram-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Thiruvananthapuram",
+      "source_master": "tmp/image-refresh/district-masters/district-thiruvananthapuram.png",
+      "dimensions": "1200x630",
+      "bytes": 77414,
+      "sha256": "02c76b45a0f83396243533cdb9e4b6947c5ab21728ed74379297e3f32e26452c",
+      "html_references": [
+        "solar-in/thiruvananthapuram.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Thiruvananthapuram urban-fringe rooftop in warm coastal light. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Thiruvananthapuram\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/thrissur-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-thrissur.png",
+      "dimensions": "1600x900",
+      "bytes": 155586,
+      "sha256": "3f81e59205f46b2702fdd9d86f58d0e10a898c140e52b69e0537978be12401d5",
+      "html_references": [
+        "solar-in/thrissur.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Thrissur traditional Kerala home with rooftop solar in a leafy residential setting. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-thrissur-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Thrissur",
+      "source_master": "tmp/image-refresh/district-masters/district-thrissur.png",
+      "dimensions": "1200x630",
+      "bytes": 89698,
+      "sha256": "ccb042f188bb8ac4565efcee41430c3a2827ef257cab28868b9a6c54b288c3a8",
+      "html_references": [
+        "solar-in/thrissur.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Thrissur traditional Kerala home with rooftop solar in a leafy residential setting. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Thrissur\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/locations/wayanad-solar.webp",
+      "kind": "district-primary",
+      "headline": "",
+      "source_master": "tmp/image-refresh/district-masters/district-wayanad.png",
+      "dimensions": "1600x900",
+      "bytes": 130946,
+      "sha256": "7b24293afbdf76a137a1561bec0195558381bd292744dffe71a80470d7924941",
+      "html_references": [
+        "solar-in/wayanad.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-primary. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Wayanad highland home with rooftop solar and a misty plantation backdrop. Text (verbatim, intended for deterministic post-generation overlay): \"\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/district-wayanad-solar.webp",
+      "kind": "district-og",
+      "headline": "Solar in Wayanad",
+      "source_master": "tmp/image-refresh/district-masters/district-wayanad.png",
+      "dimensions": "1200x630",
+      "bytes": 76926,
+      "sha256": "c1c3fe896721e27ed7393b16ac1208d309321a04156329f6e2092a8476a667c5",
+      "html_references": [
+        "solar-in/wayanad.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: district-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Wayanad highland home with rooftop solar and a misty plantation backdrop. Text (verbatim, intended for deterministic post-generation overlay): \"Solar in Wayanad\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/pm-surya-ghar-guide-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "PM Surya Ghar Kerala Guide",
+      "source_master": "tmp/image-refresh/pm-surya-ghar-guide-master.png",
+      "dimensions": "1200x675",
+      "bytes": 92430,
+      "sha256": "025df749c5fd62fbaf8d12336ad3a6d3d351d8dae76174d908f9b2abd1d45a6b",
+      "html_references": [
+        "index.html",
+        "blog/index.html",
+        "subsidy/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala homeowner and solar technician reviewing PM Surya Ghar application paperwork beside a correctly installed rooftop array; no government seal or implied endorsement. Text (verbatim, intended for deterministic post-generation overlay): \"PM Surya Ghar Kerala Guide\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/blog/kseb-net-metering-kerala.webp",
+      "kind": "blog-thumbnail",
+      "headline": "KSEB Net Metering Kerala",
+      "source_master": "tmp/image-refresh/kseb-net-metering-master.png",
+      "dimensions": "1200x675",
+      "bytes": 83614,
+      "sha256": "f7f70c41baffc5b58a713e49f111ff098aee663113280aa73b11b5bd3a81e0bb",
+      "html_references": [
+        "index.html",
+        "blog/index.html",
+        "subsidy/index.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: blog-thumbnail. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Technically credible Kerala rooftop-solar meter and inverter inspection with enclosed equipment and safe cable routing; no KSEB logo, readable meter data or implied endorsement. Text (verbatim, intended for deterministic post-generation overlay): \"KSEB Net Metering Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/homepage-og.webp",
+      "kind": "core-og",
+      "headline": "Solar Company in Kerala",
+      "source_master": "assets/images/hero/updated_hero.png",
+      "dimensions": "1200x630",
+      "bytes": 75840,
+      "sha256": "bfb01ef0b239298e388d17ff67ddb2b096215923cb2497904b3353ec2456b951",
+      "html_references": [
+        "404.html",
+        "anantha-registration.html",
+        "index.html",
+        "privacy-policy.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Existing protected FGE homepage rooftop-solar hero used only as the source for a new social preview; the homepage hero file and its website reference remain unchanged. Text (verbatim, intended for deterministic post-generation overlay): \"Solar Company in Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/contact-og.webp",
+      "kind": "core-og",
+      "headline": "Talk to FGE Solar",
+      "source_master": "tmp/image-refresh/service-installation-master.png",
+      "dimensions": "1200x630",
+      "bytes": 75042,
+      "sha256": "1af57407c824a06b623ff8ddfdf0079a46ed436c4c4e4244a66297174839893b",
+      "html_references": [
+        "contact.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Approachable Kerala solar consultation scene suitable for the contact page; no private customer information or invented claim. Text (verbatim, intended for deterministic post-generation overlay): \"Talk to FGE Solar\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/calculator-og.webp",
+      "kind": "core-og",
+      "headline": "Kerala Solar Savings Calculator",
+      "source_master": "tmp/image-refresh/residential-solar-master.png",
+      "dimensions": "1200x630",
+      "bytes": 106190,
+      "sha256": "c4cb65df7972554766ded5c44d0c2819d58326decf6bbd884278af94d742e449",
+      "html_references": [
+        "calculator.html",
+        "home-energy-check.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala residential rooftop-solar planning scene for a savings calculator preview; no fabricated bill or guaranteed savings. Text (verbatim, intended for deterministic post-generation overlay): \"Kerala Solar Savings Calculator\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/projects-og.webp",
+      "kind": "core-og",
+      "headline": "Kerala Solar Projects",
+      "source_master": "assets/images/projects/project-2-commercial-ernakulam.webp",
+      "dimensions": "1200x630",
+      "bytes": 82392,
+      "sha256": "2e0951c62e25d05c5ff9f55295df64cd68bf4737bef8c3251c452b842aea5c77",
+      "html_references": [
+        "projects.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Existing published commercial project image used for the FGE projects social preview; no new project facts added. Text (verbatim, intended for deterministic post-generation overlay): \"Kerala Solar Projects\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/pm-surya-ghar-og.webp",
+      "kind": "core-og",
+      "headline": "PM Surya Ghar Kerala Guide",
+      "source_master": "tmp/image-refresh/pm-surya-ghar-guide-master.png",
+      "dimensions": "1200x630",
+      "bytes": 90206,
+      "sha256": "c2e9e146aef325b0ecc3e26e57b36069b65781b6aeb6d463689a07a1da55b439",
+      "html_references": [
+        "subsidy/pm-surya-ghar.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Kerala homeowner and technician reviewing subsidy paperwork; no government seal or implied official endorsement. Text (verbatim, intended for deterministic post-generation overlay): \"PM Surya Ghar Kerala Guide\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/og/net-metering-og.webp",
+      "kind": "core-og",
+      "headline": "KSEB Net Metering Kerala",
+      "source_master": "tmp/image-refresh/kseb-net-metering-master.png",
+      "dimensions": "1200x630",
+      "bytes": 76124,
+      "sha256": "fb1927b49306c3b7ad8f894920f2324114d3a73fe5b5ebaa7430f146e3d7de9f",
+      "html_references": [
+        "subsidy/kseb-net-metering.html"
+      ],
+      "prompt_spec": "Use case: ads-marketing. Asset type: core-og. Primary request: photorealistic, context-aware Kerala solar editorial image. Scene/context: Safe, technically credible rooftop-solar net-metering inspection; no KSEB logo, readable private data or implied endorsement. Text (verbatim, intended for deterministic post-generation overlay): \"KSEB Net Metering Kerala\". Reserve a clean text-safe area and a logo-safe area; do not render the headline or any logo in the generated base. Final production must add the exact headline and official supplied FGE logo deterministically using a restrained green/white/dark editorial frame. Keep solar modules, rails, clamps, conduit, meters, inverters and batteries technically credible. Humans, when present, must be non-identifiable adults with correct proportions and PPE. No unsafe roof/electrical work, exposed live equipment, invented figures, readable private data, generated logos, watermarks, official seals, or model-rendered text."
+    },
+    {
+      "file": "assets/images/hero/pm-surya-ghar-consultation-kerala.webp",
+      "kind": "section-photo",
+      "headline": "",
+      "source_master": "tmp/image-refresh/pm-surya-ghar-guide-master.png",
+      "dimensions": "900x1080",
+      "bytes": 107192,
+      "sha256": "a9c0523a67d67b6ed2671c9106200043f026eee458ea225c50642491b7db30ff",
+      "html_references": [
+        "index.html"
+      ],
+      "prompt_spec": "Use case: photorealistic-natural. Asset type: homepage subsidy supporting photo. Realistic Kerala homeowner and professional solar technician reviewing PM Surya Ghar paperwork beside a correctly installed rooftop array. No text, logo, government seal, private information, unsafe rooftop pose or implied official endorsement."
+    }
+  ],
+  "contact_sheets": [
+    "tmp/image-refresh/final-blog-exports-contact-sheet.jpg",
+    "tmp/image-refresh/final-production-blog-og-contact-sheet.jpg",
+    "tmp/image-refresh/final-service-support-og-contact-sheet.jpg",
+    "tmp/image-refresh/final-district-primary-contact-sheet.jpg",
+    "tmp/image-refresh/final-district-og-contact-sheet.jpg",
+    "tmp/image-refresh/final-remaining-image-exports-contact-sheet.jpg"
+  ]
+}

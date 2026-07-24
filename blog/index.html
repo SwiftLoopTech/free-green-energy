@@ -24,21 +24,21 @@
   <meta name="google-site-verification" content="IVmlbR9pqxMh9I4DLx2H4_BHg8TOA4hT2rtm2r8SlVs" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Blog Kerala | Rooftop Solar Guides, Pricing &amp; Subsidy Tips | FGE Solar</title>
-  <meta name="description" content="Read practical Kerala solar guides on rooftop solar pricing, PM Surya Ghar subsidy, KSEB net metering, PM-KUSUM, EV charging, paperwork checklists, savings, monsoon performance, and system selection.">
+  <title>Kerala Solar Blog: Pricing &amp; Subsidy Guides | FGE Solar</title>
+  <meta name="description" content="Practical Kerala guides on solar pricing, PM Surya Ghar, KSEB net metering, documents, savings, monsoon output and system selection.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fgesolar.in/blog/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Solar Blog Kerala | Rooftop Solar Guides, Pricing &amp; Subsidy Tips | FGE Solar">
-  <meta property="og:description" content="Read practical Kerala solar guides on rooftop solar pricing, PM Surya Ghar subsidy, KSEB net metering, PM-KUSUM, EV charging, paperwork checklists, savings, monsoon performance, and system selection.">
+  <meta property="og:title" content="Kerala Solar Blog: Pricing &amp; Subsidy Guides | FGE Solar">
+  <meta property="og:description" content="Practical Kerala guides on solar pricing, PM Surya Ghar, KSEB net metering, documents, savings, monsoon output and system selection.">
   <meta property="og:url" content="https://fgesolar.in/blog/">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/blog-og.webp">
   <meta property="og:image:alt" content="Solar Blog Kerala | Rooftop Solar Guides, Pricing &amp; Subsidy Tips | FGE Solar">
   <meta property="og:site_name" content="FGE Solar">
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Solar Blog Kerala | Rooftop Solar Guides, Pricing &amp; Subsidy Tips | FGE Solar">
-  <meta name="twitter:description" content="Read practical Kerala solar guides on rooftop solar pricing, PM Surya Ghar subsidy, KSEB net metering, PM-KUSUM, EV charging, paperwork checklists, savings, monsoon performance, and system selection.">
+  <meta name="twitter:title" content="Kerala Solar Blog: Pricing &amp; Subsidy Guides | FGE Solar">
+  <meta name="twitter:description" content="Practical Kerala guides on solar pricing, PM Surya Ghar, KSEB net metering, documents, savings, monsoon output and system selection.">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/blog-og.webp">
   <meta name="theme-color" content="#172219">
   <meta name="author" content="FGE Solar">
@@ -434,7 +434,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: clamp(180px, 28vw, 340px);
+      aspect-ratio: 16 / 9;
+      min-height: 0;
       position: relative;
       overflow: hidden;
     }
@@ -534,11 +535,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: filter 0.3s ease;
     }
 
     .blog-card:hover .blog-card-image img {
-      transform: scale(1.04);
+      filter: brightness(1.03) saturate(1.03);
     }
 
     /* placeholder icon when image fails */
@@ -831,7 +832,7 @@
       }
 
       .featured-post-image {
-        min-height: 160px;
+        min-height: 0;
       }
 
       .featured-post-content {
@@ -1016,7 +1017,7 @@
       }
     }
   </style>
-  <script src="/assets/js/icons.js"></script>
+  <script src="/assets/js/icons.js" defer></script>
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
   <!-- codex-seo-generated:start -->
@@ -1072,7 +1073,7 @@
   <header id="site-header" class="solid-header">
     <div class="container">
       <nav class="nav-inner">
-        <a href="/" class="nav-logo">
+        <a href="/" class="nav-logo" aria-label="FGE Solar home">
           <img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38" height="38" loading="eager">
           <div class="logo-text">
             <span class="logo-name">FGE Solar</span>
@@ -1212,7 +1213,7 @@
           <!-- FEATURED POST -->
           <a href="/subsidy/pm-surya-ghar" class="featured-post" data-cat="govt">
             <div class="featured-post-image">
-              <img src="/assets/images/og/pm-surya-ghar-og.webp" alt="PM Surya Ghar rooftop solar subsidy guide"
+              <img src="/assets/images/blog/pm-surya-ghar-guide-kerala.webp" alt="PM Surya Ghar rooftop solar subsidy guide"
                 loading="eager" width="1200" height="675">
             </div>
             <div class="featured-post-content">
@@ -1240,7 +1241,7 @@
           <!-- CARD: PM Surya Ghar application status -->
           <a href="/blog/govt/pm-surya-ghar-application-status-kerala" class="blog-card" data-cat="govt">
             <div class="blog-card-image">
-              <img src="/assets/images/og/pm-surya-ghar-og.webp" alt="PM Surya Ghar application status guide for Kerala" loading="eager" width="400" height="225">
+              <img src="/assets/images/blog/pm-surya-ghar-status-kerala.webp" alt="PM Surya Ghar application status guide for Kerala" loading="lazy" decoding="async" width="1200" height="675">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1262,8 +1263,8 @@
           <!-- CARD NEW 1 -->
           <a href="/blog/govt/pm-kusum-kerala-2026" class="blog-card" data-cat="govt">
             <div class="blog-card-image">
-              <img src="/assets/images/og/solar-in-kerala-og.webp" alt="PM-KUSUM Kerala 2026 guide" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/pm-kusum-kerala.webp" alt="PM-KUSUM Kerala 2026 guide" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1285,8 +1286,8 @@
           <!-- CARD NEW 2 -->
           <a href="/blog/buying-guide/kerala-solar-documents-checklist-2026" class="blog-card" data-cat="buying">
             <div class="blog-card-image">
-              <img src="/assets/images/og/solar-in-kerala-og.webp" alt="Kerala solar documents checklist 2026" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-documents-kerala.webp" alt="Kerala solar documents checklist 2026" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1308,8 +1309,8 @@
           <!-- CARD NEW 3 -->
           <a href="/blog/how-solar/solar-for-ev-charging-kerala" class="blog-card" data-cat="how">
             <div class="blog-card-image">
-              <img src="/assets/images/og/solar-in-kerala-og.webp" alt="Solar for EV charging in Kerala 2026" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-ev-charging-kerala.webp" alt="Solar for EV charging in Kerala 2026" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1331,8 +1332,8 @@
           <!-- CARD NEW 4 -->
           <a href="/blog/govt/kerala-rooftop-solar-rules-2026" class="blog-card" data-cat="govt">
             <div class="blog-card-image">
-              <img src="/assets/images/og/net-metering-og.webp" alt="Kerala rooftop solar rules 2026" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/kerala-rooftop-solar-rules.webp" alt="Kerala rooftop solar rules 2026" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1354,8 +1355,8 @@
           <!-- CARD NEW 5 -->
           <a href="/blog/buying-guide/which-solar-system-size-kerala-home-2026" class="blog-card" data-cat="buying">
             <div class="blog-card-image">
-              <img src="/assets/images/og/solar-in-kerala-og.webp" alt="3 kW vs 5 kW vs 10 kW Kerala solar guide" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-system-size-kerala.webp" alt="3 kW vs 5 kW vs 10 kW Kerala solar guide" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1377,8 +1378,8 @@
           <!-- CARD 1 -->
           <a href="/subsidy/kseb-net-metering" class="blog-card" data-cat="govt">
             <div class="blog-card-image">
-              <img src="/assets/images/og/net-metering-og.webp" alt="KSEB Net Metering Guide" loading="eager" width="400"
-                height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/kseb-net-metering-kerala.webp" alt="KSEB Net Metering Guide" loading="lazy" decoding="async" width="1200"
+                height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1400,8 +1401,8 @@
           <!-- CARD 2 -->
           <a href="/blog/savings/how-much-can-you-save-solar-kerala" class="blog-card" data-cat="savings">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-savings-kerala.webp" alt="Solar savings Kerala" loading="eager"
-                width="400" height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-savings-kerala.webp" alt="Solar savings Kerala" loading="lazy" decoding="async"
+                width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1424,8 +1425,8 @@
           <!-- CARD 3 -->
           <a href="/blog/how-solar/solar-during-kerala-monsoon" class="blog-card" data-cat="how">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-monsoon-solar.webp" alt="Solar during Kerala monsoon" loading="eager"
-                width="400" height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-kerala-monsoon.webp" alt="Solar during Kerala monsoon" loading="lazy" decoding="async"
+                width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1448,8 +1449,8 @@
           <!-- CARD 4 -->
           <a href="/blog/buying-guide/solar-panel-price-kerala-2025" class="blog-card" data-cat="buying">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-solar-price-2025.webp" alt="Solar panel price Kerala 2025"
-                loading="eager" width="400" height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-panel-price-kerala.webp" alt="Solar panel price Kerala 2026"
+                loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1472,8 +1473,8 @@
           <!-- CARD 5 -->
           <a href="/blog/how-solar/on-grid-vs-off-grid-vs-hybrid" class="blog-card" data-cat="how">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-compare-systems.webp" alt="On-grid vs off-grid vs hybrid" loading="eager"
-                width="400" height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/on-grid-off-grid-hybrid-kerala.webp" alt="On-grid vs off-grid vs hybrid solar systems in Kerala" loading="lazy" decoding="async"
+                width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1496,8 +1497,8 @@
           <!-- CARD 6 -->
           <a href="/blog/buying-guide/how-to-choose-solar-company-kerala" class="blog-card" data-cat="buying">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/blog-choose-company.webp" alt="How to choose solar company Kerala"
-                loading="eager" width="400" height="225" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/choose-solar-company-kerala.webp" alt="How to choose a solar company in Kerala"
+                loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
@@ -1600,7 +1601,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Services</h4>
+          <h2 class="footer-heading">Services</h2>
           <ul class="footer-links">
             <li><a href="/services/residential">Residential Solar</a></li>
             <li><a href="/services/commercial">Commercial Solar</a></li>
@@ -1613,7 +1614,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Subsidy &amp; Guides</h4>
+          <h2 class="footer-heading">Subsidy &amp; Guides</h2>
           <ul class="footer-links">
             <li><a href="/subsidy/pm-surya-ghar">PM Surya Ghar Guide</a></li>
             <li><a href="/subsidy/kseb-net-metering">KSEB Net Metering</a></li>
@@ -1624,7 +1625,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Locations</h4>
+          <h2 class="footer-heading">Locations</h2>
           <ul class="footer-links">
             <li><a href="/solar-in/thiruvananthapuram">Thiruvananthapuram</a></li>
             <li><a href="/solar-in/ernakulam">Ernakulam / Kochi</a></li>

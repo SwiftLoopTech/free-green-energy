@@ -1076,7 +1076,7 @@ body:has(.hero) .wa-float {
 }
 
 .fge-article-card img {
-  aspect-ratio: 1.34;
+  aspect-ratio: 16 / 9;
 }
 
 .fge-article-card div {
@@ -2148,8 +2148,8 @@ p[style*="var(--gray-400)"] {
   }
 
   .fge-article-card img {
-    height: 280px;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .fge-brand-grid {
@@ -5236,8 +5236,8 @@ body.home-page .btn-primary,
 body.home-page .hero-ctas .btn-primary,
 body.home-page .fge-inline-actions .btn-primary,
 body.home-page .fge-wide-cta {
-  background: var(--fge-success) !important;
-  border-color: var(--fge-success) !important;
+  background: var(--fge-green-600) !important;
+  border-color: var(--fge-green-600) !important;
   color: #fff !important;
   box-shadow: none !important;
 }

@@ -471,13 +471,13 @@ function initEstimateModal() {
         </button>
         <div class="fge-modal-body">
           <div class="fge-modal-image">
-            <img src="/assets/images/hero/updated_hero-640.webp" alt="Solar roof" />
+            <img src="/assets/images/hero/updated_hero-640.webp" alt="Solar roof" width="640" height="306" decoding="async" />
           </div>
           <div class="fge-modal-text">
             <div class="fge-modal-badge">Limited Time Offer</div>
             <h3>Slash Your Electricity Bill by 90%</h3>
             <p>Get a free, custom solar estimate for your home. See how much you can save with PM Surya Ghar subsidy.</p>
-            <a href="/contact.html?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta">
+            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta">
               Get Free Estimate
             </a>
           </div>

@@ -322,6 +322,55 @@
       margin-bottom: 0;
     }
 
+    .page-jump-nav {
+      padding: 1rem 0;
+      background: #fff;
+      border-bottom: 1px solid #E5E7E5;
+      position: sticky;
+      top: 72px;
+      z-index: 20;
+    }
+
+    .page-jump-nav .container {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      overflow-x: auto;
+      scrollbar-width: thin;
+      overscroll-behavior-inline: contain;
+    }
+
+    .page-jump-label {
+      color: #172219;
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .page-jump-nav a {
+      flex: 0 0 auto;
+      color: #434843;
+      background: #F7FAF8;
+      border: 1px solid #DCE8DD;
+      border-radius: 999px;
+      padding: 0.55rem 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .page-jump-nav a:hover,
+    .page-jump-nav a:focus-visible {
+      color: #0D7D3C;
+      background: #EEF8F1;
+      border-color: #18B85C;
+    }
+
+    .content-section[id] {
+      scroll-margin-top: 150px;
+    }
+
     /* SUBSIDY TABLE */
     .subsidy-box {
       background: #fff;
@@ -995,6 +1044,10 @@
         padding: clamp(72px, 14vw, 100px) 0 clamp(32px, 6vw, 56px);
       }
 
+      .page-jump-nav {
+        top: 64px;
+      }
+
       .content-section {
         padding: clamp(2rem, 5vw, 3rem) 0;
       }
@@ -1063,7 +1116,7 @@
   "description": "PM Surya Ghar Kerala guide: subsidy eligibility, documents, portal steps, and KSEB net-metering preparation. Check official updates before applying.",
   "url": "https://fgesolar.in/subsidy/pm-surya-ghar",
   "inLanguage": "en-IN",
-  "dateModified": "2026-03-23",
+  "dateModified": "2026-07-24",
   "isPartOf": {
     "@type": "WebSite",
     "name": "FGE Solar",
@@ -1109,7 +1162,7 @@
   <header id="site-header">
     <div class="container">
       <nav class="nav-inner">
-        <a href="/" class="nav-logo">
+        <a href="/" class="nav-logo" aria-label="FGE Solar home">
           <img src="/assets/images/logo/logo.png" alt="FGE Solar" class="logo-img" width="38" height="38"
             loading="eager">
           <div class="logo-text"><span class="logo-name">FGE Solar</span><span class="logo-tagline">Future Green
@@ -1226,8 +1279,8 @@
 
     <!-- HERO -->
     <section class="page-hero">
-      <div class="hero-photo"><img src="/assets/images/hero/hero-services.webp" alt="" aria-hidden="true" loading="eager"
-          width="1920" height="1080"></div>
+      <div class="hero-photo"><img src="/assets/images/hero/subsidy-solar-kerala.webp" alt="" aria-hidden="true"
+          loading="eager" decoding="async" fetchpriority="high" width="1600" height="900"></div>
       <div class="page-hero-glow"></div>
       <div class="container">
         <div class="page-hero-inner">
@@ -1249,10 +1302,10 @@
             <span class="hero-badge">Kerala-Wide</span>
           </div>
           <h1>PM Surya Ghar Muft Bijli Yojana —<br><span class="accent">Complete Kerala Guide 2026</span></h1>
-          <p class="page-hero-sub">Updated for April 2026. Understand the current rooftop subsidy path, eligibility,
+          <p class="page-hero-sub">Verified in July 2026. Understand the current rooftop subsidy path, eligibility,
             portal process, required documents, and how the Kerala utility workflow fits into the PM Surya Ghar journey.</p>
           <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.65rem 1rem;color:rgba(255,255,255,0.88);font-size:0.92rem;line-height:1.6;">
-            <span><strong>Last updated:</strong> April 13, 2026</span>
+            <span><strong>Last updated:</strong> July 24, 2026</span>
             <span><strong>Reviewed by:</strong> Vishnu M, FGE Solar</span>
             <span><strong>Sources:</strong> MNRE, PM Surya Ghar portal, KSEB</span>
           </div>
@@ -1260,18 +1313,31 @@
       </div>
     </section>
 
+    <nav class="page-jump-nav" aria-label="On this page">
+      <div class="container">
+        <span class="page-jump-label">On this page</span>
+        <a href="#scheme">Scheme</a>
+        <a href="#subsidy-amount">Subsidy amount</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#application-process">Application process</a>
+        <a href="#documents">Documents</a>
+        <a href="#fge-support">FGE support</a>
+        <a href="#faq">FAQs</a>
+      </div>
+    </nav>
+
     <!-- SECTION 1: What is PM Surya Ghar? -->
-    <section class="content-section">
+    <section class="content-section" id="scheme">
       <div class="container">
         <div style="max-width:820px;">
           <span class="section-label">About the Scheme</span>
-          <h2 class="section-heading">What is PM Surya Ghar Muft Bijli Yojana?</h2>
+          <h2 class="section-heading">Solar Panel Subsidy in Kerala: What Is PM Surya Ghar?</h2>
           <div style="margin:1rem 0 1.5rem;padding:1rem 1.1rem;border:1px solid #DCE8DD;border-radius:16px;background:#F7FBF8;">
-            <p style="margin:0 0 0.65rem;color:#172219;font-weight:700;">Official sources used for this page</p>
+            <p style="margin:0 0 0.65rem;color:#172219;font-weight:700;">Verified official sources · Last checked 24 July 2026</p>
             <ul style="margin:0;padding-left:1.1rem;color:#565D56;line-height:1.8;">
-              <li><a href="https://www.solarrooftop.pmsuryaghar.gov.in/" target="_blank" rel="noopener">PM Surya Ghar rooftop portal</a></li>
-              <li><a href="https://mnre.gov.in/en/grid-connected-solar-rooftop-programme/" target="_blank" rel="noopener">MNRE rooftop solar programme page</a></li>
-              <li><a href="https://kseb.in/" target="_blank" rel="noopener">KSEB official site</a></li>
+              <li><a href="https://solarrooftop.pmsuryaghar.gov.in/notification/172_notification.pdf" target="_blank" rel="noopener">Official PM Surya Ghar CFA guidelines</a></li>
+              <li><a href="https://www.solarrooftop.pmsuryaghar.gov.in/" target="_blank" rel="noopener">PM Surya Ghar National Portal</a></li>
+              <li><a href="https://dev.erckerala.org/api/storage/final-regulations/BDm5OZBLIuAbHoyTX0xoploDz82DbFy1O6klxxfS.pdf" target="_blank" rel="noopener">Final KSERC 2025 net-metering regulations</a></li>
             </ul>
           </div>
           <div class="content-prose">
@@ -1281,22 +1347,21 @@
               ₹75,021 crore, this is the largest residential solar initiative in Indian history — and Kerala homeowners
               are among the biggest beneficiaries.</p>
             <p>For Kerala residents, this is the most financially significant solar scheme ever launched. The government
-              directly transfers the subsidy — up to ₹78,000 — into your bank account after installation is complete.
-              It's not a loan. It's not a discount. It's real money in your account. Combined with KSEB's net metering,
-              most Kerala homeowners see their solar system pay for itself in under 4 years — and then generate savings
-              for 25 years more.</p>
+              processes CFA up to ₹78,000 after the required installation, DISCOM inspection/approval and portal steps.
+              The approved amount is transferred to the beneficiary bank account or, where a scheme-linked loan is
+              used, the beneficiary loan account. Project savings and payback remain site- and bill-specific.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 2: Subsidy Amounts -->
-    <section class="content-section bg-sage">
+    <section class="content-section bg-sage" id="subsidy-amount">
       <div class="container">
         <span class="section-label">Government Subsidy</span>
         <h2 class="section-heading">How Much Subsidy Will You Get?</h2>
-        <p class="section-intro">The Central Financial Assistance (CFA) is structured by system size. Here's exactly
-          what you'll receive:</p>
+        <p class="section-intro">For an eligible individual household, CFA is ₹30,000 per kW for the first 2 kW and
+          ₹18,000 for the third kW, capped at ₹78,000. Approval remains subject to the official scheme process.</p>
 
         <div class="subsidy-box">
           <div class="table-scroll">
@@ -1309,11 +1374,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Up to 2 kW</td>
+                  <td>1 kW</td>
                   <td><span class="subsidy-amount">₹30,000</span></td>
                 </tr>
                 <tr>
-                  <td>2 kW – 3 kW</td>
+                  <td>2 kW</td>
                   <td><span class="subsidy-amount">₹60,000</span></td>
                 </tr>
                 <tr>
@@ -1327,21 +1392,22 @@
         </div>
 
         <div class="subsidy-callout">
-          <p><span>₹78,000 goes directly into your bank account</span> — not discounted from invoice. Real money, real
-            bank transfer. Not a voucher, not a credit note. Directly into the account you register on the portal.</p>
+          <p><span>CFA is released only after the official checks are completed.</span> The approved amount is
+            transferred to the beneficiary bank account or eligible loan account. FGE can assist with documentation,
+            but cannot guarantee eligibility, approval or a payment date.</p>
         </div>
       </div>
     </section>
 
     <!-- SECTION 3: Eligibility -->
-    <section class="content-section">
+    <section class="content-section" id="eligibility">
       <div class="container">
         <div class="two-col">
           <div>
             <span class="section-label">Eligibility</span>
             <h2 class="section-heading">Who Qualifies for PM Surya Ghar?</h2>
-            <p class="section-intro">The scheme has clear eligibility requirements. Check all of these boxes and you're
-              eligible:</p>
+            <p class="section-intro">These are important baseline requirements. Final eligibility and CFA release are
+              determined through the National Portal and the relevant authority checks:</p>
             <ul class="check-list" style="margin-top:1.5rem;">
               <li><span class="chk"><svg viewBox="0 0 24 24">
                     <polyline points="20 6 9 17 4 12" />
@@ -1367,7 +1433,7 @@
               Quick Eligibility Check</p>
             <p style="font-size:clamp(0.82rem,1.2vw,0.95rem);color:#434843;line-height:1.7;margin-bottom:1.25rem;">Not
               sure if you qualify? The fastest way is to share your KSEB consumer number with us. We'll check
-              eligibility in minutes and let you know exactly where you stand.</p>
+              the available details and explain the next official verification step.</p>
             <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%20want%20to%20check%20my%20eligibility%20for%20PM%20Surya%20Ghar%20subsidy."
               class="btn-wa" target="_blank" rel="noopener"
               style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.25rem;border-radius:10px;background:#25D366;color:#fff;font-family:var(--font-heading);font-size:clamp(0.82rem,1.2vw,0.9rem);font-weight:700;min-height:44px;width:100%;justify-content:center;" aria-label="Chat with FGE Solar on WhatsApp">
@@ -1383,7 +1449,7 @@
     </section>
 
     <!-- SECTION 4: Application Steps -->
-    <section class="content-section bg-sage">
+    <section class="content-section bg-sage" id="application-process">
       <div class="container">
         <span class="section-label">How to Apply</span>
         <h2 class="section-heading">Step-by-Step Application Process</h2>
@@ -1405,8 +1471,9 @@
               <div class="step-num">2</div>
               <div class="step-content">
                 <h3>Receive Technical Feasibility Report</h3>
-                <p>Wait for the Technical Feasibility Report (TFR) from KSEB — typically takes 15–30 days after
-                  application.</p>
+                <p>Under the final KSERC 2025 regulations, the technical feasibility study is due within 15 days of a
+                  complete online application, subject to the specified conditions. Track the live status in the
+                  official portal.</p>
               </div>
             </div>
             <div class="step-item">
@@ -1462,9 +1529,10 @@
               <div class="step-num">9</div>
               <div class="step-content">
                 <h3>Subsidy Credited to Your Account</h3>
-                <p>Within 30 days of net meter installation, the subsidy — up to ₹78,000 — is directly credited to your
-                  registered bank account.</p>
-                <span class="step-note">₹78,000 lands in your account</span>
+                <p>After installation, DISCOM inspection/approval and the required portal checks, the approved CFA is
+                  processed to the beneficiary bank or eligible loan account. Timing varies; no installer can promise
+                  a credit date.</p>
+                <span class="step-note">Track CFA status on the National Portal</span>
               </div>
             </div>
           </div>
@@ -1473,7 +1541,7 @@
     </section>
 
     <!-- SECTION 5: Documents -->
-    <section class="content-section">
+    <section class="content-section" id="documents">
       <div class="container">
         <div class="two-col">
           <div>
@@ -1525,7 +1593,7 @@
     </section>
 
     <!-- SECTION 6: What FGE Solar Does -->
-    <section class="content-section bg-dark">
+    <section class="content-section bg-dark" id="fge-support">
       <div class="container">
         <span class="section-label" style="color:#4ADE80;">Full-Service Handling</span>
         <h2 class="section-heading light">What FGE Solar Does For You</h2>
@@ -1628,7 +1696,7 @@
     </section>
 
     <!-- SECTION 8: FAQ -->
-    <section class="content-section">
+    <section class="content-section" id="faq">
       <div class="container">
         <span class="section-label">Common Questions</span>
         <h2 class="section-heading">Frequently Asked Questions</h2>
@@ -1832,7 +1900,7 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h2 class="footer-heading">Services</h2>
           <ul class="footer-links">
             <li><a href="/services/residential">Residential Solar</a></li>
             <li><a href="/services/commercial">Commercial Solar</a></li>
@@ -1844,7 +1912,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Subsidy &amp; Guides</h4>
+          <h2 class="footer-heading">Subsidy &amp; Guides</h2>
           <ul class="footer-links">
             <li><a href="/subsidy/pm-surya-ghar">PM Surya Ghar Guide</a></li>
             <li><a href="/subsidy/kseb-net-metering">KSEB Net Metering</a></li>
@@ -1854,7 +1922,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Locations</h4>
+          <h2 class="footer-heading">Locations</h2>
           <ul class="footer-links">
             <li><a href="/solar-in/thiruvananthapuram">Thiruvananthapuram</a></li>
             <li><a href="/solar-in/ernakulam">Ernakulam / Kochi</a></li>

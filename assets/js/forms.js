@@ -237,6 +237,13 @@
             page: window.location.pathname
           });
         }
+
+        window.dispatchEvent(new CustomEvent('fge:lead-submitted', {
+          detail: {
+            source: form.dataset.lead || form.id || 'website-form',
+            page: window.location.pathname
+          }
+        }));
       } catch (err) {
         setMessage(
           errorMsg,
