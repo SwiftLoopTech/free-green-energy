@@ -7,11 +7,16 @@ fge-lead-funnel.txt
 fge-seo-strategy.txt
 fge-sitemap.txt
 fge-technical-decisions.txt
+SEO_IMPLEMENTATION_CHECKLIST.md
+
+# Event / Campaign pages
+anantha-registration.html
 
 # Image generation prompts (internal use only)
 image-generation-prompts.json
 image-prompts-v2.json
 image-prompts-v3-content.json
+IMAGE_REFRESH_MANIFEST.json
 
 # OS files
 .DS_Store
