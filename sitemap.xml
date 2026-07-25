@@ -44,6 +44,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://fgesolar.in/blog/govt/kseb-tariff-slabs-kerala</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://fgesolar.in/blog/how-solar/on-grid-vs-off-grid-vs-hybrid</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -69,7 +75,7 @@
   </url>
   <url>
     <loc>https://fgesolar.in/blog/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

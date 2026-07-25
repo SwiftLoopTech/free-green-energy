@@ -5825,3 +5825,74 @@ body.home-page .fge-final-copy .fge-kicker {
     padding-right: 6px !important;
   }
 }
+
+/* Homepage navigation must stay reliable when the page becomes its own scroll
+   container. Reserve its space so the hero keeps the same visual start point. */
+body.home-page {
+  --fge-home-header-height: 74px;
+}
+
+body.home-page #site-header {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+body.home-page main {
+  padding-top: var(--fge-home-header-height);
+}
+
+/* The contact action is intentionally compact on the homepage, including
+   tablet and phone layouts. It stays below the header and mobile navigation. */
+body.home-page .wa-float {
+  display: flex !important;
+  width: 56px;
+  height: 56px;
+  right: 24px;
+  bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  body.home-page .wa-float {
+    display: flex !important;
+    width: 52px;
+    height: 52px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  body.home-page .wa-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home-page {
+    --fge-home-header-height: 76px;
+  }
+
+  body.home-page .wa-float {
+    width: 48px;
+    height: 48px;
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
+  body.home-page .wa-float svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  body.home-page .wa-float::before {
+    inset: -4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-page .wa-float::before {
+    animation: none;
+  }
+}
