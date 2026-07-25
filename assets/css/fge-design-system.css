@@ -309,11 +309,6 @@ body:has(.hero) #site-header {
   }
 }
 
-body:has(.hero) .whatsapp-float,
-body:has(.hero) .wa-float {
-  display: none !important;
-}
-
 .hero {
   min-height: auto;
   background: var(--fge-green-100);
@@ -4380,9 +4375,48 @@ body:has(.hero) #site-header .nav-toggle.open span,
   transition-delay: 0ms !important;
 }
 
+/* Keep a direct WhatsApp contact action available on every page. The mobile
+   navigation sits above it when open, so it never blocks the menu. */
+.wa-float {
+  display: flex !important;
+}
+
 @media (max-width: 1024px) {
   .wa-float {
-    display: none !important;
+    display: flex !important;
+    width: 52px;
+    height: 52px;
+    right: max(18px, env(safe-area-inset-right));
+    bottom: max(18px, env(safe-area-inset-bottom));
+  }
+
+  .wa-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wa-float {
+    width: 48px;
+    height: 48px;
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
+  .wa-float svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .wa-float::before {
+    inset: -4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wa-float::before {
+    animation: none;
   }
 }
 
