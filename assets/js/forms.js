@@ -1,18 +1,69 @@
 /* ============================================================
    FGE SOLAR - FORMS JS
-   Lead form submission via Web3Forms
+   Lead form submission via Google Forms
    ============================================================ */
 
 (function() {
   'use strict';
 
-  const PLACEHOLDER_KEYS = new Set([
-    '',
-    'YOUR_WEB3FORMS_KEY',
-    'YOUR_WEB3FORMS_ACCESS_KEY',
-    'YOUR_ACCESS_KEY_HERE'
+  const GOOGLE_FORMS = {
+    contact: {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSfW4FuP6obBtvlDD0Jd6T8Qp3FXknxCwm_1gGAm0FFzGB_LAg/formResponse',
+      entry: 'entry.372346092',
+      label: 'Contact & site visit request'
+    },
+    calculator: {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSfVYY6MSyinyQhNoOqahp7LPaK3eRZ379UCw-GYEZ-78TdiiQ/formResponse',
+      entry: 'entry.2115047199',
+      label: 'Solar calculator quote request'
+    },
+    home_energy_check: {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSeBHVzkyMB86UiJEJbofORpck0Zgs2IK6Tk-5NEXycUhSrWJQ/formResponse',
+      entry: 'entry.2013841671',
+      label: 'Home Energy Check request'
+    },
+    'pm-surya-ghar-checklist': {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLScgm6aFfbtuNZgLnmgXupsAyTiep357dWg3QxjNjrpn-kcIag/formResponse',
+      entry: 'entry.372346092',
+      label: 'PM Surya Ghar checklist request'
+    }
+  };
+
+  const EXCLUDED_FIELDS = new Set([
+    'access_key',
+    'subject',
+    'from_name',
+    'botcheck',
+    'captcha_answer',
+    'h-captcha-response',
+    'g-recaptcha-response'
   ]);
-  const WEB3FORMS_HCAPTCHA_SITEKEY = '50b2fe65-b00b-4b9e-ad62-3ba471098be2';
+
+  const FIELD_LABELS = {
+    name: 'Name',
+    mobile: 'Mobile / WhatsApp',
+    phone: 'Mobile / WhatsApp',
+    email: 'Email',
+    district: 'District',
+    monthly_bill: 'Monthly electricity bill',
+    property_type: 'Property type',
+    message: 'Message / notes',
+    interest: 'Interest',
+    audit_score: 'Energy Check score',
+    audit_readiness: 'Solar readiness',
+    audit_recommendation: 'Energy Check recommendation',
+    roof_profile: 'Roof profile',
+    ac_profile: 'Air-conditioner profile',
+    water_heating: 'Water-heating profile',
+    utm_source: 'UTM source',
+    utm_medium: 'UTM medium',
+    utm_campaign: 'UTM campaign',
+    utm_content: 'UTM content',
+    fbclid: 'Facebook click ID',
+    landing_page: 'Landing page'
+  };
+
+  let responseFrame;
 
   function setMessage(element, message) {
     if (!element) {
@@ -58,120 +109,101 @@
   }
 
   function isCaptchaValid(input) {
-    if (!input) {
-      return true;
-    }
-
-    return input.value.trim() === input.dataset.captchaAnswer;
+    return !input || input.value.trim() === input.dataset.captchaAnswer;
   }
 
-  function getHcaptchaResponse(form) {
-    const field = form.querySelector('textarea[name="h-captcha-response"]');
-    return field ? field.value.trim() : '';
+  function labelForField(name) {
+    return FIELD_LABELS[name] || name.replace(/[_-]+/g, ' ').replace(/\b\w/g, (character) => character.toUpperCase());
   }
 
-  function renderInvisibleHcaptcha(form, container) {
-    if (!window.hcaptcha || typeof window.hcaptcha.render !== 'function') {
-      return null;
+  function displayValue(form, name, value) {
+    const control = form.elements[name];
+    if (control && control.tagName === 'SELECT' && control.selectedIndex >= 0) {
+      return control.options[control.selectedIndex].text.trim() || value;
     }
 
-    if (container.dataset.widgetId) {
-      return Number(container.dataset.widgetId);
-    }
-
-    let widgetId = null;
-    try {
-      widgetId = window.hcaptcha.render(container, {
-        sitekey: container.dataset.sitekey || WEB3FORMS_HCAPTCHA_SITEKEY,
-        size: 'invisible',
-        callback: () => {
-          if (container._resolveCaptcha) {
-            container._resolveCaptcha(true);
-            container._resolveCaptcha = null;
-          }
-        },
-        'error-callback': () => {
-          if (container._resolveCaptcha) {
-            container._resolveCaptcha(false);
-            container._resolveCaptcha = null;
-          }
-        },
-        'expired-callback': () => {
-          if (container._resolveCaptcha) {
-            container._resolveCaptcha(false);
-            container._resolveCaptcha = null;
-          }
-        },
-        'close-callback': () => {
-          if (container._resolveCaptcha) {
-            container._resolveCaptcha(false);
-            container._resolveCaptcha = null;
-          }
-        }
-      });
-    } catch (error) {
-      return null;
-    }
-
-    container.dataset.widgetId = String(widgetId);
-    return widgetId;
+    return String(value).trim();
   }
 
-  function ensureHcaptchaToken(form) {
-    const container = form.querySelector('[data-captcha="hcaptcha"]');
-    if (!container || getHcaptchaResponse(form)) {
-      return Promise.resolve(true);
-    }
+  function buildLeadDetails(form, config) {
+    const details = [
+      `Lead type: ${config.label}`,
+      `Page: ${window.location.href}`,
+      `Submitted (UTC): ${new Date().toISOString()}`
+    ];
 
-    const widgetId = renderInvisibleHcaptcha(form, container);
-    if (widgetId === null || !window.hcaptcha || typeof window.hcaptcha.execute !== 'function') {
-      return Promise.resolve(false);
-    }
+    new FormData(form).forEach((value, name) => {
+      if (EXCLUDED_FIELDS.has(name) || value instanceof File) {
+        return;
+      }
 
-    return new Promise((resolve) => {
-      container._resolveCaptcha = resolve;
-      try {
-        window.hcaptcha.execute(widgetId);
-      } catch (error) {
-        container._resolveCaptcha = null;
-        resolve(false);
+      const cleanedValue = displayValue(form, name, value);
+      if (cleanedValue) {
+        details.push(`${labelForField(name)}: ${cleanedValue}`);
       }
     });
+
+    return details.join('\n');
   }
 
-  function resetHcaptcha(form) {
-    const container = form.querySelector('[data-captcha="hcaptcha"]');
-    if (!container || !container.dataset.widgetId || !window.hcaptcha || typeof window.hcaptcha.reset !== 'function') {
-      return;
+  function getResponseFrame() {
+    if (responseFrame && document.body.contains(responseFrame)) {
+      return responseFrame;
     }
 
-    window.hcaptcha.reset(Number(container.dataset.widgetId));
+    responseFrame = document.createElement('iframe');
+    responseFrame.name = 'fge-google-forms-response';
+    responseFrame.title = 'Google Forms response';
+    responseFrame.hidden = true;
+    responseFrame.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(responseFrame);
+    return responseFrame;
   }
+
+  function submitToGoogleForm(config, details) {
+    const submission = document.createElement('form');
+    const field = document.createElement('input');
+    const frame = getResponseFrame();
+    let cleanupTimer;
+
+    function cleanup() {
+      window.clearTimeout(cleanupTimer);
+      submission.remove();
+    }
+
+    submission.method = 'post';
+    submission.action = config.endpoint;
+    submission.target = frame.name;
+    submission.style.display = 'none';
+
+    field.type = 'hidden';
+    field.name = config.entry;
+    field.value = details;
+    submission.appendChild(field);
+    document.body.appendChild(submission);
+    frame.addEventListener('load', cleanup, { once: true });
+    submission.submit();
+    cleanupTimer = window.setTimeout(cleanup, 10000);
+  }
+
+  getResponseFrame();
 
   document.querySelectorAll('form[data-lead]').forEach((form) => {
     const btn = form.querySelector('[type="submit"]');
-    const successMsg = form.querySelector('.form-success, .lead-form-status.form-success');
+    const successMsg = form.querySelector('.form-success, .lead-form-status.form-success') ||
+      form.parentElement?.querySelector('.form-success, .lead-form-status.form-success');
     const errorMsg = form.querySelector('.form-error, .lead-form-status.form-error');
-    const accessKeyInput = form.querySelector('input[name="access_key"]');
-    const subjectInput = form.querySelector('input[name="subject"]');
-    const fromNameInput = form.querySelector('input[name="from_name"]');
     const originalButtonHtml = btn ? btn.innerHTML : '';
     let captchaInput = setupSimpleCaptcha(form);
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
 
       setMessage(successMsg, '');
       setMessage(errorMsg, '');
 
       if (!form.checkValidity()) {
         form.reportValidity();
-        return;
-      }
-
-      const accessKey = accessKeyInput ? accessKeyInput.value.trim() : '';
-      if (PLACEHOLDER_KEYS.has(accessKey)) {
-        setMessage(errorMsg, 'Form setup is incomplete. Add the live Web3Forms access key before going to production.');
         return;
       }
 
@@ -183,9 +215,10 @@
         return;
       }
 
-      const hcaptchaReady = await ensureHcaptchaToken(form);
-      if (!hcaptchaReady) {
-        setMessage(errorMsg, 'Please complete the hCaptcha verification before sending your request.');
+      const source = form.dataset.lead || form.id || 'website-form';
+      const config = GOOGLE_FORMS[source];
+      if (!config) {
+        setMessage(errorMsg, 'This form is not configured yet. Please contact us on WhatsApp.');
         return;
       }
 
@@ -194,38 +227,11 @@
         btn.textContent = 'Sending...';
       }
 
-      const data = new FormData(form);
-
-      if (!subjectInput || !subjectInput.value.trim()) {
-        data.set('subject', 'New lead from FGE Solar website');
-      }
-
-      if (!fromNameInput || !fromNameInput.value.trim()) {
-        data.set('from_name', 'FGE Solar Website');
-      }
-
-      data.set('page', window.location.pathname);
-      data.set('source', form.dataset.lead || form.id || 'website-form');
-
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: data,
-          headers: {
-            Accept: 'application/json'
-          }
-        });
-
-        const json = await res.json();
-
-        if (!res.ok || !json.success) {
-          throw new Error(json.message || 'Submission failed');
-        }
-
+        submitToGoogleForm(config, buildLeadDetails(form, config));
         form.reset();
-        resetHcaptcha(form);
         captchaInput = setupSimpleCaptcha(form);
-        setMessage(successMsg, successMsg ? successMsg.dataset.message : '');
+        setMessage(successMsg, successMsg ? successMsg.dataset.message : 'Thanks—your request has been sent.');
 
         if (successMsg) {
           successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -233,22 +239,19 @@
 
         if (typeof gtag === 'function') {
           gtag('event', 'form_submitted', {
-            form_id: form.dataset.lead || form.id,
+            form_id: source,
             page: window.location.pathname
           });
         }
 
         window.dispatchEvent(new CustomEvent('fge:lead-submitted', {
           detail: {
-            source: form.dataset.lead || form.id || 'website-form',
+            source,
             page: window.location.pathname
           }
         }));
-      } catch (err) {
-        setMessage(
-          errorMsg,
-          err && err.message ? err.message : 'We could not send your request. Please try again or contact us on WhatsApp.'
-        );
+      } catch (error) {
+        setMessage(errorMsg, 'We could not send your request. Please try again or contact us on WhatsApp.');
 
         if (errorMsg) {
           errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
