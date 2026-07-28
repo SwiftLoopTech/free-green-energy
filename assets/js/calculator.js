@@ -192,6 +192,9 @@
   const homeSel      = document.getElementById('calc-home');
   const billSlider   = document.getElementById('calc-bill-slider');
   const billDisplay  = document.getElementById('calc-bill-display');
+  const leadCta      = document.getElementById('res-lead-cta');
+  const leadCapture  = document.getElementById('calculator-lead-capture');
+  let latestLeadState = null;
 
   if (!form) return; // Not on calculator page
 
@@ -229,7 +232,7 @@
     }
 
     const res = calculate(bill, district, roof, home);
-    displayResults(res, bill, district);
+    displayResults(res, bill, district, roof, home);
 
     // Track
     if (typeof gtag === 'function') {
@@ -248,7 +251,30 @@
     }
   });
 
-  function displayResults(r, bill, district) {
+  if (leadCta && leadCapture) {
+    leadCta.addEventListener('click', () => {
+      if (leadCapture.hidden) {
+        leadCapture.hidden = false;
+        leadCapture.classList.add('is-active');
+        leadCta.setAttribute('aria-expanded', 'true');
+        leadCta.innerHTML = 'Your Result Is Ready <small>Complete the short form below</small>';
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'calculator_lead_cta_clicked', {
+          lead_source: 'calculator_results_cta',
+          system_kw: latestLeadState?.systemKW || 'unknown'
+        });
+      }
+
+      window.setTimeout(() => {
+        leadCapture.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        document.getElementById('lead-name')?.focus({ preventScroll: true });
+      }, 80);
+    });
+  }
+
+  function displayResults(r, bill, district, roof, home) {
     if (!results) return;
 
     // Update result elements
@@ -270,18 +296,14 @@
     }
 
     // Build WhatsApp pre-filled message
-    const districtName = districtSel?.options[districtSel.selectedIndex]?.text || district;
+    const districtName = selectedOptionText(districtSel, district || 'Not specified');
     const waMsg = `Hi FGE Solar, my monthly KSEB bill is ₹${bill.toLocaleString('en-IN')} and I'm in ${districtName}. The calculator showed I could save ₹${r.monthlySavings.toLocaleString('en-IN')}/month with a ${r.systemKW}kW system. Can you confirm this and arrange a free site visit?`;
     const waBtn = document.getElementById('res-wa-btn');
     if (waBtn) {
       waBtn.href = `https://wa.me/918089073029?text=${encodeURIComponent(waMsg)}`;
     }
 
-    // Pre-fill district in lead form
-    const leadDistrict = document.getElementById('lead-district');
-    if (leadDistrict && districtSel) {
-      leadDistrict.value = districtSel.options[districtSel.selectedIndex]?.text || '';
-    }
+    syncLeadEstimate(r, bill, districtName, roof, home);
 
     // Show results
     results.classList.add('is-visible', 'fade-up', 'visible');
@@ -290,6 +312,45 @@
   function setEl(id, text) {
     const el = document.getElementById(id);
     if (el) el.textContent = text;
+  }
+
+  function setLeadField(id, value) {
+    const field = document.getElementById(id);
+    if (field) {
+      field.value = value;
+      field.defaultValue = value;
+    }
+  }
+
+  function selectedOptionText(select, fallback) {
+    if (!select || !select.value) return fallback;
+    return select.options[select.selectedIndex]?.text || fallback;
+  }
+
+  function syncLeadEstimate(r, bill, districtName, roof, home) {
+    const roofName = selectedOptionText(roofSel, roof || 'Not specified');
+    const propertyName = selectedOptionText(homeSel, home || 'Not specified');
+    const grossCost = formatIndian(r.grossCost);
+    const subsidy = '₹' + r.subsidy.toLocaleString('en-IN');
+    const netCost = formatIndian(r.netCost);
+    const monthlySavings = '₹' + r.monthlySavings.toLocaleString('en-IN') + '/month';
+    const payback = r.paybackYears.toFixed(1) + ' years';
+
+    latestLeadState = { systemKW: r.systemKW };
+
+    setLeadField('lead-monthly-bill', '₹' + bill.toLocaleString('en-IN') + ' per month');
+    setLeadField('lead-district', districtName);
+    setLeadField('lead-roof-profile', roofName);
+    setLeadField('lead-property-type', propertyName);
+    setLeadField('lead-system-size', r.systemKW + ' kW');
+    setLeadField('lead-gross-cost', grossCost);
+    setLeadField('lead-subsidy', subsidy);
+    setLeadField('lead-net-cost', netCost);
+    setLeadField('lead-monthly-savings', monthlySavings);
+    setLeadField('lead-payback', payback);
+
+    setEl('res-lead-summary', `Your latest ${r.systemKW} kW plan is estimated at ${netCost} after a ${subsidy} subsidy, with about ${monthlySavings} in savings. We’ll attach these details to your request.`);
+    setEl('lead-capture-copy', `We’ll attach this ${r.systemKW} kW estimate, ${netCost} net price and your KSEB details automatically. Just share your name and WhatsApp number.`);
   }
 
   function showError(msg) {

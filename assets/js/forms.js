@@ -47,6 +47,13 @@
     district: 'District',
     monthly_bill: 'Monthly electricity bill',
     property_type: 'Property type',
+    lead_source: 'Lead source',
+    recommended_system_size: 'Recommended system size',
+    estimated_system_cost: 'Estimated system cost',
+    subsidy_estimate: 'Estimated subsidy',
+    net_investment: 'Estimated cost after subsidy',
+    monthly_savings_estimate: 'Estimated monthly savings',
+    payback_estimate: 'Estimated payback period',
     message: 'Message / notes',
     interest: 'Interest',
     audit_score: 'Energy Check score',
@@ -241,6 +248,9 @@
           gtag('event', 'form_submitted', {
             form_id: source,
             page: window.location.pathname
+          });
+          gtag('event', 'generate_lead', {
+            lead_source: source
           });
         }
 
