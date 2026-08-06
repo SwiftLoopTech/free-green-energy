@@ -1,6 +1,9 @@
 # Claude Code
 .claude/
 
+# Agent skills & config (local only)
+.agents/
+
 # Planning & strategy docs (internal use only)
 fge-content-strategy.txt
 fge-lead-funnel.txt

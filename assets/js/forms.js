@@ -245,13 +245,26 @@
         }
 
         if (typeof gtag === 'function') {
-          gtag('event', 'form_submitted', {
+          gtag('event', 'lead_form_submit', {
             form_id: source,
+            form_label: config.label,
             page: window.location.pathname
           });
           gtag('event', 'generate_lead', {
             lead_source: source
           });
+        }
+
+        // Clarity — specific tag per form type
+        if (typeof window.clarity === 'function') {
+          const clarityTagMap = {
+            'contact': 'contact_form_lead',
+            'calculator': 'calculator_lead',
+            'home_energy_check': 'energy_check_lead',
+            'pm-surya-ghar-checklist': 'checklist_lead'
+          };
+          const clarityTag = clarityTagMap[source] || 'generic_form_lead';
+          window.clarity('event', clarityTag);
         }
 
         window.dispatchEvent(new CustomEvent('fge:lead-submitted', {

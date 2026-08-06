@@ -242,6 +242,9 @@
         system_kw: res.systemKW
       });
     }
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', 'calculator_result_seen');
+    }
 
     // Scroll to results
     if (results) {
@@ -265,6 +268,9 @@
           lead_source: 'calculator_results_cta',
           system_kw: latestLeadState?.systemKW || 'unknown'
         });
+      }
+      if (typeof window.clarity === 'function') {
+        window.clarity('event', 'calculator_converted');
       }
 
       window.setTimeout(() => {

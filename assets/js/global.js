@@ -357,18 +357,70 @@ function _fgeMainInit() {
     });
   });
 
+  // ── Analytics helpers ───────────────────────────────────────────────────
+  // Single wrapper that fires GA4 + Clarity from one call.
+  // Clarity project: xna10prts7
+  function fgeEvent(ga4Name, ga4Params, clarityTag) {
+    if (typeof gtag === 'function') {
+      gtag('event', ga4Name, Object.assign({ page: window.location.pathname }, ga4Params));
+    }
+    if (clarityTag && typeof window.clarity === 'function') {
+      window.clarity('event', clarityTag);
+    }
+  }
+
+  function fgeSet(key, value) {
+    if (typeof window.clarity === 'function') {
+      window.clarity('set', key, value);
+    }
+  }
+
+  // ── Label each session by page type so Clarity filters work ────────────
+  (function() {
+    const p = window.location.pathname;
+    const type = p.startsWith('/blog/') ? 'blog'
+      : p.startsWith('/solar-in/') ? 'location_page'
+      : p.startsWith('/services/') ? 'service_page'
+      : p.startsWith('/subsidy/') ? 'subsidy_page'
+      : p === '/calculator' ? 'calculator'
+      : p === '/contact' ? 'contact'
+      : (p === '/' || p === '/index.html') ? 'homepage'
+      : 'other';
+    fgeSet('page_type', type);
+  })();
+
+  // ── WhatsApp floating button ────────────────────────────────────────────
   const waFloat = document.querySelector('.wa-float');
   if (waFloat) {
     waFloat.addEventListener('click', () => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'whatsapp_click', {
-          location: 'floating_button',
-          page: window.location.pathname
-        });
-      }
+      fgeEvent('whatsapp_click', { location: 'floating_button' }, 'whatsapp_float_btn');
     });
   }
 
+  // ── WhatsApp all other links — context-aware ────────────────────────────
+  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+    if (link.classList.contains('wa-float')) return; // already handled above
+    link.addEventListener('click', () => {
+      let location = 'inline';
+      let clarityTag = 'whatsapp_inline_cta';
+      if (link.closest('.sticky-mobile-cta')) {
+        location = 'sticky_bar';
+        clarityTag = 'whatsapp_sticky_cta';
+      } else if (link.closest('.hero') || link.closest('.hero-ctas')) {
+        location = 'hero';
+        clarityTag = 'whatsapp_hero_cta';
+      } else if (link.closest('.blog-inline-cta') || link.closest('article')) {
+        location = 'blog_cta';
+        clarityTag = 'whatsapp_blog_cta';
+      } else if (link.closest('footer')) {
+        location = 'footer';
+        clarityTag = 'whatsapp_footer';
+      }
+      fgeEvent('whatsapp_click', { location }, clarityTag);
+    });
+  });
+
+  // ── Smooth scroll for anchor links ─────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
       const target = document.querySelector(link.getAttribute('href'));
@@ -381,6 +433,7 @@ function _fgeMainInit() {
     });
   });
 
+  // ── Sticky CTA visibility ───────────────────────────────────────────────
   const stickyCTA = document.querySelector('.sticky-mobile-cta');
   const heroCTA = document.querySelector('.hero-ctas');
 
@@ -394,45 +447,48 @@ function _fgeMainInit() {
     stickyObserver.observe(heroCTA);
   }
 
+  // ── Phone click — with section context ─────────────────────────────────
   document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
     link.addEventListener('click', () => {
-      if (typeof gtag === 'function') {
-        gtag('event', 'phone_clicked', { page: window.location.pathname });
+      const section = link.closest('header, nav') ? 'nav'
+        : link.closest('footer') ? 'footer'
+        : 'body';
+      fgeEvent('phone_click', { section }, 'phone_click_' + section);
+    });
+  });
+
+  // ── FAQ interaction tracking ────────────────────────────────────────────
+  faqItems.forEach((item) => {
+    const btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      if (!item.classList.contains('open')) { // about to open
+        const qText = (btn.textContent || '').trim().substring(0, 60);
+        fgeEvent('faq_opened', { question: qText }, 'faq_interaction');
       }
     });
   });
 
-  document.querySelectorAll('form').forEach((form) => {
-    form.addEventListener('submit', () => {
-      if (form.matches('[data-lead]')) {
-        return;
-      }
-
-      if (typeof gtag === 'function') {
-        gtag('event', 'form_submitted', {
-          form_id: form.id || 'unknown',
-          page: window.location.pathname
-        });
-      }
-    });
-  });
-
+  // ── Blog scroll depth tracking ──────────────────────────────────────────
   const blogInlineCTA = document.querySelector('.blog-inline-cta');
   if (blogInlineCTA) {
-    let shown = false;
+    let reached50 = false;
+    let reached100 = false;
     window.addEventListener('scroll', () => {
-      if (shown) return;
-      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      if (scrolled > 0.45) {
+      const scrolled = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight);
+      if (!reached50 && scrolled > 0.50) {
+        reached50 = true;
         blogInlineCTA.classList.add('visible');
-        shown = true;
-        if (typeof gtag === 'function') {
-          gtag('event', 'blog_50_percent', { page: window.location.pathname });
-        }
+        fgeEvent('blog_scroll_depth', { depth: '50pct' }, 'blog_read_50pct');
+        fgeSet('blog_engaged', 'true');
+      }
+      if (!reached100 && scrolled > 0.95) {
+        reached100 = true;
+        fgeEvent('blog_scroll_depth', { depth: '100pct' }, 'blog_read_complete');
       }
     }, { passive: true });
   }
-}
+} // end _fgeMainInit
 
 const WA_NUMBER = '918089073029';
 
@@ -500,21 +556,36 @@ function initEstimateModal() {
     if (typeof gtag === 'function') {
       gtag('event', 'modal_view', { modal_name: 'estimate_modal', page: window.location.pathname });
     }
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', 'estimate_modal_shown');
+    }
   };
 
-  const closeModal = (isClick = false) => {
+  const closeModal = (action) => {
     modal.classList.remove('fge-modal-show');
     localStorage.setItem(STORAGE_KEY, Date.now().toString());
-    if (isClick && typeof gtag === 'function') {
-      gtag('event', 'modal_click', { modal_name: 'estimate_modal', page: window.location.pathname });
+    if (action === 'cta') {
+      if (typeof gtag === 'function') {
+        gtag('event', 'modal_cta_click', { modal_name: 'estimate_modal', page: window.location.pathname });
+      }
+      if (typeof window.clarity === 'function') {
+        window.clarity('event', 'estimate_modal_converted');
+      }
+    } else {
+      if (typeof gtag === 'function') {
+        gtag('event', 'modal_dismissed', { modal_name: 'estimate_modal', page: window.location.pathname });
+      }
+      if (typeof window.clarity === 'function') {
+        window.clarity('event', 'estimate_modal_closed');
+      }
     }
     setTimeout(() => { modal.remove(); }, 300);
   };
 
-  closeBtn.addEventListener('click', () => closeModal(false));
-  ctaBtn.addEventListener('click', () => closeModal(true));
+  closeBtn.addEventListener('click', () => closeModal('dismiss'));
+  ctaBtn.addEventListener('click', () => closeModal('cta'));
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal(false);
+    if (e.target === modal) closeModal('dismiss');
   });
 
   // Trigger after 10 seconds or 50% scroll
