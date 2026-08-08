@@ -234,6 +234,15 @@
     const res = calculate(bill, district, roof, home);
     displayResults(res, bill, district, roof, home);
 
+    // Run conversion upgrades
+    updateMoneyLost(res.monthlySavings);
+    updateDistrictProof(district);
+    updateKSEBProjection(bill);
+    updateNeighbourBadge(res.systemKW, res.monthlySavings);
+    showStickyBar(res.monthlySavings, res.netCost);
+    showWhatNext();
+    updateLeadCTACopy(res.subsidy, res.netCost);
+
     // Track
     if (typeof gtag === 'function') {
       gtag('event', 'calculator_completed', {
@@ -518,19 +527,5 @@
     }
   }
 
-  // ── Wire all upgrades into displayResults ─────────────────────────────
-  const _origDisplayResults = displayResults;
-  function displayResults(r, bill, district, roof, home) {
-    _origDisplayResults(r, bill, district, roof, home);
-
-    // Run all upgrades
-    updateMoneyLost(r.monthlySavings);
-    updateDistrictProof(district);
-    updateKSEBProjection(bill);
-    updateNeighbourBadge(r.systemKW, r.monthlySavings);
-    showStickyBar(r.monthlySavings, r.netCost);
-    showWhatNext();
-    updateLeadCTACopy(r.subsidy, r.netCost);
-  }
 
 })();
