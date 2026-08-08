@@ -526,8 +526,8 @@ function initEstimateModal() {
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 6L6 18M6 6l12 12"></path></svg>
         </button>
         <div class="fge-modal-body">
-          <div class="fge-modal-image" style="background-color: #0a1128;">
-            <img src="/assets/images/modal-subsidy-banner.webp" alt="Breaking News: PM Surya Ghar Subsidy Expires March 2027" width="640" height="400" decoding="async" />
+          <div class="fge-modal-image">
+            <img src="/assets/images/modal-subsidy-banner.webp" alt="Breaking News: PM Surya Ghar Subsidy Expires March 2027" width="400" height="640" decoding="async" />
           </div>
           <div class="fge-modal-text">
             <div class="fge-modal-badge" style="background:#fff3cd;color:#7d4700;border-radius:6px;padding:4px 10px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-block;margin-bottom:0.75rem;">
@@ -561,7 +561,7 @@ function initEstimateModal() {
             <p style="font-size:0.84rem;color:#4a5c4e;margin:0.5rem 0 0.9rem;line-height:1.5;">
               MNRE-empanelled installer. Free site visit. Your bill, your roof, your exact subsidy amount — calculated on-site.
             </p>
-            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta" style="display:flex; align-items:center; justify-content:center; text-align:center; background:linear-gradient(90deg, #d32f2f, #e53935); border:none; color:#fff; font-weight:800; font-size:1.1rem; box-shadow:0 4px 15px rgba(211,47,47,0.4);">
+            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta fge-modal-cta-urgent" id="fge-modal-cta">
               CLAIM ₹78,000 SUBSIDY NOW →
             </a>
             <div style="font-size:0.7rem;color:#9aab9c;text-align:center;margin-top:0.5rem;">No cost · No commitment · 48-hr response</div>

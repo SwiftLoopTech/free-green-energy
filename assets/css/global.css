@@ -749,6 +749,7 @@ svg.icon, .icon svg {
   position: relative;
   width: 100%;
   height: 200px;
+  background-color: #0d1b2a;
 }
 
 .fge-modal-image img {
@@ -804,7 +805,19 @@ svg.icon, .icon svg {
   justify-content: center;
   width: 100%;
   max-width: 320px;
+}
+
+.fge-modal-cta-urgent {
+  background: linear-gradient(90deg, #d32f2f, #e53935) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4) !important;
   animation: pulse-red 2s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes pulse-red {
