@@ -375,20 +375,25 @@
 
   function pad2(n) { return String(n).padStart(2, '0'); }
 
-  function updateSubsidyCountdown() {
+  function calcCountdown() {
     const now  = Date.now();
     const diff = Math.max(0, SUBSIDY_DEADLINE - now);
-    const days  = Math.floor(diff / 864e5);
-    const hours = Math.floor((diff % 864e5) / 36e5);
-    const mins  = Math.floor((diff % 36e5)  / 6e4);
-    const secs  = Math.floor((diff % 6e4)   / 1e3);
+    const totalDays  = Math.floor(diff / 864e5);
+    const months     = Math.floor(totalDays / 30.44);
+    const days       = Math.floor(totalDays % 30.44);
+    const hours      = Math.floor((diff % 864e5) / 36e5);
+    const mins       = Math.floor((diff % 36e5)  / 6e4);
+    return { months, days, hours, mins };
+  }
 
+  function updateSubsidyCountdown() {
+    const { months, days, hours, mins } = calcCountdown();
     const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-    set('sct-days',  days);
-    set('sct-hours', pad2(hours));
-    set('sct-mins',  pad2(mins));
-    set('sct-secs',  pad2(secs));
-    set('sticky-sct-days', days);
+    set('sct-days',  months);   // now shows months
+    set('sct-hours', pad2(days));   // now shows days
+    set('sct-mins',  pad2(hours));
+    set('sct-secs',  pad2(mins));
+    set('sticky-sct-days', months + ' months');
   }
 
   // Start countdown immediately and tick every second

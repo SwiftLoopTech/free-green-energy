@@ -535,27 +535,27 @@ function initEstimateModal() {
             </div>
             <h3 style="font-size:clamp(1.15rem,2.8vw,1.45rem);line-height:1.2;margin:0 0 0.5rem;">
               Up to ₹78,000 Subsidy.<br>Only
-              <span id="modal-sct-days" style="color:#18B85C;">—</span> Days Left to Claim.
+              <span id="modal-sct-days" style="color:#18B85C;">—</span> Months Left to Claim.
             </h3>
             <div style="background:#1a1a2e;border-radius:10px;padding:0.65rem 0.9rem;margin:0.65rem 0;display:flex;gap:0.6rem;align-items:center;justify-content:center;">
               <div style="text-align:center;">
                 <span id="modal-sct-d" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
-                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Days</div>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Months</div>
               </div>
               <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
               <div style="text-align:center;">
                 <span id="modal-sct-h" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
-                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Hrs</div>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Days</div>
               </div>
               <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
               <div style="text-align:center;">
                 <span id="modal-sct-m" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
-                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Min</div>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Hrs</div>
               </div>
               <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
               <div style="text-align:center;">
                 <span id="modal-sct-s" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
-                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Sec</div>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Min</div>
               </div>
             </div>
             <p style="font-size:0.84rem;color:#4a5c4e;margin:0.5rem 0 0.9rem;line-height:1.5;">
@@ -594,16 +594,17 @@ function initEstimateModal() {
     const p2 = n => String(n).padStart(2,'0');
     function tickModal() {
       const diff = Math.max(0, MODAL_DEADLINE - Date.now());
-      const d = Math.floor(diff / 864e5);
-      const h = Math.floor((diff % 864e5) / 36e5);
-      const m = Math.floor((diff % 36e5) / 6e4);
-      const s = Math.floor((diff % 6e4) / 1e3);
+      const totalDays = Math.floor(diff / 864e5);
+      const mo = Math.floor(totalDays / 30.44);
+      const d  = Math.floor(totalDays % 30.44);
+      const h  = Math.floor((diff % 864e5) / 36e5);
+      const m  = Math.floor((diff % 36e5) / 6e4);
       const $ = id => document.getElementById(id);
-      if ($('modal-sct-days')) $('modal-sct-days').textContent = d;
-      if ($('modal-sct-d'))    $('modal-sct-d').textContent = d;
-      if ($('modal-sct-h'))    $('modal-sct-h').textContent = p2(h);
-      if ($('modal-sct-m'))    $('modal-sct-m').textContent = p2(m);
-      if ($('modal-sct-s'))    $('modal-sct-s').textContent = p2(s);
+      if ($('modal-sct-days')) $('modal-sct-days').textContent = mo;
+      if ($('modal-sct-d'))    $('modal-sct-d').textContent = mo;
+      if ($('modal-sct-h'))    $('modal-sct-h').textContent = p2(d);
+      if ($('modal-sct-m'))    $('modal-sct-m').textContent = p2(h);
+      if ($('modal-sct-s'))    $('modal-sct-s').textContent = p2(m);
     }
     tickModal();
     const modalTicker = setInterval(tickModal, 1000);
