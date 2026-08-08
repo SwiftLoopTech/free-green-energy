@@ -534,10 +534,10 @@ function initEstimateModal() {
               ⚡ PM Surya Ghar Subsidy — Time Running Out
             </div>
             <h3 style="font-size:clamp(1.15rem,2.8vw,1.45rem);line-height:1.2;margin:0 0 0.5rem;">
-              Up to ₹78,000 Subsidy.<br>Only
-              <span id="modal-sct-days" style="color:#18B85C;">—</span> Months Left to Claim.
+              Up to <span style="color:#d32f2f; font-weight:800;">₹78,000</span> Subsidy.<br>Only
+              <span id="modal-sct-days" style="color:#d32f2f; font-weight:800;">—</span> Months Left to Claim.
             </h3>
-            <div style="background:#1a1a2e;border-radius:10px;padding:0.65rem 0.9rem;margin:0.65rem 0;display:flex;gap:0.6rem;align-items:center;justify-content:center;">
+            <div style="background:linear-gradient(135deg, #b71c1c 0%, #d32f2f 100%);border-radius:10px;padding:0.65rem 0.9rem;margin:0.65rem 0;display:flex;gap:0.6rem;align-items:center;justify-content:center;box-shadow:inset 0 0 10px rgba(0,0,0,0.2);">
               <div style="text-align:center;">
                 <span id="modal-sct-d" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
                 <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Months</div>
