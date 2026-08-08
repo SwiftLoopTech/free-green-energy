@@ -527,7 +527,7 @@ function initEstimateModal() {
         </button>
         <div class="fge-modal-body">
           <div class="fge-modal-image">
-            <img src="/assets/images/hero/updated_hero-640.webp" alt="Rooftop solar in Kerala" width="640" height="306" decoding="async" />
+            <img src="/assets/images/modal-subsidy-banner.webp" alt="PM Surya Ghar Muft Bijli Yojana — Solar subsidy scheme" width="640" height="400" decoding="async" />
           </div>
           <div class="fge-modal-text">
             <div class="fge-modal-badge" style="background:#fff3cd;color:#7d4700;border-radius:6px;padding:4px 10px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-block;margin-bottom:0.75rem;">
