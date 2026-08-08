@@ -858,6 +858,320 @@
       }
     }
   </style>
+
+  <!-- ── CONVERSION UPGRADE STYLES ────────────────────────────────── -->
+  <style>
+    /* Subsidy countdown on the subsidy card */
+    .subsidy-countdown {
+      margin-top: 0.85rem;
+      background: rgba(0,0,0,0.22);
+      border-radius: 10px;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .subsidy-countdown-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+    }
+    .subsidy-countdown-timer {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .sct-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255,255,255,0.12);
+      border-radius: 7px;
+      padding: 0.3rem 0.5rem;
+      min-width: 42px;
+    }
+    .sct-value {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .sct-label {
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 0.15rem;
+    }
+    .sct-sep { color: rgba(255,255,255,0.4); font-size: 1rem; font-weight: 700; align-self: flex-start; margin-top: 0.3rem; }
+    .subsidy-countdown-note {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.1rem;
+    }
+
+    /* Money lost card */
+    .money-lost-card {
+      background: linear-gradient(135deg, #3d1a1a 0%, #5c2222 100%);
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 1.25rem;
+      display: none;
+      gap: 1rem;
+      align-items: center;
+    }
+    .money-lost-card.is-shown { display: flex; }
+    .money-lost-icon { font-size: 2rem; flex-shrink: 0; }
+    .money-lost-text {}
+    .money-lost-label {
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: rgba(255,140,140,0.8);
+      margin-bottom: 0.25rem;
+    }
+    .money-lost-value {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ff8a8a;
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .money-lost-sub { font-size: 0.78rem; color: rgba(255,200,200,0.65); }
+
+    /* District social proof */
+    .district-proof {
+      background: #f0faf4;
+      border: 1.5px solid #b8dfc8;
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      display: none;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .district-proof.is-shown { display: flex; }
+    .district-proof-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .district-proof-text { font-size: 0.88rem; color: #1a4a2a; line-height: 1.45; }
+    .district-proof-text strong { font-weight: 700; }
+
+    /* KSEB tariff projection card */
+    .kseb-projection-card {
+      background: #fff;
+      border: 1.5px solid #e0e8e1;
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+    .kseb-projection-card.is-shown { display: block; }
+    .kseb-proj-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    .kseb-proj-header span:first-child { font-size: 1.2rem; }
+    .kseb-proj-title {
+      font-family: var(--font-heading);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #172219;
+    }
+    .kseb-proj-subtitle {
+      font-size: 0.72rem;
+      color: #6b7c6e;
+      margin-top: 0.1rem;
+    }
+    .kseb-proj-rows {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .kseb-proj-row {
+      background: #f7faf7;
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      text-align: center;
+    }
+    .kseb-proj-row.solar-row {
+      background: #edf9f1;
+      border: 1px solid rgba(24,184,92,0.2);
+    }
+    .kseb-proj-year {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #6b7c6e;
+      margin-bottom: 0.3rem;
+    }
+    .kseb-proj-amount {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #c0392b;
+      line-height: 1;
+    }
+    .kseb-proj-row.solar-row .kseb-proj-amount { color: #18B85C; }
+    .kseb-proj-note {
+      font-size: 0.68rem;
+      color: #9aab9c;
+      margin-top: 0.9rem;
+    }
+
+    /* Sticky urgency bar */
+    #calc-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: linear-gradient(90deg, #172219 0%, #1a3522 100%);
+      color: #fff;
+      padding: 0.85rem 1.5rem;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.28);
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+    }
+    #calc-sticky-bar.is-visible {
+      display: flex;
+      transform: translateY(0);
+    }
+    #calc-sticky-bar.is-hidden { transform: translateY(100%); }
+    .sticky-bar-text { font-size: 0.88rem; line-height: 1.35; }
+    .sticky-bar-text strong { font-weight: 700; color: #8fe1b0; display: block; font-size: 0.92rem; }
+    .sticky-bar-text span { color: rgba(255,255,255,0.7); font-size: 0.78rem; }
+    .sticky-bar-cta {
+      flex-shrink: 0;
+      padding: 0.65rem 1.2rem;
+      background: #18B85C;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .sticky-bar-cta:hover { background: #14a050; transform: scale(1.02); }
+    .sticky-bar-countdown {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .sticky-bar-countdown strong { color: #ffcc55; font-size: 0.85rem; display: block; }
+    @media (max-width: 560px) {
+      #calc-sticky-bar { flex-wrap: wrap; gap: 0.65rem; padding: 0.85rem 1rem; }
+      .sticky-bar-text { flex: 1 1 100%; }
+      .sticky-bar-countdown { display: none; }
+      .sticky-bar-cta { flex: 1 1 100%; text-align: center; padding: 0.85rem; }
+    }
+
+    /* What happens next */
+    .what-next-section {
+      background: #f7faf7;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+    .what-next-section.is-shown { display: block; }
+    .what-next-title {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #172219;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .what-next-steps {
+      display: flex;
+      gap: 0;
+      align-items: flex-start;
+      position: relative;
+    }
+    .what-next-steps::before {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: calc(16.66% + 18px);
+      right: calc(16.66% + 18px);
+      height: 2px;
+      background: linear-gradient(90deg, #18B85C, #1FC7C0);
+    }
+    .what-next-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+    .wns-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #18B85C;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .wns-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #172219;
+      margin-bottom: 0.2rem;
+    }
+    .wns-sub { font-size: 0.68rem; color: #6b7c6e; }
+    @media (max-width: 480px) {
+      .what-next-steps { flex-direction: column; gap: 0.85rem; }
+      .what-next-steps::before { display: none; }
+      .what-next-step { display: flex; align-items: flex-start; gap: 0.75rem; text-align: left; }
+      .wns-num { flex-shrink: 0; }
+    }
+
+    /* Neighbour compare badge */
+    .neighbour-badge {
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+      background: #fff8e7;
+      border: 1.5px solid #f0d070;
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.84rem;
+      color: #5c4a00;
+    }
+    .neighbour-badge.is-shown { display: flex; }
+    .neighbour-badge span:first-child { font-size: 1.2rem; }
+
+    /* pulse animation for countdown */
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(24,184,92,0.0); }
+      50% { box-shadow: 0 0 0 6px rgba(24,184,92,0.18); }
+    }
+    .sct-value { animation: pulse-green 2s infinite; border-radius: 4px; }
+  </style>
+
   <!-- codex-seo-generated:start -->
   <script type="application/ld+json">
 {
@@ -1206,7 +1520,33 @@
             <div class="result-card-label" style="color:rgba(255,255,255,0.7);">PM Surya Ghar Subsidy</div>
             <div class="result-card-value" id="res-subsidy" style="color:#fff;">—</div>
             <div class="result-card-sub" style="color:rgba(255,255,255,0.6);">eligible residential CFA estimate</div>
+            <!-- Subsidy countdown -->
+            <div class="subsidy-countdown" id="subsidy-countdown-box">
+              <div class="subsidy-countdown-label">⏳ Subsidy scheme ends in</div>
+              <div class="subsidy-countdown-timer">
+                <div class="sct-unit"><span class="sct-value" id="sct-days">—</span><span class="sct-label">Days</span></div>
+                <span class="sct-sep">:</span>
+                <div class="sct-unit"><span class="sct-value" id="sct-hours">—</span><span class="sct-label">Hrs</span></div>
+                <span class="sct-sep">:</span>
+                <div class="sct-unit"><span class="sct-value" id="sct-mins">—</span><span class="sct-label">Min</span></div>
+                <span class="sct-sep">:</span>
+                <div class="sct-unit"><span class="sct-value" id="sct-secs">—</span><span class="sct-label">Sec</span></div>
+              </div>
+              <div class="subsidy-countdown-note">Book before March 31, 2027 to secure your subsidy</div>
+            </div>
           </div>
+        </div>
+
+        <!-- District Social Proof -->
+        <div class="district-proof" id="district-proof">
+          <div class="district-proof-icon">✅</div>
+          <div class="district-proof-text" id="district-proof-text">Families in your district are already saving with solar.</div>
+        </div>
+
+        <!-- Neighbour comparison badge -->
+        <div class="neighbour-badge" id="neighbour-badge">
+          <span>🏆</span>
+          <span id="neighbour-badge-text">People with similar bills in Kerala typically choose this system size — and see payback in under 4 years.</span>
         </div>
 
         <div class="result-lead-prompt" aria-labelledby="result-lead-title">
@@ -1271,6 +1611,64 @@
             <span>Year 0 (Today)</span>
             <span id="res-payback-marker">Break-even</span>
             <span>Year 25</span>
+          </div>
+        </div>
+
+        <!-- Money Lost Card -->
+        <div class="money-lost-card" id="money-lost-card">
+          <div class="money-lost-icon">💸</div>
+          <div class="money-lost-text">
+            <div class="money-lost-label">Extra paid to KSEB in 2026 (that solar would have saved)</div>
+            <div class="money-lost-value" id="money-lost-value">—</div>
+            <div class="money-lost-sub">Every month you wait, this number grows. Solar stops it permanently.</div>
+          </div>
+        </div>
+
+        <!-- KSEB Tariff Projection -->
+        <div class="kseb-projection-card" id="kseb-proj-card">
+          <div class="kseb-proj-header">
+            <span>📈</span>
+            <div>
+              <div class="kseb-proj-title">If KSEB keeps raising tariffs (historical avg: +8%/yr)</div>
+              <div class="kseb-proj-subtitle">KSEB raised tariffs in 2020, 2022, 2023 and 2025 — that's 4 hikes in 5 years.</div>
+            </div>
+          </div>
+          <div class="kseb-proj-rows">
+            <div class="kseb-proj-row">
+              <div class="kseb-proj-year">Today</div>
+              <div class="kseb-proj-amount" id="proj-today">—</div>
+            </div>
+            <div class="kseb-proj-row">
+              <div class="kseb-proj-year">In 5 Years</div>
+              <div class="kseb-proj-amount" id="proj-5yr">—</div>
+            </div>
+            <div class="kseb-proj-row solar-row">
+              <div class="kseb-proj-year">With Solar ☀️</div>
+              <div class="kseb-proj-amount" id="proj-solar">~₹0</div>
+            </div>
+          </div>
+          <div class="kseb-proj-note">* Projection based on 8% compound annual tariff increase. Actual increases may vary.</div>
+        </div>
+
+        <!-- What Happens Next -->
+        <div class="what-next-section" id="what-next-section">
+          <div class="what-next-title">What happens after you request a visit?</div>
+          <div class="what-next-steps">
+            <div class="what-next-step">
+              <div class="wns-num">1</div>
+              <div class="wns-label">Free Site Visit</div>
+              <div class="wns-sub">Within 48 hrs. No cost, no commitment.</div>
+            </div>
+            <div class="what-next-step">
+              <div class="wns-num">2</div>
+              <div class="wns-label">Custom Quote</div>
+              <div class="wns-sub">Same day. Includes exact subsidy & KSEB filing.</div>
+            </div>
+            <div class="what-next-step">
+              <div class="wns-num">3</div>
+              <div class="wns-label">Installation</div>
+              <div class="wns-sub">14–21 working days. MNRE-certified team.</div>
+            </div>
           </div>
         </div>
 
@@ -1517,5 +1915,18 @@
   <script src="/assets/js/global.js" defer></script>
   <script src="/assets/js/calculator.js" defer></script>
   <script src="/assets/js/forms.js?v=20260727d" defer></script>
+  <!-- Sticky Urgency Bar (shown after calculator results) -->
+  <div id="calc-sticky-bar" role="complementary" aria-label="Solar savings reminder">
+    <div class="sticky-bar-text">
+      <strong id="sticky-bar-savings">Your estimated savings are ready</strong>
+      <span>Free site visit · No commitment · Results auto-attached</span>
+    </div>
+    <div class="sticky-bar-countdown">
+      <strong id="sticky-sct-days">—</strong>
+      days left to claim subsidy
+    </div>
+    <button class="sticky-bar-cta" id="sticky-bar-cta" type="button">Book Free Site Visit →</button>
+  </div>
 </body>
+
 </html>

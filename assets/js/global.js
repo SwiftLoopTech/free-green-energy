@@ -527,20 +527,50 @@ function initEstimateModal() {
         </button>
         <div class="fge-modal-body">
           <div class="fge-modal-image">
-            <img src="/assets/images/hero/updated_hero-640.webp" alt="Solar roof" width="640" height="306" decoding="async" />
+            <img src="/assets/images/hero/updated_hero-640.webp" alt="Rooftop solar in Kerala" width="640" height="306" decoding="async" />
           </div>
           <div class="fge-modal-text">
-            <div class="fge-modal-badge">Limited Time Offer</div>
-            <h3>Slash Your Electricity Bill by 90%</h3>
-            <p>Get a free, custom solar estimate for your home. See how much you can save with PM Surya Ghar subsidy.</p>
-            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta">
-              Get Free Estimate
+            <div class="fge-modal-badge" style="background:#fff3cd;color:#7d4700;border-radius:6px;padding:4px 10px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;display:inline-block;margin-bottom:0.75rem;">
+              ⚡ PM Surya Ghar Subsidy — Time Running Out
+            </div>
+            <h3 style="font-size:clamp(1.15rem,2.8vw,1.45rem);line-height:1.2;margin:0 0 0.5rem;">
+              Up to ₹78,000 Subsidy.<br>Only
+              <span id="modal-sct-days" style="color:#18B85C;">—</span> Days Left to Claim.
+            </h3>
+            <div style="background:#1a1a2e;border-radius:10px;padding:0.65rem 0.9rem;margin:0.65rem 0;display:flex;gap:0.6rem;align-items:center;justify-content:center;">
+              <div style="text-align:center;">
+                <span id="modal-sct-d" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Days</div>
+              </div>
+              <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
+              <div style="text-align:center;">
+                <span id="modal-sct-h" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Hrs</div>
+              </div>
+              <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
+              <div style="text-align:center;">
+                <span id="modal-sct-m" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Min</div>
+              </div>
+              <span style="color:rgba(255,255,255,0.3);font-size:1.2rem;align-self:flex-start;margin-top:4px;">:</span>
+              <div style="text-align:center;">
+                <span id="modal-sct-s" style="font-size:1.3rem;font-weight:800;color:#fff;font-family:var(--font-heading,inherit);">—</span>
+                <div style="font-size:0.55rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.06em;">Sec</div>
+              </div>
+            </div>
+            <p style="font-size:0.84rem;color:#4a5c4e;margin:0.5rem 0 0.9rem;line-height:1.5;">
+              MNRE-empanelled installer. Free site visit. Your bill, your roof, your exact subsidy amount — calculated on-site.
+            </p>
+            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta" style="display:block;text-align:center;">
+              Get My Free Estimate →
             </a>
+            <div style="font-size:0.7rem;color:#9aab9c;text-align:center;margin-top:0.5rem;">No cost · No commitment · 48-hr response</div>
           </div>
         </div>
       </div>
     </div>
   `;
+
   document.body.insertAdjacentHTML('beforeend', modalHTML);
 
   const modal = document.getElementById('fge-estimate-modal');
@@ -559,6 +589,26 @@ function initEstimateModal() {
     if (typeof window.clarity === 'function') {
       window.clarity('event', 'estimate_modal_shown');
     }
+    // Start modal countdown ticker
+    const MODAL_DEADLINE = new Date('2027-03-31T23:59:59+05:30').getTime();
+    const p2 = n => String(n).padStart(2,'0');
+    function tickModal() {
+      const diff = Math.max(0, MODAL_DEADLINE - Date.now());
+      const d = Math.floor(diff / 864e5);
+      const h = Math.floor((diff % 864e5) / 36e5);
+      const m = Math.floor((diff % 36e5) / 6e4);
+      const s = Math.floor((diff % 6e4) / 1e3);
+      const $ = id => document.getElementById(id);
+      if ($('modal-sct-days')) $('modal-sct-days').textContent = d;
+      if ($('modal-sct-d'))    $('modal-sct-d').textContent = d;
+      if ($('modal-sct-h'))    $('modal-sct-h').textContent = p2(h);
+      if ($('modal-sct-m'))    $('modal-sct-m').textContent = p2(m);
+      if ($('modal-sct-s'))    $('modal-sct-s').textContent = p2(s);
+    }
+    tickModal();
+    const modalTicker = setInterval(tickModal, 1000);
+    // Clear when modal removed
+    setTimeout(() => clearInterval(modalTicker), 365 * 24 * 3600e3);
   };
 
   const closeModal = (action) => {
