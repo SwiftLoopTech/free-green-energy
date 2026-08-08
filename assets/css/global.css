@@ -748,16 +748,13 @@ svg.icon, .icon svg {
 .fge-modal-image {
   position: relative;
   width: 100%;
-  height: auto;
-  display: block;
-  line-height: 0;
+  height: 200px;
 }
 
 .fge-modal-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 .fge-modal-text {
@@ -807,34 +804,38 @@ svg.icon, .icon svg {
   justify-content: center;
   width: 100%;
   max-width: 320px;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% { transform: scale(1); box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
+  50% { transform: scale(1.03); box-shadow: 0 6px 20px rgba(211, 47, 47, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); }
 }
 
 @media (min-width: 769px) {
-  /* Override side-by-side to force stacked layout for the news banner */
   .fge-modal-body {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
   }
   .fge-modal-image {
-    flex: none;
-    width: 100%;
+    flex: 0 0 45%;
     height: auto;
-    min-height: auto;
+    min-height: 400px;
   }
   .fge-modal-text {
-    flex: none;
-    width: 100%;
-    padding: 2rem 3rem 2.5rem;
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    text-align: left;
   }
   .fge-modal-text p {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
   }
   .fge-modal-cta {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    width: auto;
   }
 }
 
