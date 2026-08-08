@@ -748,13 +748,16 @@ svg.icon, .icon svg {
 .fge-modal-image {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: auto;
+  display: block;
+  line-height: 0;
 }
 
 .fge-modal-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .fge-modal-text {
@@ -807,28 +810,31 @@ svg.icon, .icon svg {
 }
 
 @media (min-width: 769px) {
+  /* Override side-by-side to force stacked layout for the news banner */
   .fge-modal-body {
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
   }
   .fge-modal-image {
-    flex: 0 0 45%;
+    flex: none;
+    width: 100%;
     height: auto;
-    min-height: 400px;
+    min-height: auto;
   }
   .fge-modal-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem;
-    text-align: left;
+    flex: none;
+    width: 100%;
+    padding: 2rem 3rem 2.5rem;
+    text-align: center;
   }
   .fge-modal-text p {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .fge-modal-cta {
-    width: auto;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 

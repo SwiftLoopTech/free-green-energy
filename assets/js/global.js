@@ -561,7 +561,7 @@ function initEstimateModal() {
             <p style="font-size:0.84rem;color:#4a5c4e;margin:0.5rem 0 0.9rem;line-height:1.5;">
               MNRE-empanelled installer. Free site visit. Your bill, your roof, your exact subsidy amount — calculated on-site.
             </p>
-            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta" style="display:block;text-align:center;">
+            <a href="/contact?ref=estimate_modal" class="btn btn-primary fge-modal-cta" id="fge-modal-cta" style="display:block;text-align:center;background:#c0392b;border-color:#c0392b;color:#fff;font-weight:700;">
               Get My Free Estimate →
             </a>
             <div style="font-size:0.7rem;color:#9aab9c;text-align:center;margin-top:0.5rem;">No cost · No commitment · 48-hr response</div>
