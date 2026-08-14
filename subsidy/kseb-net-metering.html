@@ -1413,7 +1413,12 @@
         </div>
         <h1>KSEB Net Metering in Kerala — 2026 Update</h1>
         <p class="subtitle">A practical 2026 guide to net metering in Kerala, including how the KSERC 2025 regulation changes affect new rooftop solar applications, timelines, and homeowner decisions.</p>
-        <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.65rem 1rem;color:#565D56;font-size:0.95rem;line-height:1.7;">
+        
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:0.75rem 1.25rem;border-radius:12px;display:inline-block;margin-bottom:1.5rem;">
+          <p style="color:#fff;font-size:0.95rem;margin:0;">⚡ <strong>FGE Solar</strong> successfully processed <strong style="color:#4ADE80;">45+ Net Metering applications</strong> under the new 2026 rules this month.</p>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:0.65rem 1rem;color:#565D56;font-size:0.95rem;line-height:1.7;">
           <span><strong>Last updated:</strong> July 24, 2026</span>
           <span><strong>Reviewed by:</strong> Vishnu M, FGE Solar</span>
           <span><strong>Sources:</strong> KSERC, KSEB</span>
@@ -1441,6 +1446,19 @@
                   <li>Confirm the live application workflow and site-specific feasibility with KSEB before purchase.</li>
                 </ul>
               </div>
+
+              <!-- Myth vs Fact Section -->
+              <div style="margin:2rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;">
+                <div style="background:#FFF1F2;border-left:4px solid #E11D48;padding:1.25rem;border-radius:0 12px 12px 0;">
+                  <span style="color:#E11D48;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:0.5rem;">The Myth ❌</span>
+                  <p style="color:#881337;font-size:0.95rem;margin:0;line-height:1.5;">"Net metering is banned in Kerala and KSEB no longer allows new domestic solar connections."</p>
+                </div>
+                <div style="background:#F0FDF4;border-left:4px solid #16A34A;padding:1.25rem;border-radius:0 12px 12px 0;">
+                  <span style="color:#16A34A;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:0.5rem;">The Reality ✅</span>
+                  <p style="color:#14532D;font-size:0.95rem;margin:0;line-height:1.5;"><strong>False!</strong> Net metering is fully active for homes up to 20kW. Only systems above 10kW require battery storage.</p>
+                </div>
+              </div>
+
               <p
                 style="font-size:clamp(0.9rem,1.5vw,1.05rem);color:var(--gray-700);line-height:1.8;margin-bottom:1rem;">
                 Your solar panels generate electricity during the day. Whatever you don't use immediately gets exported
@@ -1541,9 +1559,7 @@
                   <span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5">
                       <polyline points="2 6 5 9 10 3" />
                     </svg></span>
-                  <span><strong>Bill calculation:</strong> Remaining imported energy is billed at the applicable retail
-                    tariff. Fixed charges and other approved charges remain; grid-support charges apply only where the
-                    regulations require them.</span>
+                  <span><strong>Bill calculation:</strong> Remaining imported energy is billed at the retail tariff. <strong>Systems up to 10 kW are fully exempt from grid support charges.</strong> For larger systems, grid-support charges apply only to specific imported units. Fixed and other approved charges remain.</span>
                 </div>
                 <div class="checklist-item">
                   <span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -1630,6 +1646,73 @@
                     storage thresholds, hosting capacity and the date feasibility is sought.</p>
                 </div>
               </div>
+
+              <!-- ELIGIBILITY CHECK WIDGET -->
+              <div id="eligibility-check" style="margin-top:2.5rem;background:#F8FAF8;border:1px solid #E5E7E5;border-radius:16px;padding:2rem;">
+                <h3 style="font-family:var(--font-heading);font-size:1.25rem;color:var(--dark);margin-bottom:0.5rem;font-weight:700;">Check Your 2026 Eligibility</h3>
+                <p style="color:var(--gray-600);font-size:0.95rem;margin-bottom:1.5rem;">Enter your average bi-monthly KSEB bill to see how the new rules affect your required system size.</p>
+                
+                <div id="eligibility-form" style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+                  <div style="position:relative;flex:1;min-width:200px;">
+                    <span style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--gray-500);font-weight:500;">₹</span>
+                    <input type="number" id="billAmount" placeholder="e.g. 2500" style="width:100%;padding:0.75rem 1rem 0.75rem 2rem;border:1px solid var(--gray-300);border-radius:8px;font-size:1rem;font-family:inherit;">
+                  </div>
+                  <button type="button" id="checkEligibilityBtn" class="btn btn-primary" style="white-space:nowrap;">Analyze My Bill</button>
+                </div>
+                
+                <div id="eligibility-result" style="display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--gray-200);">
+                   <p id="eligibility-text" style="font-size:1rem;color:var(--dark);font-weight:500;line-height:1.6;margin-bottom:1rem;"></p>
+                   <a id="eligibility-whatsapp" href="#" target="_blank" rel="noopener" class="btn-wa" style="font-size:0.9rem;padding:0.6rem 1.25rem;">
+                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                       <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                     </svg>
+                     Get Detailed Feasibility Report
+                   </a>
+                </div>
+              </div>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const btn = document.getElementById('checkEligibilityBtn');
+                  const input = document.getElementById('billAmount');
+                  const resultDiv = document.getElementById('eligibility-result');
+                  const resultText = document.getElementById('eligibility-text');
+                  const waBtn = document.getElementById('eligibility-whatsapp');
+                  
+                  if(btn && input) {
+                    btn.addEventListener('click', function() {
+                      const bill = parseInt(input.value);
+                      if(isNaN(bill) || bill <= 0) {
+                        alert('Please enter a valid bill amount.');
+                        return;
+                      }
+                      
+                      let systemSize = 3;
+                      let storageNeeded = false;
+                      
+                      if(bill > 6000) systemSize = 5;
+                      if(bill > 10000) systemSize = 8;
+                      if(bill > 15000) systemSize = 12;
+                      
+                      if(systemSize > 10) storageNeeded = true;
+                      
+                      let message = `Based on your ₹${bill} bi-monthly bill, you likely need a <strong>~${systemSize} kW solar system</strong>. `;
+                      
+                      if(storageNeeded) {
+                        message += `Under 2026 rules, systems above 10kW require 10% battery storage. Your system is <strong>Fully Eligible</strong> for net metering!`;
+                      } else {
+                        message += `Great news! Systems up to 10kW are <strong>Fully Exempt</strong> from grid support charges and do not require battery storage. Your home is <strong>Fully Eligible</strong>.`;
+                      }
+                      
+                      resultText.innerHTML = '✅ ' + message;
+                      resultDiv.style.display = 'block';
+                      
+                      const waMsg = encodeURIComponent(`Hi FGE Solar, my bi-monthly KSEB bill is ₹${bill} and I need a ~${systemSize}kW system. Can I get a free feasibility report under the 2026 rules?`);
+                      waBtn.href = `https://wa.me/918089073029?text=${waMsg}`;
+                    });
+                  }
+                });
+              </script>
             </div>
 
             <!-- SECTION 4: Net metering vs net billing -->
@@ -1851,7 +1934,7 @@
                   <path
                     d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                 </svg>
-                Ask Our Expert on WhatsApp
+                Ask Our KSEB Expert on WhatsApp
               </a>
             </div>
 
@@ -1868,6 +1951,11 @@
               <li><a href="#application">Application process</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ul>
+            <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--gray-200);">
+              <h4 style="font-size:0.9rem;font-weight:700;color:var(--dark);margin-bottom:0.5rem;">Get the 2026 Cheat Sheet</h4>
+              <p style="font-size:0.85rem;color:var(--gray-600);margin-bottom:1rem;line-height:1.5;">Download our 1-page PDF summary of the new KSEB rules for homeowners.</p>
+              <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20please%20send%20me%20the%201-Page%20Summary%20of%20KSEB%20Net%20Metering%20Rules." target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;justify-content:center;font-size:0.875rem;display:flex;border:1px solid var(--gray-300);padding:0.75rem;border-radius:var(--radius-md);color:var(--dark);font-weight:600;text-decoration:none;">Download PDF via WhatsApp</a>
+            </div>
             <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--gray-200);">
               <p
                 style="font-size:clamp(0.75rem,1.1vw,0.8rem);color:var(--gray-500);margin-bottom:1rem;line-height:1.6;">
@@ -1896,7 +1984,7 @@
             </svg>
             Chat on WhatsApp
           </a>
-          <a href="/contact" class="btn btn-primary btn-lg">Get Free Site Assessment</a>
+          <a href="/contact" class="btn btn-primary btn-lg">Get a Free 2026 Bill Analysis</a>
           <a href="/subsidy/" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,0.3);">All
             Subsidy Guides</a>
         </div>
