@@ -52,7 +52,8 @@
 
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
   <script src="/assets/js/icons.js" defer></script>
-  <link rel="preload" as="image" href="/assets/images/hero/updated_hero-1360.webp" imagesrcset="/assets/images/hero/updated_hero-640.webp 640w, /assets/images/hero/updated_hero-960.webp 960w, /assets/images/hero/updated_hero-1360.webp 1360w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/updated_hero-960.webp" type="image/webp" media="(min-width: 769px) and (max-width: 1180px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/updated_hero-1360.webp" type="image/webp" media="(min-width: 1181px)" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/global.css">
   <link rel="stylesheet" href="/assets/css/components.css">
 
@@ -2205,10 +2206,9 @@
         <div class="container">
           <div class="hero-inner">
             <picture class="hero-bg-picture" aria-hidden="true">
-              <source type="image/webp" media="(max-width: 640px)" srcset="/assets/images/hero/updated_hero-640.webp">
-              <source type="image/webp" media="(max-width: 1180px)" srcset="/assets/images/hero/updated_hero-960.webp">
-              <source type="image/webp" srcset="/assets/images/hero/updated_hero-1360.webp">
-              <img src="/assets/images/hero/updated_hero.png" alt="Rooftop solar installation in Kerala" width="1360" height="650" decoding="async" fetchpriority="high">
+              <source type="image/webp" media="(min-width: 1181px)" srcset="/assets/images/hero/updated_hero-1360.webp">
+              <source type="image/webp" media="(min-width: 769px)" srcset="/assets/images/hero/updated_hero-960.webp">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1360' height='650'%3E%3C/svg%3E" alt="" width="1360" height="650" decoding="async" fetchpriority="high">
             </picture>
 
             <!-- Left: Text -->
@@ -2271,15 +2271,15 @@
         </div>
         <div class="hero-mini-strip" aria-label="Featured installations across Kerala">
           <a href="/solar-in/thiruvananthapuram" class="hero-mini-card">
-            <img src="/assets/images/locations/thiruvananthapuram.webp" alt="Solar-ready homes in Thiruvananthapuram" loading="eager" width="512" height="512">
+            <img src="/assets/images/locations/thiruvananthapuram.webp" alt="Solar-ready homes in Thiruvananthapuram" loading="lazy" decoding="async" width="512" height="512">
             <div class="hero-mini-label"><strong>Thiruvananthapuram</strong><span>Fast payback for urban homes</span></div>
           </a>
           <a href="/solar-in/ernakulam" class="hero-mini-card">
-            <img src="/assets/images/locations/kochi-ernakulam.webp" alt="Residential and commercial rooftops in Kochi and Ernakulam" loading="eager" width="512" height="512">
+            <img src="/assets/images/locations/kochi-ernakulam.webp" alt="Residential and commercial rooftops in Kochi and Ernakulam" loading="lazy" decoding="async" width="512" height="512">
             <div class="hero-mini-label"><strong>Ernakulam / Kochi</strong><span>High-consumption homes and businesses</span></div>
           </a>
           <a href="/solar-in/malappuram" class="hero-mini-card">
-            <img src="/assets/images/locations/malappuram-solar.webp" alt="Solar rooftops for homes and businesses in Malappuram" loading="eager" width="1600" height="900">
+            <img src="/assets/images/locations/malappuram-solar.webp" alt="Solar rooftops for homes and businesses in Malappuram" loading="lazy" decoding="async" width="1600" height="900">
             <div class="hero-mini-label"><strong>Malappuram</strong><span>Reliable rooftop solar for growing homes</span></div>
           </a>
         </div>
