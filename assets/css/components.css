@@ -107,11 +107,17 @@
 }
 
 .nav-logo .logo-img {
-  width: 38px;
-  height: 38px;
+  width: 136px;
+  height: 34px;
+  max-width: min(150px, 42vw);
   object-fit: contain;
   display: block;
   flex-shrink: 0;
+  content: url("/assets/images/logo/fge-horizontal.png");
+}
+
+#site-header .nav-logo .logo-text {
+  display: none;
 }
 
 #site-header.light-header .logo-name {
@@ -2733,8 +2739,9 @@
 
   .nav-logo .logo-img,
   .nav-logo .logo-mark {
-    width: 32px;
-    height: 32px;
+    width: auto;
+    height: 28px;
+    max-width: 120px;
   }
 
   .nav-logo .logo-name {
