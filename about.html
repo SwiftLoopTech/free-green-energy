@@ -40,6 +40,9 @@
   <meta name="twitter:description" content="Learn about FGE Solar, the Kerala solar company behind residential, commercial, on-grid, off-grid, and subsidy-supported installations across the state.">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/about-og.webp">
   <meta name="theme-color" content="#172219">
+  <link rel="preload" as="image" href="/assets/images/hero/about-hero-kerala-640.webp" type="image/webp" media="(max-width: 639px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/about-hero-kerala-960.webp" type="image/webp" media="(min-width: 640px) and (max-width: 1180px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/about-hero-kerala.webp" type="image/webp" media="(min-width: 1181px)" fetchpriority="high">
   <meta name="author" content="FGE Solar">
   <meta name="geo.region" content="IN-KL">
   <meta name="geo.placename" content="Thiruvananthapuram, Kerala">
@@ -334,9 +337,7 @@
     .team-avatar { position: relative; overflow: hidden; }
     .team-avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; opacity: 1; transition: opacity 0.2s; }
     .avatar-initial { position: relative; z-index: 0; font-family: var(--font-heading); font-weight: 800; font-size: 1.75rem; color: var(--white); }
-    .about-hero-badges, .about-cta-actions { display: flex; flex-wrap: wrap; }
-    .about-hero-badges { gap: 0.75rem; margin-top: 1.75rem; }
-    .about-cta-actions { gap: 1rem; justify-content: center; }
+    .about-cta-actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
   </style>
   <!-- codex-seo-generated:start -->
   <script type="application/ld+json">
@@ -344,11 +345,11 @@
   "@context": "https://schema.org",
   "@type": "AboutPage",
   "name": "About FGE Solar | Kerala Solar Company, Team & Credentials",
-  "headline": "About FGE Solar | Kerala Solar Company, Team & Credentials",
+  "headline": "About FGE Solar: Solar Installation Company in Kerala",
   "description": "Learn about FGE Solar, the Kerala solar company behind residential, commercial, on-grid, off-grid, and subsidy-supported installations across the state.",
   "url": "https://fgesolar.in/about",
   "inLanguage": "en-IN",
-  "dateModified": "2026-07-24",
+  "dateModified": "2026-08-27",
   "isPartOf": {
     "@type": "WebSite",
     "name": "FGE Solar",
@@ -377,17 +378,66 @@
   ]
 }
   </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is FGE Solar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FGE Solar, or Future Green Energy Group, is a solar installation company based in Thiruvananthapuram, Kerala. The company provides residential, commercial, on-grid, off-grid and hybrid solar solutions, along with system design, documentation assistance, commissioning and maintenance support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does FGE Solar provide solar installation in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FGE Solar serves customers across all 14 districts of Kerala. Site-visit availability and project scheduling may vary depending on the location, system requirements and current installation calendar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FGE Solar install solar panels for homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FGE Solar provides residential rooftop-solar systems for houses and eligible residential properties. The process includes electricity-bill review, roof assessment, system recommendation, quotation, installation and applicable documentation assistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FGE Solar undertake commercial solar projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FGE Solar provides commercial solar systems for offices, factories, warehouses, shops, hotels, hospitals, schools and other institutions. Commercial-system design is based on electricity consumption, daytime load, roof availability and project objectives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What solar-panel brands does FGE Solar install in Kerala?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FGE Solar works with multiple established solar-panel and inverter manufacturers. The specific brand and model recommended for a project depend on system compatibility, technical requirements, warranty terms, availability and budget."
+      }
+    }
+  ]
+}
+  </script>
   <!-- codex-seo-generated:end -->
-  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260725-wa2">
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260827-faq">
   <style>
-    body.about-page .page-hero {
-      padding-bottom: clamp(3.5rem, 7vw, 5.25rem) !important;
+    body.about-page .page-hero.about-hero {
+      padding: clamp(5.5rem, 8vw, 7.5rem) 0 clamp(2.75rem, 6vw, 4.5rem) !important;
     }
 
     body.about-page .about-hero-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.46fr);
-      gap: clamp(2.5rem, 5vw, 5rem);
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: clamp(1.75rem, 4vw, 4.5rem);
       align-items: center;
     }
 
@@ -395,72 +445,1522 @@
       min-width: 0;
     }
 
-    body.about-page .about-hero-panel {
-      position: relative;
-      display: block;
-      margin: 0;
-      min-height: 360px;
-      aspect-ratio: 0.92 / 1;
-      overflow: hidden;
-      border-radius: 1.4rem;
-      border: 1px solid rgba(45, 106, 79, 0.18);
-      box-shadow: 0 24px 70px rgba(8, 28, 21, 0.16);
-      background: #d9eee2;
+    body.about-page .about-hero-copy h1 {
+      margin: 0.75rem 0 1rem;
+      font-size: clamp(1.75rem, 4.2vw, 3.25rem);
+      line-height: 1.1;
+      text-wrap: balance;
     }
 
-    body.about-page .about-hero-panel img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: center;
+    body.about-page .about-hero-copy p {
+      margin: 0 0 0.9rem;
+      max-width: 62ch;
+      font-size: clamp(0.92rem, 1.7vw, 1.05rem);
+      line-height: 1.72;
     }
 
-    body.about-page .about-hero-panel::after {
-      content: "";
-      position: absolute;
-      inset: 40% 0 0;
-      background: linear-gradient(180deg, rgba(8, 28, 21, 0), rgba(8, 28, 21, 0.78));
-      pointer-events: none;
-    }
-
-    body.about-page .about-hero-panel figcaption {
-      position: absolute;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      z-index: 1;
-      display: grid;
-      gap: 0.25rem;
-      padding: 0.8rem 0.9rem;
-      border-radius: 0.9rem;
-      background: #081c15;
-      color: #fff;
-    }
-
-    body.about-page .about-hero-panel figcaption span {
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    body.about-page .about-hero-panel figcaption strong {
-      font-family: var(--font-heading);
-      font-size: clamp(1.35rem, 2vw, 1.75rem);
-      line-height: 1.08;
-      color: #fff;
-    }
-
-    body.about-page .about-hero-badges .badge {
-      min-height: 2.25rem;
+    body.about-page .about-hero-lead {
+      font-size: clamp(1rem, 1.9vw, 1.12rem) !important;
+      color: var(--fge-ink) !important;
     }
 
     body.about-page .about-hero-badges {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, max-content));
+      gap: 0.65rem 0.75rem;
+      margin-top: 1.35rem;
+    }
+
+    body.about-page .about-hero-badges .badge {
+      min-height: 2.15rem;
+      width: auto;
+      justify-self: start;
+    }
+
+    body.about-page .about-hero-badges .badge:last-child {
+      grid-column: 1 / -1;
+    }
+
+    body.about-page .about-hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    body.about-page .about-hero-panel {
+      position: relative;
+      display: block;
+      margin: 0;
+      min-height: clamp(220px, 42vw, 420px);
+      aspect-ratio: 1.05 / 1;
+      overflow: hidden;
+      border-radius: clamp(1rem, 2vw, 1.4rem);
+      border: 1px solid rgba(45, 106, 79, 0.18);
+      box-shadow: 0 24px 70px rgba(8, 28, 21, 0.14);
+      background: #d9eee2;
+    }
+
+    body.about-page .about-hero-panel picture,
+    body.about-page .about-hero-panel img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 42%;
+    }
+
+    body.about-page .why-started-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+
+    body.about-page .why-started-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(1.75rem, 4vw, 3.5rem);
+      align-items: start;
+    }
+
+    body.about-page .why-started-intro {
+      min-width: 0;
+    }
+
+    body.about-page .why-started-intro h2 {
+      margin: 0.65rem 0 1rem;
+      text-wrap: balance;
+    }
+
+    body.about-page .why-started-lead {
+      margin: 0 0 1rem;
+      max-width: 62ch;
+      color: var(--gray-600);
+      line-height: 1.72;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    }
+
+    body.about-page .why-started-bridge {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--fge-ink);
+      font-weight: 600;
+      line-height: 1.55;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+    }
+
+    body.about-page .why-started-questions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    body.about-page .why-started-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      border: 1px solid rgba(45, 106, 79, 0.16);
+      border-radius: var(--radius-lg);
+      color: var(--fge-ink);
+      font-size: clamp(0.86rem, 1.4vw, 0.94rem);
+      line-height: 1.5;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    body.about-page .why-started-q:hover {
+      border-color: rgba(24, 184, 92, 0.45);
+      box-shadow: 0 10px 28px rgba(8, 28, 21, 0.07);
+      transform: translateY(-1px);
+    }
+
+    body.about-page .why-started-q-icon {
+      flex: 0 0 auto;
+      display: flex;
       align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.55rem;
+      background: var(--fge-green-100);
+      color: var(--green);
+    }
+
+    body.about-page .why-started-q-icon svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    body.about-page .why-started-q:last-child {
+      grid-column: 1 / -1;
+    }
+
+    body.about-page .why-started-promise {
+      margin-top: clamp(1.75rem, 3.5vw, 2.75rem);
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+      border-radius: clamp(1rem, 2vw, 1.35rem);
+      border: 1px solid rgba(45, 106, 79, 0.14);
+      border-left: 4px solid var(--green);
+      background: linear-gradient(135deg, #f7fbf8 0%, #eef7f0 100%);
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: start;
+    }
+
+    body.about-page .why-started-promise-lead {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--fge-ink);
+    }
+
+    body.about-page .why-started-promise-body {
+      margin: 0;
+      color: var(--gray-600);
+      line-height: 1.72;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+    }
+
+    body.about-page .why-started-cta {
+      grid-column: 1 / -1;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 1180px) {
+      body.about-page .why-started-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(1.25rem, 3vw, 2rem);
+      }
+
+      body.about-page .why-started-bridge {
+        max-width: none;
+      }
+    }
+
+    body.about-page .what-we-do-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+
+    body.about-page .what-we-do-header {
+      max-width: 72ch;
+      margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+    }
+
+    body.about-page .what-we-do-header h2 {
+      margin: 0.65rem 0 1rem;
+      text-wrap: balance;
+    }
+
+    body.about-page .what-we-do-lead {
+      margin: 0;
+      color: var(--gray-600);
+      line-height: 1.72;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    }
+
+    body.about-page .what-we-do-bridge {
+      margin: 0 0 1rem;
+      font-weight: 600;
+      color: var(--fge-ink);
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+    }
+
+    body.about-page .what-we-do-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+    }
+
+    body.about-page .what-we-do-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      padding: clamp(1rem, 2vw, 1.25rem);
+      background: #fff;
+      border: 1px solid rgba(45, 106, 79, 0.16);
+      border-radius: var(--radius-lg);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    body.about-page .what-we-do-card:hover {
+      border-color: rgba(24, 184, 92, 0.4);
+      box-shadow: 0 12px 32px rgba(8, 28, 21, 0.08);
+      transform: translateY(-2px);
+    }
+
+    body.about-page .what-we-do-card-title {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    body.about-page .what-we-do-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    body.about-page .what-we-do-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      font-size: clamp(0.84rem, 1.35vw, 0.92rem);
+      line-height: 1.45;
+    }
+
+    body.about-page .what-we-do-list li svg {
+      flex: 0 0 auto;
+      width: 0.95rem;
+      height: 0.95rem;
+      margin-top: 0.15rem;
+      color: var(--green);
+    }
+
+    body.about-page .what-we-do-list a {
+      color: var(--fge-ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    body.about-page .what-we-do-list a:hover {
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    body.about-page .what-we-do-process {
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+      border-radius: clamp(1rem, 2vw, 1.35rem);
+      border: 1px solid rgba(45, 106, 79, 0.14);
+      border-left: 4px solid var(--green);
+      background: linear-gradient(135deg, #f7fbf8 0%, #eef7f0 100%);
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: start;
+    }
+
+    body.about-page .what-we-do-process-lead {
+      margin: 0;
+      font-weight: 600;
+      color: var(--fge-ink);
+      line-height: 1.65;
+      font-size: clamp(0.94rem, 1.55vw, 1.02rem);
+    }
+
+    body.about-page .what-we-do-process-body {
+      margin: 0;
+      color: var(--gray-600);
+      line-height: 1.72;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+    }
+
+    body.about-page .what-we-do-cta {
+      grid-column: 1 / -1;
+      margin-top: 0.25rem;
+    }
+
+    body.about-page .company-performance-section {
+      padding: clamp(3rem, 6vw, 4.5rem) 0;
+    }
+
+    body.about-page .company-performance-header {
+      text-align: center;
+      max-width: 46rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .company-performance-header .section-label {
+      justify-content: center;
+    }
+
+    body.about-page .company-performance-header h2 {
+      margin: 0.65rem 0 0;
+      color: var(--white);
+      text-wrap: balance;
+    }
+
+    body.about-page .company-performance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: clamp(0.85rem, 1.5vw, 1.1rem);
+      overflow: hidden;
+    }
+
+    body.about-page .company-performance-stat {
+      background: rgba(255, 255, 255, 0.03);
+      padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1rem, 2vw, 1.35rem);
+      text-align: center;
+    }
+
+    body.about-page .company-performance-val {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--white);
+    }
+
+    body.about-page .company-performance-val--text {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    body.about-page .company-performance-label {
+      margin: 0.55rem 0 0;
+      font-size: clamp(0.82rem, 1.35vw, 0.92rem);
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.62);
+      font-weight: 500;
+    }
+
+    body.about-page .company-performance-note {
+      margin: clamp(1.25rem, 2.5vw, 1.75rem) auto 0;
+      max-width: 52rem;
+      text-align: center;
+      font-size: clamp(0.8rem, 1.25vw, 0.88rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.48);
+      font-style: italic;
+    }
+
+    body.about-page .purpose-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #eef4ef;
+    }
+
+    body.about-page .purpose-header {
+      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .purpose-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .purpose-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .purpose-header h2 {
+      margin: 0.65rem 0 0;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .purpose-pillars {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+      margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    body.about-page .purpose-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      padding: clamp(1.35rem, 2.5vw, 2rem);
+      border-radius: clamp(1rem, 2vw, 1.35rem);
+      min-height: 100%;
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      box-shadow: 0 14px 38px rgba(23, 34, 25, 0.07);
+    }
+
+    body.about-page .purpose-card--mission {
+      border-top: 4px solid #18b85c;
+    }
+
+    body.about-page .purpose-card--vision {
+      border-top: 4px solid #0e8fad;
+    }
+
+    body.about-page .purpose-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 0.75rem;
+      background: #eef7f0;
+      color: #157a42;
+    }
+
+    body.about-page .purpose-card--vision .purpose-card-icon {
+      background: #e8f6fb;
+      color: #0e7a96;
+    }
+
+    body.about-page .purpose-card-label {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #157a42;
+    }
+
+    body.about-page .purpose-card--vision .purpose-card-label {
+      color: #0e7a96;
+    }
+
+    body.about-page .purpose-card-text {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+      font-weight: 600;
+      line-height: 1.55;
+      color: #172219;
+    }
+
+    body.about-page .purpose-commitment {
+      padding: clamp(1.25rem, 2.5vw, 2rem);
+      border-radius: clamp(1rem, 2vw, 1.35rem);
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-left: 4px solid #18b85c;
+      background: #ffffff;
+      box-shadow: 0 14px 38px rgba(23, 34, 25, 0.07);
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(1rem, 2.5vw, 2rem);
+      align-items: start;
+    }
+
+    body.about-page .purpose-commitment-label {
+      margin: 0 0 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #157a42;
+    }
+
+    body.about-page .purpose-commitment-lead {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      font-weight: 700;
+      line-height: 1.45;
+      color: #172219;
+    }
+
+    body.about-page .purpose-commitment-body {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.72;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+    }
+
+    body.about-page .purpose-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .how-we-work-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #ffffff;
+    }
+
+    body.about-page .how-we-work-header {
+      text-align: center;
+      max-width: 50rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .how-we-work-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .how-we-work-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .how-we-work-header h2 {
+      margin: 0.65rem 0 0;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .how-we-work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.85rem, 2vw, 1.15rem);
+    }
+
+    body.about-page .how-we-work-step {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: clamp(1.15rem, 2vw, 1.5rem);
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: clamp(0.9rem, 1.5vw, 1.15rem);
+      box-shadow: 0 12px 34px rgba(23, 34, 25, 0.06);
+      height: 100%;
+    }
+
+    body.about-page .how-we-work-step-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    body.about-page .how-we-work-step-num {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.35rem;
+      height: 2.35rem;
+      padding: 0 0.45rem;
+      border-radius: 999px;
+      background: #eef7f0;
+      color: #157a42;
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    body.about-page .how-we-work-step-title {
+      margin: 0.15rem 0 0;
+      font-family: var(--font-heading);
+      font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: #172219;
+    }
+
+    body.about-page .how-we-work-step p {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.68;
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+    }
+
+    body.about-page .how-we-work-lead {
+      font-weight: 600;
+      color: #172219 !important;
+    }
+
+    body.about-page .how-we-work-checklist {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.45rem 0.75rem;
+    }
+
+    body.about-page .how-we-work-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      font-size: clamp(0.82rem, 1.3vw, 0.9rem);
+      line-height: 1.45;
+      color: #4a5249;
+    }
+
+    body.about-page .how-we-work-checklist svg {
+      flex: 0 0 auto;
+      width: 0.9rem;
+      height: 0.9rem;
+      margin-top: 0.12rem;
+      color: #18b85c;
+    }
+
+    body.about-page .how-we-work-checklist li:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    body.about-page .how-we-work-note {
+      padding: 0.7rem 0.85rem;
+      border-radius: 0.65rem;
+      background: #f4f6f5;
+      border: 1px solid rgba(23, 34, 25, 0.08);
+      font-size: clamp(0.8rem, 1.25vw, 0.88rem) !important;
+      line-height: 1.6 !important;
+      color: #5c6560 !important;
+      font-style: italic;
+    }
+
+    body.about-page .how-we-work-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .credentials-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #eef4ef;
+    }
+
+    body.about-page .credentials-header {
+      max-width: 52rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+
+    body.about-page .credentials-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .credentials-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .credentials-header h2 {
+      margin: 0.65rem 0 1rem;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .credentials-intro {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.72;
+      font-size: clamp(0.94rem, 1.55vw, 1.02rem);
+    }
+
+    body.about-page .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+      gap: clamp(0.85rem, 1.8vw, 1.25rem);
+      max-width: 76rem;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    body.about-page .credentials-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      height: 100%;
+      padding: clamp(1.1rem, 2vw, 1.5rem);
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: clamp(0.9rem, 1.5vw, 1.15rem);
+      box-shadow: 0 12px 34px rgba(23, 34, 25, 0.06);
+      text-align: left;
+      container-type: inline-size;
+    }
+
+    body.about-page .credentials-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: 3rem;
+    }
+
+    body.about-page .credentials-card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      flex: 1;
+    }
+
+    @container (min-width: 34rem) {
+      body.about-page .credentials-card--split .credentials-card-body {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 0.65rem 1rem;
+        align-items: start;
+      }
+
+      body.about-page .credentials-card--split .credentials-card-note {
+        margin-top: 0;
+      }
+    }
+
+    body.about-page .credentials-card-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 3rem;
+      height: 3rem;
+      padding: 0.35rem;
+      border-radius: 0.75rem;
+      background: #eef7f0;
+    }
+
+    body.about-page .credentials-card-logo img {
+      display: block;
+      max-height: 2rem;
+      max-width: 2.75rem;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    body.about-page .credentials-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.75rem;
+      background: #eef7f0;
+      color: #157a42;
+    }
+
+    body.about-page .credentials-card-title {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: #172219;
+      text-wrap: balance;
+    }
+
+    body.about-page .credentials-card p {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.68;
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+    }
+
+    body.about-page .credentials-card-note {
+      padding: 0.7rem 0.85rem;
+      border-radius: 0.65rem;
+      background: #f4f6f5;
+      border: 1px solid rgba(23, 34, 25, 0.08);
+      font-size: clamp(0.8rem, 1.25vw, 0.88rem) !important;
+      line-height: 1.6 !important;
+      color: #5c6560 !important;
+      font-style: italic;
+      margin-top: auto;
+    }
+
+    @media (min-width: 1200px) {
+      body.about-page .credentials-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      body.about-page .credentials-header {
+        max-width: 58rem;
+      }
+
+      body.about-page .credentials-grid {
+        max-width: 80rem;
+      }
+    }
+
+    body.about-page .credentials-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .team-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #eef4ef;
+    }
+
+    body.about-page .team-section .section-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .team-section .section-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .team-section .section-header h2 {
+      color: #172219;
+      text-wrap: balance;
+    }
+
+    body.about-page .team-intro {
+      display: grid;
+      gap: 0.75rem;
+      max-width: 52rem;
+      margin: 0.75rem auto 0;
+      text-align: center;
+    }
+
+    body.about-page .team-intro p {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.72;
+      font-size: clamp(0.94rem, 1.55vw, 1.02rem);
+    }
+
+    body.about-page .team-section .team-name {
+      color: #172219;
+    }
+
+    body.about-page .team-section .team-role {
+      color: #157a42;
+    }
+
+    body.about-page .team-section .team-bio {
+      color: #4a5249;
+      text-align: center;
+    }
+
+    body.about-page .team-section .team-bio + .team-bio {
+      margin-top: 0.65rem;
+    }
+
+    body.about-page .team-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .components-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #ffffff;
+    }
+
+    body.about-page .components-header {
+      max-width: 52rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+      text-align: center;
+    }
+
+    body.about-page .components-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .components-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .components-header h2 {
+      margin: 0.65rem 0 1rem;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .components-intro {
+      margin: 0;
+      color: #4a5249;
+      line-height: 1.72;
+      font-size: clamp(0.94rem, 1.55vw, 1.02rem);
+    }
+
+    body.about-page .components-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(1.5rem, 3.5vw, 2.5rem);
+      align-items: start;
+      margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    body.about-page .components-criteria-lead {
+      margin: 0 0 0.85rem;
+      font-weight: 600;
+      color: #172219;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+      line-height: 1.5;
+    }
+
+    body.about-page .components-criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.55rem;
+    }
+
+    body.about-page .components-criterion {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.65rem 0.7rem;
+      background: #f7fbf8;
+      border: 1px solid rgba(23, 34, 25, 0.08);
+      border-radius: 0.65rem;
+      font-size: clamp(0.78rem, 1.25vw, 0.86rem);
+      line-height: 1.4;
+      color: #4a5249;
+    }
+
+    body.about-page .components-criterion svg {
+      flex: 0 0 auto;
+      width: 0.95rem;
+      height: 0.95rem;
+      margin-top: 0.1rem;
+      color: #18b85c;
+    }
+
+    body.about-page .components-criteria-grid .components-criterion:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+
+    body.about-page .components-brands-panel {
+      padding: clamp(1.15rem, 2vw, 1.5rem);
+      background: #f7fbf8;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: clamp(0.9rem, 1.5vw, 1.15rem);
+    }
+
+    body.about-page .components-brands-title {
+      margin: 0 0 1rem;
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 1.7vw, 1.12rem);
+      font-weight: 700;
+      color: #172219;
+    }
+
+    body.about-page .components-brands-intro {
+      margin: 0 0 1rem;
+      font-weight: 500;
+      color: #4a5249;
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+      line-height: 1.55;
+    }
+
+    body.about-page .components-brand-group + .components-brand-group {
+      margin-top: 1.15rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid rgba(23, 34, 25, 0.08);
+    }
+
+    body.about-page .components-brand-group-label {
+      display: inline-flex;
+      margin: 0 0 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #eef7f0;
+      color: #157a42;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    body.about-page .components-brand-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.65rem;
+    }
+
+    body.about-page .components-brand-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 0.4rem;
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.08);
+      border-radius: 0.65rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    body.about-page .components-brand-tile:hover {
+      border-color: rgba(24, 184, 92, 0.35);
+      box-shadow: 0 8px 22px rgba(23, 34, 25, 0.06);
+    }
+
+    body.about-page .components-brand-tile picture,
+    body.about-page .components-brand-tile img {
+      display: block;
+      max-width: 100%;
+      max-height: 2.35rem;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(0.15);
+      transition: filter 0.2s ease;
+    }
+
+    body.about-page .components-brand-tile:hover img {
+      filter: none;
+    }
+
+    body.about-page .components-brand-tile span {
+      font-size: 0.68rem;
+      line-height: 1.25;
+      text-align: center;
+      color: #5c6560;
+      font-weight: 600;
+    }
+
+    body.about-page .components-callout {
+      margin: 0;
+      padding: clamp(1.1rem, 2vw, 1.35rem) clamp(1.15rem, 2.5vw, 1.5rem);
+      border-radius: clamp(0.85rem, 1.5vw, 1.1rem);
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-left: 4px solid #18b85c;
+      background: linear-gradient(135deg, #f7fbf8 0%, #eef7f0 100%);
+      color: #172219;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+      font-weight: 600;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    body.about-page .components-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .journey-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #eef4ef;
+    }
+
+    body.about-page .journey-header {
+      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .journey-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .journey-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .journey-header h2 {
+      margin: 0.65rem 0 0;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .journey-timeline {
+      position: relative;
+      max-width: 44rem;
+      margin: 0 auto;
+      padding-left: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    body.about-page .journey-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.35rem;
+      bottom: 0.35rem;
+      width: 2px;
+      background: linear-gradient(to bottom, #18b85c, rgba(24, 184, 92, 0.12));
+    }
+
+    body.about-page .journey-item {
+      position: relative;
+      padding: 0 0 clamp(1.35rem, 2.5vw, 1.75rem);
+    }
+
+    body.about-page .journey-item:last-child {
+      padding-bottom: 0;
+    }
+
+    body.about-page .journey-item::before {
+      content: '';
+      position: absolute;
+      left: calc(-1 * clamp(1.35rem, 3vw, 2rem) - 5px);
+      top: 0.45rem;
+      width: 12px;
+      height: 12px;
+      background: #18b85c;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(24, 184, 92, 0.2);
+    }
+
+    body.about-page .journey-item--current::before {
+      background: #172219;
+      box-shadow: 0 0 0 3px rgba(23, 34, 25, 0.12);
+    }
+
+    body.about-page .journey-date {
+      display: block;
+      margin: 0 0 0.35rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #157a42;
+    }
+
+    body.about-page .journey-item--current .journey-date {
+      color: #4a5249;
+    }
+
+    body.about-page .journey-title {
+      margin: 0 0 0.45rem;
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 1.7vw, 1.1rem);
+      font-weight: 700;
+      line-height: 1.35;
+      color: #172219;
+    }
+
+    body.about-page .journey-desc {
+      margin: 0;
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+      line-height: 1.68;
+      color: #4a5249;
+    }
+
+    body.about-page .journey-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    @media (min-width: 900px) {
+      body.about-page .journey-timeline {
+        max-width: 52rem;
+      }
+    }
+
+    body.about-page .coverage-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #ffffff;
+    }
+
+    body.about-page .coverage-header {
+      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .coverage-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .coverage-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .coverage-header h2 {
+      margin: 0.65rem 0 0;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .coverage-panel {
+      padding: clamp(1.35rem, 2.5vw, 1.85rem);
+      background: #f7fbf8;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: clamp(0.9rem, 1.5vw, 1.15rem);
+      margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+    }
+
+    body.about-page .coverage-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: clamp(1.5rem, 3vw, 2.25rem);
+    }
+
+    @media (min-width: 900px) {
+      body.about-page .coverage-layout {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        align-items: start;
+      }
+    }
+
+    body.about-page .coverage-intro {
+      margin: 0 0 1rem;
+      font-size: clamp(0.9rem, 1.45vw, 0.98rem);
+      line-height: 1.72;
+      color: #4a5249;
+    }
+
+    body.about-page .coverage-districts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (min-width: 600px) {
+      body.about-page .coverage-districts-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 900px) {
+      body.about-page .coverage-districts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1100px) {
+      body.about-page .coverage-districts-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    body.about-page .coverage-district-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 0.7rem;
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: 0.55rem;
+      font-size: clamp(0.78rem, 1.2vw, 0.86rem);
+      font-weight: 600;
+      line-height: 1.35;
+      color: #172219;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+
+    body.about-page .coverage-district-link svg {
+      flex: 0 0 auto;
+      width: 0.85rem;
+      height: 0.85rem;
+      color: #18b85c;
+    }
+
+    body.about-page .coverage-district-link:hover,
+    body.about-page .coverage-district-link:focus-visible {
+      border-color: rgba(24, 184, 92, 0.45);
+      background: #eef7f0;
+      color: #157a42;
+    }
+
+    body.about-page .coverage-audiences-lead {
+      margin: 0 0 0.85rem;
+      font-weight: 600;
+      color: #172219;
+      font-size: clamp(0.92rem, 1.5vw, 1rem);
+      line-height: 1.5;
+    }
+
+    body.about-page .coverage-property-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (max-width: 599px) {
+      body.about-page .coverage-property-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    body.about-page .coverage-property-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.65rem 0.7rem;
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.08);
+      border-radius: 0.65rem;
+      font-size: clamp(0.78rem, 1.25vw, 0.86rem);
+      line-height: 1.4;
+      color: #4a5249;
+    }
+
+    body.about-page .coverage-property-item svg {
+      flex: 0 0 auto;
+      width: 0.95rem;
+      height: 0.95rem;
+      margin-top: 0.1rem;
+      color: #18b85c;
+    }
+
+    body.about-page .coverage-note {
+      margin: 0 0 clamp(1.25rem, 2.5vw, 1.75rem);
+      max-width: 52rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+      line-height: 1.68;
+      color: #4a5249;
+      text-align: center;
+    }
+
+    body.about-page .coverage-cta {
+      display: flex;
+      justify-content: center;
+    }
+
+    body.about-page .coverage-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    body.about-page .about-faq-section {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background: #eef4ef;
+    }
+
+    body.about-page .about-faq-header {
+      text-align: center;
+      max-width: 48rem;
+      margin: 0 auto clamp(2rem, 4vw, 2.75rem);
+    }
+
+    body.about-page .about-faq-header .section-label {
+      justify-content: center;
+      color: #157a42;
+    }
+
+    body.about-page .about-faq-header .section-label::before {
+      background: #18b85c;
+    }
+
+    body.about-page .about-faq-header h2 {
+      margin: 0.65rem 0 0;
+      text-wrap: balance;
+      color: #172219;
+    }
+
+    body.about-page .about-faq-list {
+      max-width: 44rem;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid rgba(23, 34, 25, 0.1);
+      border-radius: clamp(0.9rem, 1.5vw, 1.15rem);
+      padding: 0 clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    body.about-page .about-faq-list .faq-item {
+      border-bottom: 1px solid rgba(23, 34, 25, 0.1);
+      overflow: hidden;
+    }
+
+    body.about-page .about-faq-list .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    body.about-page .about-faq-list .faq-question {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      outline: none;
+      padding: clamp(0.95rem, 2vw, 1.2rem) 0;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: clamp(0.9rem, 1.7vw, 1.02rem);
+      font-weight: 700;
+      color: #172219;
+      line-height: 1.45;
+      min-height: 48px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    body.about-page .about-faq-list .faq-question:focus-visible {
+      outline: 2px solid #18b85c;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    body.about-page .about-faq-list .faq-question:hover .faq-icon {
+      color: #12963f;
+    }
+
+    body.about-page .about-faq-list .faq-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(1.1rem, 3vw, 1.25rem);
+      color: #18b85c;
+      flex-shrink: 0;
+      min-width: 1.65rem;
+      width: 1.65rem;
+      height: 1.65rem;
+      transition: transform 0.25s ease, color 0.2s;
+      font-style: normal;
+      line-height: 1;
+      background: rgba(24, 184, 92, 0.1);
+      border-radius: 50%;
+      margin-top: 2px;
+    }
+
+    body.about-page .about-faq-list .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(24, 184, 92, 0.15);
+    }
+
+    body.about-page .about-faq-list .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      min-width: 0;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body.about-page .about-faq-list .faq-answer-inner {
+      font-size: clamp(0.86rem, 1.35vw, 0.94rem);
+      color: #4a5249;
+      line-height: 1.72;
+      padding-bottom: 1.15rem;
+      overflow-wrap: anywhere;
+    }
+
+    body.about-page .about-faq-list .faq-answer-inner p {
+      margin: 0 0 0.75rem;
+    }
+
+    body.about-page .about-faq-list .faq-answer-inner p:last-child {
+      margin-bottom: 0;
+    }
+
+    body.about-page .about-faq-list .faq-item.open .faq-answer {
+      max-height: 520px;
+    }
+
+    body.about-page .about-faq-section .fade-up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    @media (max-width: 1180px) {
+      body.about-page .what-we-do-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body.about-page .company-performance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body.about-page .purpose-commitment {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .how-we-work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body.about-page .components-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .components-brand-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     body.about-page .story-grid {
@@ -474,79 +1974,186 @@
       transform: none !important;
     }
 
-    body.about-page .story-visual {
-      padding: clamp(1.5rem, 3vw, 2rem);
-    }
-
-    body.about-page .story-visual > img {
-      aspect-ratio: 16 / 10;
-      max-height: 360px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 768px) {
-      body.about-page .page-hero {
-        padding-top: 6.5rem !important;
-        padding-bottom: 2.75rem !important;
+    @media (max-width: 767px) {
+      body.about-page .page-hero.about-hero {
+        padding-top: clamp(5rem, 12vw, 6.5rem) !important;
+        padding-bottom: clamp(2rem, 5vw, 2.75rem) !important;
       }
 
       body.about-page .about-hero-layout {
-        display: block;
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(1.25rem, 4vw, 1.75rem);
       }
 
       body.about-page .about-hero-panel {
-        display: none;
+        order: -1;
+        min-height: clamp(210px, 52vw, 320px);
+        aspect-ratio: 16 / 10;
+        width: 100%;
+      }
+
+      body.about-page .about-hero-panel img {
+        object-position: center 38%;
+      }
+
+      body.about-page .about-hero-copy h1 {
+        font-size: clamp(1.65rem, 7vw, 2.35rem);
       }
 
       body.about-page .about-hero-badges {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
-        max-width: 100%;
+        gap: 0.65rem;
       }
 
       body.about-page .about-hero-badges .badge {
         width: 100%;
         justify-content: center;
+        justify-self: stretch;
         white-space: normal;
         text-align: center;
       }
 
-      body.about-page .story-grid {
-        gap: 2rem;
+      body.about-page .about-hero-badges .badge:last-child {
+        grid-column: auto;
+      }
+
+      body.about-page .about-hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      body.about-page .about-hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      body.about-page .why-started-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+      }
+
+      body.about-page .why-started-questions {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .why-started-q:last-child {
+        grid-column: auto;
+      }
+
+      body.about-page .why-started-promise {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .why-started-cta .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      body.about-page .what-we-do-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .what-we-do-process {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .what-we-do-cta .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      body.about-page .company-performance-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .company-performance-stat {
+        padding: 1.15rem 1rem;
+      }
+
+      body.about-page .purpose-pillars {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .how-we-work-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .how-we-work-checklist {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .components-criteria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      body.about-page .components-brand-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       body.about-page main > section:nth-of-type(2) {
         padding-top: 3rem;
       }
+    }
 
-      body.about-page .story-visual > img {
-        max-height: 260px;
+    @media (max-width: 359px) {
+      body.about-page .about-hero-badges {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      body.about-page .about-hero-panel {
+        min-height: 200px;
+        border-radius: 0.9rem;
       }
     }
 
-    @media (max-width: 480px) {
-      body.about-page .page-hero {
-        padding-top: 5.75rem !important;
-        padding-bottom: 1.75rem !important;
+    @media (min-width: 640px) and (max-width: 767px) {
+      body.about-page .about-hero-panel {
+        min-height: clamp(240px, 44vw, 340px);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1180px) {
+      body.about-page .about-hero-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.88fr);
+        gap: clamp(1.5rem, 3vw, 2.5rem);
       }
 
-      body.about-page .about-hero-badges {
-        grid-template-columns: 1fr;
-        gap: 0.625rem;
-        margin-top: 1.35rem;
+      body.about-page .about-hero-panel {
+        min-height: clamp(280px, 36vw, 380px);
+      }
+    }
+
+    @media (min-width: 1181px) {
+      body.about-page .about-hero-layout {
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
       }
 
-      body.about-page main > section:nth-of-type(2) {
-        padding-top: 1.75rem !important;
+      body.about-page .about-hero-copy h1 {
+        font-size: clamp(2.25rem, 3vw, 3.25rem);
+      }
+    }
+
+    @media (min-width: 1440px) {
+      body.about-page .about-hero-layout {
+        gap: 5rem;
       }
 
-      body.about-page .page-hero h1 {
-        font-size: clamp(2rem, 9vw, 2.75rem);
+      body.about-page .about-hero-panel {
+        min-height: 440px;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      body.about-page .about-hero-copy h1 {
+        font-size: clamp(2.75rem, 2.4vw, 3.5rem);
       }
 
-      body.about-page main > section:nth-of-type(2) h2 {
-        padding-right: 4.5rem;
+      body.about-page .about-hero-copy p {
+        font-size: 1.08rem;
+      }
+
+      body.about-page .about-hero-panel {
+        min-height: 480px;
       }
     }
   </style>
@@ -674,336 +2281,680 @@
   <main>
 
     <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-hero about-hero">
       <div class="container">
         <div class="breadcrumb">
           <a href="/">Home</a><span>/</span><span>About</span>
         </div>
         <div class="about-hero-layout">
-          <div class="about-hero-copy">
+          <div class="about-hero-copy fade-up">
             <div class="section-label">Our Story</div>
-            <h1>Future Green Energy — Energy, Engineered for the Future</h1>
-            <p class="subtitle">We started FGE Solar to solve a simple, persistent problem: Kerala's rising electricity bills. Everything we do is built around solving that problem — completely.</p>
-            <div class="about-hero-badges">
+            <h1>About FGE Solar: Solar Installation Company in Kerala</h1>
+            <p class="about-hero-lead">FGE Solar, also known as Future Green Energy Group, helps homes and businesses make informed, practical decisions about rooftop solar.</p>
+            <p>Based in Thiruvananthapuram and serving customers across Kerala, we provide residential and commercial solar installation, system design, documentation assistance, KSEB coordination, commissioning and post-installation support.</p>
+            <p>Our goal is straightforward: make the transition to solar electricity in Kerala easier to understand, properly engineered and financially meaningful for every customer.</p>
+            <div class="about-hero-badges" aria-label="FGE Solar certifications">
               <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>MNRE Empanelled</span>
               <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>KSEB Approved Vendor</span>
               <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>PM Surya Ghar Registered</span>
-              <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-check"/></svg>50+ Installations</span>
+            </div>
+            <div class="about-hero-ctas">
+              <a href="/contact" class="btn btn-primary btn-lg">Book a Free Site Visit</a>
+              <a href="/calculator" class="btn btn-outline-dark btn-lg">Calculate My Solar Savings</a>
             </div>
           </div>
-          <figure class="about-hero-panel" aria-label="FGE Solar installation team proof point">
-            <img src="/assets/images/hero/about-fge-solar-kerala.webp" alt="Two solar advisers viewing rooftop panels at a Kerala home" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high">
-            <figcaption>
-              <span>Kerala rooftop solar team</span>
-              <strong>50+ completed installations</strong>
-            </figcaption>
+          <figure class="about-hero-panel fade-up" aria-label="FGE Solar rooftop installation in Kerala">
+            <picture>
+              <source type="image/webp" media="(max-width: 639px)" srcset="/assets/images/hero/about-hero-kerala-640.webp" width="640" height="360">
+              <source type="image/webp" media="(min-width: 1181px)" srcset="/assets/images/hero/about-hero-kerala.webp" width="1600" height="900">
+              <source type="image/webp" media="(min-width: 640px)" srcset="/assets/images/hero/about-hero-kerala-1200.webp" width="1200" height="675">
+              <img src="/assets/images/hero/about-hero-kerala.webp" alt="Traditional Kerala home with rooftop solar panels under palm trees and blue sky" width="1600" height="900" loading="eager" decoding="async" fetchpriority="high">
+            </picture>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- Brand Story -->
-    <section class="section">
+    <!-- Why FGE Solar Was Started -->
+    <section class="section why-started-section">
       <div class="container">
-        <div class="story-grid">
-          <div class="fade-up">
+        <div class="why-started-layout fade-up">
+          <div class="why-started-intro">
             <div class="section-label">Why We Started</div>
-            <h2 class="h2">Founded to Change One Number: Your Monthly Bill.</h2>
-            <p class="body-lg text-muted" style="margin:1.25rem 0 1rem">
-              Electricity tariffs and household consumption can change over time, making long-term energy costs difficult to predict. FGE Solar was founded to help Kerala homes and businesses reduce grid dependence with properly designed solar.
-            </p>
-            <p style="color:var(--gray-600);line-height:1.8;margin-bottom:1rem">
-              We saw a clear gap: solar technology had become genuinely cost-effective, subsidies made it even more accessible, but most homeowners were still stuck — confused by paperwork, uncertain about companies, and unsure if the ROI was real.
-            </p>
-            <p style="color:var(--gray-600);line-height:1.8;margin-bottom:1rem">
-              FGE Solar was built to remove every barrier between a homeowner and their solar system. Not just installation — but the entire journey. Subsidy paperwork. KSEB coordination. Net metering applications. Post-install support. The whole thing, handled.
-            </p>
-            <p style="color:var(--gray-600);line-height:1.8;margin-bottom:2rem">
-              In our first year, we've deployed 700 kW across 50+ installations in Kerala. Every one of those customers has a lower KSEB bill today. That's the number we care about.
-            </p>
-            <a href="/contact" class="btn btn-primary btn-lg">Work with us <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <h2 class="h2">Why FGE Solar Was Started</h2>
+            <p class="why-started-lead">FGE Solar was created in response to a problem experienced by many Kerala households and businesses: electricity consumption was increasing, grid costs were becoming harder to manage and choosing the right solar system remained unnecessarily complicated.</p>
+            <p class="why-started-bridge">Solar panels had become more accessible, but customers still had important questions:</p>
           </div>
 
-          <div class="story-visual fade-in">
-            <div class="story-quote">
-              Making solar energy reliable, accessible, and financially beneficial — for every home in Kerala.
+          <div class="why-started-questions" aria-label="Common solar questions FGE Solar helps answer">
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+              <span>What size of system does the property actually need?</span>
             </div>
-            <div class="story-metrics">
-              <div class="story-metric">
-                <div class="val">50+</div>
-                <div class="lbl">Installations done</div>
-              </div>
-              <div class="story-metric">
-                <div class="val">700 kW</div>
-                <div class="lbl">Capacity deployed</div>
-              </div>
-              <div class="story-metric">
-                <div class="val">₹78K</div>
-                <div class="lbl">Max subsidy handled</div>
-              </div>
-              <div class="story-metric">
-                <div class="val">100%</div>
-                <div class="lbl">Subsidy success rate</div>
-              </div>
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></span>
+              <span>Is an on-grid, off-grid or hybrid system more suitable?</span>
             </div>
-            <img src="/assets/images/hero/service-installation-kerala.webp" alt="Solar technicians installing rooftop panels in Kerala" loading="lazy" decoding="async" width="1600" height="900" style="width:100%;border-radius:var(--radius-xl);margin-top:1.5rem;display:block">
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+              <span>How much suitable roof area is available?</span>
+            </div>
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+              <span>What will the system realistically generate?</span>
+            </div>
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+              <span>Which components and warranties are included?</span>
+            </div>
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+              <span>Who will handle KSEB applications and metering procedures?</span>
+            </div>
+            <div class="why-started-q">
+              <span class="why-started-q-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></span>
+              <span>What support will be available after installation?</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-started-promise fade-up">
+          <p class="why-started-promise-lead">FGE Solar was established to bring these parts together through one coordinated process.</p>
+          <p class="why-started-promise-body">We do not view solar as a one-day panel installation. We view it as a long-term energy project that begins with understanding the customer&rsquo;s electricity usage and continues through system design, installation, commissioning, monitoring and after-sales support.</p>
+          <div class="why-started-cta">
+            <a href="/contact" class="btn btn-primary btn-lg">Work with us <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mission & Vision -->
-    <section class="section bg-sage">
+    <!-- What We Do -->
+    <section class="section what-we-do-section">
       <div class="container">
-        <div class="section-header centered fade-up">
+        <div class="what-we-do-header fade-up">
+          <div class="section-label">What We Do</div>
+          <h2 class="h2">Solar Installation in Kerala, Managed End to End</h2>
+          <p class="what-we-do-lead">FGE Solar provides complete rooftop-solar solutions for houses, apartments, offices, shops, factories, hotels, hospitals, educational institutions and other properties.</p>
+        </div>
+
+        <p class="what-we-do-bridge fade-up">Our services include:</p>
+
+        <div class="what-we-do-grid stagger" aria-label="FGE Solar services in Kerala">
+          <div class="what-we-do-card fade-up">
+            <h3 class="what-we-do-card-title">Property &amp; scale</h3>
+            <ul class="what-we-do-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/residential">Residential rooftop solar.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/commercial">Commercial and industrial solar.</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="what-we-do-card fade-up">
+            <h3 class="what-we-do-card-title">System types</h3>
+            <ul class="what-we-do-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/on-grid">On-grid solar systems.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/off-grid">Off-grid solar systems.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/hybrid">Hybrid solar with battery backup.</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="what-we-do-card fade-up">
+            <h3 class="what-we-do-card-title">Care &amp; extras</h3>
+            <ul class="what-we-do-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/amc">Solar annual maintenance and servicing.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/solar-water-heater">Solar water-heating systems.</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="what-we-do-card fade-up">
+            <h3 class="what-we-do-card-title">Delivery &amp; compliance</h3>
+            <ul class="what-we-do-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/">Site assessment and system design.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/">Installation and commissioning.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/services/on-grid">Documentation and KSEB coordination.</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <a href="/subsidy/">Guidance for applicable residential subsidy procedures.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="what-we-do-process fade-up">
+          <p class="what-we-do-process-lead">Every project begins with an assessment of the property, roof conditions, electricity consumption, system objectives and budget.</p>
+          <p class="what-we-do-process-body">The recommended system is then developed around those findings rather than based only on available roof area or a standard package.</p>
+          <div class="what-we-do-cta">
+            <a href="/services/" class="btn btn-primary btn-lg">Explore FGE Solar Services <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Performance -->
+    <section class="section-sm bg-dark company-performance-section" aria-labelledby="company-performance-heading">
+      <div class="container">
+        <div class="company-performance-header fade-up">
+          <div class="section-label">Company Performance</div>
+          <h2 class="h2" id="company-performance-heading">Building a Growing Solar Presence in Kerala</h2>
+        </div>
+
+        <div class="company-performance-grid fade-up" role="list" aria-label="FGE Solar company performance figures">
+          <div class="company-performance-stat" role="listitem">
+            <p class="company-performance-val" data-count="50" data-suffix="+">50+</p>
+            <p class="company-performance-label">Solar installations completed</p>
+          </div>
+          <div class="company-performance-stat" role="listitem">
+            <p class="company-performance-val">700 kW</p>
+            <p class="company-performance-label">Total capacity deployed</p>
+          </div>
+          <div class="company-performance-stat" role="listitem">
+            <p class="company-performance-val">14 Districts</p>
+            <p class="company-performance-label">Statewide service coverage</p>
+          </div>
+          <div class="company-performance-stat" role="listitem">
+            <p class="company-performance-val company-performance-val--text">Residential and Commercial</p>
+            <p class="company-performance-label">Solar project capabilities</p>
+          </div>
+        </div>
+
+        <p class="company-performance-note fade-up">Company figures last updated: May 2026. Installation and capacity numbers are updated periodically.</p>
+      </div>
+    </section>
+
+    <!-- Mission, Vision & Purpose -->
+    <section class="section purpose-section" aria-labelledby="purpose-heading">
+      <div class="container">
+        <div class="purpose-header fade-up">
           <div class="section-label">Purpose</div>
-          <h2 class="h2">Why We Show Up Every Day</h2>
+          <h2 class="h2" id="purpose-heading">Our Mission and Vision for Solar Electricity in Kerala</h2>
         </div>
-        <div class="mission-vision-grid stagger">
-          <div class="mv-card mission">
-            <div class="mv-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-            <div class="mv-label">Mission</div>
-            <h3>To make solar energy reliable, accessible, and financially beneficial for every home and business in India.</h3>
-          </div>
-          <div class="mv-card vision">
-            <div class="mv-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.85-2.1 4.5-2.5C8.15 19.1 10 19 12 19c5.5 0 9-4 9-9C21 5 17 2 12 2 7 2 2 7.5 2 13c0 2.5.5 4.5 1.5 6L2 22z"/></svg></div>
-            <div class="mv-label">Vision</div>
-            <h3>A future where every rooftop produces clean energy — and every family controls their own power and costs.</h3>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Stats -->
-    <section class="section-sm bg-dark">
-      <div class="container">
-        <div class="stats-bar dark">
-          <div class="stat-item">
-            <div class="stat-num" data-count="50" data-suffix="+">50+</div>
-            <div class="stat-label">Installations Completed</div>
+        <div class="purpose-pillars stagger">
+          <article class="purpose-card purpose-card--mission fade-up">
+            <div class="purpose-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <p class="purpose-card-label">Mission</p>
+            <p class="purpose-card-text">To make solar energy reliable, understandable and financially practical for homes and businesses through responsible system design, quality installation and dependable customer support.</p>
+          </article>
+
+          <article class="purpose-card purpose-card--vision fade-up">
+            <div class="purpose-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.85-2.1 4.5-2.5C8.15 19.1 10 19 12 19c5.5 0 9-4 9-9C21 5 17 2 12 2 7 2 2 7.5 2 13c0 2.5.5 4.5 1.5 6L2 22z"/></svg>
+            </div>
+            <p class="purpose-card-label">Vision</p>
+            <p class="purpose-card-text">To help create a future in which rooftops across Kerala generate clean electricity and customers have greater control over their long-term energy consumption and costs.</p>
+          </article>
+        </div>
+
+        <div class="purpose-commitment fade-up">
+          <div>
+            <p class="purpose-commitment-label">Our Purpose</p>
+            <p class="purpose-commitment-lead">We want customers to make solar decisions with clarity.</p>
           </div>
-          <div class="stat-item">
-            <div class="stat-num">700 kW</div>
-            <div class="stat-label">Total Capacity Deployed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">Year 1</div>
-            <div class="stat-label">And Still Scaling Fast</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">3</div>
-            <div class="stat-label">Certifications: MNRE · KSEB · PM Surya Ghar</div>
-          </div>
+          <p class="purpose-commitment-body">That means explaining both the benefits and limitations of each system, providing written equipment specifications, setting realistic expectations and remaining available after commissioning.</p>
         </div>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="section">
+    <!-- How We Work -->
+    <section class="section how-we-work-section" aria-labelledby="how-we-work-heading">
       <div class="container">
-        <div class="section-header centered fade-up">
-          <div class="section-label">Trust & Credentials</div>
-          <h2 class="h2">Certified. Approved. Accountable.</h2>
-          <p class="section-subtitle">Three certifications that protect your subsidy, your installation, and your investment.</p>
+        <div class="how-we-work-header fade-up">
+          <div class="section-label">How We Work</div>
+          <h2 class="h2" id="how-we-work-heading">The Standards Behind Every FGE Solar Installation</h2>
         </div>
 
-        <div class="grid grid-3 stagger">
-          <div class="cert-card">
-            <div class="cert-badge-wrap"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
-            <h3 class="cert-title">MNRE Empanelled</h3>
-            <p class="cert-desc">Empanelled with the Ministry of New and Renewable Energy, Government of India. This means we are authorized to process PM Surya Ghar subsidies directly on your behalf — you don't have to navigate government portals yourself.</p>
-          </div>
+        <div class="how-we-work-grid stagger">
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">01</span>
+              <h3 class="how-we-work-step-title">Site Assessment Before System Recommendation</h3>
+            </div>
+            <p>Before recommending a system, the FGE Solar team assesses available roof area, orientation, shading, structural conditions, electrical infrastructure and installation access.</p>
+            <p>We also review the customer&rsquo;s electricity bills and discuss future requirements such as air conditioning, business expansion or electric-vehicle charging.</p>
+          </article>
 
-          <div class="cert-card">
-            <div class="cert-badge-wrap"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-            <h3 class="cert-title">KSEB Approved Vendor</h3>
-            <p class="cert-desc">Approved by Kerala State Electricity Board as a qualified solar installer. This approval is essential for net metering applications and for installations under the Soura and E-Kiran programs.</p>
-          </div>
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">02</span>
+              <h3 class="how-we-work-step-title">Design Based on Actual Electricity Usage</h3>
+            </div>
+            <p>The appropriate solar capacity depends on more than roof size.</p>
+            <p class="how-we-work-lead">We consider:</p>
+            <ul class="how-we-work-checklist">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Monthly electricity consumption.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Daytime and nighttime usage.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Available shadow-free area.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Property type.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Grid availability.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Backup requirements.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Budget.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Future energy needs.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Applicable metering and regulatory conditions.</li>
+            </ul>
+          </article>
 
-          <div class="cert-card">
-            <div class="cert-badge-wrap"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-            <h3 class="cert-title">PM Surya Ghar Registered</h3>
-            <p class="cert-desc">Registered on the national PM Surya Ghar portal, which means your subsidy application is processed through official channels with full transparency and direct bank transfer to you.</p>
-          </div>
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">03</span>
+              <h3 class="how-we-work-step-title">Transparent Equipment and Warranty Information</h3>
+            </div>
+            <p class="how-we-work-lead">Every proposal should clearly identify:</p>
+            <ul class="how-we-work-checklist">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Proposed system capacity.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Solar-panel make and model.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Inverter make and model.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Mounting-structure specification.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Electrical protections.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Available product warranties.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Workmanship coverage.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Installation scope.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Items not included in the quotation.</li>
+            </ul>
+          </article>
+
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">04</span>
+              <h3 class="how-we-work-step-title">Installation and Electrical Quality Control</h3>
+            </div>
+            <p>The installation team follows the approved design and checks the mounting structure, panel alignment, cable routing, electrical protection and system connections before commissioning.</p>
+            <p>Project photographs and commissioning records should be maintained for customer reference and internal quality control.</p>
+          </article>
+
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">05</span>
+              <h3 class="how-we-work-step-title">KSEB and Documentation Assistance</h3>
+            </div>
+            <p>For applicable installations, FGE Solar assists customers with the documentation and coordination required for grid connectivity, inspection, metering and eligible government schemes.</p>
+            <p class="how-we-work-note">Final approvals, metering decisions and subsidy disbursement remain subject to the relevant authorities and applicable regulations.</p>
+          </article>
+
+          <article class="how-we-work-step fade-up">
+            <div class="how-we-work-step-head">
+              <span class="how-we-work-step-num" aria-hidden="true">06</span>
+              <h3 class="how-we-work-step-title">Post-Installation Support</h3>
+            </div>
+            <p class="how-we-work-lead">After commissioning, customers receive guidance on:</p>
+            <ul class="how-we-work-checklist">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>System operation.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Generation monitoring.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Inverter alerts.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Basic maintenance.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Panel-cleaning requirements.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Warranty procedures.</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Service-request channels.</li>
+            </ul>
+            <p>Annual maintenance and system inspections are also available based on the selected service plan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="section credentials-section" aria-labelledby="credentials-heading">
+      <div class="container">
+        <div class="credentials-header fade-up">
+          <div class="section-label">Credentials</div>
+          <h2 class="h2" id="credentials-heading">Credentials That Support a Compliant Solar Journey</h2>
+          <p class="credentials-intro">Credentials are important because solar installation involves technical work, electrical connections, utility procedures and, for eligible residential customers, government-scheme documentation.</p>
+        </div>
+
+        <div class="credentials-grid stagger">
+          <article class="credentials-card fade-up">
+            <div class="credentials-card-head">
+              <div class="credentials-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+              </div>
+              <h3 class="credentials-card-title">MNRE Empanelment</h3>
+            </div>
+            <div class="credentials-card-body">
+              <p>FGE Solar is presented as an MNRE-empanelled solar installer.</p>
+              <p class="credentials-card-note">Where applicable, this supports participation in the official rooftop-solar process. Customer and project eligibility remains subject to the rules of the relevant scheme and authorities.</p>
+            </div>
+          </article>
+
+          <article class="credentials-card fade-up">
+            <div class="credentials-card-head">
+              <div class="credentials-card-logo">
+                <img src="/assets/images/credentials/kseb.webp" alt="KSEB official logo" width="105" height="44" loading="lazy" decoding="async">
+              </div>
+              <h3 class="credentials-card-title">KSEB Vendor Approval</h3>
+            </div>
+            <div class="credentials-card-body">
+              <p>FGE Solar is presented as a KSEB-approved vendor for eligible solar installations in Kerala.</p>
+              <p>Our team assists customers with the applicable application, inspection, grid-connectivity and metering procedures.</p>
+            </div>
+          </article>
+
+          <article class="credentials-card credentials-card--split fade-up">
+            <div class="credentials-card-head">
+              <div class="credentials-card-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </div>
+              <h3 class="credentials-card-title">PM Surya Ghar Portal Registration</h3>
+            </div>
+            <div class="credentials-card-body">
+              <p>FGE Solar is registered on the PM Surya Ghar portal and supports eligible residential customers through the relevant rooftop-solar application and installation process.</p>
+              <p class="credentials-card-note">Registration does not guarantee that every applicant will qualify or that a subsidy will be released within a fixed timeframe. Final approval and payment remain under the official process.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Team -->
-    <section class="section bg-sage">
+    <section class="section team-section" aria-labelledby="team-heading">
       <div class="container">
         <div class="section-header centered fade-up">
-          <div class="section-label">The Team</div>
-          <h2 class="h2">The People Behind Your Installation</h2>
-          <p class="section-subtitle">A focused team with one goal: make your solar transition seamless.</p>
+          <div class="section-label">Team</div>
+          <h2 class="h2" id="team-heading">Meet the FGE Solar Team</h2>
+          <div class="team-intro">
+            <p>A solar project requires coordination between customer consultation, engineering, installation, documentation and after-sales support.</p>
+            <p>The FGE Solar team brings these responsibilities together under one process.</p>
+          </div>
         </div>
 
         <div class="team-grid stagger">
-          <div class="team-card">
+          <div class="team-card fade-up">
             <div class="team-avatar"><span class="avatar-initial">V</span></div>
             <div class="team-name">Vishnu M</div>
-            <div class="team-role">Founder & CEO</div>
-            <p class="team-bio">Founded FGE Solar with a clear vision: make solar genuinely accessible for Kerala homeowners. Leads company strategy and client relations.</p>
+            <div class="team-role">Founder and CEO</div>
+            <p class="team-bio">Vishnu leads FGE Solar&rsquo;s company strategy, customer relationships and long-term growth.</p>
+            <p class="team-bio">He established the company with the objective of making professionally managed solar installation more accessible to Kerala homes and businesses.</p>
           </div>
 
-          <div class="team-card">
-            <div class="team-avatar"><span class="avatar-initial">G</span></div>
-            <div class="team-name">Gokul</div>
+          <div class="team-card fade-up">
+            <div class="team-avatar"><span class="avatar-initial">A</span></div>
+            <div class="team-name">Anna</div>
             <div class="team-role">Operations Lead</div>
-            <p class="team-bio">Oversees all installation operations, quality control, and project timelines. Ensures every installation meets FGE's standards.</p>
+            <p class="team-bio">Anna manages installation operations, project coordination, quality checks and delivery timelines.</p>
+            <p class="team-bio">Her role is to ensure that each project is executed according to its approved scope and FGE Solar&rsquo;s installation standards.</p>
           </div>
 
-          <div class="team-card">
+          <div class="team-card fade-up">
             <div class="team-avatar"><span class="avatar-initial">A</span></div>
             <div class="team-name">Athulya</div>
-            <div class="team-role">Operations & Admin</div>
-            <p class="team-bio">Manages subsidy applications, KSEB coordination, and customer documentation. The engine behind our smooth subsidy processing.</p>
+            <div class="team-role">Operations and Administration</div>
+            <p class="team-bio">Athulya coordinates customer documentation, application processes, project administration and communication with the relevant stakeholders.</p>
+            <p class="team-bio">She helps customers understand the steps and documentation required throughout the project.</p>
           </div>
 
-          <div class="team-card">
+          <div class="team-card fade-up">
             <div class="team-avatar"><span class="avatar-initial">J</span></div>
             <div class="team-name">Jithin</div>
-            <div class="team-role">Sales Lead</div>
-            <p class="team-bio">First point of contact for new customers. Site assessments, quotations, and guiding customers through the decision process.</p>
+            <div class="team-role">Consultation &amp; Site Assessment Lead</div>
+            <p class="team-bio">Jithin supports customers during the initial consultation, site-assessment and quotation stages.</p>
+            <p class="team-bio">He helps customers compare system options and understand the proposed capacity, project scope and next steps.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Brands -->
-    <section class="section">
+    <!-- Components -->
+    <section class="section components-section" aria-labelledby="components-heading">
       <div class="container">
-        <div class="section-header centered fade-up">
-          <div class="section-label">Brand Partners</div>
-          <h2 class="h2">Premium Brands. No Compromise on Quality.</h2>
-          <p class="section-subtitle">We install from India's most trusted solar manufacturers — so your system performs for 25+ years.</p>
+        <div class="components-header fade-up">
+          <div class="section-label">Components</div>
+          <h2 class="h2" id="components-heading">Solar Panels and Inverters Selected for Each Project</h2>
+          <p class="components-intro">FGE Solar works with established solar-panel, inverter and electrical-equipment manufacturers.</p>
         </div>
 
-        <div class="brands-row fade-up">
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/waree.webp" type="image/webp">
-              <img src="assets/images/icons/waree.jpg" alt="Waaree logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Waaree</span>
+        <div class="components-layout fade-up">
+          <div class="components-criteria-col">
+            <p class="components-criteria-lead">The brand selected for an installation depends on:</p>
+            <div class="components-criteria-grid" role="list" aria-label="Factors that influence brand selection">
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>System type.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>Required capacity.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>Product compatibility.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Customer requirements.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>Technical specifications.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Warranty terms.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Service availability.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Current product availability.</div>
+              <div class="components-criterion" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Project budget.</div>
+            </div>
           </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/adani.webp" type="image/webp">
-              <img src="assets/images/icons/adani.jpg" alt="Adani Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Adani Solar</span>
+
+          <div class="components-brands-panel">
+            <h3 class="components-brands-title">Brands We Work With</h3>
+            <p class="components-brands-intro">Brands currently displayed on the FGE Solar website include:</p>
+
+            <div class="components-brand-group">
+              <span class="components-brand-group-label">Solar panels</span>
+              <div class="components-brand-grid">
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/waree.webp" type="image/webp"><img src="/assets/images/icons/waree.jpg" alt="Waaree logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Waaree</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/adani.webp" type="image/webp"><img src="/assets/images/icons/adani.jpg" alt="Adani Solar logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Adani Solar</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/vikram.webp" type="image/webp"><img src="/assets/images/icons/vikram.jpg" alt="Vikram Solar logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Vikram Solar</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/tata.webp" type="image/webp"><img src="/assets/images/icons/tata.jpg" alt="Tata Power Solar logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Tata Power Solar</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/goldi.webp" type="image/webp"><img src="/assets/images/icons/goldi.jpg" alt="Goldi Solar logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Goldi Solar</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/renewsys.webp" type="image/webp"><img src="/assets/images/icons/renewsys.jpg" alt="RenewSys logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>RenewSys</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/longi.webp" type="image/webp"><img src="/assets/images/icons/longi.jpg" alt="LONGi logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>LONGi</span></div>
+              </div>
+            </div>
+
+            <div class="components-brand-group">
+              <span class="components-brand-group-label">Inverters &amp; electrical</span>
+              <div class="components-brand-grid">
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/luminous.webp" type="image/webp"><img src="/assets/images/icons/luminous.jpg" alt="Luminous logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Luminous</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/solis.webp" type="image/webp"><img src="/assets/images/icons/solis.jpg" alt="Solis logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Solis</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/growatt.webp" type="image/webp"><img src="/assets/images/icons/growatt.jpg" alt="Growatt logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Growatt</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/sma.webp" type="image/webp"><img src="/assets/images/icons/sma.jpg" alt="SMA logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>SMA</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/havells.webp" type="image/webp"><img src="/assets/images/icons/havells.jpg" alt="Havells logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Havells</span></div>
+                <div class="components-brand-tile"><picture><source srcset="/assets/images/icons/enphase.webp" type="image/webp"><img src="/assets/images/icons/enphase.jpg" alt="Enphase logo" width="120" height="48" loading="lazy" decoding="async"></picture><span>Enphase</span></div>
+              </div>
+            </div>
           </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/vikram.webp" type="image/webp">
-              <img src="assets/images/icons/vikram.jpg" alt="Vikram Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Vikram Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/tata.webp" type="image/webp">
-              <img src="assets/images/icons/tata.jpg" alt="Tata Power Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Tata Power Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/goldi.webp" type="image/webp">
-              <img src="assets/images/icons/goldi.jpg" alt="Goldi Solar logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Goldi Solar</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/renewsys.webp" type="image/webp">
-              <img src="assets/images/icons/renewsys.jpg" alt="RenewSys logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>RenewSys</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/longi.webp" type="image/webp">
-              <img src="assets/images/icons/longi.jpg" alt="LONGi logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>LONGi</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/luminous.webp" type="image/webp">
-              <img src="assets/images/icons/luminous.jpg" alt="Luminous logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Luminous</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/solis.webp" type="image/webp">
-              <img src="assets/images/icons/solis.jpg" alt="Solis logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Solis</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/growatt.webp" type="image/webp">
-              <img src="assets/images/icons/growatt.jpg" alt="Growatt logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Growatt</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/sma.webp" type="image/webp">
-              <img src="assets/images/icons/sma.jpg" alt="SMA logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>SMA</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/havells.webp" type="image/webp">
-              <img src="assets/images/icons/havells.jpg" alt="Havells logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Havells</span>
-          </div>
-          <div class="brand-item brand-logo-item">
-            <picture>
-              <source srcset="assets/images/icons/enphase.webp" type="image/webp">
-              <img src="assets/images/icons/enphase.jpg" alt="Enphase logo" width="170" height="70" loading="lazy" decoding="async">
-            </picture>
-            <span>Enphase</span>
-          </div>
+        </div>
+
+        <p class="components-callout fade-up">The final proposal should identify the specific make, model, technical specifications and applicable warranties.</p>
+      </div>
+    </section>
+
+    <!-- Journey -->
+    <section class="section journey-section" aria-labelledby="journey-heading">
+      <div class="container">
+        <div class="journey-header fade-up">
+          <div class="section-label">Journey</div>
+          <h2 class="h2" id="journey-heading">The FGE Solar Journey</h2>
+        </div>
+
+        <div class="journey-timeline fade-up">
+          <article class="journey-item">
+            <time class="journey-date" datetime="2024-10">October 2024</time>
+            <h3 class="journey-title">FGE Solar Established</h3>
+            <p class="journey-desc">Future Green Energy Group was established in Thiruvananthapuram with a focus on complete residential and commercial solar installation.</p>
+          </article>
+
+          <article class="journey-item">
+            <time class="journey-date" datetime="2025-01">Early 2025</time>
+            <h3 class="journey-title">Credentials and Installation Capabilities Developed</h3>
+            <p class="journey-desc">FGE Solar completed the relevant vendor and portal registration processes and established its site-assessment, documentation, installation and commissioning workflows.</p>
+          </article>
+
+          <article class="journey-item">
+            <time class="journey-date" datetime="2026-05">May 2026</time>
+            <h3 class="journey-title">50+ Solar Installations</h3>
+            <p class="journey-desc">The company reached more than 50 installations across residential and commercial properties.</p>
+          </article>
+
+          <article class="journey-item">
+            <time class="journey-date" datetime="2026-05">May 2026</time>
+            <h3 class="journey-title">700 kW Deployed</h3>
+            <p class="journey-desc">FGE Solar&rsquo;s reported installed capacity reached 700 kW across completed projects.</p>
+          </article>
+
+          <article class="journey-item">
+            <time class="journey-date" datetime="2026-06">Mid 2026</time>
+            <h3 class="journey-title">Coverage Across All 14 Districts</h3>
+            <p class="journey-desc">The company expanded its service coverage to support solar installations across Kerala.</p>
+          </article>
+
+          <article class="journey-item journey-item--current">
+            <time class="journey-date" datetime="2026">2026 — Present</time>
+            <h3 class="journey-title">Stronger Engineering, Service and Commercial Capabilities</h3>
+            <p class="journey-desc">FGE Solar continues to strengthen its project delivery, customer support, maintenance and commercial-solar services.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Timeline -->
-    <section class="section bg-sage">
+    <!-- Service Coverage -->
+    <section class="section coverage-section" aria-labelledby="coverage-heading">
       <div class="container">
-        <div class="story-grid">
-          <div class="fade-up">
-            <div class="section-label">Our Journey</div>
-            <h2 class="h2">One Year In. Scaling Fast.</h2>
-            <p class="section-subtitle">FGE Solar launched in 2024 and has moved quickly — certifications, deployments, and satisfied customers.</p>
+        <div class="coverage-header fade-up">
+          <div class="section-label">Service Coverage</div>
+          <h2 class="h2" id="coverage-heading">Solar Installation Across Kerala</h2>
+        </div>
+
+        <div class="coverage-panel fade-up">
+          <div class="coverage-layout">
+            <div class="coverage-districts">
+              <p class="coverage-intro">FGE Solar provides site assessments and solar installation support across Kerala&rsquo;s 14 districts:</p>
+              <ul class="coverage-districts-grid" role="list" aria-label="FGE Solar district service pages">
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/thiruvananthapuram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Thiruvananthapuram</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/kollam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kollam</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/pathanamthitta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Pathanamthitta</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/alappuzha"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Alappuzha</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/kottayam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kottayam</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/idukki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Idukki</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/ernakulam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ernakulam</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/thrissur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Thrissur</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/palakkad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Palakkad</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/malappuram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Malappuram</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/kozhikode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kozhikode</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/wayanad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wayanad</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/kannur"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kannur</a></li>
+                <li role="listitem"><a class="coverage-district-link" href="/solar-in/kasaragod"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kasaragod</a></li>
+              </ul>
+            </div>
+
+            <div class="coverage-audiences">
+              <p class="coverage-audiences-lead">Our services are available for:</p>
+              <ul class="coverage-property-grid" role="list" aria-label="Property types served by FGE Solar">
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Homes and villas.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Apartments and housing communities.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Shops and offices.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Hotels and hospitals.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Schools and colleges.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Factories and warehouses.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Farms and remote properties.</li>
+                <li class="coverage-property-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Institutions and commercial facilities.</li>
+              </ul>
+            </div>
           </div>
-          <div class="timeline fade-up">
-            <div class="timeline-item">
-              <div class="timeline-date">Early 2024</div>
-              <div class="timeline-title">FGE Solar Founded</div>
-              <p class="timeline-desc">Vishnu M establishes Future Green Energy Group in Thiruvananthapuram with a clear focus on full-service solar installation.</p>
+        </div>
+
+        <p class="coverage-note fade-up">Project feasibility, system size, cost and expected generation are assessed individually because roof conditions and electricity requirements vary between properties.</p>
+
+        <div class="coverage-cta fade-up">
+          <a href="/solar-in/" class="btn btn-primary btn-lg">Find FGE Solar in Your District <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section about-faq-section" aria-labelledby="about-faq-heading">
+      <div class="container">
+        <div class="about-faq-header fade-up">
+          <div class="section-label">FAQs</div>
+          <h2 class="h2" id="about-faq-heading">FAQs About FGE Solar</h2>
+        </div>
+
+        <div class="about-faq-list faq-list fade-up">
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What is FGE Solar?
+              <i class="faq-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>FGE Solar, or Future Green Energy Group, is a solar installation company based in Thiruvananthapuram, Kerala.</p>
+                <p>The company provides residential, commercial, on-grid, off-grid and hybrid solar solutions, along with system design, documentation assistance, commissioning and maintenance support.</p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">Mid 2024</div>
-              <div class="timeline-title">Triple Certification Achieved</div>
-              <p class="timeline-desc">MNRE empanelment, KSEB approval, and PM Surya Ghar portal registration — all three secured, opening subsidy processing capabilities.</p>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Where does FGE Solar provide solar installation in Kerala?
+              <i class="faq-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>FGE Solar serves customers across all 14 districts of Kerala.</p>
+                <p>Site-visit availability and project scheduling may vary depending on the location, system requirements and current installation calendar.</p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">Late 2024</div>
-              <div class="timeline-title">50+ Installations Milestone</div>
-              <p class="timeline-desc">700 kW deployed across residential and commercial properties in Thiruvananthapuram, Kollam, Ernakulam, and Kozhikode.</p>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Does FGE Solar install solar panels for homes?
+              <i class="faq-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Yes. FGE Solar provides residential rooftop-solar systems for houses and eligible residential properties.</p>
+                <p>The process includes electricity-bill review, roof assessment, system recommendation, quotation, installation and applicable documentation assistance.</p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-date">2025</div>
-              <div class="timeline-title">Kerala-Wide Expansion</div>
-              <p class="timeline-desc">Scaling operations to all 14 Kerala districts. Growing team. Increasing commercial solar focus.</p>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              Does FGE Solar undertake commercial solar projects?
+              <i class="faq-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Yes. FGE Solar provides commercial solar systems for offices, factories, warehouses, shops, hotels, hospitals, schools and other institutions.</p>
+                <p>Commercial-system design is based on electricity consumption, daytime load, roof availability and project objectives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              What solar-panel brands does FGE Solar install in Kerala?
+              <i class="faq-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>FGE Solar works with multiple established solar-panel and inverter manufacturers.</p>
+                <p>The specific brand and model recommended for a project depend on system compatibility, technical requirements, warranty terms, availability and budget.</p>
+              </div>
             </div>
           </div>
         </div>
