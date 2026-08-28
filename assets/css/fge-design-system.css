@@ -8197,7 +8197,7 @@ body.home-page .home-proof-section .home-areas-heading {
   margin-bottom: clamp(14px, 2.5vw, 22px) !important;
 }
 
-body.home-page .home-proof-section .home-areas-heading h2 {
+body.home-page .home-proof-section .home-areas-heading h3 {
   margin-top: 8px !important;
   margin-bottom: 6px !important;
   font-size: clamp(20px, 5.2vw, 30px) !important;
@@ -8294,12 +8294,13 @@ body.home-page .home-area-card-label {
   z-index: 2 !important;
 }
 
-body.home-page .home-area-card-label strong,
+body.home-page .home-area-card-label h3,
 body.home-page .home-area-card-label span {
   display: block !important;
 }
 
-body.home-page .home-area-card-label strong {
+body.home-page .home-area-card-label h3 {
+  margin: 0 !important;
   color: #fff !important;
   font-family: var(--font-heading) !important;
   font-size: clamp(15px, 3.8vw, 18px) !important;
@@ -8340,7 +8341,7 @@ body.home-page .home-proof-section .home-glance-heading {
   margin-bottom: clamp(12px, 2.5vw, 18px) !important;
 }
 
-body.home-page .home-proof-section .home-glance-heading h2 {
+body.home-page .home-proof-section .home-glance-heading h3 {
   margin-top: 8px !important;
   margin-bottom: 0 !important;
   font-size: clamp(18px, 4.8vw, 28px) !important;
@@ -8414,7 +8415,7 @@ body.home-page .home-glance-lbl {
     bottom: 10px !important;
   }
 
-  body.home-page .home-area-card-label strong {
+  body.home-page .home-area-card-label h3 {
     font-size: 13px !important;
   }
 
@@ -8454,7 +8455,7 @@ body.home-page .home-glance-lbl {
     padding: clamp(28px, 4vw, 44px) 20px clamp(48px, 6vw, 72px) !important;
   }
 
-  body.home-page .home-proof-section .home-areas-heading h2 {
+  body.home-page .home-proof-section .home-areas-heading h3 {
     font-size: clamp(24px, 3.5vw, 32px) !important;
   }
 
@@ -8476,7 +8477,7 @@ body.home-page .home-glance-lbl {
     bottom: clamp(12px, 1.8vw, 16px) !important;
   }
 
-  body.home-page .home-area-card-label strong {
+  body.home-page .home-area-card-label h3 {
     font-size: clamp(15px, 2.1vw, 20px) !important;
   }
 
@@ -8489,7 +8490,7 @@ body.home-page .home-glance-lbl {
     font-size: 15px !important;
   }
 
-  body.home-page .home-proof-section .home-glance-heading h2 {
+  body.home-page .home-proof-section .home-glance-heading h3 {
     font-size: clamp(22px, 3.2vw, 30px) !important;
   }
 
@@ -8530,7 +8531,7 @@ body.home-page .home-glance-lbl {
     margin-bottom: 24px !important;
   }
 
-  body.home-page .home-proof-section .home-areas-heading h2 {
+  body.home-page .home-proof-section .home-areas-heading h3 {
     font-size: clamp(28px, 2.4vw, 34px) !important;
   }
 
@@ -8560,7 +8561,7 @@ body.home-page .home-glance-lbl {
     bottom: 24px !important;
   }
 
-  body.home-page .home-area-card-label strong {
+  body.home-page .home-area-card-label h3 {
     font-size: 22px !important;
   }
 
@@ -8576,7 +8577,7 @@ body.home-page .home-glance-lbl {
     margin-bottom: 20px !important;
   }
 
-  body.home-page .home-proof-section .home-glance-heading h2 {
+  body.home-page .home-proof-section .home-glance-heading h3 {
     font-size: clamp(24px, 2vw, 30px) !important;
   }
 
@@ -8630,7 +8631,7 @@ body.home-page .home-glance-lbl {
     bottom: 10px !important;
   }
 
-  body.home-page .home-area-card-label strong {
+  body.home-page .home-area-card-label h3 {
     font-size: 14px !important;
   }
 
@@ -8695,7 +8696,7 @@ body.home-page .home-proof-section .home-glance-heading .fge-kicker {
     bottom: 8px !important;
   }
 
-  body.home-page .home-area-card-label strong {
+  body.home-page .home-area-card-label h3 {
     font-size: 12px !important;
     line-height: 1.12 !important;
   }
@@ -8733,9 +8734,11 @@ body.home-page .fge-problem-copy .fge-note-card > p {
   margin: 0 !important;
 }
 
-body.home-page .fge-problem-copy .fge-note-card > p strong {
+body.home-page .fge-problem-copy .fge-note-card > h3 {
+  margin: 0 0 0.8rem !important;
   color: var(--fge-ink) !important;
   font-weight: 700 !important;
+  font-size: inherit !important;
   line-height: 1.5 !important;
 }
 
