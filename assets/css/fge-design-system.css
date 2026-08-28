@@ -8316,6 +8316,13 @@ body.home-page .home-area-card-label h3 {
   line-height: 1.15 !important;
 }
 
+body.home-page a.home-area-card .home-area-card-label h3,
+body.home-page a.home-area-card:hover .home-area-card-label h3,
+body.home-page a.home-area-card:focus-visible .home-area-card-label h3,
+body.home-page a.home-area-card:visited .home-area-card-label h3 {
+  color: #fff !important;
+}
+
 body.home-page .home-area-card-label span {
   margin-top: 3px !important;
   color: rgba(255, 255, 255, 0.78) !important;
@@ -8425,6 +8432,7 @@ body.home-page .home-glance-lbl {
 
   body.home-page .home-area-card-label h3 {
     font-size: 13px !important;
+    color: #fff !important;
   }
 
   body.home-page .home-area-card-label span {
@@ -8487,6 +8495,7 @@ body.home-page .home-glance-lbl {
 
   body.home-page .home-area-card-label h3 {
     font-size: clamp(15px, 2.1vw, 20px) !important;
+    color: #fff !important;
   }
 
   body.home-page .home-area-card-label span {
@@ -8571,6 +8580,7 @@ body.home-page .home-glance-lbl {
 
   body.home-page .home-area-card-label h3 {
     font-size: 22px !important;
+    color: #fff !important;
   }
 
   body.home-page .home-area-card-label span {
@@ -8641,6 +8651,7 @@ body.home-page .home-glance-lbl {
 
   body.home-page .home-area-card-label h3 {
     font-size: 14px !important;
+    color: #fff !important;
   }
 
   body.home-page .home-area-card-label span {
@@ -8707,6 +8718,7 @@ body.home-page .home-proof-section .home-glance-heading .fge-kicker {
   body.home-page .home-area-card-label h3 {
     font-size: 12px !important;
     line-height: 1.12 !important;
+    color: #fff !important;
   }
 
   body.home-page .home-area-card-label span {
