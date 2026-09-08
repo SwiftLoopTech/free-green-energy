@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
 
   <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/components.css?v=20260908-fix4">
+  <link rel="stylesheet" href="/assets/css/components.css?v=20260908-blogfix">
   <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260908-fix4">
 
   <!-- codex-seo-generated:start -->
@@ -918,6 +918,7 @@
       justify-content: space-between;
       gap: 0.5rem;
       margin-bottom: 0.75rem;
+      flex-wrap: wrap;
     }
 
     .blog-category {
@@ -973,9 +974,10 @@
       line-height: 1.35;
       margin-bottom: 0.5rem;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      overflow-wrap: anywhere;
     }
 
     .blog-excerpt {
@@ -1103,17 +1105,31 @@
     }
 
     /* Tier 4: 768px – 991px (Tablets Portrait) */
+    @media (max-width: 1024px) {
+      .featured-post,
+      a.featured-post,
+      #featured-article {
+        grid-template-columns: 1fr !important;
+      }
+      .featured-post-image {
+        aspect-ratio: 16 / 9 !important;
+        min-height: 200px !important;
+      }
+      .featured-meta,
+      .featured-post .featured-meta {
+        flex-wrap: wrap !important;
+        row-gap: 0.35rem !important;
+      }
+      .featured-cta {
+        max-width: 100% !important;
+        justify-content: center !important;
+      }
+    }
+
     @media (max-width: 991px) {
       .blog-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
-      }
-      .featured-post {
-        grid-template-columns: 1fr;
-      }
-      .featured-post-image {
-        aspect-ratio: 16 / 9;
-        min-height: 220px;
       }
     }
 
@@ -1124,10 +1140,13 @@
         max-width: 520px;
         margin-inline: auto;
       }
-      .featured-post {
+      .featured-post,
+      a.featured-post,
+      #featured-article {
         max-width: 520px;
         margin-inline: auto;
         margin-bottom: 2rem;
+        grid-template-columns: 1fr !important;
       }
       .filter-bar-wrap {
         top: 60px;

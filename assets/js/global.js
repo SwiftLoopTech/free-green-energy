@@ -653,6 +653,37 @@ function initEstimateModal() {
   window.addEventListener('scroll', scrollTrigger, { passive: true });
 }
 
+function relocateBlogJumpNav() {
+  var jump = document.querySelector('.sidebar-card-jump');
+  var article = document.querySelector('.article-layout > article');
+  var toc = document.querySelector('.article-toc');
+  if (!jump || !article || toc) return;
+
+  var mq = window.matchMedia('(max-width: 1024px)');
+  var home = jump.parentNode;
+
+  function place() {
+    if (mq.matches) {
+      var anchor = article.querySelector('.article-featured-img, .article-lede, .article-meta');
+      if (anchor) {
+        anchor.insertAdjacentElement('afterend', jump);
+      } else if (jump.parentNode !== article) {
+        article.insertBefore(jump, article.children[Math.min(3, article.children.length)]);
+      }
+    } else if (home && jump.parentNode !== home) {
+      var related = home.querySelector('.sidebar-card-sage');
+      if (related) home.insertBefore(jump, related);
+      else home.appendChild(jump);
+    }
+  }
+
+  place();
+  if (mq.addEventListener) mq.addEventListener('change', place);
+  else mq.addListener(place);
+}
+
+relocateBlogJumpNav();
+
 // Ensure the modal initializes after the main initialization
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initEstimateModal);
