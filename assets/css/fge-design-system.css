@@ -1503,6 +1503,35 @@ textarea:focus,
   color: var(--fge-ink-soft) !important;
 }
 
+/* Dark Hero Breadcrumbs (Commercial Hero & Calculator Hero) */
+#commercial-hero .breadcrumb,
+.calc-hero .breadcrumb {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+#commercial-hero .breadcrumb a,
+.calc-hero .breadcrumb a {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-decoration: none !important;
+}
+
+#commercial-hero .breadcrumb a:hover,
+.calc-hero .breadcrumb a:hover {
+  color: #34D399 !important;
+  text-decoration: underline !important;
+}
+
+#commercial-hero .breadcrumb span,
+.calc-hero .breadcrumb span {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+#commercial-hero .breadcrumb span:last-child,
+.calc-hero .breadcrumb span:last-child {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
 .contact-method {
   background: #fff !important;
   border: 1px solid var(--fge-grey-90) !important;
@@ -1879,10 +1908,18 @@ a:not(.btn):not(.nav-logo):not(.footer-logo) {
 
 .bg-dark .section-label,
 .dark-section .section-label,
+.section-dark .section-label,
+.section.section-dark .section-label,
 .section.bg-dark .section-label,
+.quote-check-box .section-label,
+.cta-banner .section-label,
 [style*="#172219"] .section-label,
-[style*="#1E2D22"] .section-label {
-  color: #d2f2de !important;
+[style*="#1E2D22"] .section-label,
+[style*="background:var(--dark)"] .section-label,
+[style*="background: var(--dark)"] .section-label {
+  color: #4ade80 !important;
+  background: rgba(24, 184, 92, 0.16) !important;
+  border-color: rgba(24, 184, 92, 0.38) !important;
 }
 
 .footer-grid,
@@ -3364,8 +3401,7 @@ section[style*="#172219"] .btn-outline {
 .local-stat .val .g,
 .local-stat strong,
 .data-table .highlight,
-.subsidy-amount,
-main a:not(.btn):not(.nav-logo):not(.footer-logo):not(.social-link) {
+.subsidy-amount {
   color: var(--fge-green-800) !important;
 }
 
@@ -3693,7 +3729,9 @@ section[style*="background: var(--dark)"] .mode-card .mode-label {
 [style*="background: #172219"] .section-label,
 [style*="background:#1E2D22"] .section-label,
 [style*="background: #1E2D22"] .section-label {
-  color: #d2f2de !important;
+  color: #4ade80 !important;
+  background: rgba(24, 184, 92, 0.16) !important;
+  border-color: rgba(24, 184, 92, 0.38) !important;
 }
 
 .section-dark .sector-card,
@@ -3704,6 +3742,15 @@ section[style*="background: var(--dark)"] .step-card {
   background: rgba(255, 255, 255, 0.07) !important;
   border-color: rgba(255, 255, 255, 0.14) !important;
   color: #fff !important;
+}
+
+.section-dark .sector-card:hover,
+section[style*="background:var(--dark)"] .sector-card:hover,
+section[style*="background: var(--dark)"] .sector-card:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(24, 184, 92, 0.5) !important;
+  color: #fff !important;
+  transform: translateY(-3px);
 }
 
 .section-dark .sector-card h3,
@@ -3724,12 +3771,25 @@ section[style*="background: var(--dark)"] .step-card p {
   color: inherit !important;
 }
 
+.section-dark .sector-card:hover h3,
+.section-dark .sector-card:hover h4,
+section[style*="background:var(--dark)"] .sector-card:hover h3,
+section[style*="background: var(--dark)"] .sector-card:hover h3 {
+  color: #fff !important;
+}
+
 .section-dark .sector-card p,
 section[style*="background:var(--dark)"] .sector-card p,
 section[style*="background:var(--dark)"] .step-card p,
 section[style*="background: var(--dark)"] .sector-card p,
 section[style*="background: var(--dark)"] .step-card p {
   color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.section-dark .sector-card:hover p,
+section[style*="background:var(--dark)"] .sector-card:hover p,
+section[style*="background: var(--dark)"] .sector-card:hover p {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .comp-card.featured .comp-row .val,
@@ -10599,3 +10659,12 @@ body.home-page main {
     height: 36px !important;
   }
 }
+
+/* ── FAQ DETAILS ACCORDION EXPANSION FIX ─────────────────── */
+details[open] .faq-answer,
+.faq-item details[open] .faq-answer {
+  max-height: none !important;
+  overflow: visible !important;
+  height: auto !important;
+}
+

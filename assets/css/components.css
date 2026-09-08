@@ -1770,6 +1770,19 @@
   margin-top: var(--space-5);
 }
 
+.google-preferred-source {
+  margin-top: 1.25rem;
+}
+
+.google-preferred-source--light {
+  margin-top: 0.75rem;
+}
+
+.google-preferred-source [google-add-preferred-source-btn] {
+  display: inline-block;
+  min-height: 40px;
+}
+
 .social-link {
   width: 36px;
   height: 36px;

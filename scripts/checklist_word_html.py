@@ -1,0 +1,256 @@
+"""Word-friendly table HTML for PM Surya Ghar checklist (opens cleanly in Microsoft Word)."""
+
+
+def build_word_html(logo_src: str) -> str:
+    def panel(title: str, body: str) -> str:
+        return f"""
+<table width="100%" cellspacing="0" cellpadding="0" style="border:1pt solid #DCE8DD; margin-bottom:6pt;">
+  <tr>
+    <td bgcolor="#172219" style="padding:5pt 8pt; color:#ffffff; font-size:8pt; font-weight:bold; letter-spacing:0.6pt; text-transform:uppercase; font-family:Calibri,sans-serif;">{title}</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F4FAF6" style="padding:8pt; font-family:Calibri,sans-serif; font-size:9pt; color:#172219; vertical-align:top;">{body}</td>
+  </tr>
+</table>"""
+
+    def checks(items: list[str]) -> str:
+        rows = "".join(
+            f'<tr><td width="14" valign="top" style="font-size:10pt; color:#8FA897;">☐</td>'
+            f'<td style="padding-bottom:3pt; font-size:9pt; line-height:1.35;">{item}</td></tr>'
+            for item in items
+        )
+        return f'<table width="100%" cellspacing="0" cellpadding="0">{rows}</table>'
+
+    def header_block(subtitle: str, right_html: str) -> str:
+        return f"""
+<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#172219" style="margin-bottom:10pt;">
+  <tr>
+    <td width="58%" valign="middle" style="padding:10pt 12pt;">
+      <table cellspacing="0" cellpadding="0"><tr>
+        <td valign="middle"><img src="{logo_src}" width="54" height="54" alt="FGE Solar" style="display:block; background:#ffffff; padding:3pt;"></td>
+        <td valign="middle" style="padding-left:10pt;">
+          <div style="font-family:Georgia,serif; font-size:18pt; color:#ffffff; font-weight:bold; line-height:1.1;">FGE Solar</div>
+          <div style="font-family:Calibri,sans-serif; font-size:7.5pt; color:#b8d4bc; letter-spacing:2pt; text-transform:uppercase; margin-top:2pt;">{subtitle}</div>
+        </td>
+      </tr></table>
+    </td>
+    <td width="42%" valign="top" align="right" style="padding:10pt 12pt; font-family:Calibri,sans-serif; color:#ddeedd; font-size:9pt; line-height:1.45;">
+      {right_html}
+    </td>
+  </tr>
+</table>"""
+
+    cfa_body = """
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse; font-size:9pt;">
+  <tr>
+    <td bgcolor="#233026" style="padding:4pt 6pt; color:#fff; font-weight:bold; font-size:8pt; border:1pt solid #DCE8DD;">System size</td>
+    <td bgcolor="#233026" style="padding:4pt 6pt; color:#fff; font-weight:bold; font-size:8pt; border:1pt solid #DCE8DD;">CFA amount</td>
+  </tr>
+  <tr><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">1 kW</td><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">₹30,000</td></tr>
+  <tr><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">2 kW</td><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">₹60,000</td></tr>
+  <tr><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">3 kW and above</td><td style="padding:4pt 6pt; border:1pt solid #DCE8DD;">₹78,000 maximum</td></tr>
+</table>
+<p style="margin:6pt 0 0; font-size:8pt; color:#5B645C; line-height:1.4;">Current CFA guideline: ₹30,000/kW for first 2 kW + ₹18,000 for the additional third kW, capped at ₹78,000. Subsidy scheme rates are revised periodically — confirm the latest CFA on the National Portal before applying.</p>"""
+
+    eligibility = checks([
+        "Indian citizen with valid KSEB electricity connection in your name",
+        "Residential consumer applying for PM Surya Ghar rooftop subsidy",
+        "Have not already received PM Surya Ghar subsidy on this KSEB consumer number (one-time per connection)",
+        "Installing through an MNRE-empanelled vendor (e.g. FGE Solar)",
+        "ALMM-listed modules and adequate unshaded roof area",
+        "Bank account in applicant name for subsidy transfer",
+    ])
+
+    steps_html = ""
+    steps = [
+        ("Register on pmsuryaghar.gov.in", "Basic details + KSEB connection submitted"),
+        ("Technical feasibility / DISCOM stage", "Track live status in portal (KSERC 2025 process applies in Kerala)"),
+        ("Select FGE Solar on the portal", "Choose FGE Solar / Future Green Energy Group from the MNRE-empanelled vendor list"),
+        ("Sign agreement &amp; upload documents", "FGE Solar prepares and submits your portal file pack"),
+        ("Rooftop installation by FGE Solar", "Panels, inverter, protections, commissioning — typically 2–4 days"),
+        ("Project completion report filed", "FGE Solar uploads completion details on the portal"),
+        ("KSEB / DISCOM inspection", "Technical inspection — FGE follows up on scheduling"),
+        ("Net meter installed", "KSEB commissions bidirectional meter for export credits"),
+        ("CFA processed after approvals", "Subsidy credited to beneficiary bank / eligible loan account — timing varies"),
+    ]
+    for i, (title, detail) in enumerate(steps, start=1):
+        steps_html += f"""
+<table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom:4pt;">
+  <tr>
+    <td width="22" valign="top"><div style="width:18pt; height:18pt; background:#18B85C; color:#fff; font-size:8pt; font-weight:bold; text-align:center; line-height:18pt; font-family:Calibri,sans-serif;">{i}</div></td>
+    <td valign="top" style="padding-left:6pt;">
+      <div style="font-size:9.5pt; font-weight:bold; color:#172219; font-family:Calibri,sans-serif;">{title}</div>
+      <div style="font-size:8.5pt; color:#5B645C; line-height:1.35; font-family:Calibri,sans-serif;">{detail}</div>
+    </td>
+  </tr>
+</table>"""
+
+    why_items = checks([
+        "Free site assessment &amp; system sizing for your roof",
+        "Full portal registration &amp; document submission handled",
+        "KSEB net metering application &amp; follow-up included",
+        "ALMM-listed panels with written warranty &amp; scope",
+        "Serving all 14 districts across Kerala",
+        "Itemised quote showing subsidy &amp; your net cost",
+    ])
+
+    before_items = checks([
+        "Written itemised quote (capacity, brands, warranty, scope)",
+        "ALMM-listed module and inverter details confirmed",
+        "Who handles KSEB / portal paperwork clearly stated",
+        "Installer is MNRE-empanelled &amp; selectable on pmsuryaghar.gov.in",
+    ])
+
+    header1_right = """
+<div style="color:#4ADE80; font-size:8pt; font-weight:bold; letter-spacing:1pt; text-transform:uppercase;">Expert Consultation</div>
+<div style="margin-top:2pt;">MNRE empanelled · Kerala-wide</div>
+<div style="font-size:14pt; font-weight:bold; color:#ffffff; margin-top:4pt;">+91 80890 73029</div>
+<div>info@fgesolar.in</div>"""
+
+    header2_right = """
+<div style="text-align:left; color:#ddeedd; font-size:9pt; line-height:1.6;">
+  <div><b>Applicant name:</b> ________________________________</div>
+  <div><b>KSEB consumer no.:</b> _____________________________</div>
+  <div><b>District:</b> _______________________________________</div>
+</div>"""
+
+    return f"""<!DOCTYPE html>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:w="urn:schemas-microsoft-com:office:word"
+      xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+  <meta charset="utf-8">
+  <title>PM Surya Ghar Checklist | FGE Solar</title>
+  <!--[if gte mso 9]><xml>
+  <w:WordDocument>
+    <w:View>Print</w:View>
+    <w:Zoom>100</w:Zoom>
+    <w:DoNotOptimizeForBrowser/>
+  </w:WordDocument>
+  </xml><![endif]-->
+  <style>
+    @page {{
+      size: 21cm 29.7cm;
+      margin: 1.2cm 1.4cm 1cm 1.4cm;
+    }}
+    body {{
+      margin: 0;
+      padding: 0;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 10pt;
+      color: #172219;
+    }}
+    p {{ margin: 0 0 6pt; }}
+    .section-title {{
+      font-family: Calibri, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      color: #172219;
+      border-left: 3pt solid #18B85C;
+      padding-left: 6pt;
+      margin: 10pt 0 6pt;
+      text-transform: uppercase;
+      letter-spacing: 0.4pt;
+    }}
+    .page-break {{ page-break-after: always; height: 0; line-height: 0; font-size: 0; }}
+  </style>
+</head>
+<body>
+
+{header_block("Future Green Energy Group", header1_right)}
+
+<p style="font-size:8pt; font-weight:bold; color:#18B85C; letter-spacing:1pt; text-transform:uppercase; margin:0 0 4pt;">Official 2026 Homeowner Checklist</p>
+<p style="font-family:Georgia,serif; font-size:20pt; font-weight:bold; color:#172219; margin:0 0 6pt; line-height:1.15;">PM Surya Ghar Application Checklist for Kerala</p>
+<p style="font-size:10pt; color:#5B645C; line-height:1.45; margin:0 0 10pt;">Use this printable checklist before registering on the National Portal. FGE Solar — MNRE empanelled across all 14 Kerala districts — can handle your eligibility check, portal registration, installation, and KSEB net metering.</p>
+
+<table width="100%" cellspacing="6" cellpadding="0"><tr>
+  <td width="50%" valign="top">{panel("Central Financial Assistance (Residential)", cfa_body)}</td>
+  <td width="50%" valign="top">{panel("Quick Eligibility Self-Check", eligibility)}</td>
+</tr></table>
+
+<p class="section-title">Documents — Subsidy Only</p>
+{checks([
+    "Latest KSEB electricity bill (consumer number visible)",
+    "Bank proof — passbook front page or cancelled cheque leaf showing <b>applicant name, account number and IFSC</b> (all three required)",
+    "Aadhaar card (recommended for name verification on the portal)",
+    "Mobile number linked to Aadhaar (for OTP on portal)",
+    "Email ID for portal registration",
+    "Written quotation / system proposal from empanelled installer",
+])}
+
+<p class="section-title">Documents — If Taking Bank Loan (additional)</p>
+{checks([
+    "Property ownership proof (sale deed / tax receipt / possession certificate)",
+    "PAN card of applicant",
+    "Bank passbook from a <b>nationalized bank</b> (mandatory for loan cases)",
+])}
+
+<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#18B85C" style="margin:8pt 0;">
+  <tr>
+    <td style="padding:9pt 10pt; color:#ffffff; font-size:9.5pt; line-height:1.4;">
+      <b>Not sure if you qualify?</b><br>
+      WhatsApp your latest KSEB bill — FGE Solar will confirm PM Surya Ghar eligibility, recommend system size, and explain next steps. Free. No obligation.
+    </td>
+    <td align="right" valign="middle" style="padding:9pt 10pt; color:#ffffff; font-size:13pt; font-weight:bold; white-space:nowrap;">+91 80890 73029</td>
+  </tr>
+</table>
+
+<table width="100%" cellspacing="6" cellpadding="0" style="margin:6pt 0;"><tr>
+  <td width="50%" valign="top" bgcolor="#FFF1F2" style="padding:8pt; border:1pt solid #FECDD3;">
+    <div style="font-size:8pt; font-weight:bold; letter-spacing:0.8pt; text-transform:uppercase; margin-bottom:4pt;">Common confusion</div>
+    <div style="font-size:9pt; line-height:1.4;">"Subsidy is paid upfront before installation."</div>
+  </td>
+  <td width="50%" valign="top" bgcolor="#ECFDF3" style="padding:8pt; border:1pt solid #BBF7D0;">
+    <div style="font-size:8pt; font-weight:bold; letter-spacing:0.8pt; text-transform:uppercase; margin-bottom:4pt;">The reality</div>
+    <div style="font-size:9pt; line-height:1.4;">CFA is processed after installation, DISCOM inspection/approval, and required portal checks on pmsuryaghar.gov.in.</div>
+  </td>
+</tr></table>
+
+<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFBEB" style="border:1pt solid #FDE68A; margin:6pt 0;">
+  <tr><td style="padding:8pt 10pt; font-size:9pt; color:#5B4B1F; line-height:1.4;"><b>FGE tip:</b> Send us your document photos on WhatsApp before portal upload — we catch missing IFSC details and blurry scans early, so your application moves faster.</td></tr>
+</table>
+
+<p style="text-align:center; font-size:8pt; color:#5B645C; margin-top:8pt;">Portal: pmsuryaghar.gov.in · Edition: September 2026 · Page 1 of 2</p>
+
+<div class="page-break">&nbsp;</div>
+
+{header_block("PM Surya Ghar Step Tracker", header2_right)}
+
+<p class="section-title">Application &amp; Installation Milestones</p>
+{steps_html}
+
+<table width="100%" cellspacing="0" cellpadding="0" style="border:1pt solid #BBF7D0; margin:8pt 0;">
+  <tr><td bgcolor="#ECFDF3" style="padding:8pt 10pt;">
+    <div style="font-size:8pt; font-weight:bold; letter-spacing:0.8pt; text-transform:uppercase; color:#12963F; margin-bottom:6pt;">Why homeowners choose FGE Solar for PM Surya Ghar</div>
+    {why_items}
+  </td></tr>
+</table>
+
+<table width="100%" cellspacing="6" cellpadding="0"><tr>
+  <td width="50%" valign="top">
+    <p class="section-title" style="margin-top:0;">Before You Sign With Any Installer</p>
+    {before_items}
+  </td>
+  <td width="50%" valign="top" bgcolor="#172219" style="padding:10pt; color:#ddeedd; font-size:9pt; line-height:1.45;">
+    <div style="font-size:10pt; font-weight:bold; color:#ffffff; margin-bottom:4pt;">Ready to start?</div>
+    <div>Message us on WhatsApp with:</div>
+    <div style="margin:6pt 0;">• Your district<br>• Latest KSEB bill photo<br>• Roof photo (if available)</div>
+    <div style="font-size:12pt; font-weight:bold; color:#4ADE80;">+91 80890 73029</div>
+  </td>
+</tr></table>
+
+<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#172219" style="margin:10pt 0 8pt;">
+  <tr><td align="center" style="padding:12pt 14pt; color:#ffffff;">
+    <div style="font-family:Georgia,serif; font-size:15pt; font-weight:bold; margin-bottom:4pt;">Book Your Free Site Visit with FGE Solar</div>
+    <div style="font-size:9pt; color:#ddeedd; line-height:1.45; margin-bottom:6pt;">We handle PM Surya Ghar registration, installation, KSEB net metering, and subsidy milestone tracking — so you don't have to chase the portal alone.</div>
+    <div style="display:inline-block; background:#18B85C; color:#ffffff; font-size:11pt; font-weight:bold; padding:6pt 12pt;">WhatsApp +91 80890 73029</div>
+    <div style="font-size:8pt; color:#b8d4bc; margin-top:6pt;">Say: "I want PM Surya Ghar — please check my eligibility"</div>
+  </td></tr>
+</table>
+
+<p style="font-size:8pt; color:#5B645C; line-height:1.45; border-top:1pt dashed #DCE8DD; padding-top:6pt;"><b>Note:</b> PM Surya Ghar subsidy rules and CFA rates are updated from time to time by MNRE. This checklist is for general guidance — always confirm the latest scheme details on the official National Portal before applying.</p>
+
+<p style="text-align:center; font-size:8pt; color:#5B645C; margin-top:6pt;">© FGE Solar (Future Green Energy Group) · Page 2 of 2</p>
+
+</body>
+</html>"""

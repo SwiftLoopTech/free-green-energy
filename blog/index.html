@@ -25,7 +25,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solar Blog Kerala | Rooftop Solar Guides, Pricing & Subsidy Tips | FGE Solar</title>
-  <meta name="description" content="Read practical Kerala solar guides on rooftop solar pricing, PM Surya Ghar subsidy, KSEB net metering, PM-KUSUM, EV charging, paperwork checklists, savings, monsoon performance, and system selection.">>
+  <meta name="description" content="Read practical Kerala solar guides on rooftop solar pricing, PM Surya Ghar subsidy, KSEB net metering, PM-KUSUM, EV charging, paperwork checklists, savings, monsoon performance, and system selection.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fgesolar.in/blog/">
   <meta property="og:type" content="website">
@@ -47,979 +47,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
-
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
 
-  <style>
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html,
-    body {
-      overflow-x: hidden;
-      width: 100%;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    section {
-      max-width: 100vw;
-      overflow-x: hidden;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    button {
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    .btn,
-    button,
-    a[href],
-    input,
-    select,
-    textarea {
-      min-height: 44px;
-    }
-
-    /* ============================================================
-       CSS VARIABLES
-    ============================================================ */
-    :root {
-      --font-heading: 'Playfair Display', Georgia, serif;
-      --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --green: #18B85C;
-      --teal: #1FC7C0;
-      --dark: #172219;
-      --dark-2: #1E2D22;
-      --sage: #EEF2EF;
-      --white: #ffffff;
-      --gray-100: #F5F7F5;
-      --gray-200: #E8EBE8;
-      --gray-300: #D0D5D0;
-      --gray-400: #A0A8A0;
-      --gray-500: #737A73;
-      --gray-600: #565D56;
-      --gray-700: #3A403A;
-      --gray-900: #172219;
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 14px;
-      --radius-xl: 20px;
-      --radius-2xl: 24px;
-      --radius-full: 9999px;
-      --transition-fast: 0.18s ease;
-      --transition-med: 0.28s ease;
-      --container-max: 1280px;
-      --container-pad: clamp(1rem, 4vw, 1.5rem);
-      --header-h: 72px;
-    }
-
-    /* ============================================================
-       TYPOGRAPHY BASE
-    ============================================================ */
-    body {
-      font-family: var(--font-body);
-      font-size: 16px;
-      color: var(--gray-700);
-      line-height: 1.6;
-      background: var(--white);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: var(--font-heading);
-      line-height: 1.15;
-      color: var(--dark);
-    }
-
-    /* ============================================================
-       CONTAINER
-    ============================================================ */
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin-inline: auto;
-      padding-inline: var(--container-pad);
-    }
-
-    /* ============================================================
-       BUTTONS
-    ============================================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.9375rem;
-      border-radius: var(--radius-full);
-      padding: 0.75rem 1.5rem;
-      transition: all var(--transition-fast);
-      cursor: pointer;
-      border: 2px solid transparent;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: var(--white);
-      border-color: var(--green);
-    }
-
-    .btn-primary:hover {
-      background: #14a050;
-      border-color: #14a050;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(24, 184, 92, 0.35);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.35);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--white);
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .btn-outline-dark {
-      background: transparent;
-      color: var(--dark);
-      border-color: var(--gray-300);
-    }
-
-    .btn-outline-dark:hover {
-      border-color: var(--green);
-      color: var(--green);
-    }
-
-    .btn-wa {
-      background: #25D366;
-      color: var(--white);
-      border-color: #25D366;
-    }
-
-    .btn-wa:hover {
-      background: #20ba5a;
-    }
-
-    .btn-sm {
-      font-size: 0.85rem;
-      padding: 0.5rem 1.1rem;
-      min-height: 38px;
-    }
-
-    .btn-lg {
-      font-size: 1rem;
-      padding: 0.875rem 1.875rem;
-    }
-
-    .arrow {
-      flex-shrink: 0;
-      transition: transform var(--transition-fast);
-    }
-
-    .btn:hover .arrow {
-      transform: translateX(3px);
-    }
-
-    /* ============================================================
-       PAGE HERO
-    ============================================================ */
-    .page-hero {
-      background: linear-gradient(160deg, #172219 0%, #1E2D22 55%, #1a2e1c 100%);
-      padding-top: calc(var(--header-h) + clamp(2.5rem, 6vw, 4.5rem));
-      padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -15%;
-      width: clamp(200px, 50vw, 600px);
-      height: clamp(200px, 50vw, 600px);
-      background: radial-gradient(circle, rgba(24, 184, 92, 0.1) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .page-hero .container {
-      position: relative;
-      z-index: 1;
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.45rem 0.6rem;
-      width: 100%;
-      max-width: 100%;
-      font-size: clamp(0.76rem, 1.2vw, 0.8rem);
-      color: rgba(255, 255, 255, 0.45);
-      margin-bottom: 1rem;
-    }
-
-    .breadcrumb > * {
-      min-width: 0;
-      line-height: 1.5;
-    }
-
-    .breadcrumb a {
-      display: inline-flex;
-      align-items: center;
-      max-width: 100%;
-      color: rgba(255, 255, 255, 0.55);
-      text-decoration: none;
-      transition: color var(--transition-fast);
-    }
-
-    .breadcrumb a:hover {
-      color: var(--green);
-    }
-
-    .breadcrumb span:not(:last-child) {
-      flex: 0 0 auto;
-    }
-
-    .breadcrumb span:last-child {
-      color: rgba(255, 255, 255, 0.7);
-      font-weight: 600;
-      overflow-wrap: anywhere;
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 0.875rem;
-    }
-
-    .section-label::before {
-      content: '';
-      width: 18px;
-      height: 2px;
-      background: var(--green);
-      border-radius: 2px;
-    }
-
-    .page-hero h1 {
-      font-size: clamp(1.75rem, 5vw, 3.5rem);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-      max-width: 700px;
-    }
-
-    .page-hero .subtitle {
-      font-size: clamp(0.9rem, 2vw, 1.1rem);
-      color: rgba(255, 255, 255, 0.65);
-      line-height: 1.7;
-      max-width: 620px;
-    }
-
-    /* ============================================================
-       SECTION SPACING
-    ============================================================ */
-    .section {
-      padding-block: clamp(3rem, 6vw, 5rem);
-    }
-
-    .section-sm {
-      padding-block: clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    .bg-sage {
-      background: var(--sage);
-    }
-
-    /* ============================================================
-       BLOG CATEGORIES
-    ============================================================ */
-    .blog-categories {
-      display: flex;
-      gap: 0.625rem;
-      flex-wrap: wrap;
-      margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
-    }
-
-    .category-btn {
-      padding: 0.5rem 1.125rem;
-      border-radius: var(--radius-full);
-      font-size: 0.84rem;
-      font-weight: 600;
-      border: 1.5px solid var(--gray-300);
-      background: var(--white);
-      color: var(--gray-600);
-      cursor: pointer;
-      transition: all var(--transition-fast);
-      font-family: var(--font-body);
-      white-space: nowrap;
-      min-height: 40px;
-    }
-
-    .category-btn:hover,
-    .category-btn.active {
-      background: var(--green);
-      border-color: var(--green);
-      color: var(--white);
-    }
-
-    /* ============================================================
-       BLOG GRID
-    ============================================================ */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1rem, 2vw, 1.5rem);
-    }
-
-    /* ============================================================
-       FEATURED POST
-    ============================================================ */
-    .featured-post {
-      grid-column: span 3;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      background: var(--dark);
-      border-radius: var(--radius-2xl);
-      overflow: hidden;
-      text-decoration: none;
-      transition: transform var(--transition-med), box-shadow var(--transition-med);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .featured-post:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
-    }
-
-    .featured-post-image {
-      background: linear-gradient(135deg, #1E2D22, #263328);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      aspect-ratio: 16 / 9;
-      min-height: 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .featured-post-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 40% 50%, rgba(24, 184, 92, 0.12) 0%, transparent 65%);
-    }
-
-    .featured-post-image svg {
-      width: clamp(60px, 10vw, 100px);
-      height: clamp(60px, 10vw, 100px);
-      stroke: rgba(24, 184, 92, 0.5);
-      position: relative;
-      z-index: 1;
-    }
-
-    .featured-post-content {
-      padding: clamp(1.5rem, 3.5vw, 2.75rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0;
-    }
-
-    .featured-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(24, 184, 92, 0.15);
-      border: 1px solid rgba(24, 184, 92, 0.3);
-      color: var(--green);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.75rem;
-      border-radius: var(--radius-full);
-      margin-bottom: 1rem;
-      width: fit-content;
-      min-height: unset;
-    }
-
-    .featured-badge svg {
-      flex-shrink: 0;
-    }
-
-    .featured-post-content h2 {
-      font-size: clamp(1.1rem, 2.5vw, 1.7rem);
-      color: var(--white);
-      margin-bottom: 0.875rem;
-      line-height: 1.22;
-      font-weight: 800;
-    }
-
-    .featured-post-content p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: clamp(0.85rem, 1.5vw, 1rem);
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ============================================================
-       BLOG CARD
-    ============================================================ */
-    .blog-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      text-decoration: none;
-      color: inherit;
-      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-fast);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
-      border-color: var(--green);
-    }
-
-    .blog-card-image {
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: linear-gradient(135deg, #1E2D22, #263328);
-      overflow: hidden;
-      position: relative;
-      min-height: 170px;
-    }
-
-    .blog-card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: filter 0.3s ease;
-    }
-
-    .blog-card:hover .blog-card-image img {
-      filter: brightness(1.03) saturate(1.03);
-    }
-
-    /* placeholder icon when image fails */
-    .blog-card-image::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(24, 184, 92, 0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    .blog-card-content {
-      padding: clamp(1rem, 2.5vw, 1.5rem);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .blog-meta {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.625rem;
-      flex-wrap: wrap;
-    }
-
-    .blog-category {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--green);
-      background: rgba(24, 184, 92, 0.08);
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(24, 184, 92, 0.18);
-    }
-
-    .blog-date {
-      font-size: 0.75rem;
-      color: var(--gray-400);
-      font-weight: 500;
-    }
-
-    .blog-title {
-      font-size: clamp(0.9rem, 1.8vw, 1.075rem);
-      font-weight: 700;
-      color: var(--dark);
-      line-height: 1.3;
-      margin-bottom: 0.625rem;
-      font-family: var(--font-heading);
-    }
-
-    .blog-excerpt {
-      font-size: clamp(0.82rem, 1.3vw, 0.9rem);
-      color: var(--gray-500);
-      line-height: 1.65;
-      flex: 1;
-      margin-bottom: 1rem;
-    }
-
-    .blog-read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: var(--green);
-      margin-top: auto;
-      transition: gap var(--transition-fast);
-    }
-
-    .blog-card:hover .blog-read-more {
-      gap: 8px;
-    }
-
-    /* ============================================================
-       INLINE CTA SECTION
-    ============================================================ */
-    .inline-cta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .inline-cta p {
-      font-size: clamp(0.95rem, 2vw, 1.15rem);
-      font-weight: 600;
-      color: var(--gray-700);
-    }
-
-    /* ============================================================
-       RESPONSIVE — 1440px+ (Large screens)
-    ============================================================ */
-    @media (min-width: 1440px) {
-      :root {
-        --container-max: 1360px;
-        --container-pad: 2rem;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — 1920px+ (Full HD TVs)
-    ============================================================ */
-    @media (min-width: 1920px) {
-      :root {
-        --container-max: 1600px;
-        --container-pad: 3rem;
-        --header-h: 80px;
-      }
-
-      .blog-title {
-        font-size: 1.15rem;
-      }
-
-      .blog-excerpt {
-        font-size: 0.95rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 2rem;
-      }
-
-      .featured-post-content p {
-        font-size: 1.05rem;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — 2560px+ (4K)
-    ============================================================ */
-    @media (min-width: 2560px) {
-      :root {
-        --container-max: 2000px;
-        --container-pad: 4rem;
-        --header-h: 90px;
-      }
-
-      .blog-grid {
-        gap: 2rem;
-      }
-
-      .blog-title {
-        font-size: 1.3rem;
-      }
-
-      .blog-excerpt {
-        font-size: 1.05rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 2.5rem;
-      }
-
-      .featured-post-content p {
-        font-size: 1.2rem;
-      }
-
-      .category-btn {
-        font-size: 0.95rem;
-        padding: 0.6rem 1.4rem;
-      }
-
-      .page-hero h1 {
-        font-size: 4rem;
-      }
-
-      .page-hero .subtitle {
-        font-size: 1.25rem;
-      }
-
-      .logo-name {
-        font-size: 1.2rem;
-      }
-
-      .nav-links>li>a {
-        font-size: 1rem;
-      }
-
-      .footer-desc {
-        font-size: 1rem;
-        max-width: 440px;
-      }
-
-      .footer-links li a {
-        font-size: 1rem;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — 3840px+ (Ultra-wide / 8K)
-    ============================================================ */
-    @media (min-width: 3840px) {
-      :root {
-        --container-max: 2800px;
-        --container-pad: 5rem;
-        --header-h: 100px;
-      }
-
-      .page-hero h1 {
-        font-size: 5.5rem;
-      }
-
-      .page-hero .subtitle {
-        font-size: 1.6rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 3rem;
-      }
-
-      .blog-title {
-        font-size: 1.5rem;
-      }
-
-      .blog-excerpt {
-        font-size: 1.15rem;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 1200px (Smaller desktops)
-    ============================================================ */
-    @media (max-width: 1200px) {
-      .nav-phone {
-        display: none;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 1024px (Tablet landscape)
-    ============================================================ */
-    @media (max-width: 1024px) {
-
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-
-      .nav-toggle {
-        display: flex;
-      }
-
-      .blog-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .featured-post {
-        grid-column: span 2;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-brand {
-        grid-column: span 2;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 768px (Tablet portrait)
-    ============================================================ */
-    @media (max-width: 768px) {
-      :root {
-        --container-pad: 1.25rem;
-      }
-
-      .breadcrumb {
-        gap: 0.3rem 0.5rem;
-        margin-bottom: 0.9rem;
-        font-size: 0.75rem;
-      }
-
-      .breadcrumb span:last-child {
-        flex: 1 1 100%;
-        margin-top: 0.1rem;
-      }
-
-      .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .featured-post {
-        grid-column: span 1;
-        grid-template-columns: 1fr;
-      }
-
-      .featured-post-image {
-        min-height: 0;
-      }
-
-      .featured-post-content {
-        padding: 1.5rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 1.25rem;
-      }
-
-      .featured-post-content p {
-        font-size: 0.9rem;
-      }
-
-      .blog-categories {
-        gap: 0.5rem;
-      }
-
-      .category-btn {
-        font-size: 0.8rem;
-        padding: 0.45rem 0.9rem;
-      }
-
-      .inline-cta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-brand {
-        grid-column: span 2;
-      }
-
-      .footer-desc {
-        max-width: 100%;
-      }
-
-      .wa-float {
-        bottom: 1rem;
-        right: 1rem;
-        width: 50px;
-        height: 50px;
-      }
-
-      .wa-float svg {
-        width: 24px;
-        height: 24px;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 560px (Large mobile)
-    ============================================================ */
-    @media (max-width: 560px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-brand {
-        grid-column: span 1;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 480px (Standard mobile)
-    ============================================================ */
-    @media (max-width: 480px) {
-      :root {
-        --container-pad: 1rem;
-      }
-
-      .breadcrumb {
-        font-size: 0.72rem;
-      }
-
-      .page-hero h1 {
-        font-size: clamp(1.5rem, 7.5vw, 2rem);
-      }
-
-      .page-hero .subtitle {
-        font-size: 0.875rem;
-      }
-
-      .blog-card-image {
-        min-height: 150px;
-      }
-
-      .featured-post-content {
-        padding: 1.125rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 1.1rem;
-      }
-
-      .featured-post-content p {
-        font-size: 0.85rem;
-        margin-bottom: 1.1rem;
-      }
-
-      .featured-badge {
-        font-size: 0.62rem;
-      }
-
-      .section-label {
-        font-size: 0.68rem;
-      }
-
-      .footer-social {
-        gap: 0.4rem;
-      }
-
-      .social-link {
-        width: 32px;
-        height: 32px;
-        min-height: 32px;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 375px (Small mobile)
-    ============================================================ */
-    @media (max-width: 375px) {
-      .blog-title {
-        font-size: 0.9rem;
-      }
-
-      .blog-excerpt {
-        font-size: 0.82rem;
-      }
-
-      .featured-post-content h2 {
-        font-size: 1rem;
-      }
-
-      .featured-post-content p {
-        display: none;
-      }
-
-      /* hide on tiny screens to avoid clutter */
-      .category-btn {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.7rem;
-      }
-    }
-
-    /* ============================================================
-       RESPONSIVE — = 320px (Very small mobile)
-    ============================================================ */
-    @media (max-width: 320px) {
-      :root {
-        --container-pad: 0.75rem;
-      }
-
-      .page-hero h1 {
-        font-size: 1.3rem;
-      }
-
-      .blog-categories {
-        gap: 0.4rem;
-      }
-
-      .category-btn {
-        font-size: 0.72rem;
-        padding: 0.35rem 0.65rem;
-      }
-    }
-
-    /* ============================================================
-       REDUCED MOTION
-    ============================================================ */
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
-  <script src="/assets/js/icons.js" defer></script>
   <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/components.css?v=20260908-fix4">
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260908-fix4">
+
   <!-- codex-seo-generated:start -->
   <script type="application/ld+json">
 {
@@ -1060,8 +93,1297 @@
 }
   </script>
   <!-- codex-seo-generated:end -->
-  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260827-header">
 
+  <style>
+        /* BREADCRUMB HIGH-CONTRAST (DARK HERO) */
+    main .page-hero .breadcrumb,
+    main .calc-hero .breadcrumb,
+    main .breadcrumb,
+    .page-hero .breadcrumb,
+    .calc-hero .breadcrumb,
+    .breadcrumb {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.45rem 0.6rem !important;
+      font-size: clamp(0.76rem, 1.2vw, 0.85rem) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      margin-bottom: 1.25rem !important;
+    }
+    main .page-hero .breadcrumb a,
+    main .calc-hero .breadcrumb a,
+    main .breadcrumb a,
+    .page-hero .breadcrumb a,
+    .calc-hero .breadcrumb a,
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.92) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.18s ease !important;
+    }
+    main .page-hero .breadcrumb a:hover,
+    main .calc-hero .breadcrumb a:hover,
+    main .breadcrumb a:hover,
+    .page-hero .breadcrumb a:hover,
+    .calc-hero .breadcrumb a:hover,
+    .breadcrumb a:hover {
+      color: #34D399 !important;
+      text-decoration: underline !important;
+    }
+    main .page-hero .breadcrumb span,
+    main .page-hero .breadcrumb .sep,
+    main .page-hero .breadcrumb .breadcrumb-sep,
+    main .calc-hero .breadcrumb span,
+    main .breadcrumb span,
+    main .breadcrumb .sep,
+    main .breadcrumb .breadcrumb-sep,
+    .page-hero .breadcrumb span,
+    .page-hero .breadcrumb .sep,
+    .page-hero .breadcrumb .breadcrumb-sep,
+    .calc-hero .breadcrumb span,
+    .breadcrumb span,
+    .breadcrumb .sep,
+    .breadcrumb .breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.55) !important;
+    }
+    main .page-hero .breadcrumb span:last-child,
+    main .page-hero .breadcrumb .current,
+    main .page-hero .breadcrumb .breadcrumb-current,
+    main .calc-hero .breadcrumb span:last-child,
+    main .breadcrumb span:last-child,
+    main .breadcrumb .current,
+    main .breadcrumb .breadcrumb-current,
+    .page-hero .breadcrumb span:last-child,
+    .page-hero .breadcrumb .current,
+    .page-hero .breadcrumb .breadcrumb-current,
+    .calc-hero .breadcrumb span:last-child,
+    .breadcrumb span:last-child,
+    .breadcrumb .current,
+    .breadcrumb .breadcrumb-current {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+    }
+    .page-hero .breadcrumb,
+    .breadcrumb {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.45rem 0.6rem !important;
+      font-size: clamp(0.76rem, 1.2vw, 0.85rem) !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .page-hero .breadcrumb a,
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.92) !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.18s ease !important;
+    }
+    .page-hero .breadcrumb a:hover,
+    .breadcrumb a:hover {
+      color: #34D399 !important;
+      text-decoration: underline !important;
+    }
+    .page-hero .breadcrumb span,
+    .page-hero .breadcrumb .sep,
+    .page-hero .breadcrumb .breadcrumb-sep,
+    .breadcrumb span,
+    .breadcrumb .sep,
+    .breadcrumb .breadcrumb-sep {
+      color: rgba(255, 255, 255, 0.55) !important;
+    }
+    .page-hero .breadcrumb span:last-child,
+    .page-hero .breadcrumb .current,
+    .page-hero .breadcrumb .breadcrumb-current,
+    .breadcrumb span:last-child,
+    .breadcrumb .current,
+    .breadcrumb .breadcrumb-current {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+    }
+
+    /* ============================================================
+       SCOPED DESIGN OVERRIDES FOR BLOG INDEX
+    ============================================================ */
+    :root {
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Fira Mono', monospace;
+      --green: #18B85C;
+      --green-dark: #14a050;
+      --dark: #172219;
+      --dark-2: #1E2D22;
+      --dark-3: #131b14;
+      --sage: #EEF2EF;
+      --white: #ffffff;
+      --gray-100: #F5F7F5;
+      --gray-200: #E8EBE8;
+      --gray-300: #D0D5D0;
+      --gray-400: #A0A8A0;
+      --gray-500: #737A73;
+      --gray-600: #565D56;
+      --gray-700: #3A403A;
+      --gray-900: #172219;
+      --container-max: 1240px;
+      --container-pad: clamp(1rem, 3.5vw, 2rem);
+      --header-h: 72px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--gray-700);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: var(--container-pad);
+    }
+
+    /* ============================================================
+       PAGE HERO (Matches index.html premium dark theme)
+    ============================================================ */
+    .page-hero {
+      background: linear-gradient(160deg, #172219 0%, #1E2D22 55%, #1a2e1c 100%) !important;
+      padding-top: calc(var(--header-h) + clamp(2rem, 5vw, 3.75rem));
+      padding-bottom: clamp(2.5rem, 5vw, 4.25rem);
+      position: relative;
+      overflow: hidden;
+      color: #ffffff !important;
+    }
+
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(24, 184, 92, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(24, 184, 92, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+
+    .hero-glow-1 {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: clamp(280px, 45vw, 650px);
+      height: clamp(280px, 45vw, 650px);
+      background: radial-gradient(circle, rgba(24, 184, 92, 0.16) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-glow-2 {
+      position: absolute;
+      bottom: -30%;
+      left: 10%;
+      width: clamp(220px, 35vw, 500px);
+      height: clamp(220px, 35vw, 500px);
+      background: radial-gradient(circle, rgba(31, 199, 192, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      font-size: clamp(0.78rem, 1.2vw, 0.85rem);
+      color: rgba(255, 255, 255, 0.65) !important;
+      margin-bottom: 1.25rem;
+    }
+
+    .page-hero .breadcrumb a,
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.9) !important;
+      text-decoration: none !important;
+      transition: color 0.18s ease;
+    }
+
+    .page-hero .breadcrumb a:hover,
+    .breadcrumb a:hover {
+      color: #34D399 !important;
+      text-decoration: underline !important;
+    }
+
+    .breadcrumb .sep {
+      color: rgba(255, 255, 255, 0.45) !important;
+    }
+
+    .breadcrumb .current {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+    }
+
+    /* Hero Badge */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      background: rgba(24, 184, 92, 0.14);
+      border: 1px solid rgba(24, 184, 92, 0.32);
+      color: #22c55e;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.15rem;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      display: inline-block;
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .page-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      font-weight: 700;
+      color: #ffffff !important;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+      max-width: 820px;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 45%, #18B85C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .page-hero .subtitle {
+      font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+      color: rgba(255, 255, 255, 0.8) !important;
+      line-height: 1.68;
+      max-width: 680px;
+      margin-bottom: 2rem;
+    }
+
+    /* Hero Search Bar */
+    .hero-search-wrapper {
+      max-width: 650px;
+      margin-top: 1.75rem;
+    }
+
+    .hero-search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+      padding: 0.35rem 0.65rem 0.35rem 1.25rem;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-search-box:focus-within {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: var(--green);
+      box-shadow: 0 0 0 4px rgba(24, 184, 92, 0.28);
+    }
+
+    .hero-search-box .search-icon {
+      color: rgba(255, 255, 255, 0.65);
+      flex-shrink: 0;
+      margin-right: 0.75rem;
+    }
+
+    .hero-search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: clamp(0.88rem, 1.4vw, 1rem);
+      min-height: 42px;
+    }
+
+    .hero-search-box input::placeholder {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .clear-search-btn {
+      background: rgba(255, 255, 255, 0.16);
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.85);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      flex-shrink: 0;
+      margin-right: 0.25rem;
+      padding: 0;
+    }
+
+    .clear-search-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+    }
+
+    .search-quick-tags {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem 0.55rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+      font-size: 0.78rem;
+    }
+
+    .quick-tags-label {
+      color: rgba(255, 255, 255, 0.55);
+      font-weight: 500;
+    }
+
+    .quick-tag {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.85);
+      padding: 0.22rem 0.7rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      min-height: 28px;
+    }
+
+    .quick-tag:hover {
+      background: rgba(24, 184, 92, 0.22);
+      border-color: var(--green);
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       STICKY SEARCH & CATEGORY FILTER BAR
+    ============================================================ */
+    .filter-bar-wrap {
+      position: sticky;
+      top: var(--header-h, 72px);
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gray-200);
+      padding-block: 0.75rem;
+      box-shadow: 0 4px 18px rgba(23, 34, 25, 0.04);
+      transition: top 0.2s ease;
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .filter-controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .sticky-search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: #F4F6F4;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 9999px;
+      padding: 0.32rem 0.75rem 0.32rem 1rem;
+      flex: 1;
+      max-width: 440px;
+      min-width: 220px;
+      transition: all 0.2s ease;
+    }
+
+    .sticky-search-box:focus-within {
+      background: #ffffff;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(24, 184, 92, 0.18);
+    }
+
+    .sticky-search-box .search-icon {
+      color: var(--gray-500);
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+    }
+
+    .sticky-search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      min-height: 32px;
+      width: 100%;
+    }
+
+    .sticky-search-box input::placeholder {
+      color: var(--gray-500);
+    }
+
+    .sticky-clear-btn {
+      background: var(--gray-200);
+      border: none;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      min-height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+      padding: 0;
+    }
+
+    .sticky-clear-btn:hover {
+      background: var(--gray-300);
+      color: var(--dark);
+    }
+
+    .sort-control-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: auto;
+    }
+
+    .sort-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      white-space: nowrap;
+    }
+
+    .sort-select-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .sort-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background: #ffffff;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 9999px;
+      padding: 0.38rem 2.2rem 0.38rem 0.95rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      color: var(--dark);
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease;
+      min-height: 36px;
+    }
+
+    .sort-select:hover {
+      border-color: var(--green);
+      color: var(--green-dark);
+    }
+
+    .sort-select:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(24, 184, 92, 0.18);
+    }
+
+    .select-chevron {
+      position: absolute;
+      right: 0.75rem;
+      pointer-events: none;
+      color: var(--gray-500);
+    }
+
+    .blog-categories {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      flex-wrap: nowrap;
+      padding-bottom: 2px;
+      width: 100%;
+    }
+
+    .blog-categories::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-btn {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 0.5rem 1.05rem;
+      border-radius: 9999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      border: 1.5px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      min-height: 40px;
+      font-family: var(--font-body);
+    }
+
+    .category-btn:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: rgba(24, 184, 92, 0.04);
+    }
+
+    .category-btn.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(24, 184, 92, 0.3);
+    }
+
+    .category-btn .count-badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      margin-left: 6px;
+      background: var(--gray-100);
+      color: var(--gray-600);
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .category-btn.active .count-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       MAIN CONTENT SECTION
+    ============================================================ */
+    .section-articles {
+      padding-top: 2rem;
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    /* ============================================================
+       FEATURED POST CARD (Synchronized White Card)
+    ============================================================ */
+    .featured-post,
+    a.featured-post,
+    #featured-article {
+      display: grid !important;
+      grid-template-columns: 1.15fr 1fr !important;
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      border-radius: 22px !important;
+      border: 1.5px solid #E8EBE8 !important;
+      overflow: hidden !important;
+      text-decoration: none !important;
+      margin-bottom: 2.5rem !important;
+      box-shadow: 0 8px 24px rgba(23, 34, 25, 0.06) !important;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.25s ease !important;
+    }
+
+    .featured-post:hover,
+    a.featured-post:hover,
+    #featured-article:hover {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      transform: translateY(-5px) !important;
+      box-shadow: 0 20px 48px rgba(23, 34, 25, 0.12) !important;
+      border-color: #18B85C !important;
+    }
+
+    .featured-post-image {
+      position: relative !important;
+      aspect-ratio: 16 / 10 !important;
+      min-height: 280px !important;
+      overflow: hidden !important;
+      background: #F3F4F6 !important;
+    }
+
+    .featured-post-image img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .featured-post:hover .featured-post-image img {
+      transform: scale(1.03) !important;
+    }
+
+    .featured-post-content {
+      padding: clamp(1.5rem, 3.5vw, 2.75rem) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+
+    .featured-post:hover .featured-post-content {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+    }
+
+    .featured-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: #DCFCE7 !important;
+      border: 1px solid #86EFAC !important;
+      color: #15803d !important;
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.06em !important;
+      text-transform: uppercase !important;
+      padding: 0.35rem 0.85rem !important;
+      border-radius: 9999px !important;
+      width: fit-content !important;
+      margin-bottom: 1.1rem !important;
+    }
+
+    .featured-post-content h2,
+    .featured-post h2 {
+      font-family: var(--font-heading) !important;
+      font-size: clamp(1.25rem, 2.3vw, 1.85rem) !important;
+      font-weight: 700 !important;
+      color: #172219 !important;
+      line-height: 1.28 !important;
+      margin-bottom: 0.85rem !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .featured-post:hover .featured-post-content h2,
+    .featured-post:hover h2 {
+      color: #0D7A3E !important;
+    }
+
+    .featured-post-content p,
+    .featured-post p {
+      font-size: clamp(0.88rem, 1.4vw, 0.98rem) !important;
+      color: #4B5563 !important;
+      line-height: 1.65 !important;
+      margin-bottom: 1.25rem !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .featured-post:hover .featured-post-content p,
+    .featured-post:hover p {
+      color: #374151 !important;
+    }
+
+    .featured-meta,
+    .featured-post .featured-meta {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+      font-size: 0.82rem !important;
+      color: #6B7280 !important;
+      margin-bottom: 1.5rem !important;
+      transition: color 0.2s ease !important;
+    }
+
+    .featured-post:hover .featured-meta {
+      color: #4B5563 !important;
+    }
+
+    .featured-cta {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: #18B85C !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 0.92rem !important;
+      padding: 0.75rem 1.6rem !important;
+      border-radius: 9999px !important;
+      width: fit-content !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .featured-post:hover .featured-cta {
+      background: #14a050 !important;
+      color: #ffffff !important;
+      box-shadow: 0 6px 20px rgba(24, 184, 92, 0.35) !important;
+    }
+
+    .featured-post:hover .featured-cta .arrow {
+      transform: translateX(4px) !important;
+      color: #ffffff !important;
+    }
+
+    /* ============================================================
+       BLOG GRID & CARDS
+    ============================================================ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 16px rgba(23, 34, 25, 0.04);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.2s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(23, 34, 25, 0.1);
+      border-color: var(--green);
+    }
+
+    .blog-card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #172219;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.04);
+    }
+
+    .blog-card-content {
+      padding: 1.25rem 1.35rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.65rem;
+      border-radius: 9999px;
+    }
+
+    .blog-cat-govt {
+      color: #0f766e;
+      background: rgba(15, 118, 110, 0.09);
+      border: 1px solid rgba(15, 118, 110, 0.22);
+    }
+
+    .blog-cat-savings {
+      color: #15803d;
+      background: rgba(21, 128, 61, 0.09);
+      border: 1px solid rgba(21, 128, 61, 0.22);
+    }
+
+    .blog-cat-how {
+      color: #c2410c;
+      background: rgba(194, 65, 12, 0.09);
+      border: 1px solid rgba(194, 65, 12, 0.22);
+    }
+
+    .blog-cat-buying {
+      color: #4338ca;
+      background: rgba(67, 56, 202, 0.09);
+      border: 1px solid rgba(67, 56, 202, 0.22);
+    }
+
+    .blog-cat-maintenance {
+      color: #0284c7;
+      background: rgba(2, 132, 199, 0.09);
+      border: 1px solid rgba(2, 132, 199, 0.22);
+    }
+
+    .blog-date-read {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      font-weight: 500;
+    }
+
+    .blog-title {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.35;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .blog-excerpt {
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .blog-read-more {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    .blog-read-more .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .blog-card:hover .blog-read-more .arrow {
+      transform: translateX(4px);
+    }
+
+    /* ============================================================
+       EMPTY STATE
+    ============================================================ */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      background: #F9FAF9;
+      border-radius: 18px;
+      border: 1.5px dashed var(--gray-300);
+      margin-top: 1rem;
+    }
+
+    .no-results-icon {
+      font-size: 2.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .no-results h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .no-results p {
+      color: var(--gray-500);
+      max-width: 460px;
+      margin: 0 auto 1.5rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       INLINE SAVINGS CTA
+    ============================================================ */
+    .section-savings-cta {
+      background: var(--sage);
+      padding-block: clamp(2rem, 4vw, 3rem);
+    }
+
+    .savings-cta-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .savings-cta-card h3 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      color: var(--dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .savings-cta-card p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* ============================================================
+       7-TIER RESPONSIVE STYLES
+    ============================================================ */
+    /* Tier 7: >1440px (Large Screens / 2K) */
+    @media (min-width: 1441px) {
+      :root {
+        --container-max: 1320px;
+      }
+      .blog-grid {
+        gap: 2rem;
+      }
+    }
+
+    /* Tier 6: 1200px – 1440px (Standard Desktop) */
+    @media (min-width: 1200px) and (max-width: 1440px) {
+      :root {
+        --container-max: 1240px;
+      }
+    }
+
+    /* Tier 5: 992px – 1199px (Small Desktop / Landscape Tablet) */
+    @media (max-width: 1199px) {
+      .blog-grid {
+        gap: 1.35rem;
+      }
+      .featured-post-content {
+        padding: 1.75rem;
+      }
+    }
+
+    /* Tier 4: 768px – 991px (Tablets Portrait) */
+    @media (max-width: 991px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      .featured-post {
+        grid-template-columns: 1fr;
+      }
+      .featured-post-image {
+        aspect-ratio: 16 / 9;
+        min-height: 220px;
+      }
+    }
+
+    /* Tier 3: 576px – 767px (Large Mobile / Phablets) */
+    @media (max-width: 767px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin-inline: auto;
+      }
+      .featured-post {
+        max-width: 520px;
+        margin-inline: auto;
+        margin-bottom: 2rem;
+      }
+      .filter-bar-wrap {
+        top: 60px;
+        padding-block: 0.6rem;
+      }
+      .filter-controls-row {
+        gap: 0.5rem;
+      }
+      .sticky-search-box {
+        max-width: 100%;
+        min-width: 0;
+        flex: 1 1 100%;
+      }
+      .sort-control-group {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .sort-select-wrapper {
+        flex: 1;
+      }
+      .sort-select {
+        width: 100%;
+      }
+      .savings-cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Tier 2: 380px – 575px (Standard Mobile) */
+    @media (max-width: 575px) {
+      .page-hero h1 {
+        font-size: 1.85rem;
+      }
+      .hero-search-box input {
+        font-size: 0.88rem;
+      }
+      .featured-post-content {
+        padding: 1.35rem;
+      }
+      .blog-card-content {
+        padding: 1.15rem;
+      }
+      .blog-title {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* Tier 1: < 380px (Ultra-compact Mobile) */
+    @media (max-width: 379px) {
+      :root {
+        --container-pad: 0.75rem;
+      }
+      .page-hero {
+        padding-top: calc(var(--header-h) + 1.25rem);
+        padding-bottom: 2rem;
+      }
+      .page-hero h1 {
+        font-size: 1.6rem;
+      }
+      .page-hero .subtitle {
+        font-size: 0.875rem;
+      }
+      .hero-search-box {
+        padding: 0.25rem 0.5rem 0.25rem 0.85rem;
+      }
+      .hero-search-box input {
+        font-size: 0.82rem;
+      }
+      .category-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        min-height: 36px;
+      }
+      .blog-card-content {
+        padding: 1rem;
+      }
+      .blog-title {
+        font-size: 0.98rem;
+      }
+      .blog-excerpt {
+        font-size: 0.84rem;
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+      /* ============================================================
+       ENHANCED COLOR HARMONY & HOVER SYNCING
+    ============================================================ */
+    /* Dark Hero elements */
+    .breadcrumb {
+      color: rgba(255, 255, 255, 0.65) !important;
+    }
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.78) !important;
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+    .breadcrumb a:hover {
+      color: #22c55e !important;
+      text-decoration: underline !important;
+    }
+    .breadcrumb .sep {
+      color: rgba(255, 255, 255, 0.35) !important;
+    }
+    .breadcrumb .current {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+    }
+    .hero-badge {
+      background: rgba(34, 197, 94, 0.16) !important;
+      border: 1px solid rgba(34, 197, 94, 0.36) !important;
+      color: #22c55e !important;
+    }
+    .quick-tag {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      transition: all 0.2s ease !important;
+    }
+    .quick-tag:hover {
+      background: rgba(34, 197, 94, 0.26) !important;
+      border-color: #22c55e !important;
+      color: #ffffff !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25) !important;
+    }
+    .clear-search-btn {
+      background: rgba(255, 255, 255, 0.18) !important;
+      color: #ffffff !important;
+    }
+    .clear-search-btn:hover {
+      background: rgba(255, 255, 255, 0.35) !important;
+      color: #ffffff !important;
+    }
+
+    /* Category Filter Buttons (Light Background) */
+    .category-btn {
+      background: #ffffff !important;
+      border: 1.5px solid #D0D5D0 !important;
+      color: #2E332E !important;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .category-btn:hover {
+      border-color: #18B85C !important;
+      color: #0D7A3E !important;
+      background: #F0FDF4 !important;
+      transform: translateY(-1px);
+    }
+    .category-btn .count-badge {
+      background: #EEF2EF !important;
+      color: #565D56 !important;
+      transition: all 0.2s ease !important;
+    }
+    .category-btn:hover .count-badge {
+      background: rgba(24, 184, 92, 0.16) !important;
+      color: #0D7A3E !important;
+    }
+    .category-btn.active {
+      background: #18B85C !important;
+      border-color: #18B85C !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(24, 184, 92, 0.3) !important;
+    }
+    .category-btn.active .count-badge {
+      background: rgba(255, 255, 255, 0.25) !important;
+      color: #ffffff !important;
+    }
+    .category-btn.active:hover {
+      background: #14a050 !important;
+      border-color: #14a050 !important;
+      color: #ffffff !important;
+      box-shadow: 0 6px 18px rgba(20, 160, 80, 0.4) !important;
+      transform: translateY(-1px);
+    }
+    .category-btn.active:hover .count-badge {
+      background: rgba(255, 255, 255, 0.32) !important;
+      color: #ffffff !important;
+    }
+
+    /* Blog Cards & Hover feedback */
+    .blog-card {
+      background: #ffffff !important;
+      border: 1px solid #E8EBE8 !important;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.2s ease !important;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(23, 34, 25, 0.1) !important;
+      border-color: #18B85C !important;
+    }
+    .blog-title {
+      color: #172219 !important;
+      transition: color 0.2s ease !important;
+    }
+    .blog-card:hover .blog-title {
+      color: #0D7A3E !important;
+    }
+    .blog-read-more {
+      color: #0D7A3E !important;
+      transition: color 0.2s ease !important;
+    }
+    .blog-read-more .arrow {
+      color: #0D7A3E !important;
+      transition: transform 0.2s ease, color 0.2s ease !important;
+    }
+    .blog-card:hover .blog-read-more {
+      color: #18B85C !important;
+    }
+    .blog-card:hover .blog-read-more .arrow {
+      color: #18B85C !important;
+      transform: translateX(5px);
+    }
+
+
+
+    /* Buttons */
+    .btn-primary {
+      background: #18B85C !important;
+      border-color: #18B85C !important;
+      color: #ffffff !important;
+    }
+    .btn-primary:hover {
+      background: #14a050 !important;
+      border-color: #14a050 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(24, 184, 92, 0.4) !important;
+    }
+    .btn-outline-dark {
+      background: #ffffff !important;
+      border: 1.5px solid #D0D5D0 !important;
+      color: #172219 !important;
+      border-radius: 9999px;
+      padding: 0.55rem 1.3rem;
+      font-weight: 600;
+      transition: all 0.2s ease !important;
+    }
+    .btn-outline-dark:hover {
+      background: #F0FDF4 !important;
+      border-color: #18B85C !important;
+      color: #0D7A3E !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(24, 184, 92, 0.15) !important;
+    }
+  </style>
+  <script src="/assets/js/icons.js" defer></script>
+  <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 
 <body>
@@ -1069,7 +1391,7 @@
   <!-- ============================================================
        HEADER
   ============================================================ -->
-  <!-- component:site-header -->
+<!-- component:site-header -->
   <header id="site-header">
     <div class="container">
       <nav class="nav-inner">
@@ -1176,425 +1498,574 @@
   <!-- ============================================================
        MAIN CONTENT
   ============================================================ -->
-  <main>
+  <main id="main-content">
 
     <!-- PAGE HERO -->
     <section class="page-hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
-          <span>/</span>
-          <span>Blog</span>
+          <span class="sep">/</span>
+          <span class="current">Blog</span>
         </nav>
-        <div class="section-label">Knowledge Hub</div>
-        <h1>Everything You Need to Know About Solar in Kerala</h1>
-        <p class="subtitle">Expert guides on subsidies, net metering, savings, installation, and more — written
-          specifically for Kerala homeowners and businesses.</p>
+        
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Kerala Solar Knowledge Base &bull; 2026 Edition</span>
+        </div>
+
+        <h1>Everything You Need to Know About <span class="text-gradient">Solar in Kerala</span></h1>
+        
+        <p class="subtitle">Expert, practical guides on PM Surya Ghar subsidies, KSEB net metering tariffs, installation costs, battery backup, and maintenance — written specifically for Kerala homeowners and commercial establishments.</p>
+
+        <!-- Live Search Box -->
+        <div class="hero-search-wrapper">
+          <div class="hero-search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="blog-search-input" placeholder="Search guides by keyword, e.g. Subsidy, KSEB, Battery, Cost..." aria-label="Search solar guides">
+            <button type="button" id="clear-search-btn" class="clear-search-btn" aria-label="Clear search" style="display: none;" onclick="clearSearch()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="search-quick-tags">
+            <span class="quick-tags-label">Popular:</span>
+            <button type="button" class="quick-tag" onclick="quickFilter('PM Surya Ghar')">PM Surya Ghar</button>
+            <button type="button" class="quick-tag" onclick="quickFilter('KSEB')">KSEB Tariff</button>
+            <button type="button" class="quick-tag" onclick="quickFilter('Cost')">Cost &amp; Pricing</button>
+            <button type="button" class="quick-tag" onclick="quickFilter('Off-Grid')">Off-Grid Battery</button>
+            <button type="button" class="quick-tag" onclick="quickFilter('Maintenance')">Maintenance</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- BLOG ARTICLES -->
-    <section class="section">
-      <div class="container">
+    <!-- STICKY FILTER BAR (Search, Sorting & Categories) -->
+    <div class="filter-bar-wrap" id="sticky-filter-bar">
+      <div class="container filter-bar-inner">
+        <!-- Top Controls Row: Sticky Search + Sort -->
+        <div class="filter-controls-row">
+          <div class="sticky-search-box">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="sticky-blog-search" placeholder="Search solar guides..." aria-label="Search solar guides">
+            <button type="button" id="sticky-clear-search" class="sticky-clear-btn" aria-label="Clear search" style="display: none;" onclick="clearSearch()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
 
-        <!-- Category Filter -->
-        <div class="blog-categories">
-          <button class="category-btn active" onclick="filterCategory(this,'all')">All Articles</button>
-          <button class="category-btn" onclick="filterCategory(this,'govt')">Government Schemes</button>
-          <button class="category-btn" onclick="filterCategory(this,'savings')">Savings &amp; ROI</button>
-          <button class="category-btn" onclick="filterCategory(this,'how')">How Solar Works</button>
-          <button class="category-btn" onclick="filterCategory(this,'buying')">Buying Guide</button>
-          <button class="category-btn" onclick="filterCategory(this,'maintenance')">Maintenance</button>
+          <div class="sort-control-group">
+            <label for="blog-sort-select" class="sort-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="8" y2="18"></line></svg>
+              <span>Sort:</span>
+            </label>
+            <div class="sort-select-wrapper">
+              <select id="blog-sort-select" class="sort-select" onchange="handleSort(this.value)" aria-label="Sort guides">
+                <option value="featured" selected>Featured &amp; Recommended</option>
+                <option value="read-time-asc">Read Time: Quickest first</option>
+                <option value="read-time-desc">Read Time: In-depth first</option>
+                <option value="title-az">Title: A to Z</option>
+                <option value="title-za">Title: Z to A</option>
+              </select>
+              <svg class="select-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
         </div>
 
-        <!-- Blog Grid -->
+        <!-- Categories Row -->
+        <div class="blog-categories" id="blog-categories">
+          <button type="button" class="category-btn active" data-filter="all" onclick="setCategory(this, 'all')">
+            All Articles <span class="count-badge" id="count-all">19</span>
+          </button>
+          <button type="button" class="category-btn" data-filter="govt" onclick="setCategory(this, 'govt')">
+            Government Schemes <span class="count-badge" id="count-govt">5</span>
+          </button>
+          <button type="button" class="category-btn" data-filter="savings" onclick="setCategory(this, 'savings')">
+            Savings &amp; ROI <span class="count-badge" id="count-savings">4</span>
+          </button>
+          <button type="button" class="category-btn" data-filter="how" onclick="setCategory(this, 'how')">
+            How Solar Works <span class="count-badge" id="count-how">4</span>
+          </button>
+          <button type="button" class="category-btn" data-filter="buying" onclick="setCategory(this, 'buying')">
+            Buying Guide <span class="count-badge" id="count-buying">5</span>
+          </button>
+          <button type="button" class="category-btn" data-filter="maintenance" onclick="setCategory(this, 'maintenance')">
+            Maintenance <span class="count-badge" id="count-maintenance">1</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOG ARTICLES SECTION -->
+    <section class="section-articles">
+      <div class="container">
+
+        <!-- FEATURED POST -->
+        <a href="/subsidy/pm-surya-ghar" class="featured-post" data-cat="govt" data-local-preview-href="/subsidy/pm-surya-ghar.html" id="featured-article">
+          <div class="featured-post-image">
+            <img src="/assets/images/blog/pm-surya-ghar-guide-kerala.webp" alt="PM Surya Ghar rooftop solar subsidy guide Kerala" loading="eager" width="1200" height="675">
+          </div>
+          <div class="featured-post-content">
+            <span class="featured-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Featured Kerala Guide
+            </span>
+            <h2>PM Surya Ghar Muft Bijli Yojana: Complete Kerala Guide 2026</h2>
+            <p>An updated Kerala guide to the PM Surya Ghar rooftop subsidy path, including eligibility, portal steps, required documents, and what to prepare before you apply.</p>
+            <div class="featured-meta">
+              <span>Government Schemes</span> &bull; <span>Updated 2026</span> &bull; <span>8 min read</span>
+            </div>
+            <span class="featured-cta">
+              Read Full Guide
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- BLOG GRID (18 Standard Cards) -->
         <div class="blog-grid" id="blog-grid">
-
-          <!-- FEATURED POST -->
-          <a href="/subsidy/pm-surya-ghar" class="featured-post" data-cat="govt">
-            <div class="featured-post-image">
-              <img src="/assets/images/blog/pm-surya-ghar-guide-kerala.webp" alt="PM Surya Ghar rooftop solar subsidy guide"
-                loading="eager" width="1200" height="675">
-            </div>
-            <div class="featured-post-content">
-              <span class="featured-badge">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                  <polygon
-                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-                Featured Guide
-              </span>
-              <h2>PM Surya Ghar Muft Bijli Yojana — Complete Kerala Guide 2026</h2>
-              <p>An updated Kerala guide to the PM Surya Ghar rooftop subsidy path, including eligibility, portal steps,
-                required documents, and what to prepare before you apply.</p>
-              <span class="btn btn-primary" style="width:fit-content;">
-                Read Full Guide
-                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- CARD: Best solar panels Kerala 2026 -->
-          <a href="/blog/buying-guide/best-solar-panels-kerala" class="blog-card" data-cat="buying"
-            data-local-preview-href="/blog/buying-guide/best-solar-panels-kerala.html?v=20260728">
+          <!-- CARD: Solar Panel Maintenance in Kerala: Cleaning Schedule, BOS Care, Costs & Checklist -->
+          <a href="/blog/how-solar/solar-panel-maintenance-kerala" class="blog-card" data-cat="maintenance" data-local-preview-href="/blog/how-solar/solar-panel-maintenance-kerala.html" data-title="Solar Panel Maintenance in Kerala: Cleaning Schedule, BOS Care, Costs & Checklist" data-read-time="7" data-index="1">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/best-solar-panels-kerala.webp?v=20260728"
-                srcset="/assets/images/blog/best-solar-panels-kerala-640.webp?v=20260728 640w,
-                  /assets/images/blog/best-solar-panels-kerala.webp?v=20260728 1200w"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                alt="Best solar panels in Kerala 2026 — Waaree vs Adani vs Tata vs Vikram comparison guide"
-                loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-panel-maintenance-kerala.webp" srcset="/assets/images/blog/solar-panel-maintenance-kerala-640.webp 640w, /assets/images/blog/solar-panel-maintenance-kerala-960.webp 960w, /assets/images/blog/solar-panel-maintenance-kerala.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" alt="Solar panel maintenance, cleaning schedule, and inverter care guide for Kerala rooftop plants" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Buying Guide</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-maintenance">Maintenance</span>
+                <span class="blog-date-read">2026 &bull; 7 min read</span>
+              </div>
+              <h3 class="blog-title">Solar Panel Maintenance in Kerala: Cleaning Schedule, BOS Care, Costs & Checklist</h3>
+              <p class="blog-excerpt">Practical rooftop solar panel maintenance guide for Kerala homes and commercial plants — seasonal cleaning rules, inverter care, AMC cost benchmarks, and DIY safety.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: GST on Solar Panels in India 2026: Rates, 70:30 Rule, HSN Codes & ITC Rules -->
+          <a href="/blog/buying-guide/gst-on-solar-panels-india" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/gst-on-solar-panels-india.html" data-title="GST on Solar Panels in India 2026: Rates, 70:30 Rule, HSN Codes & ITC Rules" data-read-time="6" data-index="2">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/gst-on-solar-panels-india.webp" srcset="/assets/images/blog/gst-on-solar-panels-india-640.webp 640w, /assets/images/blog/gst-on-solar-panels-india-960.webp 960w, /assets/images/blog/gst-on-solar-panels-india.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" alt="GST on solar panels in India 2026 rate guide, 70:30 composite supply rule, and ITC" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
+              </div>
+              <h3 class="blog-title">GST on Solar Panels in India 2026: Rates, 70:30 Rule, HSN Codes & ITC Rules</h3>
+              <p class="blog-excerpt">Everything Kerala homeowners and businesses need to know about GST on solar panels, inverters, and EPC services — the 70:30 composite supply rule, HSN codes, and ITC eligibility.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: Solar Panel Installation Cost in Kerala 2026: 3kW, 5kW & 10kW Price Guide -->
+          <a href="/blog/savings/solar-panel-installation-cost-kerala" class="blog-card" data-cat="savings" data-local-preview-href="/blog/savings/solar-panel-installation-cost-kerala.html" data-title="Solar Panel Installation Cost in Kerala 2026: 3kW, 5kW & 10kW Price Guide" data-read-time="8" data-index="3">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/solar-panel-installation-cost-kerala.webp" srcset="/assets/images/blog/solar-panel-installation-cost-kerala-640.webp 640w, /assets/images/blog/solar-panel-installation-cost-kerala-960.webp 960w, /assets/images/blog/solar-panel-installation-cost-kerala.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" alt="Solar panel installation cost in Kerala 2026 price guide for 3kW 5kW and 10kW systems" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-savings">Savings & Pricing</span>
+                <span class="blog-date-read">2026 &bull; 8 min read</span>
+              </div>
+              <h3 class="blog-title">Solar Panel Installation Cost in Kerala 2026: 3kW, 5kW & 10kW Price Guide</h3>
+              <p class="blog-excerpt">Transparent breakdown of on-grid, off-grid, and hybrid solar installation costs in Kerala after PM Surya Ghar subsidy — panel types, inverter costs, and genuine payback timelines.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: Off-Grid Solar System in Kerala: Battery Sizing, Costs & 2026 Practical Guide -->
+          <a href="/blog/how-solar/off-grid-solar-system-kerala" class="blog-card" data-cat="how" data-local-preview-href="/blog/how-solar/off-grid-solar-system-kerala.html" data-title="Off-Grid Solar System in Kerala: Battery Sizing, Costs & 2026 Practical Guide" data-read-time="7" data-index="4">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/off-grid-solar-system-kerala.webp" srcset="/assets/images/blog/off-grid-solar-system-kerala-640.webp 640w, /assets/images/blog/off-grid-solar-system-kerala-960.webp 960w, /assets/images/blog/off-grid-solar-system-kerala.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" alt="Off-grid solar system in Kerala battery sizing, costs, and backup performance guide" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-how">How Solar Works</span>
+                <span class="blog-date-read">2026 &bull; 9 min read</span>
+              </div>
+              <h3 class="blog-title">Off-Grid Solar System in Kerala: Battery Sizing, Costs & 2026 Practical Guide</h3>
+              <p class="blog-excerpt">Complete guide to off-grid solar in Kerala: battery capacity sizing, hybrid vs pure off-grid inverters, load planning for power cuts, and realistic installation costs.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: Best Solar Panels in Kerala 2026: Waaree vs Adani vs Tata vs Vikram -->
+          <a href="/blog/buying-guide/best-solar-panels-kerala" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/best-solar-panels-kerala.html" data-title="Best Solar Panels in Kerala 2026: Waaree vs Adani vs Tata vs Vikram" data-read-time="7" data-index="5">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/best-solar-panels-kerala.webp" srcset="/assets/images/blog/best-solar-panels-kerala-640.webp 640w, /assets/images/blog/best-solar-panels-kerala.webp 1200w" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 380px" alt="Best solar panels in Kerala 2026 — Waaree vs Adani vs Tata vs Vikram comparison guide" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2026 &bull; 7 min read</span>
               </div>
               <h3 class="blog-title">Best Solar Panels in Kerala 2026: Waaree vs Adani vs Tata vs Vikram</h3>
               <p class="blog-excerpt">Compare four leading solar panel brands for Kerala homes — covering ALMM approval, TOPCon vs Mono PERC, warranties, and climate suitability.</p>
-              <span class="blog-read-more">
-                Read full guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- CARD: KSEB tariff slabs 2026 -->
-          <a href="/blog/govt/kseb-tariff-slabs-kerala" class="blog-card" data-cat="savings"
-            data-local-preview-href="/blog/govt/kseb-tariff-slabs-kerala.html?v=20260725-wa2">
-            <div class="blog-card-image">
-              <img src="/assets/images/blog/kseb-tariff-slabs-kerala.webp"
-                alt="KSEB tariff slabs 2026 guide with Kerala home electricity meter, bill and rooftop solar"
-                loading="lazy" decoding="async" width="1200" height="675">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">Savings &amp; Electricity Bills</span>
-                <span class="blog-date">2026</span>
               </div>
-              <h3 class="blog-title">KSEB Tariff Slabs 2026: Current Rates, Fixed Charges &amp; Bill Calculation</h3>
-              <p class="blog-excerpt">See the current KSERC-approved domestic rates, how telescopic billing works, and why bills can jump above 250 monthly units.</p>
-              <span class="blog-read-more">
-                Read verified guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </span>
             </div>
           </a>
 
-          <!-- CARD: PM Surya Ghar application status -->
-          <a href="/blog/govt/pm-surya-ghar-application-status-kerala" class="blog-card" data-cat="govt">
+          <!-- CARD: KSEB Tariff Slabs 2026: Current Rates, Fixed Charges & Bill Calculation -->
+          <a href="/blog/govt/kseb-tariff-slabs-kerala" class="blog-card" data-cat="savings" data-local-preview-href="/blog/govt/kseb-tariff-slabs-kerala.html" data-title="KSEB Tariff Slabs 2026: Current Rates, Fixed Charges & Bill Calculation" data-read-time="6" data-index="6">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/pm-surya-ghar-status-kerala.webp" alt="PM Surya Ghar application status guide for Kerala" loading="lazy" decoding="async" width="1200" height="675">
+              <img src="/assets/images/blog/kseb-tariff-slabs-kerala.webp"  alt="KSEB tariff slabs 2026 guide with Kerala home electricity meter, bill and rooftop solar" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Government Schemes</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-savings">Savings & Electricity Bills</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
+              </div>
+              <h3 class="blog-title">KSEB Tariff Slabs 2026: Current Rates, Fixed Charges & Bill Calculation</h3>
+              <p class="blog-excerpt">See the current KSERC-approved domestic rates, how telescopic billing works, and why bills can jump above 250 monthly units.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: How to Check Your PM Surya Ghar Application Status in Kerala -->
+          <a href="/blog/govt/pm-surya-ghar-application-status-kerala" class="blog-card" data-cat="govt" data-local-preview-href="/blog/govt/pm-surya-ghar-application-status-kerala.html" data-title="How to Check Your PM Surya Ghar Application Status in Kerala" data-read-time="5" data-index="7">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/pm-surya-ghar-status-kerala.webp"  alt="PM Surya Ghar application status guide for Kerala" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-govt">Government Schemes</span>
+                <span class="blog-date-read">2026 &bull; 5 min read</span>
               </div>
               <h3 class="blog-title">How to Check Your PM Surya Ghar Application Status in Kerala</h3>
               <p class="blog-excerpt">Use the official KSEB and PM Surya Ghar portals to understand a pending rooftop-solar application and find the right support route.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD NEW 1 -->
-          <a href="/blog/govt/pm-kusum-kerala-2026" class="blog-card" data-cat="govt">
+          <!-- CARD: PM-KUSUM in Kerala 2026: What Farmers Should Know Before Applying -->
+          <a href="/blog/govt/pm-kusum-kerala-2026" class="blog-card" data-cat="govt" data-local-preview-href="/blog/govt/pm-kusum-kerala-2026.html" data-title="PM-KUSUM in Kerala 2026: What Farmers Should Know Before Applying" data-read-time="6" data-index="8">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/pm-kusum-kerala.webp" alt="PM-KUSUM Kerala 2026 guide" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/pm-kusum-kerala.webp"  alt="PM-KUSUM Kerala 2026 guide" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Government Schemes</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-govt">Government Schemes</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">PM-KUSUM in Kerala 2026: What Farmers Should Know Before Applying</h3>
               <p class="blog-excerpt">A practical scheme guide for farmers and landowners. Learn what PM-KUSUM covers, who it fits, and when PM Surya Ghar is the better route instead.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD NEW 2 -->
-          <a href="/blog/buying-guide/kerala-solar-documents-checklist-2026" class="blog-card" data-cat="buying">
+          <!-- CARD: Kerala Solar Documents Checklist 2026: What to Keep Ready Before You Apply -->
+          <a href="/blog/buying-guide/kerala-solar-documents-checklist-2026" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/kerala-solar-documents-checklist-2026.html" data-title="Kerala Solar Documents Checklist 2026: What to Keep Ready Before You Apply" data-read-time="5" data-index="9">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-documents-kerala.webp" alt="Kerala solar documents checklist 2026" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-documents-kerala.webp"  alt="Kerala solar documents checklist 2026" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Buying Guide</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2026 &bull; 5 min read</span>
               </div>
               <h3 class="blog-title">Kerala Solar Documents Checklist 2026: What to Keep Ready Before You Apply</h3>
               <p class="blog-excerpt">The practical paperwork checklist for Kerala homeowners. Know what to keep ready for quotation, KSEB steps, PM Surya Ghar, and faster installation.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD NEW 3 -->
-          <a href="/blog/how-solar/solar-for-ev-charging-kerala" class="blog-card" data-cat="how">
+          <!-- CARD: Solar for EV Charging in Kerala 2026: How to Size Your System Before You Buy an EV -->
+          <a href="/blog/how-solar/solar-for-ev-charging-kerala" class="blog-card" data-cat="how" data-local-preview-href="/blog/how-solar/solar-for-ev-charging-kerala.html" data-title="Solar for EV Charging in Kerala 2026: How to Size Your System Before You Buy an EV" data-read-time="6" data-index="10">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-ev-charging-kerala.webp" alt="Solar for EV charging in Kerala 2026" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-ev-charging-kerala.webp"  alt="Solar for EV charging in Kerala 2026" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">How Solar Works</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-how">How Solar Works</span>
+                <span class="blog-date-read">2026 &bull; 7 min read</span>
               </div>
               <h3 class="blog-title">Solar for EV Charging in Kerala 2026: How to Size Your System Before You Buy an EV</h3>
               <p class="blog-excerpt">Planning an EV soon? Learn how future charging changes rooftop solar sizing, roof space decisions, and savings logic for Kerala homes.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD NEW 4 -->
-          <a href="/blog/govt/kerala-rooftop-solar-rules-2026" class="blog-card" data-cat="govt">
+          <!-- CARD: Kerala Rooftop Solar Rules in 2026: What Homeowners Must Check -->
+          <a href="/blog/govt/kerala-rooftop-solar-rules-2026" class="blog-card" data-cat="govt" data-local-preview-href="/blog/govt/kerala-rooftop-solar-rules-2026.html" data-title="Kerala Rooftop Solar Rules in 2026: What Homeowners Must Check" data-read-time="6" data-index="11">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/kerala-rooftop-solar-rules.webp" alt="Kerala rooftop solar rules 2026" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/kerala-rooftop-solar-rules.webp"  alt="Kerala rooftop solar rules 2026" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Government Schemes</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-govt">Government Schemes</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">Kerala Rooftop Solar Rules in 2026: What Homeowners Must Check</h3>
               <p class="blog-excerpt">A practical rule-check guide covering net metering, battery conversations, and the questions Kerala homeowners should ask before finalising a system.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD NEW 5 -->
-          <a href="/blog/buying-guide/which-solar-system-size-kerala-home-2026" class="blog-card" data-cat="buying">
+          <!-- CARD: Is a 3 kW, 5 kW, or 10 kW Solar System Better for a Kerala Home in 2026? -->
+          <a href="/blog/buying-guide/which-solar-system-size-kerala-home-2026" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/which-solar-system-size-kerala-home-2026.html" data-title="Is a 3 kW, 5 kW, or 10 kW Solar System Better for a Kerala Home in 2026?" data-read-time="7" data-index="12">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-system-size-kerala.webp" alt="3 kW vs 5 kW vs 10 kW Kerala solar guide" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-system-size-kerala.webp"  alt="3 kW vs 5 kW vs 10 kW Kerala solar guide" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Buying Guide</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">Is a 3 kW, 5 kW, or 10 kW Solar System Better for a Kerala Home in 2026?</h3>
               <p class="blog-excerpt">Compare the most important home solar size options for Kerala using bill range, roof area, AC usage, and future EV planning.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- CARD 1 -->
-          <a href="/subsidy/kseb-net-metering" class="blog-card" data-cat="govt">
-            <div class="blog-card-image">
-              <img src="/assets/images/blog/kseb-net-metering-kerala.webp" alt="KSEB Net Metering Guide" loading="lazy" decoding="async" width="1200"
-                height="675" onerror="this.style.display='none'">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">KSEB Regulations</span>
-                <span class="blog-date">2026</span>
               </div>
-              <h3 class="blog-title">KSEB Net Metering Kerala 2026 Update — What Homeowners Should Check</h3>
-              <p class="blog-excerpt">A practical 2026 update on KSEB net metering in Kerala, including how the KSERC 2025 rule changes affect new rooftop solar applications.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </span>
             </div>
           </a>
 
-          <!-- CARD 2 -->
-          <a href="/blog/savings/how-much-can-you-save-solar-kerala" class="blog-card" data-cat="savings">
+          <!-- CARD: KSEB Net Metering Kerala 2026 Update: What Homeowners Should Check -->
+          <a href="/subsidy/kseb-net-metering" class="blog-card" data-cat="govt" data-local-preview-href="/subsidy/kseb-net-metering.html" data-title="KSEB Net Metering Kerala 2026 Update: What Homeowners Should Check" data-read-time="7" data-index="13">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-savings-kerala.webp" alt="Solar savings Kerala" loading="lazy" decoding="async"
-                width="1200" height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/kseb-net-metering-kerala.webp"  alt="KSEB Net Metering Guide" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Savings &amp; ROI</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-govt">KSEB Regulations</span>
+                <span class="blog-date-read">2026 &bull; 7 min read</span>
+              </div>
+              <h3 class="blog-title">KSEB Net Metering Kerala 2026 Update: What Homeowners Should Check</h3>
+              <p class="blog-excerpt">A practical 2026 update on KSEB net metering in Kerala, including how the KSERC 2025 rule changes affect new rooftop solar applications.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: How Much Can You Save with Solar in Kerala? (2026 Update) -->
+          <a href="/blog/savings/how-much-can-you-save-solar-kerala" class="blog-card" data-cat="savings" data-local-preview-href="/blog/savings/how-much-can-you-save-solar-kerala.html" data-title="How Much Can You Save with Solar in Kerala? (2026 Update)" data-read-time="6" data-index="14">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/solar-savings-kerala.webp"  alt="Solar savings Kerala" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-savings">Savings & ROI</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">How Much Can You Save with Solar in Kerala? (2026 Update)</h3>
-              <p class="blog-excerpt">A practical 2026 savings guide using Kerala bill patterns, PM Surya Ghar support,
-                and KSEB net metering logic.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <p class="blog-excerpt">A practical 2026 savings guide using Kerala bill patterns, PM Surya Ghar support, and KSEB net metering logic.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD 3 -->
-          <a href="/blog/how-solar/solar-during-kerala-monsoon" class="blog-card" data-cat="how">
+          <!-- CARD: Does Solar Work During Kerala's Monsoon? The Honest Answer -->
+          <a href="/blog/how-solar/solar-during-kerala-monsoon" class="blog-card" data-cat="how" data-local-preview-href="/blog/how-solar/solar-during-kerala-monsoon.html" data-title="Does Solar Work During Kerala's Monsoon? The Honest Answer" data-read-time="5" data-index="15">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-kerala-monsoon.webp" alt="Solar during Kerala monsoon" loading="lazy" decoding="async"
-                width="1200" height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-kerala-monsoon.webp"  alt="Solar during Kerala monsoon" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">How Solar Works</span>
-                <span class="blog-date">2026</span>
+                <span class="blog-category blog-cat-how">How Solar Works</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">Does Solar Work During Kerala's Monsoon? The Honest Answer</h3>
-              <p class="blog-excerpt">A Kerala-focused monsoon guide covering annual generation patterns, net metering
-                offsets, and why rooftop solar still works when designed properly.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <p class="blog-excerpt">A Kerala-focused monsoon guide covering annual generation patterns, net metering offsets, and why rooftop solar still works when designed properly.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
-            </div>
-          </a>
-
-          <!-- CARD 4 -->
-          <a href="/blog/buying-guide/solar-panel-price-kerala-2025" class="blog-card" data-cat="buying">
-            <div class="blog-card-image">
-              <img src="/assets/images/blog/solar-panel-price-kerala.webp" alt="Solar panel price Kerala 2026"
-                loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-meta">
-                <span class="blog-category">Buying Guide</span>
-                <span class="blog-date">2026</span>
               </div>
-              <h3 class="blog-title">Solar Panel Price in Kerala 2026 — With and Without Subsidy</h3>
-              <p class="blog-excerpt">Updated 2026 pricing guidance for 1 kW to 10 kW systems, including what changes
-                quote ranges across districts, brands, and system types.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
-              </span>
             </div>
           </a>
 
-          <!-- CARD 5 -->
-          <a href="/blog/how-solar/on-grid-vs-off-grid-vs-hybrid" class="blog-card" data-cat="how">
+          <!-- CARD: Solar Panel Price in Kerala 2026: With and Without Subsidy -->
+          <a href="/blog/buying-guide/solar-panel-price-kerala-2025" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/solar-panel-price-kerala-2025.html" data-title="Solar Panel Price in Kerala 2026: With and Without Subsidy" data-read-time="7" data-index="16">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/on-grid-off-grid-hybrid-kerala.webp" alt="On-grid vs off-grid vs hybrid solar systems in Kerala" loading="lazy" decoding="async"
-                width="1200" height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/solar-panel-price-kerala.webp"  alt="Solar panel price Kerala 2026" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">How Solar Works</span>
-                <span class="blog-date">2025</span>
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2026 &bull; 6 min read</span>
               </div>
-              <h3 class="blog-title">On-Grid vs Off-Grid vs Hybrid — Which Is Best for Kerala?</h3>
-              <p class="blog-excerpt">The definitive comparison for Kerala homeowners. Which system type is right for
-                your situation, budget, and goals.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <h3 class="blog-title">Solar Panel Price in Kerala 2026: With and Without Subsidy</h3>
+              <p class="blog-excerpt">Updated 2026 pricing guidance for 1 kW to 10 kW systems, including what changes quote ranges across districts, brands, and system types.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-          <!-- CARD 6 -->
-          <a href="/blog/buying-guide/how-to-choose-solar-company-kerala" class="blog-card" data-cat="buying">
+          <!-- CARD: On-Grid vs Off-Grid vs Hybrid: Which Is Best for Kerala? -->
+          <a href="/blog/how-solar/on-grid-vs-off-grid-vs-hybrid" class="blog-card" data-cat="how" data-local-preview-href="/blog/how-solar/on-grid-vs-off-grid-vs-hybrid.html" data-title="On-Grid vs Off-Grid vs Hybrid: Which Is Best for Kerala?" data-read-time="8" data-index="17">
             <div class="blog-card-image">
-              <img src="/assets/images/blog/choose-solar-company-kerala.webp" alt="How to choose a solar company in Kerala"
-                loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+              <img src="/assets/images/blog/on-grid-off-grid-hybrid-kerala.webp"  alt="On-grid vs off-grid vs hybrid solar systems in Kerala" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
             </div>
             <div class="blog-card-content">
               <div class="blog-meta">
-                <span class="blog-category">Buying Guide</span>
-                <span class="blog-date">2025</span>
+                <span class="blog-category blog-cat-how">How Solar Works</span>
+                <span class="blog-date-read">2025 &bull; 7 min read</span>
+              </div>
+              <h3 class="blog-title">On-Grid vs Off-Grid vs Hybrid: Which Is Best for Kerala?</h3>
+              <p class="blog-excerpt">The definitive comparison for Kerala homeowners. Which system type is right for your situation, budget, and goals.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD: How to Choose a Solar Company in Kerala (Without Getting Cheated) -->
+          <a href="/blog/buying-guide/how-to-choose-solar-company-kerala" class="blog-card" data-cat="buying" data-local-preview-href="/blog/buying-guide/how-to-choose-solar-company-kerala.html" data-title="How to Choose a Solar Company in Kerala (Without Getting Cheated)" data-read-time="7" data-index="18">
+            <div class="blog-card-image">
+              <img src="/assets/images/blog/choose-solar-company-kerala.webp"  alt="How to choose a solar company in Kerala" loading="lazy" decoding="async" width="1200" height="675" onerror="this.style.display='none'">
+            </div>
+            <div class="blog-card-content">
+              <div class="blog-meta">
+                <span class="blog-category blog-cat-buying">Buying Guide</span>
+                <span class="blog-date-read">2025 &bull; 6 min read</span>
               </div>
               <h3 class="blog-title">How to Choose a Solar Company in Kerala (Without Getting Cheated)</h3>
-              <p class="blog-excerpt">7 things to check before signing any solar contract in Kerala — certifications,
-                warranties, red flags, and the right questions to ask.</p>
-              <span class="blog-read-more">
-                Read guide
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
+              <p class="blog-excerpt">7 things to check before signing any solar contract in Kerala — certifications, warranties, red flags, and the right questions to ask.</p>
+              <div class="blog-read-more">
+                <span>Read Guide</span>
+                <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </span>
+              </div>
             </div>
           </a>
 
-        </div><!-- /blog-grid -->
+          <!-- NO RESULTS STATE -->
+          <div id="no-results" class="no-results" style="display: none;">
+            <div class="no-results-icon">&#128269;</div>
+            <h3>No matching guides found</h3>
+            <p id="no-results-msg">We couldn't find any articles matching your search query. Try different keywords or reset the filter.</p>
+            <button type="button" class="btn btn-outline-dark btn-sm" onclick="resetAllFilters()">Reset All Filters</button>
+          </div>
+
+        </div>
 
       </div>
     </section>
 
-    <!-- CALCULATOR CTA BANNER -->
-    <section class="section-sm bg-sage">
+    <!-- INLINE SAVINGS CTA -->
+    <section class="section-savings-cta">
       <div class="container">
-        <div class="inline-cta">
-          <p>Curious what solar would save your household specifically?</p>
-          <a href="/calculator" class="btn btn-primary">
+        <div class="savings-cta-card">
+          <div>
+            <h3>Curious what solar would save your household specifically?</h3>
+            <p>Calculate your custom rooftop system size, expected monthly KSEB bill savings, and PM Surya Ghar subsidy in seconds.</p>
+          </div>
+          <a href="/calculator" class="btn btn-primary" style="flex-shrink:0;">
             Calculate My Savings
-            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2.5">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- codex-seo-body:start -->
-    <section class="section" aria-label="Next steps for solar planning">
+    <!-- SOLAR PLANNING HUB -->
+<section class="section" aria-label="Next steps for solar planning">
       <div class="container">
         <div style="border:1px solid #E5E7E5;border-radius:24px;padding:clamp(1.25rem,3vw,2rem);background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 14px 38px rgba(23,34,25,0.06);">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:start;">
@@ -1619,11 +2090,13 @@
         </div>
       </div>
     </section>
-    <!-- codex-seo-body:end -->
 
   </main>
 
-  <!-- component:site-footer -->
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+<!-- component:site-footer -->
   <footer id="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1650,6 +2123,9 @@
             <a href="https://www.instagram.com/fgesolar" class="social-link" target="_blank" rel="noopener" aria-label="FGE Solar on Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg></a>
             <a href="https://www.facebook.com/fgesolar" class="social-link" target="_blank" rel="noopener" aria-label="FGE Solar on Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></a>
             <a href="https://www.youtube.com/@fgesolar" class="social-link" target="_blank" rel="noopener" aria-label="FGE Solar on YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" /><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" /></svg></a>
+          </div>
+          <div class="google-preferred-source">
+            <div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div>
           </div>
         </div>
 
@@ -1709,7 +2185,7 @@
   </footer>
   <!-- /component:site-footer -->
 
-  <!-- component:site-whatsapp -->
+<!-- component:site-whatsapp -->
   <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I%27m%20interested%20in%20solar%20for%20my%20home." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
@@ -1720,69 +2196,175 @@
   <script src="/assets/js/global.js" defer></script>
   <script>
     /* ============================================================
-       BLOG CATEGORY FILTER
+       BLOG FILTERING, SORTING & LIVE SEARCH ENGINE
     ============================================================ */
-    function filterCategory(btn, cat) {
-      /* Update active button */
-      document.querySelectorAll('.category-btn').forEach(function (b) {
+    var activeCategory = 'all';
+    var activeSearchQuery = '';
+    var activeSortMode = 'featured';
+
+    function filterCards() {
+      var query = activeSearchQuery.toLowerCase().trim();
+      var featured = document.getElementById('featured-article');
+      var cards = document.querySelectorAll('.blog-card');
+      var visibleCount = 0;
+
+      // Filter featured post
+      if (featured) {
+        var featCat = featured.getAttribute('data-cat') || '';
+        var featText = (featured.innerText || featured.textContent).toLowerCase();
+        var catMatch = (activeCategory === 'all' || featCat === activeCategory);
+        var searchMatch = (!query || featText.indexOf(query) !== -1);
+        
+        if (catMatch && searchMatch) {
+          featured.style.display = '';
+          visibleCount++;
+        } else {
+          featured.style.display = 'none';
+        }
+      }
+
+      // Filter standard cards
+      cards.forEach(function(card) {
+        var cardCat = card.getAttribute('data-cat') || '';
+        var cardText = (card.innerText || card.textContent).toLowerCase();
+        var catMatch = (activeCategory === 'all' || cardCat === activeCategory);
+        var searchMatch = (!query || cardText.indexOf(query) !== -1);
+
+        if (catMatch && searchMatch) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Handle empty state
+      var noResults = document.getElementById('no-results');
+      var noResultsMsg = document.getElementById('no-results-msg');
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+          if (query) {
+            noResultsMsg.textContent = 'We couldn\'t find any articles matching "' + activeSearchQuery + '". Try another search or reset filters.';
+          } else {
+            noResultsMsg.textContent = 'No articles found in this category right now.';
+          }
+        } else {
+          noResults.style.display = 'none';
+        }
+      }
+    }
+
+    function setCategory(btn, cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.category-btn').forEach(function(b) {
         b.classList.remove('active');
       });
-      btn.classList.add('active');
+      if (btn) {
+        btn.classList.add('active');
+      } else {
+        var matchBtn = document.querySelector('.category-btn[data-filter="' + cat + '"]');
+        if (matchBtn) matchBtn.classList.add('active');
+      }
+      filterCards();
+    }
 
-      /* Show / hide cards */
+    // Sync search across hero and sticky search inputs
+    var heroSearchInput = document.getElementById('blog-search-input');
+    var stickySearchInput = document.getElementById('sticky-blog-search');
+    var heroClearBtn = document.getElementById('clear-search-btn');
+    var stickyClearBtn = document.getElementById('sticky-clear-search');
+
+    function syncSearch(val) {
+      activeSearchQuery = val;
+      if (heroSearchInput && heroSearchInput.value !== val) heroSearchInput.value = val;
+      if (stickySearchInput && stickySearchInput.value !== val) stickySearchInput.value = val;
+
+      var hasVal = val.length > 0;
+      if (heroClearBtn) heroClearBtn.style.display = hasVal ? 'inline-flex' : 'none';
+      if (stickyClearBtn) stickyClearBtn.style.display = hasVal ? 'inline-flex' : 'none';
+
+      filterCards();
+    }
+
+    if (heroSearchInput) {
+      heroSearchInput.addEventListener('input', function(e) {
+        syncSearch(e.target.value);
+      });
+    }
+
+    if (stickySearchInput) {
+      stickySearchInput.addEventListener('input', function(e) {
+        syncSearch(e.target.value);
+      });
+    }
+
+    function clearSearch() {
+      syncSearch('');
+    }
+
+    function quickFilter(term) {
+      syncSearch(term);
+      var stickyBar = document.getElementById('sticky-filter-bar');
+      if (stickyBar) {
+        stickyBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function resetAllFilters() {
+      clearSearch();
+      setCategory(null, 'all');
+      var sortSelect = document.getElementById('blog-sort-select');
+      if (sortSelect) {
+        sortSelect.value = 'featured';
+        handleSort('featured');
+      }
+    }
+
+    // Sorting implementation
+    function handleSort(mode) {
+      activeSortMode = mode;
       var grid = document.getElementById('blog-grid');
-      var items = grid.querySelectorAll('[data-cat]');
-      var featured = grid.querySelector('.featured-post');
+      if (!grid) return;
 
-      items.forEach(function (item) {
-        if (cat === 'all' || item.dataset.cat === cat) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
+      var cards = Array.from(grid.querySelectorAll('.blog-card'));
+      cards.sort(function(a, b) {
+        if (mode === 'featured') {
+          var idxA = parseInt(a.getAttribute('data-index') || '0', 10);
+          var idxB = parseInt(b.getAttribute('data-index') || '0', 10);
+          return idxA - idxB;
+        } else if (mode === 'read-time-asc') {
+          var rtA = parseInt(a.getAttribute('data-read-time') || '0', 10);
+          var rtB = parseInt(b.getAttribute('data-read-time') || '0', 10);
+          return rtA - rtB;
+        } else if (mode === 'read-time-desc') {
+          var rtA = parseInt(a.getAttribute('data-read-time') || '0', 10);
+          var rtB = parseInt(b.getAttribute('data-read-time') || '0', 10);
+          return rtB - rtA;
+        } else if (mode === 'title-az') {
+          var tA = (a.getAttribute('data-title') || '').toLowerCase();
+          var tB = (b.getAttribute('data-title') || '').toLowerCase();
+          return tA.localeCompare(tB);
+        } else if (mode === 'title-za') {
+          var tA = (a.getAttribute('data-title') || '').toLowerCase();
+          var tB = (b.getAttribute('data-title') || '').toLowerCase();
+          return tB.localeCompare(tA);
         }
+        return 0;
       });
 
-      /* Featured post spanning: reset to full width on 'all', else normal card */
-      if (featured) {
-        if (cat === 'all') {
-          featured.style.gridColumn = '';
-          featured.style.gridTemplateColumns = '';
-          /* Re-apply responsive featured layout */
-          applyFeaturedLayout();
-        } else if (featured.dataset.cat !== cat) {
-          featured.style.display = 'none';
-        } else {
-          featured.style.display = '';
-          applyFeaturedLayout();
-        }
-      }
+      cards.forEach(function(card) {
+        grid.appendChild(card);
+      });
+
+      filterCards();
     }
 
-    function applyFeaturedLayout() {
-      var featured = document.querySelector('.featured-post');
-      if (!featured || featured.style.display === 'none') return;
-      var w = window.innerWidth;
-      if (w > 1024) {
-        featured.style.gridColumn = 'span 3';
-        featured.style.gridTemplateColumns = '1fr 1fr';
-      } else if (w > 768) {
-        featured.style.gridColumn = 'span 2';
-        featured.style.gridTemplateColumns = '1fr';
-      } else {
-        featured.style.gridColumn = 'span 1';
-        featured.style.gridTemplateColumns = '1fr';
-      }
-    }
-
-    window.addEventListener('resize', applyFeaturedLayout);
-    applyFeaturedLayout();
-
-    /* Python's local static preview has no extensionless-route rewrites.
-       Preserve the clean production URL while making this new guide open
-       directly from the local Blog page. */
+    /* Localhost routing preservation */
     if (['localhost', '127.0.0.1', '::1'].indexOf(window.location.hostname) !== -1) {
       document.querySelectorAll('[data-local-preview-href]').forEach(function (link) {
-        link.href = link.dataset.localPreviewHref;
+        var localHref = link.getAttribute('data-local-preview-href');
+        if (localHref) link.href = localHref;
       });
     }
   </script>

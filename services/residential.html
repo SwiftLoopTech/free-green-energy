@@ -24,21 +24,21 @@
   <meta name="google-site-verification" content="IVmlbR9pqxMh9I4DLx2H4_BHg8TOA4hT2rtm2r8SlVs" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Residential Rooftop Solar Installation in Kerala | FGE Solar</title>
-  <meta name="description" content="Reduce your KSEB bill by 80–90% with residential rooftop solar in Kerala. Get ₹78,000 PM Surya Ghar subsidy. FGE Solar handles everything — MNRE empanelled, KSEB approved. Free site visit.">>
+  <title>Residential Solar Panels for Homes in Kerala | FGE Solar</title>
+  <meta name="description" content="Switch to residential solar panels designed around your Kerala home and electricity consumption. MNRE empanelled, KSEB approved, PM Surya Ghar registered.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fgesolar.in/services/residential">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Residential Rooftop Solar Installation in Kerala | FGE Solar">
-  <meta property="og:description" content="Residential rooftop solar for Kerala homes, with system design, installation, subsidy guidance, KSEB process support, and a free FGE Solar site visit.">
+  <meta property="og:title" content="Residential Solar Panels for Homes in Kerala | FGE Solar">
+  <meta property="og:description" content="Switch to residential solar panels designed around your Kerala home and electricity consumption. MNRE empanelled, KSEB approved, PM Surya Ghar registered.">
   <meta property="og:url" content="https://fgesolar.in/services/residential">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/residential-og.webp">
-  <meta property="og:image:alt" content="Residential Rooftop Solar Installation in Kerala | FGE Solar">
+  <meta property="og:image:alt" content="Residential Solar Panels for Homes in Kerala | FGE Solar">
   <meta property="og:site_name" content="FGE Solar">
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Residential Rooftop Solar Installation in Kerala | FGE Solar">
-  <meta name="twitter:description" content="Residential rooftop solar for Kerala homes, with system design, installation, subsidy guidance, KSEB process support, and a free FGE Solar site visit.">
+  <meta name="twitter:title" content="Residential Solar Panels for Homes in Kerala | FGE Solar">
+  <meta name="twitter:description" content="Switch to residential solar panels designed around your Kerala home and electricity consumption. MNRE empanelled, KSEB approved, PM Surya Ghar registered.">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/residential-og.webp">
   <meta name="theme-color" content="#172219">
   <meta name="author" content="FGE Solar">
@@ -53,7 +53,8 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap">
   <script src="/assets/js/icons.js" defer></script>
   <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/components.css?v=20260908-fix4">
+  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260908-fix4">
 
   <script type="application/ld+json">
   {
@@ -238,12 +239,35 @@
       background-clip: text;
     }
 
+    .hero-desc-group {
+      margin-bottom: 2.25rem;
+      max-width: 760px;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+      color: rgba(255, 255, 255, 0.88);
+      line-height: 1.7;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-desc:last-child {
+      margin-bottom: 0;
+    }
+
     .hero-subtitle {
       font-size: clamp(0.875rem, 2vw, 1.15rem);
       color: rgba(255, 255, 255, 0.75);
       line-height: 1.7;
-      max-width: 620px;
+      max-width: 680px;
       margin-bottom: 2rem;
+    }
+
+    .proposal-criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem 1.5rem;
+      margin: 0.75rem 0;
     }
 
     .hero-cta-row {
@@ -252,10 +276,10 @@
       flex-wrap: wrap;
     }
 
-    /* STAT CARDS */
+    /* STAT / PILLAR CARDS */
     .stat-cards-section {
       background: #fff;
-      padding: clamp(2rem, 5vw, 3.5rem) 0;
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
     }
 
     .stat-cards-grid {
@@ -264,13 +288,36 @@
       gap: clamp(1rem, 2.5vw, 1.5rem);
     }
 
-    .stat-card-big {
+    .pillar-card {
       background: #EEF2EF;
       border-radius: 20px;
       padding: clamp(1.25rem, 3vw, 2rem);
       display: flex;
       flex-direction: column;
       color: #172219;
+      justify-content: space-between;
+      border: 1px solid rgba(24, 184, 92, 0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(23, 34, 25, 0.08);
+    }
+
+    .pillar-card h3 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+      font-weight: 700;
+      color: #172219;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+
+    .pillar-card p {
+      font-size: clamp(0.85rem, 1.3vw, 0.94rem);
+      color: #565D56;
+      line-height: 1.65;
     }
 
     .stat-icon {
@@ -279,130 +326,105 @@
     }
 
     .stat-icon svg {
-      width: clamp(20px, 3vw, 28px);
-      height: clamp(20px, 3vw, 28px);
+      width: clamp(22px, 3vw, 28px);
+      height: clamp(22px, 3vw, 28px);
     }
 
-    .stat-num {
-      font-family: var(--font-heading);
-      font-size: clamp(1.5rem, 4vw, 2.8rem);
-      font-weight: 800;
+    .card-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin: 0.75rem 0;
+      font-size: clamp(0.82rem, 1.2vw, 0.9rem);
+      color: #374037;
+    }
+
+    .card-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .card-list li::before {
+      content: '●';
       color: #18B85C;
-      line-height: 1;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.03em;
+      font-size: 0.65rem;
+      margin-top: 4px;
+      flex-shrink: 0;
     }
 
-    .stat-label {
+    .subsidy-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin: 1rem 0;
+    }
+
+    .subsidy-tier-item {
+      background: #fff;
+      border: 1px solid #D8E4DA;
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+
+    .subsidy-tier-item strong {
+      color: #18B85C;
       font-family: var(--font-heading);
-      font-size: clamp(0.85rem, 1.5vw, 1rem);
-      font-weight: 700;
-      color: #172219;
-      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
     }
 
-    .stat-sub {
-      font-size: clamp(0.78rem, 1.2vw, 0.875rem);
-      color: #565D56;
-      line-height: 1.6;
-    }
-
-    .stat-card-big .stat-label {
-      color: #172219;
-    }
-
-    .stat-card-big .stat-sub {
-      color: #565D56;
-    }
-
-    /* QUALIFY SECTION */
+    /* QUALIFY / SUITABILITY SECTION */
     .qualify-section {
       background: #EEF2EF;
       padding: clamp(2.5rem, 6vw, 5rem) 0;
     }
 
-    .qualify-layout {
+    .suitability-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2rem, 5vw, 5rem);
-      align-items: start;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(1rem, 2.5vw, 1.5rem);
+      margin-top: 2rem;
     }
 
-    .qualify-text h2 {
+    .factor-card {
+      background: #fff;
+      border: 1px solid #D8E4DA;
+      border-radius: 16px;
+      padding: clamp(1.25rem, 2.5vw, 1.75rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .factor-card h3 {
       font-family: var(--font-heading);
-      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-      font-weight: 800;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: #172219;
-      margin-bottom: 1rem;
-      line-height: 1.15;
+      line-height: 1.3;
     }
 
-    .qualify-text p {
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
+    .factor-card p {
+      font-size: 0.88rem;
       color: #565D56;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
+      line-height: 1.65;
+      margin: 0;
     }
 
     .callout-note {
-      background: rgba(24, 184, 92, 0.1);
+      background: rgba(24, 184, 92, 0.08);
       border: 1px solid rgba(24, 184, 92, 0.25);
       border-radius: 12px;
       padding: 1rem 1.25rem;
       font-size: clamp(0.82rem, 1.2vw, 0.9rem);
       color: #172219;
       line-height: 1.6;
-    }
-
-    .checklist {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.25rem 0;
-      border-bottom: 1px solid #D8E4DA;
-    }
-
-    .checklist-item:first-child {
-      border-top: 1px solid #D8E4DA;
-    }
-
-    .check-icon {
-      width: 24px;
-      height: 24px;
-      min-width: 24px;
-      background: #18B85C;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .check-icon svg {
-      color: #fff;
-    }
-
-    .checklist-item strong {
-      display: block;
-      font-size: clamp(0.875rem, 1.4vw, 0.975rem);
-      font-weight: 700;
-      color: #172219;
-      margin-bottom: 0.375rem;
-    }
-
-    .checklist-item p {
-      font-size: clamp(0.78rem, 1.2vw, 0.875rem);
-      color: #565D56;
-      line-height: 1.6;
-      margin: 0;
     }
 
     /* PROCESS SECTION */
@@ -413,13 +435,13 @@
 
     .section-header-center {
       text-align: center;
-      max-width: 600px;
+      max-width: 680px;
       margin: 0 auto 3rem;
     }
 
     .section-header-center h2 {
       font-family: var(--font-heading);
-      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.4rem, 3.5vw, 2.3rem);
       font-weight: 800;
       color: #172219;
       margin-bottom: 0.75rem;
@@ -433,7 +455,7 @@
     }
 
     .process-steps {
-      max-width: 780px;
+      max-width: 820px;
       margin: 0 auto;
       position: relative;
     }
@@ -453,7 +475,7 @@
       display: flex;
       gap: clamp(1rem, 2.5vw, 1.75rem);
       align-items: flex-start;
-      padding: clamp(1rem, 2vw, 1.75rem) 0;
+      padding: clamp(1.25rem, 2.5vw, 2rem) 0;
       position: relative;
     }
 
@@ -475,35 +497,64 @@
       z-index: 1;
     }
 
+    .step-content {
+      flex: 1;
+      min-width: 0;
+    }
+
     .step-content h3 {
       font-family: var(--font-heading);
-      font-size: clamp(0.975rem, 1.6vw, 1.1rem);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
       font-weight: 700;
       color: #172219;
       margin-bottom: 0.4rem;
     }
 
     .step-content p {
-      font-size: clamp(0.82rem, 1.3vw, 0.9rem);
+      font-size: clamp(0.84rem, 1.3vw, 0.92rem);
       color: #565D56;
       line-height: 1.7;
       margin-bottom: 0.375rem;
     }
 
-    .step-time {
-      display: inline-block;
-      background: #EEF2EF;
-      border-radius: 6px;
-      padding: 0.2rem 0.6rem;
-      font-size: clamp(0.72rem, 1vw, 0.8rem);
-      font-weight: 600;
-      color: #18B85C;
-    }
-
-    /* SAVINGS TABLE */
+    /* COST AND SAVINGS SECTION */
     .savings-table-section {
       background: #EEF2EF;
       padding: clamp(2.5rem, 6vw, 5rem) 0;
+    }
+
+    .cost-factors-wrap {
+      margin: 1.5rem 0 2rem;
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid #D8E4DA;
+    }
+
+    .cost-factors-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .cost-chip {
+      background: #EEF2EF;
+      color: #172219;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 1px solid #D8E4DA;
+    }
+
+    .cost-chip::before {
+      content: '✓';
+      color: #18B85C;
+      font-weight: bold;
     }
 
     .table-wrapper {
@@ -518,7 +569,7 @@
 
     .data-table {
       width: 100%;
-      min-width: 560px;
+      min-width: 600px;
       border-collapse: collapse;
       background: #fff;
       border-radius: 16px;
@@ -527,18 +578,18 @@
 
     .data-table th,
     .data-table td {
-      padding: clamp(0.75rem, 1.5vw, 1rem) clamp(0.875rem, 1.5vw, 1.25rem);
+      padding: clamp(0.75rem, 1.5vw, 1.1rem) clamp(0.875rem, 1.5vw, 1.25rem);
       text-align: left;
       border-bottom: 1px solid #E5E7E5;
-      font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+      font-size: clamp(0.8rem, 1.2vw, 0.92rem);
     }
 
     .data-table th {
-      background: #EEF2EF;
+      background: #E4ECE5;
       font-family: var(--font-heading);
       font-weight: 700;
       color: #172219;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .data-table td {
@@ -550,15 +601,58 @@
     }
 
     .table-caption {
-      font-size: clamp(0.72rem, 1vw, 0.8rem);
+      font-size: clamp(0.72rem, 1vw, 0.82rem);
       color: #737A73;
       margin-top: 1rem;
       line-height: 1.6;
     }
 
+    .why-bill-box {
+      background: #fff;
+      border: 1px solid #D8E4DA;
+      border-radius: 16px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      margin-top: 2rem;
+    }
+
+    /* COMPONENTS SECTION */
+    .components-section {
+      background: #fff;
+      padding: clamp(2.5rem, 6vw, 5rem) 0;
+    }
+
+    .components-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .component-card {
+      background: #EEF2EF;
+      border: 1px solid #D8E4DA;
+      border-radius: 16px;
+      padding: clamp(1.25rem, 2.5vw, 1.75rem);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .component-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #172219;
+      margin-bottom: 0.5rem;
+    }
+
+    .component-card p {
+      font-size: 0.88rem;
+      color: #565D56;
+      line-height: 1.65;
+    }
+
     /* FAQ */
     .faq-section-res {
-      background: #fff;
+      background: #EEF2EF;
       padding: clamp(2.5rem, 6vw, 5rem) 0;
     }
 
@@ -568,7 +662,7 @@
     }
 
     .faq-item {
-      border-bottom: 1px solid #E5E7E5;
+      border-bottom: 1px solid #D8E4DA;
       overflow: hidden;
     }
 
@@ -675,8 +769,8 @@
     .cta-banner-content {
       position: relative;
       z-index: 1;
-      width: min(100%, 640px);
-      max-width: 640px;
+      width: min(100%, 720px);
+      max-width: 720px;
       margin: 0 auto;
       min-width: 0;
       padding: 0 clamp(1rem, 5vw, 1.5rem);
@@ -693,7 +787,7 @@
     }
 
     .cta-banner p {
-      color: rgba(255, 255, 255, 0.72);
+      color: rgba(255, 255, 255, 0.75);
       font-size: clamp(0.875rem, 2vw, 1rem);
       margin-bottom: 1.75rem;
       line-height: 1.7;
@@ -720,316 +814,191 @@
       flex-shrink: 0;
     }
 
-    /* STAT 3 */
-    .stat3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1rem, 2.5vw, 1.5rem);
-    }
-
     /* ============================================================
-       LARGE SCREENS
+       MULTI-DEVICE RESPONSIVE BREAKPOINTS (REFERENCING HOMEPAGE)
     ============================================================ */
+
+    /* Large Desktops (>= 1440px) */
     @media (min-width: 1440px) {
-      :root {
-        --container-max: 1360px;
-        --container-pad: 2rem;
+      .stat-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .components-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (min-width: 1920px) {
-      :root {
-        --container-max: 1600px;
-        --container-pad: 3rem;
+    /* Desktops & Large Tablets Landscape (992px - 1199px) */
+    @media (max-width: 1199px) and (min-width: 992px) {
+      .stat-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
-
-      .page-hero-res {
-        padding: 160px 0 110px;
+      .suitability-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-
-      .page-hero-res h1 {
-        font-size: clamp(3rem, 3.5vw, 4.5rem);
-      }
-
-      .hero-subtitle {
-        font-size: 1.3rem;
-      }
-
-      .stat-num {
-        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
-      }
-
-      .qualify-text h2 {
-        font-size: 2.5rem;
-      }
-
-      .section-header-center h2 {
-        font-size: 2.5rem;
-      }
-
-      .cta-banner h2 {
-        font-size: 3rem;
+      .components-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (min-width: 2560px) {
-      :root {
-        --container-max: 2000px;
-        --container-pad: 4rem;
-      }
-
-      .page-hero-res {
-        padding: 180px 0 130px;
-      }
-
-      .page-hero-res h1 {
-        font-size: 5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.5rem;
-      }
-
-      .stat-num {
-        font-size: 4rem;
-      }
-    }
-
-    @media (min-width: 3840px) {
-      :root {
-        --container-max: 2800px;
-        --container-pad: 5rem;
-      }
-
-      .page-hero-res h1 {
-        font-size: 6rem;
-      }
-    }
-
-    /* ============================================================
-       TABLET / MOBILE
-    ============================================================ */
-    @media (max-width: 1024px) {
-      .qualify-layout {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
+    /* Tablets Portrait & Large Phablets (768px - 991px) */
+    @media (max-width: 991px) {
       .stat-cards-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .stat3 {
+      .suitability-grid {
+        grid-template-columns: 1fr;
+      }
+      .components-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 768px) {
+    /* Mid Size / Phablets (576px - 767px) */
+    @media (max-width: 767px) {
+      :root {
+        --container-pad: 1.25rem;
+      }
+      .page-hero-res {
+        padding: clamp(75px, 12vw, 100px) 0 clamp(2.5rem, 6vw, 3.5rem);
+      }
       .hero-cta-row {
         flex-direction: column;
         align-items: stretch;
       }
-
-      .hero-cta-row>* {
+      .hero-cta-row > * {
         width: 100%;
         justify-content: center;
         text-align: center;
       }
-
       .stat-cards-grid {
         grid-template-columns: 1fr;
       }
-
+      .components-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-steps::before {
+        display: none;
+      }
       .cta-btn-row {
         flex-direction: column;
         align-items: stretch;
       }
-
-      .cta-btn-row>* {
+      .cta-btn-row > * {
         width: 100%;
         max-width: 100%;
         justify-content: center;
       }
-
-      .stat3 {
-        grid-template-columns: 1fr;
-      }
-
-      .process-steps::before {
-        display: none;
-      }
-
       .cta-banner-content {
         width: 100%;
         padding: 0 clamp(1rem, 5vw, 1.5rem);
       }
-
-      .cta-banner h2 {
-        font-size: clamp(1.25rem, 6vw, 2rem);
+      .callout-note {
+        flex-direction: column;
+        align-items: stretch;
       }
-
-      .cta-banner p {
-        font-size: 0.9rem;
-      }
-
-      .faq-list {
+      .callout-note .btn {
         width: 100%;
+        justify-content: center;
+        text-align: center;
       }
     }
 
-    @media (max-width: 640px) {
-      .stat-cards-grid {
-        grid-template-columns: 1fr;
+    /* Standard Mobile (380px - 575px) */
+    @media (max-width: 575px) {
+      :root {
+        --container-pad: 1rem;
       }
-    }
-
-    @media (max-width: 480px) {
       .page-hero-res {
-        padding: 70px 0 34px;
+        padding: 72px 0 36px;
       }
-
       .page-hero-res h1 {
-        font-size: clamp(1.45rem, 7vw, 1.9rem);
+        font-size: clamp(1.5rem, 7vw, 1.95rem);
       }
-
-      .hero-subtitle {
-        font-size: 0.875rem;
+      .hero-desc {
+        font-size: 0.9rem;
+        line-height: 1.65;
       }
-
       .hero-badge-row {
         gap: 0.35rem;
       }
-
       .page-hero-res .badge {
-        font-size: clamp(0.6rem, 2.8vw, 0.67rem);
-        padding: 0.28rem 0.6rem;
-        gap: 3px;
+        font-size: clamp(0.58rem, 2.8vw, 0.68rem);
+        padding: 0.28rem 0.65rem;
+        gap: 4px;
         line-height: 1.25;
       }
-
       .page-hero-res .badge svg {
         width: 10px;
         height: 10px;
       }
-
-      .qualify-text h2 {
-        font-size: clamp(1.25rem, 6vw, 1.7rem);
+      .proposal-criteria-grid {
+        grid-template-columns: 1fr;
       }
-
       .step-num {
-        width: 40px;
-        height: 40px;
-        font-size: 0.85rem;
+        width: 42px;
+        height: 42px;
+        font-size: 0.88rem;
         border-radius: 10px;
       }
-
-      .faq-question {
-        font-size: 0.875rem;
-        min-height: 52px;
-      }
-
-      .cta-banner h2 {
-        font-size: clamp(1.2rem, 7vw, 1.9rem);
-      }
-
-      .cta-banner p {
-        font-size: 0.85rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .cta-btn-row {
-        gap: 0.75rem;
-      }
-
-      .stat-card-big {
+      .pillar-card {
         padding: clamp(1rem, 4vw, 1.5rem);
       }
-    }
-
-    @media (max-width: 375px) {
-      .page-hero-res {
-        padding: 65px 0 30px;
+      .factor-card,
+      .component-card,
+      .why-bill-box {
+        padding: 1.25rem;
       }
-
-      .page-hero-res h1 {
-        font-size: clamp(1.3rem, 8vw, 1.5rem);
+      .cost-factors-chips {
+        gap: 0.35rem;
       }
-
-      .hero-subtitle {
-        font-size: 0.85rem;
+      .cost-chip {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.75rem;
       }
-
-      .qualify-text h2 {
-        font-size: 1.2rem;
-      }
-
-      .hero-badge-row {
-        gap: 0.3rem;
-      }
-
-      .page-hero-res .badge {
-        font-size: clamp(0.58rem, 3vw, 0.64rem);
-        padding: 0.24rem 0.55rem;
-        line-height: 1.25;
-      }
-
-      .section-header-center h2 {
-        font-size: clamp(1.2rem, 7vw, 1.6rem);
-      }
-
-      .qualify-text h2 {
-        font-size: clamp(1.1rem, 7vw, 1.4rem);
-      }
-
-      .cta-banner h2 {
-        font-size: clamp(1.1rem, 8vw, 1.5rem);
-      }
-
       .faq-question {
-        font-size: 0.83rem;
+        font-size: 0.88rem;
+        min-height: 52px;
       }
     }
 
-    @media (max-width: 320px) {
+    /* Small Mobile (< 380px, e.g. iPhone SE, Fold) */
+    @media (max-width: 379px) {
+      :root {
+        --container-pad: 0.75rem;
+      }
       .page-hero-res {
-        padding: 58px 0 24px;
+        padding: 68px 0 28px;
       }
-
       .page-hero-res h1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
-
-      .hero-subtitle {
-        font-size: 0.8rem;
+      .hero-desc {
+        font-size: 0.84rem;
       }
-
       .page-hero-res .badge {
         font-size: 0.58rem;
-        padding: 0.22rem 0.5rem;
-        line-height: 1.25;
+        padding: 0.25rem 0.5rem;
       }
-
-      .section-header-center h2 {
-        font-size: 1.15rem;
-      }
-
-      .cta-banner h2 {
-        font-size: 1.1rem;
-      }
-
-      .faq-question {
+      .step-num {
+        width: 36px;
+        height: 36px;
         font-size: 0.8rem;
       }
-
       .data-table th,
       .data-table td {
-        padding: 0.6rem 0.75rem;
-        font-size: 0.72rem;
+        padding: 0.65rem 0.75rem;
+        font-size: 0.76rem;
+      }
+      .pillar-card,
+      .factor-card,
+      .component-card,
+      .why-bill-box {
+        padding: 1rem;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       *,
       *::before,
       *::after {
@@ -1037,15 +1006,288 @@
         transition-duration: 0.01ms !important;
       }
     }
+  
+
+    /* ── GUARANTEED HIGH-CONTRAST DARK HERO (Matches Home Page) ── */
+    body .page-hero-res,
+    body.residential-page .page-hero-res,
+    .page-hero-res {
+      background: linear-gradient(160deg, #172219 0%, #1E2D22 55%, #1a2e1c 100%) !important;
+      padding: clamp(90px, 14vw, 150px) 0 clamp(44px, 8vw, 90px) !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    body .page-hero-res::before,
+    .page-hero-res::before {
+      content: '' !important;
+      display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
+      background-size: 60px 60px !important;
+      pointer-events: none !important;
+    }
+    .page-hero-res .hero-photo {
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+      display: block !important;
+    }
+    .page-hero-res .hero-photo img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      opacity: 0.15 !important;
+    }
+    .hero-glow-res {
+      position: absolute !important;
+      top: -15% !important;
+      right: -10% !important;
+      width: clamp(150px, 40vw, 600px) !important;
+      height: clamp(150px, 40vw, 600px) !important;
+      background: radial-gradient(circle, rgba(24, 184, 92, 0.16) 0%, transparent 60%) !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
+    .hero-glow-res-2 {
+      position: absolute !important;
+      bottom: -10% !important;
+      left: -10% !important;
+      width: clamp(120px, 30vw, 400px) !important;
+      height: clamp(120px, 30vw, 400px) !important;
+      background: radial-gradient(circle, rgba(31, 199, 192, 0.09) 0%, transparent 60%) !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
+    .page-hero-res .container {
+      position: relative !important;
+      z-index: 2 !important;
+    }
+    body .page-hero-res h1,
+    .page-hero-res h1 {
+      font-family: var(--font-heading) !important;
+      font-size: clamp(1.85rem, 5vw, 3.5rem) !important;
+      font-weight: 800 !important;
+      color: #ffffff !important;
+      line-height: 1.1 !important;
+      letter-spacing: -0.03em !important;
+      margin-bottom: 1.25rem !important;
+    }
+    body .page-hero-res h1 .accent,
+    .page-hero-res h1 .accent {
+      background: linear-gradient(135deg, #18B85C 0%, #1FC7C0 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    body .page-hero-res p,
+    .page-hero-res p,
+    .page-hero-res .hero-subtitle,
+    .page-hero-res .hero-desc {
+      font-size: clamp(0.92rem, 1.8vw, 1.15rem) !important;
+      color: rgba(255, 255, 255, 0.88) !important;
+      line-height: 1.7 !important;
+    }
+    .page-hero-res .breadcrumb a {
+      color: rgba(255, 255, 255, 0.65) !important;
+    }
+    .page-hero-res .breadcrumb a:hover {
+      color: #18B85C !important;
+    }
+    .page-hero-res .breadcrumb span {
+      color: rgba(255, 255, 255, 0.35) !important;
+    }
+    .page-hero-res .breadcrumb span:last-child {
+      color: rgba(255, 255, 255, 0.88) !important;
+      font-weight: 600 !important;
+    }
+    .page-hero-res .badge {
+      background: rgba(24, 184, 92, 0.15) !important;
+      border: 1px solid rgba(24, 184, 92, 0.35) !important;
+      color: #4ade80 !important;
+    }
+
+    /* ── 7-TIER RESPONSIVE OVERRIDES (Matches Home Page) ── */
+    @media (min-width: 1440px) {
+      .container {
+        max-width: 1360px !important;
+        padding-inline: 2rem !important;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1439px) {
+      .container {
+        max-width: 1200px !important;
+        padding-inline: 1.5rem !important;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      .container {
+        max-width: 960px !important;
+        padding-inline: 1.5rem !important;
+      }
+      .stat-cards-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+      .qualify-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .stat-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .qualify-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .components-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      .stat-cards-grid,
+      .qualify-grid,
+      .components-grid,
+      .process-steps-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .hero-cta-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      .hero-cta-row > * {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+    }
+    @media (max-width: 575px) {
+      :root {
+        --container-pad: 1rem;
+      }
+      .container {
+        padding-inline: 1rem !important;
+      }
+      .page-hero-res {
+        padding: 82px 0 42px !important;
+      }
+      .page-hero-res h1 {
+        font-size: 1.65rem !important;
+      }
+      .hero-subtitle,
+      .hero-desc {
+        font-size: 0.9rem !important;
+      }
+      .stat-cards-grid,
+      .qualify-grid,
+      .components-grid,
+      .process-steps-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .stat-card,
+      .qualify-card,
+      .component-card,
+      .process-step {
+        padding: 1.15rem 1rem !important;
+        border-radius: 16px !important;
+      }
+      .hero-cta-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+      .hero-cta-row > * {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+      }
+    }
+    @media (max-width: 379px) {
+      :root {
+        --container-pad: 0.75rem;
+      }
+      .container {
+        padding-inline: 0.75rem !important;
+      }
+      .page-hero-res {
+        padding: 76px 0 34px !important;
+      }
+      .page-hero-res h1 {
+        font-size: 1.45rem !important;
+        letter-spacing: -0.02em !important;
+      }
+      .hero-subtitle,
+      .hero-desc {
+        font-size: 0.85rem !important;
+      }
+    }
+
+
+    /* ============================================================
+       SERVICES COLOR HARMONY & HOVER SYNCING
+    ============================================================ */
+    .page-hero .breadcrumb a,
+    .page-hero-res .breadcrumb a {
+      color: rgba(255, 255, 255, 0.78) !important;
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+    .page-hero .breadcrumb a:hover,
+    .page-hero-res .breadcrumb a:hover {
+      color: #22c55e !important;
+      text-decoration: underline !important;
+    }
+    .page-hero .breadcrumb span,
+    .page-hero-res .breadcrumb span {
+      color: rgba(255, 255, 255, 0.4) !important;
+    }
+    .page-hero .breadcrumb span:last-child,
+    .page-hero-res .breadcrumb span:last-child {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+    }
+    .pillar-card,
+    .benefit-card,
+    .case-card,
+    .sector-card {
+      transition: transform 0.28s ease, border-color 0.2s ease, box-shadow 0.28s ease !important;
+    }
+    .pillar-card:hover,
+    .benefit-card:hover,
+    .case-card:hover {
+      border-color: #18B85C !important;
+      box-shadow: 0 14px 34px rgba(23, 34, 25, 0.08) !important;
+      transform: translateY(-4px);
+    }
+    .pillar-card:hover h3,
+    .benefit-card:hover h3,
+    .case-card:hover h3 {
+      color: #0D7A3E !important;
+      transition: color 0.2s ease;
+    }
+    .btn-primary {
+      background: #18B85C !important;
+      border-color: #18B85C !important;
+      color: #ffffff !important;
+    }
+    .btn-primary:hover {
+      background: #14a050 !important;
+      border-color: #14a050 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(24, 184, 92, 0.4) !important;
+    }
+
   </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://fgesolar.in/services/residential#service",
-    "name": "Residential rooftop solar installation in Kerala",
-    "serviceType": "Residential rooftop solar installation",
-    "description": "Rooftop solar system design, installation, subsidy support, and KSEB net metering assistance for Kerala homes.",
+    "name": "Residential Solar Panels for Homes in Kerala",
+    "serviceType": "Residential solar panel installation",
+    "description": "Switch to residential solar panels designed around your home and consumption. Rooftop solar system design, installation, subsidy support, and KSEB net metering assistance for Kerala homes.",
     "url": "https://fgesolar.in/services/residential",
     "provider": { "@id": "https://fgesolar.in/#localbusiness" },
     "areaServed": { "@type": "State", "name": "Kerala" }
@@ -1054,52 +1296,91 @@
 
   <!-- codex-seo-generated:start -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Residential Rooftop Solar Installation in Kerala | FGE Solar",
-  "headline": "Residential Rooftop Solar Installation in Kerala | FGE Solar",
-  "description": "Reduce your KSEB bill by 80–90% with residential rooftop solar in Kerala. Get ₹78,000 PM Surya Ghar subsidy. FGE Solar handles everything — MNRE empanelled, KSEB approved. Free site visit.",
-  "url": "https://fgesolar.in/services/residential",
-  "inLanguage": "en-IN",
-  "dateModified": "2026-07-24",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "FGE Solar",
-    "url": "https://fgesolar.in/"
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Residential Solar Panels for Homes in Kerala | FGE Solar",
+    "headline": "Residential Solar Panels for Homes in Kerala",
+    "description": "Switch to residential solar panels designed around your Kerala home and electricity consumption. MNRE empanelled, KSEB approved, PM Surya Ghar registered installer.",
+    "url": "https://fgesolar.in/services/residential",
+    "inLanguage": "en-IN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "FGE Solar",
+      "url": "https://fgesolar.in/"
+    }
   }
-}
   </script>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://fgesolar.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://fgesolar.in/services/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Residential Rooftop Solar Installation in Kerala",
-      "item": "https://fgesolar.in/services/residential"
-    }
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://fgesolar.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://fgesolar.in/services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Residential Solar Panels for Homes in Kerala",
+        "item": "https://fgesolar.in/services/residential"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are residential solar panels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Residential solar panels are photovoltaic modules installed at houses or other eligible residential properties to generate electricity from sunlight. A complete residential solar system normally includes solar panels, an inverter, mounting structures, electrical protections, cabling and monitoring equipment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do residential solar panels cost in Kerala?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost of residential solar depends on system capacity, panel and inverter specifications, roof conditions, mounting structure, electrical work and whether battery storage is included. As an indicative example, the current FGE Solar pricing section places a 3 kW residential project at approximately ₹1.85–₹2.15 lakh before applicable subsidy. A site visit is required for an accurate quotation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of a 3 kW residential solar panel system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The current FGE Solar reference pricing places an indicative 3 kW installation at approximately ₹1.85–₹2.15 lakh before applicable residential subsidy. The final price can vary according to the selected equipment, mounting structure and site conditions. Eligible residential households may currently qualify for central financial assistance of up to ₹78,000 for systems of 3 kW or more under the applicable PM Surya Ghar subsidy structure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many residential solar panels do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The number of panels depends on required system capacity, individual panel wattage, available roof area, electricity consumption, shading and system layout. For example, two 5 kW residential systems can use a different number of modules if different panel wattages are selected. System design should therefore start with the required capacity rather than a fixed number of panels."
+        }
+      }
+    ]
+  }
   </script>
   <!-- codex-seo-generated:end -->
-  <link rel="stylesheet" href="/assets/css/fge-design-system.css?v=20260827-header">
-
+  <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 
 <body>
@@ -1240,276 +1521,517 @@
           <div class="hero-badge-row">
             <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                 <use href="#i-check" />
-              </svg>MNRE Empanelled</span>
+              </svg>MNRE EMPANELLED</span>
             <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                 <use href="#i-check" />
-              </svg>KSEB Approved</span>
+              </svg>KSEB APPROVED</span>
             <span class="badge badge-white"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                 <use href="#i-check" />
-              </svg>PM Surya Ghar Registered</span>
+              </svg>PM SURYA GHAR REGISTERED</span>
           </div>
-          <h1>Residential Rooftop SolarInstallation in Kerala</h1>
-          <p class="hero-subtitle">Reduce your KSEB bill by 80–90%. Get ₹78,000 in government subsidy. FGE handles the
-            entire process — survey, installation, net metering, and subsidy paperwork.</p>
+          <h1>Residential Solar Panels for Homes in Kerala</h1>
+          <div class="hero-desc-group">
+            <p class="hero-desc">Switch to residential solar panels designed around your home, electricity consumption and available rooftop space.</p>
+            <p class="hero-desc">FGE Solar provides end-to-end residential solar installation in Kerala, from roof assessment and system design to panel installation, documentation, metering coordination and post-installation support.</p>
+            <p class="hero-desc">Whether you are looking for a small rooftop system for a low-consumption home or a larger residential solar system for air conditioning, appliances and EV charging, we help you identify the right capacity before you invest.</p>
+          </div>
           <div class="hero-cta-row">
-            <a href="/contact" class="btn btn-primary btn-lg">Book Free Site Visit</a>
-            <a href="/calculator" class="btn btn-outline btn-lg">Calculate My Savings</a>
+            <a href="/contact" class="btn btn-primary btn-lg">Book a Free Site Visit</a>
+            <a href="/calculator" class="btn btn-outline btn-lg">Calculate My Solar Savings</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STAT CARDS -->
+    <!-- CORE VALUE PILLARS -->
     <section class="stat-cards-section">
       <div class="container">
         <div class="stat-cards-grid">
-          <div class="stat-card-big fade-up">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
-                <polyline points="17 18 23 18 23 12" />
-              </svg>
+
+          <!-- Pillar 1: Potential Electricity Savings -->
+          <div class="pillar-card fade-up">
+            <div>
+              <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
+                  <polyline points="17 18 23 18 23 12" />
+                </svg>
+              </div>
+              <h3>Potential Electricity Savings</h3>
+              <p>A correctly sized residential rooftop solar system can reduce the amount of electricity your home needs to purchase from the grid.</p>
+              <div style="margin-top:0.75rem;">
+                <span style="font-size:0.85rem;font-weight:700;color:#172219;">Your actual savings depend on:</span>
+                <ul class="card-list">
+                  <li>Electricity consumption</li>
+                  <li>Solar-system capacity</li>
+                  <li>Daytime energy use</li>
+                  <li>Available rooftop area</li>
+                  <li>Shading</li>
+                  <li>System performance</li>
+                  <li>Applicable electricity tariffs and metering rules</li>
+                </ul>
+              </div>
             </div>
-            <div class="stat-num">80–90%</div>
-            <div class="stat-label">KSEB Bill Reduction</div>
-            <div class="stat-sub">Most Kerala homes reduce their electricity bill to near zero — sometimes getting a
-              credit from KSEB each month.</div>
-          </div>
-          <div class="stat-card-big fade-up" style="animation-delay:0.1s;">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="22" x2="21" y2="22" />
-                <line x1="6" y1="18" x2="6" y2="11" />
-                <line x1="10" y1="18" x2="10" y2="11" />
-                <line x1="14" y1="18" x2="14" y2="11" />
-                <line x1="18" y1="18" x2="18" y2="11" />
-                <polygon points="12 2 20 7 4 7" />
-              </svg>
+            <div class="callout-note" style="margin-top:1rem;font-size:0.82rem;">
+              Use your recent KSEB bills and a site assessment to estimate the right system rather than relying on a standard percentage reduction.
             </div>
-            <div class="stat-num">₹78,000</div>
-            <div class="stat-label">Government Subsidy</div>
-            <div class="stat-sub">PM Surya Ghar Muft Bijli Yojana subsidy for 3kW residential systems. Directly credited
-              to your bank account.</div>
           </div>
-          <div class="stat-card-big fade-up" style="animation-delay:0.2s;">
-            <div class="stat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 4 23 10 17 10" />
-                <polyline points="1 20 1 14 7 14" />
-                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-              </svg>
+
+          <!-- Pillar 2: Up to ₹78,000 Central Subsidy -->
+          <div class="pillar-card fade-up" style="animation-delay:0.1s;">
+            <div>
+              <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="22" x2="21" y2="22" />
+                  <line x1="6" y1="18" x2="6" y2="11" />
+                  <line x1="10" y1="18" x2="10" y2="11" />
+                  <line x1="14" y1="18" x2="14" y2="11" />
+                  <line x1="18" y1="18" x2="18" y2="11" />
+                  <polygon points="12 2 20 7 4 7" />
+                </svg>
+              </div>
+              <h3>Up to ₹78,000 Central Subsidy</h3>
+              <p>Eligible residential households may receive Central Financial Assistance through the PM Surya Ghar: Muft Bijli Yojana.</p>
+              <div style="margin-top:0.75rem;">
+                <span style="font-size:0.85rem;font-weight:700;color:#172219;">The applicable central subsidy structure currently provides:</span>
+                <div class="subsidy-tiers">
+                  <div class="subsidy-tier-item">
+                    <span><strong>1 kW:</strong></span>
+                    <span>Up to <strong>₹30,000</strong></span>
+                  </div>
+                  <div class="subsidy-tier-item">
+                    <span><strong>2 kW:</strong></span>
+                    <span>Up to <strong>₹60,000</strong></span>
+                  </div>
+                  <div class="subsidy-tier-item">
+                    <span><strong>3 kW and above:</strong></span>
+                    <span>Up to <strong>₹78,000</strong></span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="stat-num">3–4 Yrs</div>
-            <div class="stat-label">Payback Period</div>
-            <div class="stat-sub">Your system pays for itself in 3–4 years. With a 25-year panel life, that's over 20
-              years of free electricity.</div>
+            <div>
+              <p style="font-size:0.82rem;color:#565D56;margin-bottom:0.5rem;">Eligibility, approval and subsidy payment are determined through the official scheme process.</p>
+              <div class="callout-note" style="font-size:0.82rem;">
+                FGE Solar assists eligible residential customers with the applicable documentation and installation process.
+              </div>
+            </div>
           </div>
+
+          <!-- Pillar 3: Long-Term Electricity Savings -->
+          <div class="pillar-card fade-up" style="animation-delay:0.2s;">
+            <div>
+              <div class="stat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10" />
+                  <polyline points="1 20 1 14 7 14" />
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                </svg>
+              </div>
+              <h3>Long-Term Electricity Savings</h3>
+              <p>Residential solar panels are a long-term home-energy investment.</p>
+              <div style="margin-top:0.75rem;">
+                <span style="font-size:0.85rem;font-weight:700;color:#172219;">Your estimated payback depends on:</span>
+                <ul class="card-list">
+                  <li>System cost</li>
+                  <li>Eligible subsidy</li>
+                  <li>Electricity usage</li>
+                  <li>Solar generation</li>
+                  <li>Current and future electricity tariffs</li>
+                  <li>Equipment performance</li>
+                  <li>Maintenance requirements</li>
+                </ul>
+              </div>
+              <p style="font-size:0.82rem;color:#565D56;margin-top:0.5rem;">Instead of relying on a fixed payback claim, FGE Solar calculates an indicative return based on your actual electricity bill and proposed system.</p>
+            </div>
+            <div style="margin-top:1.25rem;">
+              <a href="/calculator" class="btn btn-outline-dark w-full" style="text-align:center;justify-content:center;">Calculate My Residential Solar Savings</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- IS SOLAR RIGHT FOR YOU -->
+    <!-- SUITABILITY SECTION -->
     <section class="qualify-section">
       <div class="container">
-        <div class="qualify-layout">
-          <div class="qualify-text fade-up">
-            <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Qualifying Criteria</span>
-            <h2>Is Your Home Ready for Solar?</h2>
-            <p>Solar is a great fit for most Kerala homes. Check the criteria below — if you meet 3 or more, you're
-              almost certainly a strong candidate.</p>
-            <div class="callout-note">
-              Not sure? Our engineer will assess your property for free and explain the likely eligibility and next checks —
-              including your exact subsidy amount.
-            </div>
-          </div>
-          <div class="fade-up" style="animation-delay:0.1s;">
-            <ul class="checklist">
-              <li class="checklist-item">
-                <span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg></span>
-                <div>
-                  <strong>Monthly KSEB bill above ₹2,000</strong>
-                  <p>The higher your bill, the faster your payback. Bills above ₹3,000/month are ideal for rooftop
-                    solar.</p>
-                </div>
-              </li>
-              <li class="checklist-item">
-                <span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg></span>
-                <div>
-                  <strong>Roof area of at least 150–200 sq ft available</strong>
-                  <p>A 3kW system needs roughly 200 sq ft of shadow-free roof space. More roof = bigger system = bigger
-                    savings.</p>
-                </div>
-              </li>
-              <li class="checklist-item">
-                <span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg></span>
-                <div>
-                  <strong>South or west-facing roof orientation</strong>
-                  <p>South-facing roofs get maximum sunlight in India. East or west-facing roofs still work well —
-                    typically 10–15% less output.</p>
-                </div>
-              </li>
-              <li class="checklist-item">
-                <span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg></span>
-                <div>
-                  <strong>KSEB domestic connection (LT-1A/1B/1C)</strong>
-                  <p>PM Surya Ghar subsidy and KSEB net metering are available for domestic electricity connections.</p>
-                </div>
-              </li>
-              <li class="checklist-item">
-                <span class="check-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg></span>
-                <div>
-                  <strong>Planning to stay in the property for 5+ years</strong>
-                  <p>Solar is a long-term investment. The system significantly increases property value and saves lakhs
-                    over its lifetime.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
+        <div class="section-header-center fade-up" style="max-width:760px;">
+          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Suitability Assessment</span>
+          <h2>Is Your Home Suitable for Residential Solar?</h2>
+          <p>Residential rooftop solar panels work well for many Kerala homes, but the right system depends on more than simply having an empty roof. Before recommending a system, FGE Solar reviews your electricity consumption, available rooftop area, shading, roof condition and future energy requirements. Consider the following factors.</p>
         </div>
+
+        <div class="suitability-grid fade-up">
+
+          <!-- Factor 1 -->
+          <div class="factor-card">
+            <h3>Your Electricity Consumption</h3>
+            <p>Homes with higher electricity consumption generally have more opportunity to offset grid electricity with rooftop solar.</p>
+            <p>Instead of choosing residential solar panels purely according to your bill amount, review the actual electricity units consumed across several billing periods. This helps determine a more appropriate system capacity.</p>
+          </div>
+
+          <!-- Factor 2 -->
+          <div class="factor-card">
+            <h3>Available Rooftop Space</h3>
+            <p>Your home needs sufficient usable, structurally suitable and relatively shadow-free roof space.</p>
+            <span style="font-size:0.85rem;font-weight:700;color:#172219;margin-top:0.25rem;">The exact area required depends on:</span>
+            <ul class="card-list" style="margin:0.25rem 0 0.5rem;">
+              <li>Panel dimensions</li>
+              <li>Panel wattage</li>
+              <li>Roof type</li>
+              <li>Panel layout</li>
+              <li>Maintenance access</li>
+              <li>Required spacing</li>
+              <li>Shading conditions</li>
+            </ul>
+            <p style="font-size:0.82rem;color:#565D56;">A site assessment determines how much usable solar capacity your roof can realistically accommodate.</p>
+          </div>
+
+          <!-- Factor 3 -->
+          <div class="factor-card">
+            <h3>Roof Orientation and Shading</h3>
+            <p>Solar output depends on the amount of usable sunlight reaching the panels.</p>
+            <span style="font-size:0.85rem;font-weight:700;color:#172219;margin-top:0.25rem;">Our assessment considers:</span>
+            <ul class="card-list" style="margin:0.25rem 0 0.5rem;">
+              <li>Roof orientation</li>
+              <li>Surrounding buildings</li>
+              <li>Trees</li>
+              <li>Water tanks</li>
+              <li>Parapet walls</li>
+              <li>Seasonal shadows</li>
+              <li>Panel tilt and layout</li>
+            </ul>
+            <p style="font-size:0.82rem;color:#565D56;">A roof does not need to face one specific direction to qualify for solar. The objective is to develop a layout that maximises usable generation from the available space.</p>
+          </div>
+
+          <!-- Factor 4 & 5 -->
+          <div class="factor-card">
+            <h3>Residential Electricity Connection</h3>
+            <p>Eligible residential consumers can explore rooftop-solar installation and applicable government-support schemes. For grid-connected systems, technical feasibility, metering and final connectivity remain subject to the applicable KSEB process.</p>
+            <hr style="border:0;border-top:1px solid #D8E4DA;margin:0.75rem 0;">
+            <h3>Your Long-Term Electricity Requirements</h3>
+            <p>Tell us if you expect your household electricity usage to increase. Future requirements may include:</p>
+            <ul class="card-list" style="margin:0.25rem 0 0.5rem;">
+              <li>Additional air conditioners</li>
+              <li>Electric vehicles</li>
+              <li>Heat pumps</li>
+              <li>Home office equipment</li>
+              <li>Larger water pumps</li>
+              <li>Additional appliances</li>
+            </ul>
+            <p style="font-size:0.82rem;color:#565D56;">Your residential solar system should account for realistic future needs without unnecessarily oversizing the installation.</p>
+          </div>
+
+        </div>
+
+        <!-- Suitability Callout -->
+        <div class="callout-note fade-up" style="margin-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;background:#fff;border-color:#18B85C;padding:1.5rem;">
+          <div>
+            <strong style="font-size:1.05rem;color:#172219;display:block;margin-bottom:0.25rem;">Not sure what your home needs?</strong>
+            <p style="margin:0;color:#565D56;font-size:0.9rem;">Our team can assess the property and recommend an appropriate residential solar capacity.</p>
+          </div>
+          <a href="/contact" class="btn btn-primary">Book a Free Residential Solar Assessment</a>
+        </div>
+
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
+    <!-- HOW WE COMPLETE RESIDENTIAL SOLAR INSTALLATION -->
     <section class="process-section">
       <div class="container">
-        <div class="section-header-center fade-up">
-          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">The Process</span>
-          <h2>How We Install Your Solar System</h2>
-          <p>A smooth, hassle-free process from your first call to the day your system goes live. We handle everything —
-            you just watch your bill drop.</p>
+        <div class="section-header-center fade-up" style="max-width:700px;">
+          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Structured Process</span>
+          <h2>How We Complete Residential Solar Panel Installation</h2>
+          <p>A reliable residential solar power installation begins long before the panels are fixed to your roof. FGE Solar follows a structured process from electricity-bill review through commissioning.</p>
         </div>
         <div class="process-steps">
+
+          <!-- Step 1 -->
           <div class="process-step fade-up">
             <div class="step-num">01</div>
             <div class="step-content">
-              <h3>Free Site Visit &amp; Assessment</h3>
-              <p>Our certified engineer visits your home, inspects your roof (area, orientation, shading, structural
-                strength), reviews your KSEB bills, and recommends the ideal system size for your specific situation.
-              </p>
-              <span class="step-time">Within 48 hours of enquiry</span>
+              <h3>Free Home Solar Assessment</h3>
+              <p>Our team visits your property and assesses:</p>
+              <ul class="card-list" style="margin:0.25rem 0 0.5rem;">
+                <li>Available rooftop area</li>
+                <li>Roof type and condition</li>
+                <li>Shading</li>
+                <li>Installation access</li>
+                <li>Existing electrical infrastructure</li>
+                <li>Electricity consumption</li>
+                <li>Future energy requirements</li>
+              </ul>
+              <p>We also review your recent KSEB bills to understand your household usage pattern. The objective is to recommend a residential solar system based on actual requirements rather than a standard package.</p>
             </div>
           </div>
+
+          <!-- Step 2 -->
           <div class="process-step fade-up" style="animation-delay:0.05s;">
             <div class="step-num">02</div>
             <div class="step-content">
-              <h3>Detailed Proposal &amp; Quotation</h3>
-              <p>You receive a written proposal with exact system specifications, brand details, cost breakdown, subsidy
-                amount, projected savings, and payback period — all in writing, no hidden charges.</p>
-              <span class="step-time">Within 24 hours of site visit</span>
+              <h3>Residential Solar System Design &amp; Quotation</h3>
+              <p>After the assessment, you receive a detailed proposal. The proposal clearly identifies:</p>
+              <div class="proposal-criteria-grid">
+                <ul class="card-list" style="margin:0;">
+                  <li>Recommended system capacity</li>
+                  <li>Solar-panel brand and model</li>
+                  <li>Panel wattage</li>
+                  <li>Inverter make and model</li>
+                  <li>Mounting structure</li>
+                  <li>Electrical protections</li>
+                  <li>Estimated solar generation</li>
+                </ul>
+                <ul class="card-list" style="margin:0;">
+                  <li>Available product warranties</li>
+                  <li>Workmanship coverage</li>
+                  <li>Installation scope</li>
+                  <li>Indicative residential solar panels cost</li>
+                  <li>Eligible subsidy estimate</li>
+                  <li>Estimated electricity savings</li>
+                </ul>
+              </div>
+              <p style="margin-top:0.5rem;">This makes it easier to compare quotations from different residential solar companies on more than price alone.</p>
+              <div style="margin-top:0.75rem;">
+                <a href="/contact" class="btn btn-outline-dark btn-sm">Request a Residential Solar Quote</a>
+              </div>
             </div>
           </div>
+
+          <!-- Step 3 -->
           <div class="process-step fade-up" style="animation-delay:0.1s;">
             <div class="step-num">03</div>
             <div class="step-content">
               <h3>Documentation &amp; Approvals</h3>
-              <p>FGE handles all paperwork: PM Surya Ghar portal registration, KSEB net metering application, DISCOM
-                approval. You just provide your Aadhaar, electricity bill, and bank details — we do the rest.</p>
-              <span class="step-time">5–7 working days</span>
+              <p>For eligible grid-connected residential installations, FGE Solar assists with the applicable documentation and approval process. This can include support with:</p>
+              <ul class="card-list" style="margin:0.25rem 0 0.5rem;">
+                <li>PM Surya Ghar portal procedures</li>
+                <li>Required customer documents</li>
+                <li>KSEB-related applications</li>
+                <li>Technical documentation</li>
+                <li>Metering procedures</li>
+                <li>Inspection coordination</li>
+              </ul>
+              <p>Customers provide the required identity, electricity-connection and bank documentation. Final technical approval and subsidy eligibility remain under the respective authorities.</p>
             </div>
           </div>
+
+          <!-- Step 4 -->
           <div class="process-step fade-up" style="animation-delay:0.15s;">
             <div class="step-num">04</div>
             <div class="step-content">
-              <h3>Professional Installation</h3>
-              <p>Our trained installation team mounts the panels using aluminum framing systems, runs the wiring,
-                installs the inverter and meters, and commissions the system — all in 1–2 days with zero roof damage.
-              </p>
-              <span class="step-time">1–2 days installation</span>
+              <h3>Professional Residential Solar Installation</h3>
+              <p>Once the required project stages are complete, the installation team proceeds according to the approved design. A typical residential solar panel installation includes:</p>
+              <div class="proposal-criteria-grid">
+                <ul class="card-list" style="margin:0;">
+                  <li>Mounting structure</li>
+                  <li>Solar PV panels</li>
+                  <li>Solar inverter</li>
+                  <li>DC cabling</li>
+                  <li>AC cabling</li>
+                  <li>Earthing</li>
+                </ul>
+                <ul class="card-list" style="margin:0;">
+                  <li>Surge protection</li>
+                  <li>Electrical isolators</li>
+                  <li>Distribution equipment</li>
+                  <li>Monitoring configuration</li>
+                  <li>Required metering integration</li>
+                </ul>
+              </div>
+              <p style="margin-top:0.5rem;">Installation time varies with system capacity, roof type, weather, site complexity and approval requirements. After installation, the electrical and mechanical components are inspected before commissioning.</p>
             </div>
           </div>
+
+          <!-- Step 5 -->
           <div class="process-step fade-up" style="animation-delay:0.2s;">
             <div class="step-num">05</div>
             <div class="step-content">
-              <h3>KSEB Inspection, Net Metering &amp; Subsidy</h3>
-              <p>We coordinate the KSEB technical inspection, get your bidirectional meter installed, activate net
-                metering, and support the subsidy claim. CFA is processed only after the required installation,
-                inspection/approval and portal checks; timing varies and no installer can promise a payment date.</p>
-              <span class="step-time">Track each approval in the official portal</span>
+              <h3>Inspection, Metering &amp; Subsidy Support</h3>
+              <p>For eligible grid-connected residential systems, FGE Solar assists with the applicable inspection and metering procedures.</p>
+              <p>Once the required approvals and commissioning stages are complete, eligible customers can proceed through the official subsidy process.</p>
+              <p>Subsidy approval and payment remain subject to the PM Surya Ghar scheme, electricity-distribution company requirements and government processing.</p>
+              <div class="callout-note" style="margin-top:0.5rem;background:#f9faf9;">
+                No solar installer can guarantee approval or a specific payment date.
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- SAVINGS TABLE -->
+    <!-- RESIDENTIAL SOLAR PANELS COST AND SAVINGS IN KERALA -->
     <section class="savings-table-section">
       <div class="container">
-        <div class="section-header-center fade-up">
-          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Reference Pricing</span>
-          <h2>Savings by Bill Amount</h2>
-          <p>Indicative figures based on current KSEB tariffs and PM Surya Ghar subsidy slabs. Get a precise quote after
-            your free site visit.</p>
+        <div class="section-header-center fade-up" style="max-width:760px;">
+          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Pricing Benchmark</span>
+          <h2>Residential Solar Panels Cost and Savings in Kerala</h2>
+          <p>The price of residential solar panels should not be evaluated only as a price-per-kW figure.</p>
         </div>
+
+        <div class="cost-factors-wrap fade-up">
+          <span style="font-weight:700;color:#172219;font-size:0.95rem;">The final cost of a residential solar panel system depends on:</span>
+          <div class="cost-factors-chips">
+            <span class="cost-chip">Required system capacity</span>
+            <span class="cost-chip">Solar-panel brand and technology</span>
+            <span class="cost-chip">Inverter</span>
+            <span class="cost-chip">Mounting structure</span>
+            <span class="cost-chip">Roof type</span>
+            <span class="cost-chip">Cable runs</span>
+            <span class="cost-chip">Electrical protections</span>
+            <span class="cost-chip">Site accessibility</span>
+            <span class="cost-chip">Installation complexity</span>
+            <span class="cost-chip">Battery storage, if required</span>
+            <span class="cost-chip">Warranty package</span>
+            <span class="cost-chip">Additional civil or electrical work</span>
+          </div>
+        </div>
+
+        <p style="margin:1.5rem 0 0.75rem;font-size:0.95rem;color:#172219;font-weight:600;">Below is an indicative starting point based on the current FGE Solar page.</p>
+
         <div class="table-wrapper fade-up">
           <div class="table-scroll">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>Monthly KSEB Bill</th>
-                  <th>System Size</th>
-                  <th>Approx. Cost</th>
-                  <th>After Subsidy</th>
-                  <th>Monthly Saving</th>
-                  <th>Payback Period</th>
+                  <th>Monthly Electricity Bill</th>
+                  <th>Indicative System</th>
+                  <th>Approx. Project Cost</th>
+                  <th>Indicative Cost After Maximum Applicable Residential Subsidy*</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>₹3,000 – ₹5,000</td>
-                  <td>3 kW</td>
-                  <td>₹1.85 – 2.15 L</td>
-                  <td>₹1.07 – 1.37 L</td>
-                  <td>₹2,500 – ₹4,000</td>
-                  <td>3 – 4 years</td>
+                  <td><strong>₹3,000–₹5,000</strong></td>
+                  <td>Around 3 kW</td>
+                  <td>₹1.85–₹2.15 lakh</td>
+                  <td><strong>₹1.07–₹1.37 lakh</strong></td>
                 </tr>
                 <tr class="highlight-row">
-                  <td>₹5,000 – ₹8,000</td>
-                  <td>5 kW</td>
-                  <td>₹2.70 – 3.20 L</td>
-                  <td>₹1.92 – 2.42 L</td>
-                  <td>₹4,500 – ₹6,500</td>
-                  <td>3.5 – 4.5 years</td>
+                  <td><strong>₹5,000–₹8,000</strong></td>
+                  <td>Around 5 kW</td>
+                  <td>₹2.70–₹3.20 lakh</td>
+                  <td><strong>₹1.92–₹2.42 lakh</strong></td>
                 </tr>
                 <tr>
-                  <td>₹8,000 – ₹12,000</td>
-                  <td>7 – 8 kW</td>
-                  <td>₹4.00 – 4.80 L</td>
-                  <td>₹3.22 – 4.02 L</td>
-                  <td>₹7,000 – ₹10,000</td>
-                  <td>3.5 – 5 years</td>
+                  <td><strong>₹8,000–₹12,000</strong></td>
+                  <td>Around 7–8 kW</td>
+                  <td>₹4.00–₹4.80 lakh</td>
+                  <td><strong>₹3.22–₹4.02 lakh</strong></td>
                 </tr>
                 <tr>
-                  <td>₹12,000+</td>
+                  <td><strong>₹12,000+</strong></td>
                   <td>10 kW+</td>
-                  <td>Custom</td>
-                  <td>Custom</td>
-                  <td>Significant</td>
-                  <td>4 – 6 years</td>
+                  <td>Site-specific</td>
+                  <td><strong>Site-specific</strong></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <p class="table-caption">All figures are indicative. Actual costs depend on roof type, panel brand, inverter
-          model, and local installation conditions. Subsidy applies to residential connections only.</p>
+        <p class="table-caption">*Indicative only. Eligibility and subsidy amounts depend on the applicable government scheme. Final residential solar panels cost depends on your system specification and site conditions.</p>
+
+        <!-- Why Electricity Bill Alone Is Not Enough -->
+        <div class="why-bill-box fade-up">
+          <h3 style="font-family:var(--font-heading);font-size:1.35rem;font-weight:700;color:#172219;margin-bottom:0.75rem;">Why Electricity Bill Alone Is Not Enough</h3>
+          <p style="font-size:0.92rem;color:#565D56;line-height:1.7;">Two homes paying similar electricity bills may require different systems. For example, one household may use most electricity during daylight hours, while another consumes heavily at night.</p>
+          <div style="margin:1rem 0;">
+            <span style="font-size:0.88rem;font-weight:700;color:#172219;">Other differences can include:</span>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.5rem;margin-top:0.5rem;">
+              <ul class="card-list" style="margin:0;">
+                <li>Air-conditioning usage</li>
+                <li>EV charging</li>
+                <li>Roof shading</li>
+                <li>Number of occupants</li>
+              </ul>
+              <ul class="card-list" style="margin:0;">
+                <li>Water pumping</li>
+                <li>Appliance efficiency</li>
+                <li>Future electricity needs</li>
+              </ul>
+            </div>
+          </div>
+          <p style="font-size:0.92rem;color:#172219;font-weight:600;margin-top:0.5rem;">That is why FGE Solar combines your bill data with a site assessment before finalising system capacity.</p>
+          <div style="margin-top:1.25rem;">
+            <a href="/calculator" class="btn btn-primary">Calculate My Residential Solar Power Cost</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT DOES A RESIDENTIAL SOLAR SYSTEM INCLUDE -->
+    <section class="components-section">
+      <div class="container">
+        <div class="section-header-center fade-up" style="max-width:700px;">
+          <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Equipment &amp; Components</span>
+          <h2>What Does a Residential Solar System Include?</h2>
+          <p>A complete residential solar system consists of more than rooftop panels.</p>
+        </div>
+
+        <div class="components-grid fade-up">
+
+          <!-- Component 1 -->
+          <div class="component-card">
+            <h3>Residential Solar Panels</h3>
+            <p>Solar PV modules convert sunlight into direct-current electricity.</p>
+            <span style="font-size:0.82rem;font-weight:700;color:#172219;margin-top:0.5rem;">Panel selection should consider:</span>
+            <ul class="card-list" style="margin:0.4rem 0;">
+              <li>Wattage</li>
+              <li>Efficiency</li>
+              <li>Technology</li>
+              <li>Temperature performance</li>
+              <li>Product warranty</li>
+              <li>Performance warranty</li>
+              <li>Manufacturer support</li>
+            </ul>
+            <p style="font-size:0.8rem;color:#737A73;margin-top:auto;">The highest-wattage panel is not automatically the best option for every roof.</p>
+          </div>
+
+          <!-- Component 2 -->
+          <div class="component-card">
+            <h3>Solar Inverter</h3>
+            <p>The inverter converts electricity generated by the solar panels into AC electricity that can be used by household appliances.</p>
+            <p style="margin-top:0.75rem;">The inverter should be correctly matched to the solar-array design and electrical connection.</p>
+          </div>
+
+          <!-- Component 3 -->
+          <div class="component-card">
+            <h3>Mounting Structure</h3>
+            <p>The mounting system secures the panels to the roof.</p>
+            <span style="font-size:0.82rem;font-weight:700;color:#172219;margin-top:0.5rem;">Its design should take account of:</span>
+            <ul class="card-list" style="margin:0.4rem 0;">
+              <li>Roof material</li>
+              <li>Local wind exposure</li>
+              <li>Panel layout</li>
+              <li>Drainage</li>
+              <li>Access for maintenance</li>
+            </ul>
+          </div>
+
+          <!-- Component 4 -->
+          <div class="component-card">
+            <h3>Electrical Protection</h3>
+            <p>A professionally designed residential solar installation should include appropriate isolation, earthing, surge protection and other electrical safety components required for the installation.</p>
+          </div>
+
+          <!-- Component 5 -->
+          <div class="component-card">
+            <h3>Monitoring System</h3>
+            <p>Compatible solar inverters can provide generation and system-performance information through monitoring interfaces or applications.</p>
+            <p style="margin-top:0.75rem;">Monitoring makes it easier to identify unusual generation patterns or system alerts.</p>
+          </div>
+
+          <!-- Component 6 -->
+          <div class="component-card">
+            <h3>Optional Battery Storage</h3>
+            <p>Battery storage can be added where backup electricity is important.</p>
+            <p style="margin-top:0.5rem;">A standard grid-connected solar system normally shuts down during a grid outage for safety.</p>
+            <p style="margin-top:0.5rem;font-size:0.82rem;color:#737A73;">Customers requiring backup should discuss a suitable hybrid solar and battery system during the design stage.</p>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -1518,87 +2040,64 @@
       <div class="container">
         <div class="section-header-center fade-up">
           <span class="section-label" style="margin-bottom:0.75rem;display:inline-block;">Common Questions</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know before going solar in Kerala.</p>
+          <h2>Frequently Asked Questions About Residential Solar Panels</h2>
+          <p>Clear, direct answers for homeowners considering rooftop solar in Kerala.</p>
         </div>
         <div class="faq-list">
 
           <div class="faq-item fade-up">
             <button class="faq-question" aria-expanded="false">
-              Does solar work during Kerala's monsoon season?
+              1, What are residential solar panels?
               <i class="faq-icon">+</i>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Yes, solar panels generate power even under cloudy and overcast conditions — just at 40–60% of their
-                clear-sky output. Modern high-efficiency panels are specifically rated for low-light performance. More
-                importantly, KSEB's net metering system banks your excess generation from sunny months against monsoon
-                months. Your surplus from October–February offsets lower generation during June–September, keeping your
-                annual bill very low.
+                Residential solar panels are photovoltaic modules installed at houses or other eligible residential properties to generate electricity from sunlight. A complete residential solar system normally includes solar panels, an inverter, mounting structures, electrical protections, cabling and monitoring equipment.
               </div>
             </div>
           </div>
 
           <div class="faq-item fade-up" style="animation-delay:0.05s;">
             <button class="faq-question" aria-expanded="false">
-              Will solar panel installation damage my roof?
+              2, How much do residential solar panels cost in Kerala?
               <i class="faq-icon">+</i>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                No. FGE uses marine-grade aluminum mounting structures designed specifically for Kerala's weather
-                conditions, including monsoon rains and strong winds. All roof penetrations are sealed with high-grade
-                waterproof sealants and flashing — the same materials used in professional roofing. Every FGE
-                installation includes a 5-year workmanship warranty, so any roof-related issues are covered at no cost
-                to you.
+                The cost of residential solar depends on system capacity, panel and inverter specifications, roof conditions, mounting structure, electrical work and whether battery storage is included. As an indicative example, the current FGE Solar pricing section places a 3 kW residential project at approximately ₹1.85–₹2.15 lakh before applicable subsidy. A site visit is required for an accurate quotation.
               </div>
             </div>
           </div>
 
           <div class="faq-item fade-up" style="animation-delay:0.1s;">
             <button class="faq-question" aria-expanded="false">
-              Will I have power during KSEB grid failures?
+              What is the cost of a 3 kW residential solar panel system?
               <i class="faq-icon">+</i>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Standard on-grid solar systems are designed to shut down automatically during power cuts — this is a
-                mandatory safety feature to protect KSEB linemen working on the grid. If backup power during outages is
-                important to you, we recommend a hybrid solar system with battery storage. Hybrid systems provide
-                uninterrupted power from your solar panels and battery even during KSEB failures. Ask our team about
-                hybrid options during your site visit.
+                The current FGE Solar reference pricing places an indicative 3 kW installation at approximately ₹1.85–₹2.15 lakh before applicable residential subsidy. The final price can vary according to the selected equipment, mounting structure and site conditions. Eligible residential households may currently qualify for central financial assistance of up to ₹78,000 for systems of 3 kW or more under the applicable PM Surya Ghar subsidy structure.
               </div>
             </div>
           </div>
 
           <div class="faq-item fade-up" style="animation-delay:0.15s;">
             <button class="faq-question" aria-expanded="false">
-              How long does the investment take to pay back in Kerala?
+              How many residential solar panels do I need?
               <i class="faq-icon">+</i>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                For most Kerala households, the payback period is 3–4 years after applying the PM Surya Ghar subsidy.
-                The exact period depends on your current bill, system size, and local KSEB tariff slab. Given that solar
-                panels are rated for 25 years with minimal degradation (around 0.5% per year), a 3–4 year payback means
-                you get 20+ years of essentially free electricity. KSEB's rising tariffs further accelerate your
-                effective returns each year.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item fade-up" style="animation-delay:0.2s;">
-            <button class="faq-question" aria-expanded="false">
-              Do I need to manage the subsidy application myself?
-              <i class="faq-icon">+</i>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                No. FGE handles the entire PM Surya Ghar subsidy process end-to-end. As a registered PM Surya Ghar
-                installer, we submit your application on the national portal, coordinate with KSEB for net metering, and
-                track the subsidy disbursement. You simply provide your Aadhaar card, KSEB electricity bill, and bank
-                account details. Final eligibility, approval and CFA release are controlled by the official process;
-                FGE cannot guarantee the amount or payment date.
+                The number of panels depends on:
+                <ul class="card-list" style="margin:0.5rem 0;">
+                  <li>Required system capacity</li>
+                  <li>Individual panel wattage</li>
+                  <li>Available roof area</li>
+                  <li>Electricity consumption</li>
+                  <li>Shading</li>
+                  <li>System layout</li>
+                </ul>
+                For example, two 5 kW residential systems can use a different number of modules if different panel wattages are selected. System design should therefore start with the required capacity rather than a fixed number of panels.
               </div>
             </div>
           </div>
@@ -1607,55 +2106,79 @@
       </div>
     </section>
 
-    <!-- CTA BANNER -->
+    <!-- PLAN YOUR RESIDENTIAL SOLAR INSTALLATION -->
+    <section class="section" aria-label="Plan your residential solar installation">
+      <div class="container">
+        <div style="border:1px solid #E5E7E5;border-radius:24px;padding:clamp(1.5rem,3.5vw,2.5rem);background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 14px 38px rgba(23,34,25,0.06);">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;align-items:start;">
+            <div>
+              <div style="display:inline-flex;align-items:center;padding:0.35rem 0.8rem;border-radius:999px;background:#eef7f0;color:#18B85C;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Next Steps</div>
+              <h2 style="margin:1rem 0 0.75rem;font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.2;color:#172219;font-family:var(--font-heading,inherit);">Plan Your Residential Solar Installation</h2>
+              <p style="margin:0;color:#565D56;line-height:1.75;">Before choosing your system, explore the next steps.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
+                <a href="/contact" class="btn btn-primary">Book a Free Site Visit</a>
+                <a href="/calculator" class="btn btn-outline-dark">Calculate My Solar Savings</a>
+              </div>
+            </div>
+            <div>
+              <ul style="margin:0;padding:0;list-style:none;display:grid;gap:1rem;">
+                <li style="border-bottom:1px solid #E5E7E5;padding-bottom:0.75rem;">
+                  <a href="/calculator" style="color:#172219;text-decoration:none;font-weight:700;font-size:1.05rem;display:block;margin-bottom:0.2rem;">Calculate Residential Solar Savings &rarr;</a>
+                  <p style="margin:0;color:#565D56;font-size:0.875rem;">Estimate the system size and potential savings based on your electricity usage.</p>
+                </li>
+                <li style="border-bottom:1px solid #E5E7E5;padding-bottom:0.75rem;">
+                  <a href="/subsidy/pm-surya-ghar" style="color:#172219;text-decoration:none;font-weight:700;font-size:1.05rem;display:block;margin-bottom:0.2rem;">Check PM Surya Ghar Subsidy Eligibility &rarr;</a>
+                  <p style="margin:0;color:#565D56;font-size:0.875rem;">Understand the current residential subsidy structure and application process.</p>
+                </li>
+                <li style="border-bottom:1px solid #E5E7E5;padding-bottom:0.75rem;">
+                  <a href="/subsidy/kseb-net-metering" style="color:#172219;text-decoration:none;font-weight:700;font-size:1.05rem;display:block;margin-bottom:0.2rem;">Understand KSEB Solar Metering &rarr;</a>
+                  <p style="margin:0;color:#565D56;font-size:0.875rem;">Learn how an eligible grid-connected residential solar installation interacts with your electricity connection.</p>
+                </li>
+                <li style="border-bottom:1px solid #E5E7E5;padding-bottom:0.75rem;">
+                  <a href="/services/hybrid" style="color:#172219;text-decoration:none;font-weight:700;font-size:1.05rem;display:block;margin-bottom:0.2rem;">Compare On-Grid and Hybrid Residential Solar &rarr;</a>
+                  <p style="margin:0;color:#565D56;font-size:0.875rem;">Choose between a standard grid-connected system and a battery-backed option according to your backup requirements.</p>
+                </li>
+                <li>
+                  <a href="/solar-in/" style="color:#172219;text-decoration:none;font-weight:700;font-size:1.05rem;display:block;margin-bottom:0.2rem;">Find Residential Solar Installation Near You &rarr;</a>
+                  <p style="margin:0;color:#565D56;font-size:0.875rem;">Explore FGE Solar service coverage across Kerala.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- READY TO INSTALL RESIDENTIAL SOLAR PANELS? -->
     <section class="cta-banner">
       <div class="container">
         <div class="cta-banner-content fade-up">
-          <h2>Ready to Stop Paying KSEB Every Month?</h2>
-          <p>Book your free site visit today. Our engineer will assess your roof, calculate your exact savings, and tell
-            you precisely how much you'll get in subsidy — with zero obligation to proceed.</p>
-          <div class="cta-btn-row">
-            <a href="/contact" class="btn btn-primary btn-lg">Book Free Site Visit</a>
-            <a href="https://wa.me/918089073029?text=Hi%20FGE%20Solar%2C%20I'm%20interested%20in%20residential%20solar%20for%20my%20home.%20Can%20you%20arrange%20a%20free%20site%20visit%3F"
-              target="_blank" rel="noopener" class="btn btn-wa btn-lg" aria-label="Chat with FGE Solar on WhatsApp">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-              </svg>
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- codex-seo-body:start -->
-    <section class="section" aria-label="Next steps for solar planning">
-      <div class="container">
-        <div style="border:1px solid #E5E7E5;border-radius:24px;padding:clamp(1.25rem,3vw,2rem);background:linear-gradient(180deg,#ffffff 0%,#f7faf7 100%);box-shadow:0 14px 38px rgba(23,34,25,0.06);">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;align-items:start;">
-            <div>
-              <div style="display:inline-flex;align-items:center;padding:0.35rem 0.8rem;border-radius:999px;background:#eef7f0;color:#18B85C;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;">Solar Planning Hub</div>
-              <h2 style="margin:1rem 0 0.75rem;font-size:clamp(1.35rem,2.8vw,2rem);line-height:1.15;color:#172219;font-family:var(--font-heading,inherit);">Next step after Residential Rooftop Solar Installation in Kerala</h2>
-              <p style="margin:0;color:#565D56;line-height:1.75;">Compare the service with subsidy, net metering, savings, and nearby district coverage before you decide.</p>
-            </div>
-            <div>
-              <ul style="margin:0;padding-left:1.1rem;display:grid;gap:0.8rem;">
-              <li style="margin:0;padding:0;"><a href="/calculator" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Estimate savings with the solar calculator</a></li>
-              <li style="margin:0;padding:0;"><a href="/subsidy/pm-surya-ghar" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Check PM Surya Ghar subsidy eligibility</a></li>
-              <li style="margin:0;padding:0;"><a href="/subsidy/kseb-net-metering" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">Understand KSEB net metering</a></li>
-              <li style="margin:0;padding:0;"><a href="/solar-in/" style="color:#172219;text-decoration:none;font-weight:600;line-height:1.6;">See district-wise installation coverage in Kerala</a></li>
+          <h2>Ready to Install Residential Solar Panels?</h2>
+          <p>Get a residential solar recommendation based on your actual electricity usage and rooftop conditions.</p>
+          <div style="text-align:left;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:1.25rem 1.5rem;margin-bottom:2rem;">
+            <span style="color:#8fe1b0;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:0.5rem;">Your assessment can include:</span>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.4rem;">
+              <ul class="card-list" style="margin:0;color:rgba(255,255,255,0.85);">
+                <li>Recent electricity-bill review</li>
+                <li>Roof-space assessment</li>
+                <li>Shading check</li>
+                <li>Recommended solar capacity</li>
               </ul>
-              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.25rem;">
-                <a href="/contact" class="btn btn-primary">Book Free Site Visit</a>
-                <a href="/calculator" class="btn btn-outline-dark">Use Solar Calculator</a>
-              </div>
+              <ul class="card-list" style="margin:0;color:rgba(255,255,255,0.85);">
+                <li>Panel and inverter specifications</li>
+                <li>Indicative project cost</li>
+                <li>Applicable subsidy guidance</li>
+                <li>Estimated generation and savings</li>
+              </ul>
             </div>
+          </div>
+          <div class="cta-btn-row">
+            <a href="/contact" class="btn btn-primary btn-lg">Book a Free Site Visit</a>
+            <a href="/calculator" class="btn btn-outline btn-lg">Calculate My Solar Savings</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- codex-seo-body:end -->
 
   </main>
   <!-- FOOTER -->
@@ -1723,6 +2246,9 @@
                   d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
                 <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg></a>
+          </div>
+          <div class="google-preferred-source">
+            <div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div>
           </div>
         </div>
         <div class="footer-col">
