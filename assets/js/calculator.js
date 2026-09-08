@@ -110,7 +110,7 @@
     num = Math.round(num);
     if (num >= 100000) {
       const lakhs = num / 100000;
-      return '₹' + lakhs.toFixed(1) + ' L';
+      return '₹' + lakhs.toFixed(lakhs >= 10 ? 1 : 2) + ' L';
     }
     return '₹' + num.toLocaleString('en-IN');
   }
@@ -297,6 +297,7 @@
     setEl('res-gross-cost',   formatIndian(r.grossCost));
     setEl('res-subsidy',      '₹' + r.subsidy.toLocaleString('en-IN'));
     setEl('res-net-cost',     formatIndian(r.netCost));
+    setEl('res-net-cost-note', 'was ' + formatIndian(r.grossCost) + ' before ₹' + r.subsidy.toLocaleString('en-IN') + ' subsidy');
     setEl('res-monthly-save', '₹' + r.monthlySavings.toLocaleString('en-IN') + '/mo');
     setEl('res-annual-save',  '₹' + r.annualSavings.toLocaleString('en-IN') + '/yr');
     setEl('res-payback',      r.paybackYears.toFixed(1) + ' years');

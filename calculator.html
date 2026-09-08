@@ -484,6 +484,25 @@
     .result-card.featured .result-card-sub {
       color: rgba(255,255,255,0.45);
     }
+    .result-card-hero {
+      background: linear-gradient(135deg, #18B85C 0%, #16a352 100%);
+      border-color: transparent;
+    }
+    .result-card-hero .result-card-label {
+      color: rgba(255,255,255,0.78);
+    }
+    .result-card-hero .result-card-value {
+      color: #fff;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+    }
+    .result-card-hero .result-card-sub {
+      color: rgba(255,255,255,0.72);
+    }
+    @media (min-width: 768px) {
+      .results-grid-key .result-card-hero {
+        grid-column: 1 / -1;
+      }
+    }
 
     /* Payback bar */
     .payback-section {
@@ -816,8 +835,12 @@
     .calculator-page .calc-submit-btn,
     .calculator-page .res-wa-btn,
     .calculator-page .payback-bar-fill,
+    .calculator-page .result-card-hero,
     .calculator-page .result-card[style*="#18B85C"] {
       background: var(--fge-green-600) !important;
+    }
+    .calculator-page .result-card-hero .result-card-value {
+      color: #fff !important;
     }
     .calculator-page .calc-submit-btn:hover,
     .calculator-page .res-wa-btn:hover {
@@ -864,7 +887,7 @@
     /* Subsidy countdown on the subsidy card */
     .subsidy-countdown {
       margin-top: 0.85rem;
-      background: rgba(0,0,0,0.22);
+      background: #EEF2EF;
       border-radius: 10px;
       padding: 0.65rem 0.85rem;
       display: flex;
@@ -876,7 +899,7 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
+      color: #6b7c6e;
     }
     .subsidy-countdown-timer {
       display: flex;
@@ -887,7 +910,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: rgba(255,255,255,0.12);
+      background: #fff;
+      border: 1px solid #e0e8e1;
       border-radius: 7px;
       padding: 0.3rem 0.5rem;
       min-width: 42px;
@@ -896,20 +920,20 @@
       font-family: var(--font-heading);
       font-size: 1.15rem;
       font-weight: 800;
-      color: #fff;
+      color: #172219;
       line-height: 1;
     }
     .sct-label {
       font-size: 0.58rem;
-      color: rgba(255,255,255,0.55);
+      color: #6b7c6e;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       margin-top: 0.15rem;
     }
-    .sct-sep { color: rgba(255,255,255,0.4); font-size: 1rem; font-weight: 700; align-self: flex-start; margin-top: 0.3rem; }
+    .sct-sep { color: #9aab9c; font-size: 1rem; font-weight: 700; align-self: flex-start; margin-top: 0.3rem; }
     .subsidy-countdown-note {
       font-size: 0.68rem;
-      color: rgba(255,255,255,0.55);
+      color: #6b7c6e;
       margin-top: 0.1rem;
     }
 
@@ -2620,6 +2644,12 @@
 
         <!-- 3×3 Metric Grid -->
         <div class="results-grid results-grid-key">
+          <div class="result-card result-card-hero">
+            <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="result-card-label">Your Cost After Subsidy</div>
+            <div class="result-card-value" id="res-net-cost">—</div>
+            <div class="result-card-sub" id="res-net-cost-note">net amount after PM Surya Ghar subsidy</div>
+          </div>
           <div class="result-card">
             <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <div class="result-card-label">Recommended System Size</div>
@@ -2627,17 +2657,10 @@
             <div class="result-card-sub">kilowatt-peak (kWp)</div>
           </div>
           <div class="result-card">
-            <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <div class="result-card-label">Estimated System Cost</div>
-            <div class="result-card-value" id="res-gross-cost">—</div>
-            <div class="result-card-sub">before subsidy</div>
-          </div>
-          <div class="result-card" style="background: linear-gradient(135deg, #18B85C 0%, #16a352 100%); border-color: transparent;">
             <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
-            <div class="result-card-label" style="color:rgba(255,255,255,0.7);">PM Surya Ghar Subsidy</div>
-            <div class="result-card-value" id="res-subsidy" style="color:#fff;">—</div>
-            <div class="result-card-sub" style="color:rgba(255,255,255,0.6);">eligible residential CFA estimate</div>
-            <!-- Subsidy countdown -->
+            <div class="result-card-label">PM Surya Ghar Subsidy</div>
+            <div class="result-card-value" id="res-subsidy">—</div>
+            <div class="result-card-sub">eligible residential CFA estimate</div>
             <div class="subsidy-countdown" id="subsidy-countdown-box">
               <div class="subsidy-countdown-label">⏳ Subsidy scheme ends in</div>
               <div class="subsidy-countdown-timer">
@@ -2680,11 +2703,11 @@
 
         <!-- Detailed financial breakdown -->
         <div class="results-grid results-grid-details">
-          <div class="result-card featured">
-            <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div class="result-card-label">Your Cost After Subsidy</div>
-            <div class="result-card-value" id="res-net-cost">—</div>
-            <div class="result-card-sub">net investment</div>
+          <div class="result-card">
+            <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="result-card-label">Estimated System Cost</div>
+            <div class="result-card-value" id="res-gross-cost">—</div>
+            <div class="result-card-sub">before subsidy</div>
           </div>
           <div class="result-card">
             <div class="result-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
@@ -3357,7 +3380,7 @@
   </a>
 <!-- /component:site-whatsapp -->
   <script src="/assets/js/global.js" defer></script>
-  <script src="/assets/js/calculator.js" defer></script>
+  <script src="/assets/js/calculator.js?v=20260908-netfirst" defer></script>
   <script src="/assets/js/forms.js?v=20260727d" defer></script>
   <!-- Sticky Urgency Bar (shown after calculator results) -->
   <div id="calc-sticky-bar" role="complementary" aria-label="Solar savings reminder">
