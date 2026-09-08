@@ -1662,7 +1662,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--green);
+  color: #fff;
 }
 
 .footer-contact-item .icon svg {
@@ -1792,7 +1792,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.55);
+  color: #fff;
   text-decoration: none;
   transition: all var(--transition-base);
 }
@@ -2939,7 +2939,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
 
 .footer-contact-item .icon svg {
@@ -2991,7 +2991,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: #fff;
   transition: all var(--transition-fast);
   text-decoration: none;
 }

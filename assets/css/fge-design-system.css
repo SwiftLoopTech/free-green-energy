@@ -2060,6 +2060,16 @@ p[style*="var(--gray-400)"] {
   color: var(--fge-ink-muted);
 }
 
+#site-footer .footer-contact-item .icon,
+#site-footer .social-link {
+  color: #fff !important;
+}
+
+#site-footer .footer-contact-item .icon svg,
+#site-footer .social-link svg {
+  stroke: currentColor;
+}
+
 .footer-col h4 {
   color: var(--fge-ink-soft);
   font-size: 0.75rem;
