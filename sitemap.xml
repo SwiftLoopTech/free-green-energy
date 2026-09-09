@@ -3,97 +3,13 @@
 
   <url>
     <loc>https://fgesolar.in/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/about</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/how-to-choose-solar-company-kerala</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/kerala-solar-documents-checklist-2026</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/best-solar-panels-kerala</loc>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/solar-panel-price-kerala-2025</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/govt/pm-kusum-kerala-2026</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/govt/kerala-rooftop-solar-rules-2026</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/govt/kseb-tariff-slabs-kerala</loc>
-    <lastmod>2026-07-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/how-solar/on-grid-vs-off-grid-vs-hybrid</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/how-solar/solar-during-kerala-monsoon</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/how-solar/solar-for-ev-charging-kerala</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/which-solar-system-size-kerala-home-2026</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/</loc>
-    <lastmod>2026-07-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/blog/savings/how-much-can-you-save-solar-kerala</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://fgesolar.in/calculator</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -104,31 +20,61 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/projects</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/services/amc</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://fgesolar.in/services/commercial</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/services/residential</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/subsidy/pm-surya-ghar</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/buying-guide/gst-on-solar-panels-india</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/how-solar/off-grid-solar-system-kerala</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/how-solar/solar-panel-maintenance-kerala</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/savings/solar-panel-installation-cost-kerala</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/services/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fgesolar.in/services/hybrid</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/services/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -146,10 +92,76 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/services/residential</loc>
+    <loc>https://fgesolar.in/solar-in/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/subsidy/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/subsidy/anert</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/subsidy/kseb-net-metering</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/buying-guide/how-to-choose-solar-company-kerala</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/buying-guide/solar-panel-price-kerala-2025</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/govt/kseb-tariff-slabs-kerala</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/govt/pm-surya-ghar-application-status-kerala</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/how-solar/on-grid-vs-off-grid-vs-hybrid</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/how-solar/solar-during-kerala-monsoon</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/savings/how-much-can-you-save-solar-kerala</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/services/amc</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://fgesolar.in/services/solar-water-heater</loc>
@@ -174,12 +186,6 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://fgesolar.in/solar-in/</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fgesolar.in/solar-in/kannur</loc>
@@ -248,70 +254,58 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/subsidy/anert</loc>
+    <loc>https://fgesolar.in/about</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/subsidy/</loc>
+    <loc>https://fgesolar.in/blog/buying-guide/best-solar-panels-kerala</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/buying-guide/kerala-solar-documents-checklist-2026</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/subsidy/kseb-net-metering</loc>
+    <loc>https://fgesolar.in/blog/buying-guide/which-solar-system-size-kerala-home-2026</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fgesolar.in/subsidy/pm-surya-ghar</loc>
+    <loc>https://fgesolar.in/blog/govt/kerala-rooftop-solar-rules-2026</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://fgesolar.in/blog/govt/pm-surya-ghar-application-status-kerala</loc>
+    <loc>https://fgesolar.in/blog/govt/pm-kusum-kerala-2026</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://fgesolar.in/services/commercial</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://fgesolar.in/blog/how-solar/solar-for-ev-charging-kerala</loc>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://fgesolar.in/blog/how-solar/solar-panel-maintenance-kerala</loc>
-    <lastmod>2026-09-07</lastmod>
+    <loc>https://fgesolar.in/projects</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/privacy-policy</loc>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fgesolar.in/blog/buying-guide/gst-on-solar-panels-india</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fgesolar.in/blog/savings/solar-panel-installation-cost-kerala</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://fgesolar.in/blog/how-solar/off-grid-solar-system-kerala</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

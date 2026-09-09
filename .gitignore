@@ -49,8 +49,13 @@ yarn-error.log*
 package-lock.json
 yarn.lock
 
-# Build output (if added later)
+# Build output & generator scripts (internal use only)
 dist/
 build/
 .cache/
+scripts/
+subsidy/pm-surya-ghar-checklist-word.html
+assets/downloads/ChatGPT*
+assets/downloads/_yt-fonts/
+assets/downloads/fge-youtube-channel-banner*
 .gitignore

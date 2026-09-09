@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /scripts/
+Disallow: /subsidy/pm-surya-ghar-checklist
+Disallow: /subsidy/pm-surya-ghar-checklist-word.html
+Disallow: /home-energy-check
+Disallow: /anantha-registration
 
 Sitemap: https://fgesolar.in/sitemap.xml
