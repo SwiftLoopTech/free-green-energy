@@ -26,6 +26,11 @@
       endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLScgm6aFfbtuNZgLnmgXupsAyTiep357dWg3QxjNjrpn-kcIag/formResponse',
       entry: 'entry.372346092',
       label: 'PM Surya Ghar checklist request'
+    },
+    referral: {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSfW4FuP6obBtvlDD0Jd6T8Qp3FXknxCwm_1gGAm0FFzGB_LAg/formResponse',
+      entry: 'entry.372346092',
+      label: 'Referral — Refer & Earn request'
     }
   };
 
@@ -67,7 +72,13 @@
     utm_campaign: 'UTM campaign',
     utm_content: 'UTM content',
     fbclid: 'Facebook click ID',
-    landing_page: 'Landing page'
+    landing_page: 'Landing page',
+    referrer_customer: 'Existing FGE customer',
+    friend_name: 'Friend name',
+    friend_mobile: 'Friend mobile / WhatsApp',
+    friend_district: 'Friend district',
+    friend_locality: 'Friend locality / area',
+    relationship: 'Relationship to friend'
   };
 
   let responseFrame;
@@ -261,7 +272,8 @@
             'contact': 'contact_form_lead',
             'calculator': 'calculator_lead',
             'home_energy_check': 'energy_check_lead',
-            'pm-surya-ghar-checklist': 'checklist_lead'
+            'pm-surya-ghar-checklist': 'checklist_lead',
+            'referral': 'referral_form_lead'
           };
           const clarityTag = clarityTagMap[source] || 'generic_form_lead';
           window.clarity('event', clarityTag);
