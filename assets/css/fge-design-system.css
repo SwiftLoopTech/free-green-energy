@@ -10678,3 +10678,194 @@ details[open] .faq-answer,
   height: auto !important;
 }
 
+/* ========================================================================
+   HOMEPAGE CUSTOMER STORY VIDEO EMBEDS
+   ======================================================================== */
+
+body.home-page .fge-testimonials-section {
+  overflow-x: hidden;
+}
+
+body.home-page .fge-testimonial-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  body.home-page .fge-testimonial-video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(14px, 2.5vw, 20px);
+  }
+
+  body.home-page .fge-testimonial-video-card:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: calc(50% - 0.5rem);
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.home-page .fge-testimonial-video-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  body.home-page .fge-testimonial-video-card {
+    grid-column: span 2;
+  }
+
+  body.home-page .fge-testimonial-video-card:last-child {
+    grid-column: 4 / span 2;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  body.home-page .fge-testimonial-video-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (max-width: 639px) {
+  body.home-page .fge-testimonial-video-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+
+  body.home-page .fge-testimonial-video-card,
+  body.home-page .fge-testimonial-video-card:last-child {
+    flex: 0 0 88vw;
+    width: 88vw;
+    max-width: 88vw;
+    scroll-snap-align: start;
+    grid-column: auto;
+  }
+}
+
+body.home-page .fge-testimonial-video-card {
+  min-width: 0;
+  padding: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--fge-grey-90);
+  border-radius: 10px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+body.home-page .fge-video-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0b1f14;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.home-page .fge-video-media iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border: 0;
+}
+
+body.home-page .fge-video-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.6rem;
+  padding: 0 0.15rem 0.15rem;
+}
+
+body.home-page .fge-video-meta b {
+  color: var(--fge-ink);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+body.home-page .fge-video-meta small {
+  color: var(--fge-ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+body.home-page .fge-video-proof {
+  margin-top: 0.2rem;
+  color: var(--fge-green-600);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+body.home-page .fge-testimonial-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.75rem;
+}
+
+body.home-page .fge-testimonial-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body.home-page .fge-testimonial-cta .btn-wa {
+  background: #0f733d !important;
+  border: 1px solid #0f733d !important;
+  color: #fff !important;
+}
+
+body.home-page .fge-testimonial-cta .btn-wa:hover,
+body.home-page .fge-testimonial-cta .btn-wa:focus-visible {
+  background: #0a5f32 !important;
+  border-color: #0a5f32 !important;
+  color: #fff !important;
+}
+
+body.home-page .fge-testimonial-cta .btn-call {
+  background: #fff !important;
+  border: 1px solid var(--fge-ink) !important;
+  color: var(--fge-ink) !important;
+}
+
+body.home-page .fge-testimonial-cta .btn-call:hover,
+body.home-page .fge-testimonial-cta .btn-call:focus-visible {
+  background: var(--fge-ink) !important;
+  border-color: var(--fge-ink) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 639px) {
+  body.home-page .fge-testimonial-cta {
+    flex-direction: column;
+  }
+
+  body.home-page .fge-testimonial-cta a {
+    width: 100%;
+  }
+}
+
