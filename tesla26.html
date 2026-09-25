@@ -673,6 +673,87 @@
       font-weight: 300;
     }
 
+    /* Saved vouchers on home (localStorage) */
+    .my-vouchers { display: none; margin: 0 0 18px; }
+    .my-vouchers.is-visible { display: block; }
+    .my-vouchers .mv-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .my-vouchers .mv-title h2 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--bone);
+    }
+    .my-vouchers .mv-count {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--solar);
+    }
+    .mv-card {
+      width: 100%;
+      text-align: left;
+      border: 1px solid rgba(168,172,179,0.22);
+      background: rgba(18,21,23,0.9);
+      padding: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .mv-card:hover { border-color: rgba(0,210,106,0.45); background: rgba(0,210,106,0.06); }
+    .mv-card.is-expired { opacity: 0.55; }
+    .mv-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .mv-card .code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--bone);
+    }
+    .mv-card .off {
+      color: var(--solar);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .mv-card .meta {
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--ash);
+      line-height: 1.4;
+    }
+    .mv-card .days {
+      margin-top: 8px;
+      display: inline-flex;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--chalk);
+      border: 1px solid rgba(168,172,179,0.25);
+      padding: 5px 8px;
+    }
+    .mv-card .days.ok { color: var(--solar); border-color: rgba(0,210,106,0.35); }
+    .mv-card .days.soon { color: #f0b429; border-color: rgba(240,180,41,0.35); }
+    .mv-card .days.dead { color: #f07167; border-color: rgba(240,113,103,0.35); }
+    .mv-actions {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    @media (min-width: 420px) {
+      .mv-actions { grid-template-columns: 1fr 1fr; }
+    }
+
     body.is-audit main.app-main {
       position: fixed;
       inset: 0;
@@ -988,31 +1069,46 @@
     <!-- 0 Welcome (landing only) -->
     <section id="step-0" class="step is-on">
       <h1 class="sr-only">My Home Energy Audit</h1>
-      <figure class="mb-4 sm:mb-5 -mx-0">
-        <picture>
-          <source srcset="/assets/images/campaigns/tesla26/hero-poster.webp" type="image/webp">
-          <img
-            class="hero-poster"
-            src="/assets/images/campaigns/tesla26/hero-poster.png"
-            alt="FGE Solar × TESLA '26 — My Home Energy Audit, ₹5,000 OFF rooftop solar grant valid 10 days"
-            width="1200"
-            height="1600"
-            fetchpriority="high"
-            decoding="async"
-          >
-        </picture>
-      </figure>
 
-      <p class="welcome-copy">
-        Answer a few questions about your home. We'll show solar savings and unlock a
-        <span class="text-solar font-semibold">₹5,000 off</span> voucher.
-      </p>
+      <div id="my-vouchers" class="my-vouchers" aria-live="polite">
+        <div class="mv-title">
+          <h2>My vouchers</h2>
+          <span class="mv-count" id="mv-count"></span>
+        </div>
+        <div id="mv-list"></div>
+        <div class="mv-actions">
+          <button type="button" class="btn btn-solar" data-next="1">Add another voucher</button>
+          <button type="button" class="btn btn-ghost" id="mv-clear-expired">Clear expired</button>
+        </div>
+      </div>
 
-      <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start →</button>
-      <p class="next-hint">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg>
-        Next: your monthly electricity bill
-      </p>
+      <div id="welcome-fresh">
+        <figure class="mb-4 sm:mb-5 -mx-0">
+          <picture>
+            <source srcset="/assets/images/campaigns/tesla26/hero-poster.webp" type="image/webp">
+            <img
+              class="hero-poster"
+              src="/assets/images/campaigns/tesla26/hero-poster.png"
+              alt="FGE Solar × TESLA '26 — My Home Energy Audit, ₹5,000 OFF rooftop solar grant valid 10 days"
+              width="1200"
+              height="1600"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </picture>
+        </figure>
+
+        <p class="welcome-copy">
+          Answer a few questions about your home. We'll show solar savings and unlock a
+          <span class="text-solar font-semibold">₹5,000 off</span> voucher.
+        </p>
+
+        <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start →</button>
+        <p class="next-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          Next: your monthly electricity bill
+        </p>
+      </div>
     </section>
 
     <div class="carousel-shell">
@@ -1346,7 +1442,8 @@
         </a>
         <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy share message</button>
         <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
-        <button type="button" class="btn-link" data-next="0">Start over</button>
+        <button type="button" class="btn btn-ghost" id="voucher-home">My vouchers</button>
+        <button type="button" class="btn-link" data-next="1">Add another voucher</button>
         <p id="copy-toast" class="text-center text-xs text-solar" style="display:none">Message copied</p>
       </div>
     </section>
@@ -1393,6 +1490,153 @@
     var FGE_WA = '918089073029';
     var GRANT = 5000;
     var TOTAL_STEPS = 7;
+    var STORAGE_KEY = 'fge_tesla26_vouchers';
+    var homeTicker = null;
+
+    function loadVouchers() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        var list = raw ? JSON.parse(raw) : [];
+        return Array.isArray(list) ? list : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function persistVouchers(list) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      } catch (e) {
+        console.warn('[FGE TESLA26] localStorage save failed', e);
+      }
+    }
+
+    function remainingMs(expiresAt) {
+      return Math.max(0, Number(expiresAt) - Date.now());
+    }
+
+    function daysLeftLabel(expiresAt) {
+      var diff = remainingMs(expiresAt);
+      if (diff <= 0) return { text: 'Expired', cls: 'dead', expired: true };
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      if (d >= 2) return { text: d + ' days left', cls: 'ok', expired: false };
+      if (d === 1) return { text: '1 day ' + h + 'h left', cls: 'soon', expired: false };
+      if (h > 0) return { text: h + 'h ' + m + 'm left', cls: 'soon', expired: false };
+      return { text: m + 'm left', cls: 'soon', expired: false };
+    }
+
+    function saveCurrentVoucher() {
+      var list = loadVouchers();
+      var entry = {
+        id: state.voucherCode + '-' + Date.now(),
+        code: state.voucherCode,
+        expiresAt: state.expiresAt,
+        createdAt: Date.now(),
+        studentName: state.studentName,
+        parentName: state.parentName,
+        district: state.district,
+        whatsapp: state.whatsapp,
+        bill: state.bill,
+        roof: state.roof,
+        ac: state.ac,
+        fridge: state.fridge,
+        kw: state.kw,
+        label: state.label,
+        annualSavings: state.annualSavings
+      };
+      // newest first; avoid exact duplicate codes still active
+      list = list.filter(function (v) { return v.code !== entry.code; });
+      list.unshift(entry);
+      if (list.length > 20) list = list.slice(0, 20);
+      persistVouchers(list);
+      return entry;
+    }
+
+    function applyVoucherToUI(v) {
+      state.voucherCode = v.code;
+      state.expiresAt = v.expiresAt;
+      state.studentName = v.studentName || '';
+      state.parentName = v.parentName || '';
+      state.district = v.district || '';
+      state.whatsapp = v.whatsapp || '';
+      state.bill = v.bill || state.bill;
+      state.kw = v.kw || state.kw;
+      state.label = v.label || state.label;
+      state.annualSavings = v.annualSavings || state.annualSavings;
+
+      document.getElementById('voucher-code').textContent = v.code;
+      document.getElementById('v-parent').textContent = v.parentName || '—';
+      document.getElementById('v-student').textContent = v.studentName || '—';
+      document.getElementById('v-district').textContent = v.district || '—';
+      document.getElementById('v-system').textContent =
+        (v.label || (v.kw + ' kW')) +
+        (v.annualSavings ? ' · ' + formatINR(v.annualSavings) + '/yr' : '');
+      updateWaLink();
+      startCountdown(v.expiresAt);
+    }
+
+    function renderHomeVouchers() {
+      var wrap = document.getElementById('my-vouchers');
+      var listEl = document.getElementById('mv-list');
+      var countEl = document.getElementById('mv-count');
+      var fresh = document.getElementById('welcome-fresh');
+      if (!wrap || !listEl) return;
+
+      var list = loadVouchers();
+      if (!list.length) {
+        wrap.classList.remove('is-visible');
+        if (fresh) fresh.style.display = '';
+        return;
+      }
+
+      wrap.classList.add('is-visible');
+      if (fresh) fresh.style.display = 'none';
+      countEl.textContent = list.length + (list.length === 1 ? ' saved' : ' saved');
+
+      listEl.innerHTML = list.map(function (v) {
+        var rem = daysLeftLabel(v.expiresAt);
+        return (
+          '<button type="button" class="mv-card' + (rem.expired ? ' is-expired' : '') + '" data-voucher-id="' +
+          String(v.id).replace(/"/g, '') + '">' +
+          '<div class="mv-card-top">' +
+            '<div class="code">' + (v.code || '') + '</div>' +
+            '<div class="off">₹5,000 OFF</div>' +
+          '</div>' +
+          '<div class="meta">' +
+            (v.parentName ? ('For ' + v.parentName) : 'Voucher') +
+            (v.district ? (' · ' + v.district) : '') +
+            (v.label ? (' · ' + v.label) : '') +
+          '</div>' +
+          '<div class="days ' + rem.cls + '">' + rem.text + '</div>' +
+          '</button>'
+        );
+      }).join('');
+
+      listEl.querySelectorAll('[data-voucher-id]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-voucher-id');
+          var found = loadVouchers().find(function (x) { return String(x.id) === String(id); });
+          if (!found) return;
+          applyVoucherToUI(found);
+          goStep(7);
+        });
+      });
+    }
+
+    function clearExpiredVouchers() {
+      var list = loadVouchers().filter(function (v) { return remainingMs(v.expiresAt) > 0; });
+      persistVouchers(list);
+      renderHomeVouchers();
+    }
+
+    function startHomeTicker() {
+      if (homeTicker) clearInterval(homeTicker);
+      homeTicker = setInterval(function () {
+        if (state.step === 0) renderHomeVouchers();
+      }, 60000);
+    }
 
     var state = {
       step: 0,
@@ -1606,6 +1850,7 @@
       progressFill.style.width = Math.round((n / TOTAL_STEPS) * 100) + '%';
       renderDots(n);
       if (n === 5 || n === 6) updateResults();
+      if (n === 0) renderHomeVouchers();
       window.scrollTo(0, 0);
     }
 
@@ -1636,6 +1881,16 @@
     var closeBtn = document.getElementById('audit-close');
     if (closeBtn) {
       closeBtn.addEventListener('click', function () { goStep(0); });
+    }
+
+    var homeBtn = document.getElementById('voucher-home');
+    if (homeBtn) {
+      homeBtn.addEventListener('click', function () { goStep(0); });
+    }
+
+    var clearExpiredBtn = document.getElementById('mv-clear-expired');
+    if (clearExpiredBtn) {
+      clearExpiredBtn.addEventListener('click', clearExpiredVouchers);
     }
 
     function randomCode() {
@@ -1827,6 +2082,7 @@
       state.expiresAt = Date.now() + VOUCHER_DAYS * 86400000;
 
       await onSubmitLead({ voucherCode: state.voucherCode });
+      saveCurrentVoucher();
 
       document.getElementById('voucher-code').textContent = state.voucherCode;
       document.getElementById('v-parent').textContent = state.parentName;
@@ -1849,6 +2105,8 @@
     });
 
     updateResults();
+    renderHomeVouchers();
+    startHomeTicker();
     goStep(0);
 
     /* Intro splash */
