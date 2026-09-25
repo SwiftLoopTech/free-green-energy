@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>My Home Energy Audit | FGE Solar × TESLA '26 CET</title>
-  <meta name="description" content="Check your home's electricity use, see solar savings, and gift your parents ₹5,000 off rooftop solar. FGE Solar × TESLA '26 CET.">
+  <meta name="description" content="Check your home electricity use, see solar savings, and unlock ₹5,000 off rooftop solar. FGE Solar × TESLA '26 CET.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://fgesolar.in/tesla26.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="My Home Energy Audit | FGE Solar × TESLA '26 CET">
-  <meta property="og:description" content="₹5,000 off rooftop solar for your parents. Valid 10 days. FGE Solar × TESLA '26 CET.">
+  <meta property="og:description" content="₹5,000 off rooftop solar. Valid 10 days. FGE Solar × TESLA '26 CET.">
   <meta property="og:url" content="https://fgesolar.in/tesla26.html">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="FGE Solar">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="My Home Energy Audit | FGE Solar × TESLA '26">
-  <meta name="twitter:description" content="₹5,000 off rooftop solar · Valid 10 days · Gift to parents">
+  <meta name="twitter:description" content="₹5,000 off rooftop solar · Valid 10 days">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta name="theme-color" content="#0B0D0E">
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
@@ -286,43 +286,84 @@
       font-weight: 500;
     }
 
-    /* Lightweight solar panel motion (GPU-friendly, no images) */
-    .solar-strip {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 0 0 16px;
+    /* Solar panel animation — charge sweep + sun rays */
+    .solar-stage {
+      position: relative;
+      width: 120px;
+      height: 72px;
+      margin: 0 auto 12px;
       pointer-events: none;
     }
-    .solar-panel-svg { width: 72px; height: 48px; }
-    .sp-cell { fill: #1a3d2a; stroke: #00D26A; stroke-width: 0.6; opacity: 0.35; }
-    .sp-cell.on { animation: cellPulse 2.4s ease-in-out infinite; }
-    .sp-cell.on:nth-child(2) { animation-delay: 0.15s; }
-    .sp-cell.on:nth-child(3) { animation-delay: 0.3s; }
-    .sp-cell.on:nth-child(4) { animation-delay: 0.45s; }
-    .sp-cell.on:nth-child(5) { animation-delay: 0.6s; }
-    .sp-cell.on:nth-child(6) { animation-delay: 0.75s; }
-    .sp-sun { fill: #00D26A; transform-origin: 64px 8px; animation: sunSpin 8s linear infinite; }
-    @keyframes cellPulse {
-      0%, 100% { fill: #1a3d2a; opacity: 0.4; }
-      50% { fill: #00D26A; opacity: 0.95; }
+    .solar-stage svg { width: 100%; height: 100%; display: block; }
+    .sp-ray {
+      stroke: #00D26A;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      opacity: 0.25;
+      transform-origin: 60px 14px;
+      animation: rayPulse 2.2s ease-in-out infinite;
     }
-    @keyframes sunSpin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    .sp-ray:nth-child(2) { animation-delay: 0.2s; }
+    .sp-ray:nth-child(3) { animation-delay: 0.4s; }
+    .sp-ray:nth-child(4) { animation-delay: 0.6s; }
+    .sp-ray:nth-child(5) { animation-delay: 0.8s; }
+    .sp-sun-core {
+      fill: #00D26A;
+      filter: drop-shadow(0 0 6px rgba(0,210,106,0.55));
+      animation: sunBreath 2.8s ease-in-out infinite;
+      transform-origin: 60px 14px;
+    }
+    .sp-frame { fill: #0e1411; stroke: rgba(168,172,179,0.35); stroke-width: 1; }
+    .sp-cell {
+      fill: #163526;
+      stroke: rgba(0,210,106,0.35);
+      stroke-width: 0.5;
+    }
+    .sp-glow {
+      fill: url(#cellGlow);
+      opacity: 0;
+      animation: glowSweep 2.6s ease-in-out infinite;
+    }
+    .sp-glow:nth-of-type(1) { animation-delay: 0s; }
+    .sp-glow:nth-of-type(2) { animation-delay: 0.18s; }
+    .sp-glow:nth-of-type(3) { animation-delay: 0.36s; }
+    .sp-glow:nth-of-type(4) { animation-delay: 0.54s; }
+    .sp-glow:nth-of-type(5) { animation-delay: 0.72s; }
+    .sp-glow:nth-of-type(6) { animation-delay: 0.9s; }
+    .sp-beam {
+      fill: url(#beamGrad);
+      opacity: 0.35;
+      animation: beamDrop 2.6s ease-in-out infinite;
+    }
+    @keyframes rayPulse {
+      0%, 100% { opacity: 0.15; stroke-width: 1.2; }
+      50% { opacity: 0.85; stroke-width: 1.8; }
+    }
+    @keyframes sunBreath {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    @keyframes glowSweep {
+      0%, 100% { opacity: 0.15; }
+      40%, 55% { opacity: 0.95; }
+    }
+    @keyframes beamDrop {
+      0%, 100% { opacity: 0.1; transform: translateY(-2px); }
+      50% { opacity: 0.45; transform: translateY(0); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .sp-cell.on, .sp-sun { animation: none; }
-      .sp-cell.on { fill: #00D26A; opacity: 0.85; }
+      .sp-ray, .sp-sun-core, .sp-glow, .sp-beam { animation: none; }
+      .sp-glow { opacity: 0.7; }
+      .sp-ray { opacity: 0.5; }
     }
 
     .step-dots {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 6px;
-      margin-bottom: 18px;
+      padding: 4px 0 8px;
     }
+    body.is-audit .step-dots { display: flex; }
     .step-dots span {
       width: 7px;
       height: 7px;
@@ -333,15 +374,130 @@
     .step-dots span.now { background: #00D26A; box-shadow: 0 0 0 3px rgba(0,210,106,0.18); }
 
     .step.is-on {
-      animation: stepIn 0.28s ease both;
+      animation: stepIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
     }
     @keyframes stepIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateX(18px); }
+      to { opacity: 1; transform: translateX(0); }
     }
     @media (prefers-reduced-motion: reduce) {
       .step.is-on { animation: none; }
     }
+
+    /* Fullscreen carousel modal (steps 1–7) */
+    body.is-audit {
+      overflow: hidden;
+      height: 100dvh;
+    }
+    body.is-audit .site-header,
+    body.is-audit .site-footer,
+    body.is-audit #step-0 {
+      display: none !important;
+    }
+    body.is-audit .progress-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+    }
+    .audit-chrome {
+      display: none;
+    }
+    body.is-audit .audit-chrome {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      position: fixed;
+      top: 3px;
+      left: 0;
+      right: 0;
+      z-index: 55;
+      padding: 10px 16px 8px;
+      background: linear-gradient(180deg, #0B0D0E 70%, transparent);
+    }
+    .audit-chrome .mini {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--bone);
+      letter-spacing: -0.02em;
+    }
+    .audit-chrome .mini img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+    }
+    .audit-chrome .close-x {
+      min-width: 40px;
+      min-height: 40px;
+      border: 1px solid rgba(168,172,179,0.25);
+      background: transparent;
+      color: var(--ash);
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    body.is-audit main.app-main {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(ellipse 80% 40% at 50% -10%, rgba(0,210,106,0.1), transparent 55%),
+        #0B0D0E;
+    }
+    body.is-audit .carousel-shell {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 56px 16px 16px;
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    body.is-audit .solar-stage { margin-bottom: 8px; }
+    body.is-audit .step {
+      display: none;
+      flex: 1;
+      min-height: 0;
+      flex-direction: column;
+    }
+    body.is-audit .step.is-on {
+      display: flex;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      padding-bottom: 8px;
+    }
+    body.is-audit .step-body {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      overscroll-behavior: contain;
+    }
+    body.is-audit .step-actions {
+      flex-shrink: 0;
+      padding-top: 10px;
+      padding-bottom: env(safe-area-inset-bottom, 8px);
+      background: linear-gradient(180deg, transparent, #0B0D0E 28%);
+    }
+    /* Landing (step 0) keeps normal scroll */
+    body:not(.is-audit) .carousel-shell { display: contents; }
+    body:not(.is-audit) .step-body,
+    body:not(.is-audit) .step-actions { display: contents; }
+    body:not(.is-audit) .solar-stage { display: none; }
 
     .btn-solar {
       position: relative;
@@ -353,14 +509,9 @@
       inset: 0;
       background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.22) 50%, transparent 60%);
       transform: translateX(-120%);
-      transition: none;
     }
-    .btn-solar:hover::after {
-      animation: sheen 0.7s ease;
-    }
-    @keyframes sheen {
-      to { transform: translateX(120%); }
-    }
+    .btn-solar:hover::after { animation: sheen 0.7s ease; }
+    @keyframes sheen { to { transform: translateX(120%); } }
     @media (prefers-reduced-motion: reduce) {
       .btn-solar:hover::after { animation: none; }
     }
@@ -457,26 +608,17 @@
     <div id="progress-fill" class="progress-fill"></div>
   </div>
 
-  <main class="mx-auto max-w-lg px-4 pt-4 sm:pt-7 pb-10">
-
-    <div id="step-dots" class="step-dots" aria-hidden="true"></div>
-
-    <div class="solar-strip" aria-hidden="true">
-      <svg class="solar-panel-svg" viewBox="0 0 80 52" fill="none">
-        <circle class="sp-sun" cx="64" cy="8" r="5"/>
-        <g>
-          <rect class="sp-cell on" x="4" y="16" width="18" height="14" rx="1"/>
-          <rect class="sp-cell on" x="24" y="16" width="18" height="14" rx="1"/>
-          <rect class="sp-cell on" x="44" y="16" width="18" height="14" rx="1"/>
-          <rect class="sp-cell on" x="4" y="32" width="18" height="14" rx="1"/>
-          <rect class="sp-cell on" x="24" y="32" width="18" height="14" rx="1"/>
-          <rect class="sp-cell on" x="44" y="32" width="18" height="14" rx="1"/>
-        </g>
-        <path d="M10 48h50" stroke="#A8ACB3" stroke-width="1" opacity="0.35"/>
-      </svg>
+  <div class="audit-chrome" id="audit-chrome">
+    <div class="mini">
+      <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="">
+      <span>Home Energy Audit</span>
     </div>
+    <button type="button" class="close-x" id="audit-close" aria-label="Close audit">×</button>
+  </div>
 
-    <!-- 0 Welcome -->
+  <main class="app-main mx-auto max-w-lg px-4 pt-4 sm:pt-7 pb-10">
+
+    <!-- 0 Welcome (landing only) -->
     <section id="step-0" class="step is-on">
       <figure class="mb-4 sm:mb-5 -mx-0">
         <picture>
@@ -497,8 +639,8 @@
         My Home Energy Audit
       </h1>
       <p class="welcome-copy mt-3">
-        Answer a few questions about your parents' home. We'll show solar savings and give you a
-        <span class="text-solar font-semibold">₹5,000 off</span> voucher to share with them.
+        Answer a few questions about your home. We'll show solar savings and give you a
+        <span class="text-solar font-semibold">₹5,000 off</span> voucher for your solar plan.
       </p>
 
       <div class="hero-offer mt-4 sm:mt-5">
@@ -515,14 +657,50 @@
       </p>
     </section>
 
-    <!-- 1 Bill -->
+    <div class="carousel-shell">
+      <div class="solar-stage" aria-hidden="true">
+        <svg viewBox="0 0 120 72" fill="none">
+          <defs>
+            <linearGradient id="cellGlow" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00D26A"/>
+              <stop offset="100%" stop-color="#7CFFB2"/>
+            </linearGradient>
+            <linearGradient id="beamGrad" x1="60" y1="14" x2="60" y2="58">
+              <stop offset="0%" stop-color="#00D26A" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#00D26A" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line class="sp-ray" x1="60" y1="2" x2="60" y2="8"/>
+          <line class="sp-ray" x1="48" y1="5" x2="52" y2="10"/>
+          <line class="sp-ray" x1="72" y1="5" x2="68" y2="10"/>
+          <line class="sp-ray" x1="40" y1="12" x2="46" y2="14"/>
+          <line class="sp-ray" x1="80" y1="12" x2="74" y2="14"/>
+          <circle class="sp-sun-core" cx="60" cy="14" r="5"/>
+          <path class="sp-beam" d="M48 20 L72 20 L78 30 L42 30 Z"/>
+          <rect class="sp-frame" x="22" y="30" width="76" height="34" rx="3"/>
+          <rect class="sp-cell" x="26" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-cell" x="50" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-cell" x="74" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-cell" x="26" y="48" width="20" height="12" rx="1"/>
+          <rect class="sp-cell" x="50" y="48" width="20" height="12" rx="1"/>
+          <rect class="sp-cell" x="74" y="48" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="26" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="50" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="74" y="34" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="26" y="48" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="50" y="48" width="20" height="12" rx="1"/>
+          <rect class="sp-glow" x="74" y="48" width="20" height="12" rx="1"/>
+        </svg>
+      </div>
+      <div id="step-dots" class="step-dots" aria-hidden="true"></div>
+
     <section id="step-1" class="step">
       <div class="flex items-center justify-between mb-5">
         <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 1 · Bill</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="0">← Back</button>
       </div>
       <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Monthly KSEB bill?</h2>
-      <p class="text-sm text-ash mb-6">Use your parent's typical bill — estimate is fine.</p>
+      <p class="text-sm text-ash mb-6">Use your typical monthly bill — an estimate is fine.</p>
       <div class="flex items-end justify-between mb-3">
         <label for="bill-slider" class="text-sm font-bold text-chalk">Monthly bill</label>
         <output id="bill-display" class="text-3xl font-extrabold text-solar tracking-tight tabular-nums">₹5,000</output>
@@ -700,7 +878,7 @@
       <div id="load-summary" class="mt-4 border border-ash/15 bg-charcoal/50 px-4 py-3 text-xs text-ash leading-relaxed"></div>
 
       <div class="mt-6 border border-solar/30 bg-solar/5 px-4 py-3">
-        <p class="text-sm text-bone font-semibold">Gift your parents ₹5,000 off this system.</p>
+        <p class="text-sm text-bone font-semibold">Unlock ₹5,000 off this solar system.</p>
         <p class="text-xs text-ash mt-1">TESLA '26 offer · Valid 10 days · Anywhere in Kerala</p>
       </div>
       <button type="button" class="btn btn-solar mt-6" data-next="6">Get ₹5,000 Voucher →</button>
@@ -713,8 +891,8 @@
         <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Your details</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="5">← Back</button>
       </div>
-      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Gift to Parents</h2>
-      <p class="text-sm text-ash mb-5">Fill this in so we can create your ₹5,000 voucher.</p>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Almost done</h2>
+      <p class="text-sm text-ash mb-5">Add your name, parent name and parent WhatsApp for the voucher.</p>
       <div class="mb-5 border border-ash/15 bg-charcoal/60 px-4 py-3 text-sm">
         <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash mb-1">Your plan</p>
         <p id="summary-line" class="text-bone font-semibold">5 kW · ₹54,000/yr</p>
@@ -726,10 +904,10 @@
           <span class="err">Please enter your name.</span>
         </div>
         <div class="field">
-          <label for="parent-name">Parent / homeowner name</label>
-          <span class="note">Whose house will get solar?</span>
-          <input id="parent-name" type="text" required maxlength="80" placeholder="Parent's name">
-          <span class="err">Please enter the homeowner's name.</span>
+          <label for="parent-name">Parent name</label>
+          <span class="note">Parent contact for the offer</span>
+          <input id="parent-name" type="text" required maxlength="80" placeholder="Parent full name">
+          <span class="err">Please enter the parent name.</span>
         </div>
         <div class="field">
           <label for="district">Kerala District</label>
@@ -746,15 +924,16 @@
           <span class="err">Please select a district.</span>
         </div>
         <div class="field">
-          <label for="whatsapp">WhatsApp Number</label>
+          <label for="whatsapp">Parent WhatsApp number</label>
+          <span class="note">10-digit mobile for voucher &amp; site visit</span>
           <div class="flex gap-2">
             <span class="inline-flex items-center justify-center min-h-[52px] min-w-[64px] border border-ash/28 bg-obsidian text-ash text-sm font-bold">+91</span>
-            <input id="whatsapp" type="tel" inputmode="numeric" required maxlength="10" placeholder="10-digit mobile" class="flex-1">
+            <input id="whatsapp" type="tel" inputmode="numeric" required maxlength="10" placeholder="Parent mobile" class="flex-1">
           </div>
           <span class="err">Enter a valid 10-digit Indian mobile number.</span>
         </div>
         <button type="submit" id="submit-claim" class="btn btn-solar mt-2">Get my ₹5,000 voucher</button>
-        <p class="next-hint">We'll open WhatsApp so you can send it to your parents</p>
+        <p class="next-hint">Next: send voucher on WhatsApp</p>
       </form>
     </section>
 
@@ -762,7 +941,7 @@
     <section id="step-7" class="step">
       <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-solar mb-2">You're all set</p>
       <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-2">₹5,000 Voucher Unlocked</h2>
-      <p class="text-sm text-ash mb-5">Share this with your parents on WhatsApp.</p>
+      <p class="text-sm text-ash mb-5">Send this voucher on WhatsApp.</p>
 
       <article class="voucher">
         <div class="px-5 pt-5 pb-4">
@@ -808,8 +987,9 @@
       <button type="button" class="btn-link mt-2" data-next="0">Start over</button>
       <p id="copy-toast" class="mt-2 text-center text-xs text-solar" style="display:none">Message copied — paste in WhatsApp</p>
     </section>
+    </div><!-- /.carousel-shell -->
 
-    <footer class="mt-14 pt-8 border-t border-ash/15">
+    <footer class="site-footer mt-14 pt-8 border-t border-ash/15">
       <div class="flex items-center gap-3 mb-4">
         <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="36" height="36" class="rounded-full">
         <div>
@@ -1052,6 +1232,7 @@
 
     function goStep(n) {
       state.step = n;
+      document.body.classList.toggle('is-audit', n > 0);
       document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
       var el = document.getElementById('step-' + n);
       if (el) {
@@ -1062,6 +1243,11 @@
       renderDots(n);
       if (n === 5 || n === 6) updateResults();
       window.scrollTo(0, 0);
+    }
+
+    var closeBtn = document.getElementById('audit-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () { goStep(0); });
     }
 
     function randomCode() {
@@ -1111,7 +1297,7 @@
         'Student / Attendee Name: ' + state.studentName,
         'Parent / Guardian Name: ' + state.parentName,
         'District: ' + state.district,
-        'Mobile / WhatsApp: +91' + state.whatsapp,
+        'Parent WhatsApp: +91' + state.whatsapp,
         'Monthly electricity bill: ₹' + state.bill,
         'Roof profile: ' + state.roof,
         'Air-conditioners: ' + state.ac,
