@@ -545,18 +545,11 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: min(48vh, 380px);
-      object-fit: cover;
-      object-position: center 18%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center top;
       border: 1px solid rgba(168,172,179,0.18);
       background: #0B0D0E;
-    }
-    @media (min-width: 640px) {
-      .hero-poster {
-        max-height: none;
-        object-fit: contain;
-        object-position: center;
-      }
     }
     .hero-offer {
       display: flex;
@@ -582,10 +575,142 @@
     @media (min-width: 480px) {
       .welcome-copy { font-size: 15px; }
     }
+
+    /* Intro splash — FGE × TESLA '26 */
+    .boot-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 40%, rgba(0,210,106,0.12), transparent 60%),
+        #0B0D0E;
+      transition: opacity 0.55s ease, visibility 0.55s ease;
+    }
+    .boot-splash.is-done {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .boot-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      animation: bootRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .boot-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 88px;
+    }
+    .boot-brand img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 28px rgba(0,210,106,0.18);
+      animation: bootPulse 1.6s ease-in-out infinite;
+    }
+    .boot-brand:last-child img {
+      box-shadow: 0 0 28px rgba(243,239,230,0.16);
+      animation-delay: 0.2s;
+    }
+    .boot-brand span {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #F3EFE6;
+    }
+    .boot-x {
+      font-size: 22px;
+      font-weight: 200;
+      color: #A8ACB3;
+      opacity: 0;
+      animation: bootFade 0.5s ease 0.25s both;
+    }
+    .boot-sub {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #A8ACB3;
+      opacity: 0;
+      animation: bootFade 0.5s ease 0.4s both;
+    }
+    .boot-bar {
+      width: 120px;
+      height: 2px;
+      background: #1e2226;
+      overflow: hidden;
+      border-radius: 99px;
+      opacity: 0;
+      animation: bootFade 0.4s ease 0.35s both;
+    }
+    .boot-bar i {
+      display: block;
+      height: 100%;
+      width: 40%;
+      background: linear-gradient(90deg, #00B359, #00D26A);
+      animation: bootSlide 1.1s ease-in-out infinite;
+    }
+    @keyframes bootRise {
+      from { opacity: 0; transform: translateY(14px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes bootFade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes bootPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes bootSlide {
+      0% { transform: translateX(-120%); }
+      100% { transform: translateX(320%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .boot-lockup, .boot-x, .boot-sub, .boot-bar, .boot-brand img { animation: none; opacity: 1; }
+      .boot-bar i { width: 100%; transform: none; }
+    }
+    body.is-booting { overflow: hidden; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
   </style>
 </head>
-<body class="grain bg-app">
+<body class="grain bg-app is-booting">
 
+  <div class="boot-splash" id="boot-splash" role="status" aria-live="polite" aria-label="Loading FGE Solar and TESLA 26">
+    <div class="boot-lockup">
+      <div class="boot-brand">
+        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="56" height="56">
+        <span>FGE Solar</span>
+      </div>
+      <span class="boot-x" aria-hidden="true">×</span>
+      <div class="boot-brand">
+        <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="56" height="56">
+        <span>TESLA '26</span>
+      </div>
+    </div>
+    <p class="boot-sub">Official Energy Partner · CET</p>
+    <div class="boot-bar" aria-hidden="true"><i></i></div>
+  </div>
   <header class="site-header border-b border-ash/15">
     <div class="mx-auto max-w-lg">
       <div class="flex items-center justify-center gap-2.5 sm:gap-4">
@@ -620,6 +745,7 @@
 
     <!-- 0 Welcome (landing only) -->
     <section id="step-0" class="step is-on">
+      <h1 class="sr-only">My Home Energy Audit</h1>
       <figure class="mb-4 sm:mb-5 -mx-0">
         <picture>
           <source srcset="/assets/images/campaigns/tesla26/hero-poster.webp" type="image/webp">
@@ -635,20 +761,10 @@
         </picture>
       </figure>
 
-      <h1 class="text-[clamp(1.75rem,7.2vw,2.55rem)] font-extrabold leading-[1.05] tracking-[-0.04em] text-bone">
-        My Home Energy Audit
-      </h1>
-      <p class="welcome-copy mt-3">
-        Answer a few questions about your home. We'll show solar savings and give you a
-        <span class="text-solar font-semibold">₹5,000 off</span> voucher for your solar plan.
+      <p class="welcome-copy">
+        Answer a few questions about your home. We'll show solar savings and unlock a
+        <span class="text-solar font-semibold">₹5,000 off</span> voucher.
       </p>
-
-      <div class="hero-offer mt-4 sm:mt-5">
-        <div>
-          <p class="amount">₹5,000 OFF</p>
-          <p class="mt-1 text-[11px] sm:text-xs text-ash">Rooftop solar · Valid 10 days · Kerala</p>
-        </div>
-      </div>
 
       <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start →</button>
       <p class="next-hint">
@@ -1461,6 +1577,28 @@
 
     updateResults();
     goStep(0);
+
+    /* Intro splash */
+    (function bootSplash() {
+      var splash = document.getElementById('boot-splash');
+      if (!splash) {
+        document.body.classList.remove('is-booting');
+        return;
+      }
+      var minMs = 1400;
+      var started = Date.now();
+      function finish() {
+        var wait = Math.max(0, minMs - (Date.now() - started));
+        window.setTimeout(function () {
+          splash.classList.add('is-done');
+          document.body.classList.remove('is-booting');
+          window.setTimeout(function () { splash.remove(); }, 600);
+        }, wait);
+      }
+      if (document.readyState === 'complete') finish();
+      else window.addEventListener('load', finish);
+      window.setTimeout(finish, 3200);
+    })();
   })();
   </script>
 </body>
