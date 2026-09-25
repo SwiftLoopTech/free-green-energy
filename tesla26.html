@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>My Home Energy Audit | FGE Solar × TESLA '26 CET</title>
+  <meta name="description" content="Engineered for CETians. Audit your home's appliances, calculate KSEB solar savings, and gift parents a ₹5,000 Solar Grant — Official Energy Partner of TESLA '26.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0B0D0E">
+  <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0B0D0E',
+            charcoal: '#121517',
+            bone: '#F3EFE6',
+            chalk: '#EAE5D9',
+            ash: '#A8ACB3',
+            solar: '#00D26A',
+            'solar-deep': '#00B359',
+            brick: '#C44B3A',
+            navy: '#1B2A4A'
+          },
+          fontFamily: {
+            sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --obsidian: #0B0D0E;
+      --charcoal: #121517;
+      --bone: #F3EFE6;
+      --chalk: #EAE5D9;
+      --ash: #A8ACB3;
+      --solar: #00D26A;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0B0D0E;
+      color: var(--bone);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    .grain::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 40;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .bg-app {
+      background:
+        radial-gradient(ellipse 70% 40% at 50% -5%, rgba(0,210,106,0.07), transparent 55%),
+        radial-gradient(ellipse 50% 30% at 100% 0%, rgba(196,75,58,0.06), transparent 45%),
+        #0B0D0E;
+    }
+    .progress-track { height: 3px; background: #1e2226; }
+    .progress-fill { height: 100%; background: var(--solar); width: 0%; transition: width 0.2s ease; }
+    .step { display: none; }
+    .step.is-on { display: block; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: #2a2e32;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--solar);
+      border: 3px solid var(--bone);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      cursor: grab;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--solar);
+      border: 3px solid var(--bone);
+      cursor: grab;
+    }
+
+    .chip {
+      min-height: 48px;
+      padding: 0 14px;
+      border: 1px solid rgba(168,172,179,0.28);
+      background: transparent;
+      color: var(--ash);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .chip.is-on { border-color: var(--solar); background: var(--solar); color: #04150c; }
+
+    .choice input { position: absolute; opacity: 0; pointer-events: none; }
+    .choice label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 12px 14px;
+      border: 1px solid rgba(168,172,179,0.28);
+      background: rgba(18,21,23,0.85);
+      color: var(--ash);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .choice input:checked + label {
+      border-color: var(--solar);
+      color: var(--bone);
+      background: rgba(0,210,106,0.08);
+      box-shadow: inset 0 0 0 1px var(--solar);
+    }
+    .choice.grid-2 { display: contents; }
+    .choice-grid { display: grid; gap: 8px; }
+    .choice-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .choice-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .choice-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .choice-grid.cols-3 label,
+    .choice-grid.cols-4 label {
+      justify-content: center;
+      text-align: center;
+      min-height: 52px;
+      padding: 10px 8px;
+      font-size: 13px;
+    }
+
+    .stat {
+      border: 1px solid rgba(168,172,179,0.18);
+      background: rgba(18,21,23,0.9);
+      padding: 14px;
+    }
+    .stat .lbl {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--ash);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .stat .val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--bone);
+      line-height: 1.15;
+    }
+    .stat.hi .val { color: var(--solar); }
+
+    .field label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--chalk);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .field .note {
+      display: block;
+      margin: -4px 0 8px;
+      color: var(--ash);
+      font-size: 12px;
+    }
+    .field input, .field select {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 14px;
+      border: 1px solid rgba(168,172,179,0.28);
+      background: #0e1112;
+      color: var(--bone);
+      font-size: 15px;
+      outline: none;
+    }
+    .field input:focus, .field select:focus { border-color: var(--solar); }
+    .field input::placeholder { color: rgba(168,172,179,0.4); }
+    .field select option { background: #121517; }
+    .field .err { display: none; margin-top: 6px; color: #f07167; font-size: 12px; }
+    .field.bad input, .field.bad select { border-color: #f07167; }
+    .field.bad .err { display: block; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 0 20px;
+      border: 0;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      text-decoration: none;
+      width: 100%;
+    }
+    .btn-solar { background: var(--solar); color: #04150c; }
+    .btn-solar:hover { background: #00B359; }
+    .btn-solar:disabled { opacity: 0.55; cursor: wait; }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ash);
+      border: 1px solid rgba(168,172,179,0.28);
+    }
+    .btn-link {
+      background: transparent;
+      color: var(--ash);
+      font-size: 14px;
+      font-weight: 600;
+      min-height: 48px;
+      border: 0;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .voucher {
+      position: relative;
+      background: linear-gradient(160deg, #F3EFE6, #EAE5D9);
+      color: #0B0D0E;
+      overflow: hidden;
+    }
+    .voucher::before, .voucher::after {
+      content: "";
+      position: absolute;
+      top: 52%;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #0B0D0E;
+      transform: translateY(-50%);
+    }
+    .voucher::before { left: -12px; }
+    .voucher::after { right: -12px; }
+    .voucher-line {
+      margin: 0 20px;
+      border-top: 2px dashed rgba(11,13,14,0.16);
+    }
+
+    .q-label {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--chalk);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .q-hint {
+      display: block;
+      margin: -6px 0 10px;
+      color: var(--ash);
+      font-size: 12px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body class="grain bg-app">
+
+  <header class="border-b border-ash/15">
+    <div class="mx-auto max-w-lg px-4 py-4">
+      <div class="flex items-center justify-center gap-3 sm:gap-4">
+        <a href="/" class="flex items-center gap-2 no-underline" aria-label="FGE Solar">
+          <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="40" height="40" class="rounded-full bg-bone/5">
+          <span class="text-sm font-extrabold text-bone tracking-tight">FGE Solar</span>
+        </a>
+        <span class="text-ash/50 text-lg font-light" aria-hidden="true">×</span>
+        <div class="flex items-center gap-2">
+          <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26 CET" width="40" height="40" class="rounded-full">
+          <span class="text-sm font-extrabold text-bone tracking-tight">TESLA '26</span>
+        </div>
+      </div>
+      <p class="mt-2.5 text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-ash">
+        Official Energy Partner · Dept. of EEE, CET
+      </p>
+    </div>
+    <div class="progress-track" aria-hidden="true">
+      <div id="progress-fill" class="progress-fill"></div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-lg px-4 py-6 sm:py-8 pb-10">
+
+    <!-- 0 Welcome -->
+    <section id="step-0" class="step is-on">
+      <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-ash mb-3">Campus Micro-App</p>
+      <h1 class="text-[clamp(2.1rem,8vw,2.75rem)] font-extrabold leading-[1.02] tracking-[-0.04em] text-bone">
+        My Home Energy Audit
+      </h1>
+      <p class="mt-4 text-[15px] leading-relaxed text-ash">
+        Engineered for CETians. Map your parents' home appliances, estimate KSEB solar savings, and unlock an exclusive
+        <span class="text-solar font-semibold">₹5,000 Solar Grant</span>.
+      </p>
+      <div class="mt-6 border border-ash/20 bg-charcoal/70 px-4 py-4">
+        <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash">Festival offer</p>
+        <p class="mt-1 text-xl font-extrabold text-bone tracking-tight">₹5,000 Off Rooftop Solar</p>
+        <p class="mt-1 text-xs text-ash">Valid 10 days after voucher unlock · Across Kerala</p>
+      </div>
+      <ul class="mt-5 space-y-2 text-sm text-ash">
+        <li class="flex gap-2"><span class="text-solar">✓</span> Bill + appliance load check</li>
+        <li class="flex gap-2"><span class="text-solar">✓</span> Live kW recommendation</li>
+        <li class="flex gap-2"><span class="text-solar">✓</span> WhatsApp voucher for parents</li>
+      </ul>
+      <button type="button" class="btn btn-solar mt-8" data-next="1">Start Energy Audit →</button>
+      <p class="mt-3 text-center text-[11px] text-ash/70">~2 minutes · No login needed</p>
+    </section>
+
+    <!-- 1 Bill -->
+    <section id="step-1" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 1 · Bill</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="0">← Back</button>
+      </div>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Monthly KSEB bill?</h2>
+      <p class="text-sm text-ash mb-6">Use your parent's typical bill — estimate is fine.</p>
+      <div class="flex items-end justify-between mb-3">
+        <label for="bill-slider" class="text-sm font-bold text-chalk">Monthly bill</label>
+        <output id="bill-display" class="text-3xl font-extrabold text-solar tracking-tight tabular-nums">₹5,000</output>
+      </div>
+      <input id="bill-slider" type="range" min="1500" max="25000" step="100" value="5000" aria-label="Monthly KSEB bill">
+      <div class="mt-2 flex justify-between text-[11px] text-ash/70"><span>₹1,500</span><span>₹25,000+</span></div>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <button type="button" class="chip" data-bill="2500">₹2,500</button>
+        <button type="button" class="chip is-on" data-bill="5000">₹5,000</button>
+        <button type="button" class="chip" data-bill="8500">₹8,500</button>
+        <button type="button" class="chip" data-bill="12000">₹12,000+</button>
+      </div>
+      <button type="button" class="btn btn-solar mt-8" data-next="2">Next: Roof →</button>
+    </section>
+
+    <!-- 2 Roof -->
+    <section id="step-2" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 2 · Roof</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="1">← Back</button>
+      </div>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Roof type?</h2>
+      <p class="text-sm text-ash mb-6">Affects mounting structure and generation.</p>
+      <div class="choice-grid" role="radiogroup" aria-label="Roof type">
+        <div class="choice">
+          <input type="radio" name="roof" id="roof-flat" value="flat" checked>
+          <label for="roof-flat"><span class="text-bone font-bold">Flat Concrete Slab</span></label>
+        </div>
+        <div class="choice">
+          <input type="radio" name="roof" id="roof-tile" value="tile">
+          <label for="roof-tile"><span class="text-bone font-bold">Slanted Tile</span></label>
+        </div>
+        <div class="choice">
+          <input type="radio" name="roof" id="roof-metal" value="metal">
+          <label for="roof-metal"><span class="text-bone font-bold">Industrial Metal Sheet</span></label>
+        </div>
+      </div>
+      <button type="button" class="btn btn-solar mt-8" data-next="3">Next: Cooling &amp; major loads →</button>
+    </section>
+
+    <!-- 3 Cooling & major loads -->
+    <section id="step-3" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 3 · Major loads</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="2">← Back</button>
+      </div>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Cooling &amp; big appliances</h2>
+      <p class="text-sm text-ash mb-6">These dominate a Kerala home's electricity use.</p>
+
+      <div class="mb-5">
+        <span class="q-label">Air conditioners (1–1.5 ton typical)</span>
+        <span class="q-hint">~1.2–1.8 kW each when running · largest summer load</span>
+        <div class="choice-grid cols-4" role="radiogroup">
+          <div class="choice"><input type="radio" name="ac" id="ac-0" value="0" checked><label for="ac-0">0</label></div>
+          <div class="choice"><input type="radio" name="ac" id="ac-1" value="1"><label for="ac-1">1</label></div>
+          <div class="choice"><input type="radio" name="ac" id="ac-2" value="2"><label for="ac-2">2</label></div>
+          <div class="choice"><input type="radio" name="ac" id="ac-3" value="3"><label for="ac-3">3+</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">Refrigerators</span>
+        <span class="q-hint">~30–60 units/month each · always-on base load</span>
+        <div class="choice-grid cols-3" role="radiogroup">
+          <div class="choice"><input type="radio" name="fridge" id="fridge-1" value="1" checked><label for="fridge-1">1</label></div>
+          <div class="choice"><input type="radio" name="fridge" id="fridge-2" value="2"><label for="fridge-2">2</label></div>
+          <div class="choice"><input type="radio" name="fridge" id="fridge-0" value="0"><label for="fridge-0">None</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">Water heating</span>
+        <span class="q-hint">Electric geyser ≈ 2–3 kW burst · strong solar / SWH candidate</span>
+        <div class="choice-grid" role="radiogroup">
+          <div class="choice"><input type="radio" name="water" id="water-electric" value="electric" checked><label for="water-electric"><span class="text-bone font-bold">Electric geyser / heater</span></label></div>
+          <div class="choice"><input type="radio" name="water" id="water-gas" value="gas"><label for="water-gas"><span class="text-bone font-bold">Gas / LPG</span></label></div>
+          <div class="choice"><input type="radio" name="water" id="water-none" value="none"><label for="water-none"><span class="text-bone font-bold">Rarely / none</span></label></div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <span class="q-label">Who is home daytime (10am–4pm)?</span>
+        <span class="q-hint">Solar generates midday — daytime use = better self-consumption</span>
+        <div class="choice-grid" role="radiogroup">
+          <div class="choice"><input type="radio" name="daytime" id="day-home" value="home"><label for="day-home"><span class="text-bone font-bold">Mostly home</span></label></div>
+          <div class="choice"><input type="radio" name="daytime" id="day-mixed" value="mixed" checked><label for="day-mixed"><span class="text-bone font-bold">Mixed / WFH some days</span></label></div>
+          <div class="choice"><input type="radio" name="daytime" id="day-away" value="away"><label for="day-away"><span class="text-bone font-bold">Mostly away (office)</span></label></div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-solar mt-8" data-next="4">Next: Kitchen &amp; other →</button>
+    </section>
+
+    <!-- 4 Kitchen & other -->
+    <section id="step-4" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 4 · Other loads</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="3">← Back</button>
+      </div>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Kitchen &amp; extras</h2>
+      <p class="text-sm text-ash mb-6">Short bursts still show up on the bill over a month.</p>
+
+      <div class="mb-5">
+        <span class="q-label">Mixer / grinder</span>
+        <div class="choice-grid cols-2" role="radiogroup">
+          <div class="choice"><input type="radio" name="mixer" id="mixer-yes" value="yes" checked><label for="mixer-yes">Yes</label></div>
+          <div class="choice"><input type="radio" name="mixer" id="mixer-no" value="no"><label for="mixer-no">No</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">Washing machine</span>
+        <div class="choice-grid cols-2" role="radiogroup">
+          <div class="choice"><input type="radio" name="washer" id="washer-yes" value="yes" checked><label for="washer-yes">Yes</label></div>
+          <div class="choice"><input type="radio" name="washer" id="washer-no" value="no"><label for="washer-no">No</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">Induction cooktop / electric stove</span>
+        <div class="choice-grid cols-2" role="radiogroup">
+          <div class="choice"><input type="radio" name="induction" id="ind-yes" value="yes"><label for="ind-yes">Yes</label></div>
+          <div class="choice"><input type="radio" name="induction" id="ind-no" value="no" checked><label for="ind-no">No</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">Ceiling / pedestal fans (approx.)</span>
+        <div class="choice-grid cols-4" role="radiogroup">
+          <div class="choice"><input type="radio" name="fans" id="fans-2" value="2"><label for="fans-2">1–2</label></div>
+          <div class="choice"><input type="radio" name="fans" id="fans-4" value="4" checked><label for="fans-4">3–4</label></div>
+          <div class="choice"><input type="radio" name="fans" id="fans-6" value="6"><label for="fans-6">5–6</label></div>
+          <div class="choice"><input type="radio" name="fans" id="fans-8" value="8"><label for="fans-8">7+</label></div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <span class="q-label">EV / two-wheeler electric charger at home?</span>
+        <div class="choice-grid cols-2" role="radiogroup">
+          <div class="choice"><input type="radio" name="ev" id="ev-yes" value="yes"><label for="ev-yes">Yes</label></div>
+          <div class="choice"><input type="radio" name="ev" id="ev-no" value="no" checked><label for="ev-no">No</label></div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <span class="q-label">Inverter / UPS battery backup?</span>
+        <div class="choice-grid cols-2" role="radiogroup">
+          <div class="choice"><input type="radio" name="inverter" id="inv-yes" value="yes"><label for="inv-yes">Yes</label></div>
+          <div class="choice"><input type="radio" name="inv-no" id="inv-no" value="no" checked><label for="inv-no">No</label></div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-solar mt-8" data-next="5">See my solar plan →</button>
+    </section>
+
+    <!-- 5 Results -->
+    <section id="step-5" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Your audit</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="4">← Back</button>
+      </div>
+      <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-solar mb-2">Recommended for this home</p>
+      <h2 id="rec-system" class="text-2xl font-extrabold tracking-tight text-bone leading-tight">5 kW On-Grid System</h2>
+      <p id="rec-units" class="mt-2 text-sm text-ash">~600 units / month</p>
+      <p id="rec-note" class="mt-2 text-xs text-ash/80 leading-relaxed"></p>
+
+      <div class="mt-5 grid grid-cols-2 gap-3">
+        <div class="stat hi"><span class="lbl">25-Year Savings</span><span id="stat-25y" class="val">₹14.4 L</span></div>
+        <div class="stat"><span class="lbl">Annual Savings</span><span id="stat-annual" class="val">₹54,000</span><span id="stat-offset" class="block mt-1 text-[11px] text-ash">~90%</span></div>
+        <div class="stat"><span class="lbl">CO₂ Mitigated</span><span id="stat-co2" class="val">5.9 t/yr</span></div>
+        <div class="stat"><span class="lbl">Roof Area</span><span id="stat-roof" class="val">~500 ft²</span></div>
+      </div>
+      <p id="stat-trees" class="mt-4 text-sm text-ash">Green impact: ~295 trees / year</p>
+      <div id="load-summary" class="mt-4 border border-ash/15 bg-charcoal/50 px-4 py-3 text-xs text-ash leading-relaxed"></div>
+
+      <div class="mt-6 border border-solar/30 bg-solar/5 px-4 py-3">
+        <p class="text-sm text-bone font-semibold">Gift parents ₹5,000 off this system.</p>
+        <p class="text-xs text-ash mt-1">TESLA '26 exclusive · Valid 10 days · Kerala-wide</p>
+      </div>
+      <button type="button" class="btn btn-solar mt-6" data-next="6">Unlock ₹5,000 Voucher →</button>
+      <button type="button" class="btn-link mt-1" data-back="1">Adjust answers</button>
+    </section>
+
+    <!-- 6 Claim -->
+    <section id="step-6" class="step">
+      <div class="flex items-center justify-between mb-5">
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Claim grant</p>
+        <button type="button" class="text-xs text-ash hover:text-bone" data-back="5">← Back</button>
+      </div>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Gift to Parents</h2>
+      <p class="text-sm text-ash mb-5">We save your full audit to FGE Solar and issue the voucher.</p>
+      <div class="mb-5 border border-ash/15 bg-charcoal/60 px-4 py-3 text-sm">
+        <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash mb-1">Audit snapshot</p>
+        <p id="summary-line" class="text-bone font-semibold">5 kW · ₹54,000/yr</p>
+      </div>
+      <form id="claim-form" novalidate class="space-y-4">
+        <div class="field">
+          <label for="student-name">Student / Attendee Name</label>
+          <input id="student-name" type="text" autocomplete="name" required maxlength="80" placeholder="Your name">
+          <span class="err">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <label for="parent-name">Parent / Guardian Name</label>
+          <span class="note">Who is the homeowner?</span>
+          <input id="parent-name" type="text" required maxlength="80" placeholder="Parent's name">
+          <span class="err">Please enter the homeowner's name.</span>
+        </div>
+        <div class="field">
+          <label for="district">Kerala District</label>
+          <select id="district" required>
+            <option value="" disabled selected>Select district</option>
+            <option>Thiruvananthapuram</option>
+            <option>Kollam</option>
+            <option>Pathanamthitta</option>
+            <option>Ernakulam</option>
+            <option>Malappuram</option>
+            <option>Kozhikode</option>
+            <option>Other</option>
+          </select>
+          <span class="err">Please select a district.</span>
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp Number</label>
+          <div class="flex gap-2">
+            <span class="inline-flex items-center justify-center min-h-[52px] min-w-[64px] border border-ash/28 bg-obsidian text-ash text-sm font-bold">+91</span>
+            <input id="whatsapp" type="tel" inputmode="numeric" required maxlength="10" placeholder="10-digit mobile" class="flex-1">
+          </div>
+          <span class="err">Enter a valid 10-digit Indian mobile number.</span>
+        </div>
+        <button type="submit" id="submit-claim" class="btn btn-solar mt-2">Generate ₹5,000 Voucher</button>
+      </form>
+    </section>
+
+    <!-- 7 Voucher -->
+    <section id="step-7" class="step">
+      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-solar mb-2">You're all set</p>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-2">₹5,000 Voucher Unlocked</h2>
+      <p class="text-sm text-ash mb-5">Share this with your parents on WhatsApp.</p>
+
+      <article class="voucher">
+        <div class="px-5 pt-5 pb-4">
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-navy/70">FGE Solar × TESLA '26</p>
+              <p class="mt-1 text-2xl font-black tracking-tight">₹5,000 OFF</p>
+              <p class="text-sm text-navy/80 font-medium">Rooftop Solar Installation</p>
+            </div>
+            <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="" width="44" height="44" class="rounded-full shrink-0 mix-blend-multiply opacity-90">
+          </div>
+        </div>
+        <div class="voucher-line"></div>
+        <div class="px-5 pt-4 pb-5">
+          <div class="flex flex-wrap items-end justify-between gap-3 mb-3">
+            <div>
+              <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Code</p>
+              <p id="voucher-code" class="mt-0.5 font-mono text-base font-bold tracking-wider">TESLA26-CET-0000</p>
+            </div>
+            <div class="text-right">
+              <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Expires in</p>
+              <p id="voucher-countdown" class="mt-0.5 font-mono text-base font-bold text-brick tabular-nums">10d 00h 00m</p>
+            </div>
+          </div>
+          <div class="space-y-1 text-sm border-t border-obsidian/10 pt-3">
+            <p><span class="text-navy/55">For:</span> <strong id="v-parent">—</strong></p>
+            <p><span class="text-navy/55">From:</span> <strong id="v-student">—</strong></p>
+            <p><span class="text-navy/55">District:</span> <strong id="v-district">—</strong></p>
+            <p><span class="text-navy/55">System:</span> <strong id="v-system">—</strong></p>
+          </div>
+          <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.06em] text-navy/50">
+            Authorized by FGE Solar · Redeemable across Kerala · 10-day validity
+          </p>
+        </div>
+      </article>
+
+      <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar mt-5">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Send Voucher to WhatsApp
+      </a>
+      <button type="button" id="wa-share-copy" class="btn btn-ghost mt-3">Copy share message</button>
+      <a href="tel:+918089073029" class="btn btn-ghost mt-3">Direct Helpline: +91 80890 73029</a>
+      <button type="button" class="btn-link mt-2" data-next="0">Start over</button>
+      <p id="copy-toast" class="mt-2 text-center text-xs text-solar" style="display:none">Message copied — paste in WhatsApp</p>
+    </section>
+
+    <footer class="mt-14 pt-8 border-t border-ash/15">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="36" height="36" class="rounded-full">
+        <div>
+          <p class="text-sm font-extrabold text-bone tracking-tight">FGE Solar</p>
+          <p class="text-[10px] uppercase tracking-[0.12em] text-ash">Future. Green. Energy.</p>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed text-ash">
+        FGE Solar (Future Green Energy Group) is an MNRE-empanelled solar installation company based in Thiruvananthapuram, Kerala.
+        We design and install residential and commercial rooftop systems, assist with PM Surya Ghar subsidy and KSEB net metering,
+        and support families from site survey through commissioning — across the state.
+      </p>
+      <p class="mt-4 text-xs text-ash/70">
+        Official Energy Partner of TESLA '26 · Department of EEE, College of Engineering Trivandrum (CET).
+      </p>
+      <p class="mt-3 text-[11px] text-ash/50 leading-relaxed">
+        Kerala model: ~4.2 peak sun hours · 1 kWp ≈ 120 units/month. Estimates are directional — site assessment required. Voucher valid 10 days.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-4 text-xs font-semibold">
+        <a href="/" class="text-solar hover:underline">fgesolar.in</a>
+        <a href="tel:+918089073029" class="text-ash hover:text-bone">+91 80890 73029</a>
+      </div>
+    </footer>
+  </main>
+
+  <iframe name="fge-tesla26-gf" title="Google Forms" hidden aria-hidden="true"></iframe>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* Google Forms — same sink as Home Energy Check leads */
+    var GF_ENDPOINT = 'https://docs.google.com/forms/d/e/1FAIpQLSeBHVzkyMB86UiJEJbofORpck0Zgs2IK6Tk-5NEXycUhSrWJQ/formResponse';
+    var GF_ENTRY = 'entry.2013841671';
+
+    var UNITS_PER_KWP = 120;
+    var CO2_PER_KWH = 0.82;
+    var KG_PER_TREE = 20;
+    var SQFT_PER_KW = 100;
+    var LIFE = 25;
+    var VOUCHER_DAYS = 10;
+    var FGE_WA = '918089073029';
+    var GRANT = 5000;
+    var TOTAL_STEPS = 7;
+
+    var state = {
+      step: 0,
+      bill: 5000,
+      roof: 'flat',
+      ac: 0,
+      fridge: 1,
+      water: 'electric',
+      daytime: 'mixed',
+      mixer: 'yes',
+      washer: 'yes',
+      induction: 'no',
+      fans: 4,
+      ev: 'no',
+      inverter: 'no',
+      kw: 5,
+      label: '',
+      unitsMonth: 0,
+      annualSavings: 0,
+      savings25: 0,
+      offsetPct: 90,
+      co2Tons: 0,
+      trees: 0,
+      roofSqft: 0,
+      loadNote: '',
+      loadSummary: '',
+      voucherCode: '',
+      expiresAt: null,
+      studentName: '',
+      parentName: '',
+      district: '',
+      whatsapp: ''
+    };
+
+    var countdownTimer = null;
+    var billSlider = document.getElementById('bill-slider');
+    var billDisplay = document.getElementById('bill-display');
+    var progressFill = document.getElementById('progress-fill');
+    var chips = document.querySelectorAll('.chip[data-bill]');
+
+    function formatINR(n) {
+      return '₹' + Math.round(n).toLocaleString('en-IN');
+    }
+    function formatLakhs(n) {
+      var L = n / 100000;
+      if (L >= 10) return '₹' + L.toFixed(1) + ' L';
+      if (L >= 1) return '₹' + (Math.round(L * 100) / 100).toFixed(2).replace(/\.?0+$/, '') + ' L';
+      return formatINR(n);
+    }
+    function radioVal(name) {
+      var el = document.querySelector('input[name="' + name + '"]:checked');
+      return el ? el.value : '';
+    }
+    function syncAppliances() {
+      state.roof = radioVal('roof') || state.roof;
+      state.ac = Number(radioVal('ac') || 0);
+      state.fridge = Number(radioVal('fridge') || 1);
+      state.water = radioVal('water') || 'electric';
+      state.daytime = radioVal('daytime') || 'mixed';
+      state.mixer = radioVal('mixer') || 'yes';
+      state.washer = radioVal('washer') || 'yes';
+      state.induction = radioVal('induction') || 'no';
+      state.fans = Number(radioVal('fans') || 4);
+      state.ev = radioVal('ev') || 'no';
+      state.inverter = radioVal('inverter') || 'no';
+    }
+
+    /* Indicative monthly units from appliance profile (Kerala residential) */
+    function estimateLoadUnits() {
+      var u = 0;
+      u += state.ac * 180;          // 1–1.5T, ~5–6h/day seasonal avg
+      u += state.fridge * 45;       // frost-free / single door blend
+      if (state.water === 'electric') u += 70;
+      if (state.mixer === 'yes') u += 8;
+      if (state.washer === 'yes') u += 25;
+      if (state.induction === 'yes') u += 40;
+      u += state.fans * 12;         // ~50–75W fans
+      if (state.ev === 'yes') u += 90; // light EV / scooter charge
+      if (state.inverter === 'yes') u += 15; // standby + losses
+      u += 40; // lights, TV, router, misc
+      return Math.round(u);
+    }
+
+    function baseRecommend(bill) {
+      if (bill < 3500) return { kw: 3, label: '3 kW On-Grid System', offset: 0.92 };
+      if (bill <= 7000) return { kw: 5, label: '5 kW On-Grid System', offset: 0.90 };
+      if (bill <= 11000) return { kw: 8, label: '8 kW High-Efficiency System', offset: 0.88 };
+      return { kw: 10, label: '10 kW+ Hybrid / Three-Phase System', offset: 0.85 };
+    }
+
+    function roofMod(roof) {
+      if (roof === 'tile') return 1;
+      if (roof === 'metal') return 0.98;
+      return 0.95;
+    }
+
+    function calculate() {
+      syncAppliances();
+      var rec = baseRecommend(state.bill);
+      var notes = [];
+      var kw = rec.kw;
+      var label = rec.label;
+      var offset = rec.offset;
+
+      // Load-driven bumps (technically conservative)
+      if (state.ac >= 2 && kw < 8) {
+        kw = Math.min(10, kw + (state.ac >= 3 ? 3 : 2));
+        notes.push(state.ac + ' ACs push cooling demand — sized up.');
+      }
+      if (state.ev === 'yes' && kw < 10) {
+        kw = Math.min(10, kw + 2);
+        notes.push('Home EV charging — capacity increased.');
+      }
+      if (state.water === 'electric') {
+        notes.push('Electric geyser: consider solar water heater alongside panels.');
+      }
+      if (state.daytime === 'home') {
+        offset = Math.min(0.95, offset + 0.03);
+        notes.push('Daytime occupancy improves solar self-consumption.');
+      } else if (state.daytime === 'away') {
+        offset = Math.max(0.80, offset - 0.04);
+        notes.push('Mostly away daytime — net metering carries more of the benefit.');
+      }
+      if (state.inverter === 'yes' && state.ac >= 1 && kw >= 5) {
+        label = kw >= 10
+          ? '10 kW+ Hybrid / Three-Phase System'
+          : kw + ' kW Hybrid-ready System';
+        notes.push('Existing inverter/UPS — hybrid option can be discussed on site.');
+      } else if (kw >= 10) {
+        label = '10 kW+ Hybrid / Three-Phase System';
+      } else if (kw === 8) {
+        label = '8 kW High-Efficiency System';
+      } else {
+        label = kw + ' kW On-Grid System';
+      }
+
+      // Snap to allowed set: 3,5,8,10
+      if (kw <= 3) kw = 3;
+      else if (kw <= 5) kw = 5;
+      else if (kw <= 8) kw = 8;
+      else kw = 10;
+
+      if (kw === 3) label = '3 kW On-Grid System';
+      else if (kw === 5) label = state.inverter === 'yes' ? '5 kW Hybrid-ready System' : '5 kW On-Grid System';
+      else if (kw === 8) label = state.inverter === 'yes' ? '8 kW Hybrid-ready System' : '8 kW High-Efficiency System';
+      else label = '10 kW+ Hybrid / Three-Phase System';
+
+      var mod = roofMod(state.roof);
+      var unitsMonth = Math.round(kw * UNITS_PER_KWP * mod);
+      var offsetPct = Math.max(80, Math.min(95, Math.round(offset * 100)));
+      var annualSavings = Math.round(state.bill * 12 * (offsetPct / 100));
+      var annualKwh = unitsMonth * 12;
+      var co2Kg = annualKwh * CO2_PER_KWH;
+      var loadUnits = estimateLoadUnits();
+
+      state.kw = kw;
+      state.label = label;
+      state.unitsMonth = unitsMonth;
+      state.offsetPct = offsetPct;
+      state.annualSavings = annualSavings;
+      state.savings25 = annualSavings * LIFE;
+      state.co2Tons = co2Kg / 1000;
+      state.trees = Math.round(co2Kg / KG_PER_TREE);
+      state.roofSqft = Math.round(kw * SQFT_PER_KW);
+      state.loadNote = notes.join(' ');
+      state.loadSummary =
+        'Appliance profile ≈ ' + loadUnits + ' units/mo indicative · ' +
+        state.ac + ' AC · ' + state.fridge + ' fridge · fans×' + state.fans +
+        (state.mixer === 'yes' ? ' · mixer' : '') +
+        (state.washer === 'yes' ? ' · washer' : '') +
+        (state.induction === 'yes' ? ' · induction' : '') +
+        (state.ev === 'yes' ? ' · EV charge' : '') +
+        (state.water === 'electric' ? ' · electric geyser' : '') +
+        ' · daytime: ' + state.daytime;
+    }
+
+    function updateResults() {
+      calculate();
+      billDisplay.textContent = formatINR(state.bill) + (state.bill >= 25000 ? '+' : '');
+      var pct = ((state.bill - 1500) / (25000 - 1500)) * 100;
+      billSlider.style.background =
+        'linear-gradient(90deg,#00B359 0%,#00D26A ' + pct + '%,#2a2e32 ' + pct + '%)';
+
+      document.getElementById('rec-system').textContent = state.label;
+      document.getElementById('rec-units').textContent =
+        '~' + state.unitsMonth.toLocaleString('en-IN') + ' units / month · Kerala peak-sun model';
+      document.getElementById('rec-note').textContent = state.loadNote;
+      document.getElementById('stat-25y').textContent = formatLakhs(state.savings25);
+      document.getElementById('stat-annual').textContent = formatINR(state.annualSavings);
+      document.getElementById('stat-offset').textContent = '~' + state.offsetPct + '% bill offset';
+      document.getElementById('stat-co2').textContent = state.co2Tons.toFixed(1) + ' t/yr';
+      document.getElementById('stat-roof').textContent = '~' + state.roofSqft.toLocaleString('en-IN') + ' ft²';
+      document.getElementById('stat-trees').textContent =
+        'Green impact: ~' + state.trees.toLocaleString('en-IN') + ' trees equivalent / year';
+      document.getElementById('load-summary').textContent = state.loadSummary;
+      document.getElementById('summary-line').textContent =
+        state.kw + ' kW · ' + formatINR(state.annualSavings) + '/yr · ' + state.ac + ' AC';
+    }
+
+    function goStep(n) {
+      state.step = n;
+      document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
+      var el = document.getElementById('step-' + n);
+      if (el) el.classList.add('is-on');
+      progressFill.style.width = Math.round((n / TOTAL_STEPS) * 100) + '%';
+      if (n === 5 || n === 6) updateResults();
+      window.scrollTo(0, 0);
+    }
+
+    function randomCode() {
+      return 'TESLA26-CET-' + (1000 + Math.floor(Math.random() * 9000));
+    }
+
+    function startCountdown(expiresAt) {
+      if (countdownTimer) clearInterval(countdownTimer);
+      function tick() {
+        var diff = Math.max(0, expiresAt - Date.now());
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        document.getElementById('voucher-countdown').textContent =
+          String(d).padStart(2, '0') + 'd ' +
+          String(h).padStart(2, '0') + 'h ' +
+          String(m).padStart(2, '0') + 'm';
+        if (diff <= 0) clearInterval(countdownTimer);
+      }
+      tick();
+      countdownTimer = setInterval(tick, 30000);
+    }
+
+    function waText() {
+      return (
+        "Hello FGE Solar team! I unlocked the TESLA '26 CET ₹5,000 discount voucher for my parents (" +
+        state.parentName + ') in ' + state.district +
+        '. Based on our monthly KSEB bill (₹' + state.bill.toLocaleString('en-IN') +
+        ') and home appliances (' + state.ac + ' AC, ' + state.fridge + ' fridge), our recommended setup is ' +
+        state.kw + ' kW with estimated annual savings of ₹' +
+        Math.round(state.annualSavings).toLocaleString('en-IN') +
+        '. Voucher Code: ' + state.voucherCode +
+        ' (valid 10 days). Please schedule our free site assessment.'
+      );
+    }
+
+    function updateWaLink() {
+      document.getElementById('wa-send').href =
+        'https://wa.me/' + FGE_WA + '?text=' + encodeURIComponent(waText());
+    }
+
+    function buildLeadDetails() {
+      return [
+        "Lead type: TESLA '26 CET — Home Energy Audit / ₹5,000 voucher",
+        'Page: ' + location.href,
+        'Submitted (UTC): ' + new Date().toISOString(),
+        'Student / Attendee Name: ' + state.studentName,
+        'Parent / Guardian Name: ' + state.parentName,
+        'District: ' + state.district,
+        'Mobile / WhatsApp: +91' + state.whatsapp,
+        'Monthly electricity bill: ₹' + state.bill,
+        'Roof profile: ' + state.roof,
+        'Air-conditioners: ' + state.ac,
+        'Refrigerators: ' + state.fridge,
+        'Water heating: ' + state.water,
+        'Daytime occupancy: ' + state.daytime,
+        'Mixer / grinder: ' + state.mixer,
+        'Washing machine: ' + state.washer,
+        'Induction cooktop: ' + state.induction,
+        'Fans (approx): ' + state.fans,
+        'EV charger: ' + state.ev,
+        'Inverter / UPS: ' + state.inverter,
+        'Recommended system size: ' + state.label,
+        'Recommended kW: ' + state.kw,
+        'Estimated monthly generation (units): ' + state.unitsMonth,
+        'Estimated annual savings: ₹' + state.annualSavings,
+        'Estimated 25-year savings: ₹' + state.savings25,
+        'Bill offset %: ' + state.offsetPct,
+        'CO2 tons/year: ' + state.co2Tons.toFixed(2),
+        'Trees equivalent/year: ' + state.trees,
+        'Roof area sq.ft: ' + state.roofSqft,
+        'Load summary: ' + state.loadSummary,
+        'Voucher code: ' + state.voucherCode,
+        'Voucher expiry: ' + new Date(state.expiresAt).toISOString(),
+        'Grant value: ₹' + GRANT,
+        'Validity days: ' + VOUCHER_DAYS
+      ].join('\n');
+    }
+
+    function submitToGoogleForm(details) {
+      return new Promise(function (resolve) {
+        var form = document.createElement('form');
+        var field = document.createElement('input');
+        form.method = 'POST';
+        form.action = GF_ENDPOINT;
+        form.target = 'fge-tesla26-gf';
+        form.style.display = 'none';
+        field.type = 'hidden';
+        field.name = GF_ENTRY;
+        field.value = details;
+        form.appendChild(field);
+        document.body.appendChild(form);
+        form.submit();
+        setTimeout(function () {
+          form.remove();
+          resolve({ ok: true });
+        }, 1200);
+      });
+    }
+
+    async function onSubmitLead(payload) {
+      await submitToGoogleForm(buildLeadDetails());
+      console.info('[FGE TESLA26] Lead saved to Google Form', payload.voucherCode);
+      return { ok: true };
+    }
+    window.onSubmitLead = onSubmitLead;
+
+    function setValid(field, ok) {
+      if (ok) field.classList.remove('bad');
+      else field.classList.add('bad');
+      return ok;
+    }
+
+    document.querySelectorAll('[data-next]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        goStep(Number(btn.getAttribute('data-next')));
+      });
+    });
+    document.querySelectorAll('[data-back]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        goStep(Number(btn.getAttribute('data-back')));
+      });
+    });
+
+    billSlider.addEventListener('input', function () {
+      state.bill = Number(billSlider.value);
+      chips.forEach(function (c) {
+        var v = Number(c.dataset.bill);
+        c.classList.toggle('is-on', v === state.bill || (v === 12000 && state.bill >= 12000));
+      });
+      updateResults();
+    });
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        state.bill = Number(chip.dataset.bill);
+        billSlider.value = String(state.bill);
+        chips.forEach(function (c) { c.classList.remove('is-on'); });
+        chip.classList.add('is-on');
+        updateResults();
+      });
+    });
+
+    document.getElementById('whatsapp').addEventListener('input', function (e) {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+    });
+
+    document.getElementById('wa-share-copy').addEventListener('click', function () {
+      var text = waText();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          var t = document.getElementById('copy-toast');
+          t.style.display = 'block';
+          setTimeout(function () { t.style.display = 'none'; }, 2500);
+        });
+      } else {
+        window.prompt('Copy message:', text);
+      }
+    });
+
+    document.getElementById('claim-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var studentEl = document.getElementById('student-name');
+      var parentEl = document.getElementById('parent-name');
+      var districtEl = document.getElementById('district');
+      var waEl = document.getElementById('whatsapp');
+
+      var student = studentEl.value.trim();
+      var parent = parentEl.value.trim();
+      var district = districtEl.value;
+      var wa = waEl.value.replace(/\D/g, '');
+
+      var ok =
+        setValid(studentEl.closest('.field'), student.length >= 2) &
+        setValid(parentEl.closest('.field'), parent.length >= 2) &
+        setValid(districtEl.closest('.field'), !!district) &
+        setValid(waEl.closest('.field'), /^[6-9]\d{9}$/.test(wa));
+      if (!ok) return;
+
+      var btn = document.getElementById('submit-claim');
+      btn.disabled = true;
+      btn.textContent = 'Saving & generating…';
+
+      calculate();
+      state.studentName = student;
+      state.parentName = parent;
+      state.district = district;
+      state.whatsapp = wa;
+      state.voucherCode = randomCode();
+      state.expiresAt = Date.now() + VOUCHER_DAYS * 86400000;
+
+      await onSubmitLead({ voucherCode: state.voucherCode });
+
+      document.getElementById('voucher-code').textContent = state.voucherCode;
+      document.getElementById('v-parent').textContent = state.parentName;
+      document.getElementById('v-student').textContent = state.studentName;
+      document.getElementById('v-district').textContent = state.district;
+      document.getElementById('v-system').textContent =
+        state.label + ' · ' + formatINR(state.annualSavings) + '/yr';
+      updateWaLink();
+      startCountdown(state.expiresAt);
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { lead_source: 'tesla26' });
+        gtag('event', 'tesla26_voucher', { kw: state.kw, district: state.district });
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Generate ₹5,000 Voucher';
+      goStep(7);
+    });
+
+    updateResults();
+    goStep(0);
+  })();
+  </script>
+</body>
+</html>

@@ -31,6 +31,11 @@
       endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSfW4FuP6obBtvlDD0Jd6T8Qp3FXknxCwm_1gGAm0FFzGB_LAg/formResponse',
       entry: 'entry.372346092',
       label: 'Referral — Refer & Earn request'
+    },
+    tesla26: {
+      endpoint: 'https://docs.google.com/forms/d/e/1FAIpQLSeBHVzkyMB86UiJEJbofORpck0Zgs2IK6Tk-5NEXycUhSrWJQ/formResponse',
+      entry: 'entry.2013841671',
+      label: "TESLA '26 CET — Home Energy Audit / ₹5,000 voucher"
     }
   };
 
