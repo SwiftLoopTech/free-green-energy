@@ -253,22 +253,230 @@
       background: linear-gradient(160deg, #F3EFE6, #EAE5D9);
       color: #0B0D0E;
       overflow: hidden;
+      flex-shrink: 0;
     }
     .voucher::before, .voucher::after {
       content: "";
       position: absolute;
       top: 52%;
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
       background: #0B0D0E;
       transform: translateY(-50%);
     }
-    .voucher::before { left: -12px; }
-    .voucher::after { right: -12px; }
+    .voucher::before { left: -10px; }
+    .voucher::after { right: -10px; }
     .voucher-line {
-      margin: 0 20px;
+      margin: 0 16px;
       border-top: 2px dashed rgba(11,13,14,0.16);
+    }
+    .voucher-top {
+      padding: 14px 16px 12px;
+    }
+    .voucher-bottom {
+      padding: 12px 16px 14px;
+    }
+    .voucher-title {
+      margin: 4px 0 0;
+      font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .voucher-meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 12px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(11,13,14,0.1);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .voucher-meta span { color: rgba(27,42,74,0.55); display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    .voucher-meta strong { color: #0B0D0E; font-weight: 800; word-break: break-word; }
+    .voucher-foot {
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(27,42,74,0.5);
+    }
+
+    /* Voucher step — fit full ticket on one screen */
+    body.is-voucher .solar-stage,
+    body.is-voucher .step-dots {
+      display: none !important;
+    }
+    body.is-voucher .carousel-shell {
+      padding-top: 52px;
+      padding-bottom: 10px;
+    }
+    body.is-voucher #step-7.is-on {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 0;
+      height: 100%;
+    }
+    body.is-voucher .voucher-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      padding-bottom: 8px;
+    }
+    body.is-voucher .voucher-actions {
+      flex-shrink: 0;
+      display: grid;
+      gap: 8px;
+      padding-top: 8px;
+      padding-bottom: env(safe-area-inset-bottom, 4px);
+      background: #0B0D0E;
+    }
+    body.is-voucher .voucher-actions .btn {
+      min-height: 48px;
+      margin: 0 !important;
+    }
+    body.is-voucher .voucher-actions .btn-link {
+      min-height: 40px;
+    }
+    body.is-voucher .voucher-head {
+      margin-bottom: 10px;
+    }
+    body.is-voucher .voucher-head h2 {
+      font-size: 1.35rem;
+      margin: 0;
+    }
+    body.is-voucher .voucher-head p {
+      margin: 4px 0 0;
+      font-size: 12px;
+    }
+
+    /* Sticky 3D Get Voucher CTA */
+    .sticky-cta-wrap {
+      position: sticky;
+      bottom: 0;
+      z-index: 6;
+      margin-top: 14px;
+      padding: 12px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+      background: linear-gradient(180deg, rgba(11,13,14,0), #0B0D0E 36%);
+    }
+    .btn-3d {
+      position: relative;
+      width: 100%;
+      min-height: 56px;
+      border: 0;
+      border-radius: 0;
+      background: linear-gradient(180deg, #2AFF88 0%, #00D26A 42%, #00B359 100%);
+      color: #04150c;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.4) inset,
+        0 -4px 0 rgba(0,110,55,0.5) inset,
+        0 8px 0 #006b36,
+        0 14px 24px rgba(0,0,0,0.4);
+      transform: translateY(0);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      animation: ctaBob 2.2s ease-in-out infinite;
+    }
+    .btn-3d:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.45) inset,
+        0 -4px 0 rgba(0,110,55,0.5) inset,
+        0 11px 0 #006b36,
+        0 18px 28px rgba(0,0,0,0.45);
+    }
+    .btn-3d:active {
+      transform: translateY(7px);
+      animation: none;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.2) inset,
+        0 -1px 0 rgba(0,110,55,0.4) inset,
+        0 2px 0 #006b36,
+        0 4px 10px rgba(0,0,0,0.3);
+    }
+    @keyframes ctaBob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* Congrats + confetti */
+    .congrats-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      background: rgba(11,13,14,0.58);
+    }
+    .congrats-layer.is-on {
+      display: flex;
+      animation: congratsFade 2.5s ease forwards;
+    }
+    .congrats-card {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 24px 28px;
+      border: 1px solid rgba(0,210,106,0.4);
+      background: #121517;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+      animation: congratsPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .congrats-card .pop {
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .congrats-card h3 {
+      margin: 0;
+      color: #F3EFE6;
+      font-size: clamp(1.3rem, 5vw, 1.6rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    .congrats-card p {
+      margin: 8px 0 0;
+      color: #00D26A;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .confetti { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+    .confetti i {
+      position: absolute;
+      top: -14px;
+      width: 8px;
+      height: 11px;
+      border-radius: 1px;
+      animation: confettiFall linear forwards;
+    }
+    @keyframes congratsPop {
+      from { opacity: 0; transform: scale(0.72) translateY(18px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    @keyframes congratsFade {
+      0%, 72% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+    @keyframes confettiFall {
+      0% { transform: translateY(0) rotate(0); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0.15; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-3d { animation: none; }
+      .congrats-layer.is-on { animation: none; }
+      .congrats-card { animation: none; }
+      .confetti i { animation: none; display: none; }
     }
 
     .q-label {
@@ -427,9 +635,16 @@
       letter-spacing: -0.02em;
     }
     .audit-chrome .mini img {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       border-radius: 50%;
+      object-fit: cover;
+    }
+    .audit-chrome .mini .x {
+      color: #A8ACB3;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 1;
     }
     .audit-chrome .close-x {
       min-width: 40px;
@@ -439,6 +654,23 @@
       color: var(--ash);
       font-size: 18px;
       cursor: pointer;
+    }
+    .voucher-logos {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .voucher-logos img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .voucher-logos .x {
+      color: rgba(11,13,14,0.4);
+      font-size: 14px;
+      font-weight: 300;
     }
 
     body.is-audit main.app-main {
@@ -733,10 +965,20 @@
     <div id="progress-fill" class="progress-fill"></div>
   </div>
 
+  <div class="congrats-layer" id="congrats-layer" aria-live="polite">
+    <div class="confetti" aria-hidden="true"></div>
+    <div class="congrats-card">
+      <div class="pop" aria-hidden="true">🎉</div>
+      <h3>Congratulations!</h3>
+      <p>You unlocked a ₹5,000 voucher</p>
+    </div>
+  </div>
+
   <div class="audit-chrome" id="audit-chrome">
     <div class="mini">
-      <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="">
-      <span>Home Energy Audit</span>
+      <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar">
+      <span class="x" aria-hidden="true">×</span>
+      <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26">
     </div>
     <button type="button" class="close-x" id="audit-close" aria-label="Close audit">×</button>
   </div>
@@ -997,8 +1239,10 @@
         <p class="text-sm text-bone font-semibold">Unlock ₹5,000 off this solar system.</p>
         <p class="text-xs text-ash mt-1">TESLA '26 offer · Valid 10 days · Anywhere in Kerala</p>
       </div>
-      <button type="button" class="btn btn-solar mt-6" data-next="6">Get ₹5,000 Voucher →</button>
-      <button type="button" class="btn-link mt-1" data-back="1">Change answers</button>
+      <div class="sticky-cta-wrap">
+        <button type="button" class="btn-3d" data-next="6">Get ₹5,000 Voucher →</button>
+        <button type="button" class="btn-link mt-1" data-back="1">Change answers</button>
+      </div>
     </section>
 
     <!-- 6 Claim -->
@@ -1055,53 +1299,56 @@
 
     <!-- 7 Voucher -->
     <section id="step-7" class="step">
-      <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-solar mb-2">You're all set</p>
-      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-2">₹5,000 Voucher Unlocked</h2>
-      <p class="text-sm text-ash mb-5">Send this voucher on WhatsApp.</p>
-
-      <article class="voucher">
-        <div class="px-5 pt-5 pb-4">
-          <div class="flex items-start justify-between gap-3">
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-navy/70">FGE Solar × TESLA '26</p>
-              <p class="mt-1 text-2xl font-black tracking-tight">₹5,000 OFF</p>
-              <p class="text-sm text-navy/80 font-medium">Rooftop Solar Installation</p>
-            </div>
-            <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="" width="44" height="44" class="rounded-full shrink-0 mix-blend-multiply opacity-90">
-          </div>
+      <div class="voucher-scroll">
+        <div class="voucher-head">
+          <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-solar">You're all set</p>
+          <h2 class="font-extrabold tracking-tight text-bone">₹5,000 Voucher Unlocked</h2>
+          <p class="text-ash">Send this on WhatsApp.</p>
         </div>
-        <div class="voucher-line"></div>
-        <div class="px-5 pt-4 pb-5">
-          <div class="flex flex-wrap items-end justify-between gap-3 mb-3">
-            <div>
-              <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Code</p>
-              <p id="voucher-code" class="mt-0.5 font-mono text-base font-bold tracking-wider">TESLA26-CET-0000</p>
-            </div>
-            <div class="text-right">
-              <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Expires in</p>
-              <p id="voucher-countdown" class="mt-0.5 font-mono text-base font-bold text-brick tabular-nums">10d 00h 00m</p>
-            </div>
-          </div>
-          <div class="space-y-1 text-sm border-t border-obsidian/10 pt-3">
-            <p><span class="text-navy/55">For:</span> <strong id="v-parent">—</strong></p>
-            <p><span class="text-navy/55">From:</span> <strong id="v-student">—</strong></p>
-            <p><span class="text-navy/55">District:</span> <strong id="v-district">—</strong></p>
-            <p><span class="text-navy/55">Solar system:</span> <strong id="v-system">—</strong></p>
-          </div>
-          <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.06em] text-navy/50">
-            Authorized by FGE Solar · Redeemable across Kerala · 10-day validity
-          </p>
-        </div>
-      </article>
 
-      <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar mt-5">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Send Voucher to WhatsApp
-      </a>
-      <button type="button" id="wa-share-copy" class="btn btn-ghost mt-3">Copy share message</button>
-      <a href="tel:+918089073029" class="btn btn-ghost mt-3">Direct Helpline: +91 80890 73029</a>
-      <button type="button" class="btn-link mt-2" data-next="0">Start over</button>
-      <p id="copy-toast" class="mt-2 text-center text-xs text-solar" style="display:none">Message copied — paste in WhatsApp</p>
+        <article class="voucher" id="voucher-card">
+          <div class="voucher-top">
+            <div class="voucher-logos">
+              <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar">
+              <span class="x" aria-hidden="true">×</span>
+              <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" class="mix-blend-multiply">
+            </div>
+            <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-navy/70">FGE Solar × TESLA '26</p>
+            <p class="voucher-title">₹5,000 OFF</p>
+            <p class="text-xs text-navy/80 font-medium mt-1">Rooftop Solar Installation</p>
+          </div>
+          <div class="voucher-line"></div>
+          <div class="voucher-bottom">
+            <div class="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Code</p>
+                <p id="voucher-code" class="mt-0.5 font-mono text-sm sm:text-base font-bold tracking-wider">TESLA26-CET-0000</p>
+              </div>
+              <div class="text-right">
+                <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-navy/55">Expires in</p>
+                <p id="voucher-countdown" class="mt-0.5 font-mono text-sm sm:text-base font-bold text-brick tabular-nums">10d 00h 00m</p>
+              </div>
+            </div>
+            <div class="voucher-meta">
+              <div><span>For</span><strong id="v-parent">—</strong></div>
+              <div><span>From</span><strong id="v-student">—</strong></div>
+              <div><span>District</span><strong id="v-district">—</strong></div>
+              <div><span>Solar system</span><strong id="v-system">—</strong></div>
+            </div>
+            <p class="voucher-foot">Authorized by FGE Solar · Across Kerala · 10 days</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="voucher-actions">
+        <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar">
+          Send Voucher to WhatsApp
+        </a>
+        <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy share message</button>
+        <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
+        <button type="button" class="btn-link" data-next="0">Start over</button>
+        <p id="copy-toast" class="text-center text-xs text-solar" style="display:none">Message copied</p>
+      </div>
     </section>
     </div><!-- /.carousel-shell -->
 
@@ -1349,6 +1596,7 @@
     function goStep(n) {
       state.step = n;
       document.body.classList.toggle('is-audit', n > 0);
+      document.body.classList.toggle('is-voucher', n === 7);
       document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
       var el = document.getElementById('step-' + n);
       if (el) {
@@ -1359,6 +1607,30 @@
       renderDots(n);
       if (n === 5 || n === 6) updateResults();
       window.scrollTo(0, 0);
+    }
+
+    function showCongrats() {
+      var layer = document.getElementById('congrats-layer');
+      if (!layer) return;
+      var confetti = layer.querySelector('.confetti');
+      if (confetti) {
+        confetti.innerHTML = '';
+        var colors = ['#00D26A', '#F3EFE6', '#C44B3A', '#A8ACB3', '#7CFFB2', '#EAE5D9'];
+        for (var i = 0; i < 42; i++) {
+          var bit = document.createElement('i');
+          bit.style.left = Math.random() * 100 + '%';
+          bit.style.background = colors[i % colors.length];
+          bit.style.animationDuration = 1.4 + Math.random() * 1.4 + 's';
+          bit.style.animationDelay = Math.random() * 0.35 + 's';
+          bit.style.width = 6 + Math.random() * 6 + 'px';
+          bit.style.height = 8 + Math.random() * 8 + 'px';
+          confetti.appendChild(bit);
+        }
+      }
+      layer.classList.remove('is-on');
+      void layer.offsetWidth;
+      layer.classList.add('is-on');
+      window.setTimeout(function () { layer.classList.remove('is-on'); }, 2600);
     }
 
     var closeBtn = document.getElementById('audit-close');
@@ -1573,6 +1845,7 @@
       btn.disabled = false;
       btn.textContent = 'Get my ₹5,000 voucher';
       goStep(7);
+      showCongrats();
     });
 
     updateResults();
