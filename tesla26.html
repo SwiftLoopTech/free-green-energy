@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>My Home Energy Audit | FGE Solar × TESLA '26 CET</title>
-  <meta name="description" content="Engineered for CETians. Audit your home's appliances, calculate KSEB solar savings, and gift parents a ₹5,000 Solar Grant — Official Energy Partner of TESLA '26.">
+  <meta name="description" content="Check your home's electricity use, see solar savings, and gift your parents ₹5,000 off rooftop solar. FGE Solar × TESLA '26 CET.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://fgesolar.in/tesla26.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="My Home Energy Audit | FGE Solar × TESLA '26 CET">
-  <meta property="og:description" content="₹5,000 off rooftop solar for CETians' parents. 10-day voucher. Official Energy Partner of TESLA '26.">
+  <meta property="og:description" content="₹5,000 off rooftop solar for your parents. Valid 10 days. FGE Solar × TESLA '26 CET.">
   <meta property="og:url" content="https://fgesolar.in/tesla26.html">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="FGE Solar">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="My Home Energy Audit | FGE Solar × TESLA '26">
-  <meta name="twitter:description" content="₹5,000 Solar Grant · 10-day voucher · Engineered for CETians">
+  <meta name="twitter:description" content="₹5,000 off rooftop solar · Valid 10 days · Gift to parents">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta name="theme-color" content="#0B0D0E">
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
@@ -286,6 +286,96 @@
       font-weight: 500;
     }
 
+    /* Lightweight solar panel motion (GPU-friendly, no images) */
+    .solar-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      pointer-events: none;
+    }
+    .solar-panel-svg { width: 72px; height: 48px; }
+    .sp-cell { fill: #1a3d2a; stroke: #00D26A; stroke-width: 0.6; opacity: 0.35; }
+    .sp-cell.on { animation: cellPulse 2.4s ease-in-out infinite; }
+    .sp-cell.on:nth-child(2) { animation-delay: 0.15s; }
+    .sp-cell.on:nth-child(3) { animation-delay: 0.3s; }
+    .sp-cell.on:nth-child(4) { animation-delay: 0.45s; }
+    .sp-cell.on:nth-child(5) { animation-delay: 0.6s; }
+    .sp-cell.on:nth-child(6) { animation-delay: 0.75s; }
+    .sp-sun { fill: #00D26A; transform-origin: 64px 8px; animation: sunSpin 8s linear infinite; }
+    @keyframes cellPulse {
+      0%, 100% { fill: #1a3d2a; opacity: 0.4; }
+      50% { fill: #00D26A; opacity: 0.95; }
+    }
+    @keyframes sunSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sp-cell.on, .sp-sun { animation: none; }
+      .sp-cell.on { fill: #00D26A; opacity: 0.85; }
+    }
+
+    .step-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .step-dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2a2e32;
+    }
+    .step-dots span.done { background: rgba(0,210,106,0.45); }
+    .step-dots span.now { background: #00D26A; box-shadow: 0 0 0 3px rgba(0,210,106,0.18); }
+
+    .step.is-on {
+      animation: stepIn 0.28s ease both;
+    }
+    @keyframes stepIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .step.is-on { animation: none; }
+    }
+
+    .btn-solar {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-solar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.22) 50%, transparent 60%);
+      transform: translateX(-120%);
+      transition: none;
+    }
+    .btn-solar:hover::after {
+      animation: sheen 0.7s ease;
+    }
+    @keyframes sheen {
+      to { transform: translateX(120%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-solar:hover::after { animation: none; }
+    }
+
+    .next-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--ash);
+      font-size: 11px;
+    }
+    .next-hint svg { flex-shrink: 0; color: var(--solar); opacity: 0.85; }
+
     /* Mobile-first hero */
     .site-header {
       padding: 10px 16px 12px;
@@ -359,7 +449,7 @@
         </div>
       </div>
       <p class="mt-1.5 sm:mt-2.5 text-center text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.1em] sm:tracking-[0.12em] text-ash leading-snug px-2">
-        Official Energy Partner · Dept. of EEE, CET
+        Official Energy Partner of TESLA '26 · CET
       </p>
     </div>
   </header>
@@ -368,6 +458,23 @@
   </div>
 
   <main class="mx-auto max-w-lg px-4 pt-4 sm:pt-7 pb-10">
+
+    <div id="step-dots" class="step-dots" aria-hidden="true"></div>
+
+    <div class="solar-strip" aria-hidden="true">
+      <svg class="solar-panel-svg" viewBox="0 0 80 52" fill="none">
+        <circle class="sp-sun" cx="64" cy="8" r="5"/>
+        <g>
+          <rect class="sp-cell on" x="4" y="16" width="18" height="14" rx="1"/>
+          <rect class="sp-cell on" x="24" y="16" width="18" height="14" rx="1"/>
+          <rect class="sp-cell on" x="44" y="16" width="18" height="14" rx="1"/>
+          <rect class="sp-cell on" x="4" y="32" width="18" height="14" rx="1"/>
+          <rect class="sp-cell on" x="24" y="32" width="18" height="14" rx="1"/>
+          <rect class="sp-cell on" x="44" y="32" width="18" height="14" rx="1"/>
+        </g>
+        <path d="M10 48h50" stroke="#A8ACB3" stroke-width="1" opacity="0.35"/>
+      </svg>
+    </div>
 
     <!-- 0 Welcome -->
     <section id="step-0" class="step is-on">
@@ -386,25 +493,26 @@
         </picture>
       </figure>
 
-      <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-ash mb-2">Campus Micro-App</p>
       <h1 class="text-[clamp(1.75rem,7.2vw,2.55rem)] font-extrabold leading-[1.05] tracking-[-0.04em] text-bone">
         My Home Energy Audit
       </h1>
       <p class="welcome-copy mt-3">
-        Map your parents' home appliances, estimate KSEB solar savings, and unlock an exclusive
-        <span class="text-solar font-semibold">₹5,000 Solar Grant</span>.
+        Answer a few questions about your parents' home. We'll show solar savings and give you a
+        <span class="text-solar font-semibold">₹5,000 off</span> voucher to share with them.
       </p>
 
       <div class="hero-offer mt-4 sm:mt-5">
         <div>
           <p class="amount">₹5,000 OFF</p>
-          <p class="mt-1 text-[11px] sm:text-xs text-ash">Rooftop solar · Valid 10 days</p>
+          <p class="mt-1 text-[11px] sm:text-xs text-ash">Rooftop solar · Valid 10 days · Kerala</p>
         </div>
-        <p class="text-[10px] font-bold uppercase tracking-[0.08em] text-ash text-right leading-snug shrink-0">Across<br>Kerala</p>
       </div>
 
-      <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start Energy Audit →</button>
-      <p class="mt-2.5 text-center text-[11px] text-ash/70">~2 min · Bill + appliances · WhatsApp voucher</p>
+      <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start →</button>
+      <p class="next-hint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        Next: your monthly electricity bill
+      </p>
     </section>
 
     <!-- 1 Bill -->
@@ -427,7 +535,8 @@
         <button type="button" class="chip" data-bill="8500">₹8,500</button>
         <button type="button" class="chip" data-bill="12000">₹12,000+</button>
       </div>
-      <button type="button" class="btn btn-solar mt-8" data-next="2">Next: Roof →</button>
+      <button type="button" class="btn btn-solar mt-8" data-next="2">Next →</button>
+      <p class="next-hint">Next: roof type</p>
     </section>
 
     <!-- 2 Roof -->
@@ -436,37 +545,37 @@
         <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 2 · Roof</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="1">← Back</button>
       </div>
-      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Roof type?</h2>
-      <p class="text-sm text-ash mb-6">Affects mounting structure and generation.</p>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">What type of roof?</h2>
+      <p class="text-sm text-ash mb-6">Helps us plan how panels can be fixed.</p>
       <div class="choice-grid" role="radiogroup" aria-label="Roof type">
         <div class="choice">
           <input type="radio" name="roof" id="roof-flat" value="flat" checked>
-          <label for="roof-flat"><span class="text-bone font-bold">Flat Concrete Slab</span></label>
+          <label for="roof-flat"><span class="text-bone font-bold">Flat concrete</span></label>
         </div>
         <div class="choice">
           <input type="radio" name="roof" id="roof-tile" value="tile">
-          <label for="roof-tile"><span class="text-bone font-bold">Slanted Tile</span></label>
+          <label for="roof-tile"><span class="text-bone font-bold">Sloped tile</span></label>
         </div>
         <div class="choice">
           <input type="radio" name="roof" id="roof-metal" value="metal">
-          <label for="roof-metal"><span class="text-bone font-bold">Industrial Metal Sheet</span></label>
+          <label for="roof-metal"><span class="text-bone font-bold">Metal sheet</span></label>
         </div>
       </div>
-      <button type="button" class="btn btn-solar mt-8" data-next="3">Next: Cooling &amp; major loads →</button>
+      <button type="button" class="btn btn-solar mt-8" data-next="3">Next →</button>
+      <p class="next-hint">Next: ACs &amp; appliances</p>
     </section>
 
     <!-- 3 Cooling & major loads -->
     <section id="step-3" class="step">
       <div class="flex items-center justify-between mb-5">
-        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 3 · Major loads</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 3 · Appliances</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="2">← Back</button>
       </div>
-      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Cooling &amp; big appliances</h2>
-      <p class="text-sm text-ash mb-6">These dominate a Kerala home's electricity use.</p>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Main appliances at home</h2>
+      <p class="text-sm text-ash mb-6">These usually use the most electricity.</p>
 
       <div class="mb-5">
-        <span class="q-label">Air conditioners (1–1.5 ton typical)</span>
-        <span class="q-hint">~1.2–1.8 kW each when running · largest summer load</span>
+        <span class="q-label">How many ACs?</span>
         <div class="choice-grid cols-4" role="radiogroup">
           <div class="choice"><input type="radio" name="ac" id="ac-0" value="0" checked><label for="ac-0">0</label></div>
           <div class="choice"><input type="radio" name="ac" id="ac-1" value="1"><label for="ac-1">1</label></div>
@@ -476,8 +585,7 @@
       </div>
 
       <div class="mb-5">
-        <span class="q-label">Refrigerators</span>
-        <span class="q-hint">~30–60 units/month each · always-on base load</span>
+        <span class="q-label">How many refrigerators?</span>
         <div class="choice-grid cols-3" role="radiogroup">
           <div class="choice"><input type="radio" name="fridge" id="fridge-1" value="1" checked><label for="fridge-1">1</label></div>
           <div class="choice"><input type="radio" name="fridge" id="fridge-2" value="2"><label for="fridge-2">2</label></div>
@@ -486,36 +594,36 @@
       </div>
 
       <div class="mb-5">
-        <span class="q-label">Water heating</span>
-        <span class="q-hint">Electric geyser ≈ 2–3 kW burst · strong solar / SWH candidate</span>
+        <span class="q-label">How do you heat water?</span>
         <div class="choice-grid" role="radiogroup">
-          <div class="choice"><input type="radio" name="water" id="water-electric" value="electric" checked><label for="water-electric"><span class="text-bone font-bold">Electric geyser / heater</span></label></div>
+          <div class="choice"><input type="radio" name="water" id="water-electric" value="electric" checked><label for="water-electric"><span class="text-bone font-bold">Electric geyser</span></label></div>
           <div class="choice"><input type="radio" name="water" id="water-gas" value="gas"><label for="water-gas"><span class="text-bone font-bold">Gas / LPG</span></label></div>
           <div class="choice"><input type="radio" name="water" id="water-none" value="none"><label for="water-none"><span class="text-bone font-bold">Rarely / none</span></label></div>
         </div>
       </div>
 
       <div class="mb-2">
-        <span class="q-label">Who is home daytime (10am–4pm)?</span>
-        <span class="q-hint">Solar generates midday — daytime use = better self-consumption</span>
+        <span class="q-label">Is someone usually home during the day?</span>
+        <span class="q-hint">Solar power is strongest from about 10am–4pm</span>
         <div class="choice-grid" role="radiogroup">
-          <div class="choice"><input type="radio" name="daytime" id="day-home" value="home"><label for="day-home"><span class="text-bone font-bold">Mostly home</span></label></div>
-          <div class="choice"><input type="radio" name="daytime" id="day-mixed" value="mixed" checked><label for="day-mixed"><span class="text-bone font-bold">Mixed / WFH some days</span></label></div>
-          <div class="choice"><input type="radio" name="daytime" id="day-away" value="away"><label for="day-away"><span class="text-bone font-bold">Mostly away (office)</span></label></div>
+          <div class="choice"><input type="radio" name="daytime" id="day-home" value="home"><label for="day-home"><span class="text-bone font-bold">Yes, mostly home</span></label></div>
+          <div class="choice"><input type="radio" name="daytime" id="day-mixed" value="mixed" checked><label for="day-mixed"><span class="text-bone font-bold">Sometimes</span></label></div>
+          <div class="choice"><input type="radio" name="daytime" id="day-away" value="away"><label for="day-away"><span class="text-bone font-bold">Mostly away</span></label></div>
         </div>
       </div>
 
-      <button type="button" class="btn btn-solar mt-8" data-next="4">Next: Kitchen &amp; other →</button>
+      <button type="button" class="btn btn-solar mt-8" data-next="4">Next →</button>
+      <p class="next-hint">Next: kitchen &amp; other devices</p>
     </section>
 
     <!-- 4 Kitchen & other -->
     <section id="step-4" class="step">
       <div class="flex items-center justify-between mb-5">
-        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 4 · Other loads</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Step 4 · More details</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="3">← Back</button>
       </div>
-      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Kitchen &amp; extras</h2>
-      <p class="text-sm text-ash mb-6">Short bursts still show up on the bill over a month.</p>
+      <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Other home devices</h2>
+      <p class="text-sm text-ash mb-6">Quick yes / no — helps size the system better.</p>
 
       <div class="mb-5">
         <span class="q-label">Mixer / grinder</span>
@@ -534,7 +642,7 @@
       </div>
 
       <div class="mb-5">
-        <span class="q-label">Induction cooktop / electric stove</span>
+        <span class="q-label">Induction cooktop</span>
         <div class="choice-grid cols-2" role="radiogroup">
           <div class="choice"><input type="radio" name="induction" id="ind-yes" value="yes"><label for="ind-yes">Yes</label></div>
           <div class="choice"><input type="radio" name="induction" id="ind-no" value="no" checked><label for="ind-no">No</label></div>
@@ -542,7 +650,7 @@
       </div>
 
       <div class="mb-5">
-        <span class="q-label">Ceiling / pedestal fans (approx.)</span>
+        <span class="q-label">How many fans?</span>
         <div class="choice-grid cols-4" role="radiogroup">
           <div class="choice"><input type="radio" name="fans" id="fans-2" value="2"><label for="fans-2">1–2</label></div>
           <div class="choice"><input type="radio" name="fans" id="fans-4" value="4" checked><label for="fans-4">3–4</label></div>
@@ -552,7 +660,7 @@
       </div>
 
       <div class="mb-5">
-        <span class="q-label">EV / two-wheeler electric charger at home?</span>
+        <span class="q-label">Electric scooter / car charger at home?</span>
         <div class="choice-grid cols-2" role="radiogroup">
           <div class="choice"><input type="radio" name="ev" id="ev-yes" value="yes"><label for="ev-yes">Yes</label></div>
           <div class="choice"><input type="radio" name="ev" id="ev-no" value="no" checked><label for="ev-no">No</label></div>
@@ -560,7 +668,7 @@
       </div>
 
       <div class="mb-2">
-        <span class="q-label">Inverter / UPS battery backup?</span>
+        <span class="q-label">Inverter backup at home?</span>
         <div class="choice-grid cols-2" role="radiogroup">
           <div class="choice"><input type="radio" name="inverter" id="inv-yes" value="yes"><label for="inv-yes">Yes</label></div>
           <div class="choice"><input type="radio" name="inv-no" id="inv-no" value="no" checked><label for="inv-no">No</label></div>
@@ -568,57 +676,58 @@
       </div>
 
       <button type="button" class="btn btn-solar mt-8" data-next="5">See my solar plan →</button>
+      <p class="next-hint">Next: recommended solar system size</p>
     </section>
 
     <!-- 5 Results -->
     <section id="step-5" class="step">
       <div class="flex items-center justify-between mb-5">
-        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Your audit</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Your result</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="4">← Back</button>
       </div>
-      <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-solar mb-2">Recommended for this home</p>
-      <h2 id="rec-system" class="text-2xl font-extrabold tracking-tight text-bone leading-tight">5 kW On-Grid System</h2>
-      <p id="rec-units" class="mt-2 text-sm text-ash">~600 units / month</p>
+      <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-solar mb-2">Suggested for this home</p>
+      <h2 id="rec-system" class="text-2xl font-extrabold tracking-tight text-bone leading-tight">5 kW On-Grid Solar System</h2>
+      <p id="rec-units" class="mt-2 text-sm text-ash">About 600 units of solar power / month</p>
       <p id="rec-note" class="mt-2 text-xs text-ash/80 leading-relaxed"></p>
 
       <div class="mt-5 grid grid-cols-2 gap-3">
         <div class="stat hi"><span class="lbl">25-Year Savings</span><span id="stat-25y" class="val">₹14.4 L</span></div>
-        <div class="stat"><span class="lbl">Annual Savings</span><span id="stat-annual" class="val">₹54,000</span><span id="stat-offset" class="block mt-1 text-[11px] text-ash">~90%</span></div>
-        <div class="stat"><span class="lbl">CO₂ Mitigated</span><span id="stat-co2" class="val">5.9 t/yr</span></div>
-        <div class="stat"><span class="lbl">Roof Area</span><span id="stat-roof" class="val">~500 ft²</span></div>
+        <div class="stat"><span class="lbl">Yearly Savings</span><span id="stat-annual" class="val">₹54,000</span><span id="stat-offset" class="block mt-1 text-[11px] text-ash">~90% of bill</span></div>
+        <div class="stat"><span class="lbl">CO₂ Reduced</span><span id="stat-co2" class="val">5.9 t/yr</span></div>
+        <div class="stat"><span class="lbl">Roof Space</span><span id="stat-roof" class="val">~500 ft²</span></div>
       </div>
-      <p id="stat-trees" class="mt-4 text-sm text-ash">Green impact: ~295 trees / year</p>
+      <p id="stat-trees" class="mt-4 text-sm text-ash">Equal to about 295 trees planted each year</p>
       <div id="load-summary" class="mt-4 border border-ash/15 bg-charcoal/50 px-4 py-3 text-xs text-ash leading-relaxed"></div>
 
       <div class="mt-6 border border-solar/30 bg-solar/5 px-4 py-3">
-        <p class="text-sm text-bone font-semibold">Gift parents ₹5,000 off this system.</p>
-        <p class="text-xs text-ash mt-1">TESLA '26 exclusive · Valid 10 days · Kerala-wide</p>
+        <p class="text-sm text-bone font-semibold">Gift your parents ₹5,000 off this system.</p>
+        <p class="text-xs text-ash mt-1">TESLA '26 offer · Valid 10 days · Anywhere in Kerala</p>
       </div>
-      <button type="button" class="btn btn-solar mt-6" data-next="6">Unlock ₹5,000 Voucher →</button>
-      <button type="button" class="btn-link mt-1" data-back="1">Adjust answers</button>
+      <button type="button" class="btn btn-solar mt-6" data-next="6">Get ₹5,000 Voucher →</button>
+      <button type="button" class="btn-link mt-1" data-back="1">Change answers</button>
     </section>
 
     <!-- 6 Claim -->
     <section id="step-6" class="step">
       <div class="flex items-center justify-between mb-5">
-        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Claim grant</p>
+        <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-ash">Your details</p>
         <button type="button" class="text-xs text-ash hover:text-bone" data-back="5">← Back</button>
       </div>
       <h2 class="text-2xl font-extrabold tracking-tight text-bone mb-1">Gift to Parents</h2>
-      <p class="text-sm text-ash mb-5">We save your full audit to FGE Solar and issue the voucher.</p>
+      <p class="text-sm text-ash mb-5">Fill this in so we can create your ₹5,000 voucher.</p>
       <div class="mb-5 border border-ash/15 bg-charcoal/60 px-4 py-3 text-sm">
-        <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash mb-1">Audit snapshot</p>
+        <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash mb-1">Your plan</p>
         <p id="summary-line" class="text-bone font-semibold">5 kW · ₹54,000/yr</p>
       </div>
       <form id="claim-form" novalidate class="space-y-4">
         <div class="field">
-          <label for="student-name">Student / Attendee Name</label>
+          <label for="student-name">Your name</label>
           <input id="student-name" type="text" autocomplete="name" required maxlength="80" placeholder="Your name">
           <span class="err">Please enter your name.</span>
         </div>
         <div class="field">
-          <label for="parent-name">Parent / Guardian Name</label>
-          <span class="note">Who is the homeowner?</span>
+          <label for="parent-name">Parent / homeowner name</label>
+          <span class="note">Whose house will get solar?</span>
           <input id="parent-name" type="text" required maxlength="80" placeholder="Parent's name">
           <span class="err">Please enter the homeowner's name.</span>
         </div>
@@ -644,7 +753,8 @@
           </div>
           <span class="err">Enter a valid 10-digit Indian mobile number.</span>
         </div>
-        <button type="submit" id="submit-claim" class="btn btn-solar mt-2">Generate ₹5,000 Voucher</button>
+        <button type="submit" id="submit-claim" class="btn btn-solar mt-2">Get my ₹5,000 voucher</button>
+        <p class="next-hint">We'll open WhatsApp so you can send it to your parents</p>
       </form>
     </section>
 
@@ -681,7 +791,7 @@
             <p><span class="text-navy/55">For:</span> <strong id="v-parent">—</strong></p>
             <p><span class="text-navy/55">From:</span> <strong id="v-student">—</strong></p>
             <p><span class="text-navy/55">District:</span> <strong id="v-district">—</strong></p>
-            <p><span class="text-navy/55">System:</span> <strong id="v-system">—</strong></p>
+            <p><span class="text-navy/55">Solar system:</span> <strong id="v-system">—</strong></p>
           </div>
           <p class="mt-3 text-[11px] font-semibold uppercase tracking-[0.06em] text-navy/50">
             Authorized by FGE Solar · Redeemable across Kerala · 10-day validity
@@ -708,15 +818,11 @@
         </div>
       </div>
       <p class="text-sm leading-relaxed text-ash">
-        FGE Solar (Future Green Energy Group) is an MNRE-empanelled solar installation company based in Thiruvananthapuram, Kerala.
-        We design and install residential and commercial rooftop systems, assist with PM Surya Ghar subsidy and KSEB net metering,
-        and support families from site survey through commissioning — across the state.
-      </p>
-      <p class="mt-4 text-xs text-ash/70">
-        Official Energy Partner of TESLA '26 · Department of EEE, College of Engineering Trivandrum (CET).
+        FGE Solar helps Kerala homes and businesses install rooftop solar — from site visit and subsidy help to final switch-on.
+        We are the Official Energy Partner of TESLA '26 at CET.
       </p>
       <p class="mt-3 text-[11px] text-ash/50 leading-relaxed">
-        Kerala model: ~4.2 peak sun hours · 1 kWp ≈ 120 units/month. Estimates are directional — site assessment required. Voucher valid 10 days.
+        Savings shown are estimates. Final size and price need a free site visit. Voucher valid 10 days.
       </p>
       <div class="mt-5 flex flex-wrap gap-4 text-xs font-semibold">
         <a href="/" class="text-solar hover:underline">fgesolar.in</a>
@@ -828,10 +934,10 @@
     }
 
     function baseRecommend(bill) {
-      if (bill < 3500) return { kw: 3, label: '3 kW On-Grid System', offset: 0.92 };
-      if (bill <= 7000) return { kw: 5, label: '5 kW On-Grid System', offset: 0.90 };
-      if (bill <= 11000) return { kw: 8, label: '8 kW High-Efficiency System', offset: 0.88 };
-      return { kw: 10, label: '10 kW+ Hybrid / Three-Phase System', offset: 0.85 };
+      if (bill < 3500) return { kw: 3, label: '3 kW On-Grid Solar System', offset: 0.92 };
+      if (bill <= 7000) return { kw: 5, label: '5 kW On-Grid Solar System', offset: 0.90 };
+      if (bill <= 11000) return { kw: 8, label: '8 kW High-Efficiency Solar System', offset: 0.88 };
+      return { kw: 10, label: '10 kW+ Hybrid Solar System', offset: 0.85 };
     }
 
     function roofMod(roof) {
@@ -848,48 +954,37 @@
       var label = rec.label;
       var offset = rec.offset;
 
-      // Load-driven bumps (technically conservative)
       if (state.ac >= 2 && kw < 8) {
         kw = Math.min(10, kw + (state.ac >= 3 ? 3 : 2));
-        notes.push(state.ac + ' ACs push cooling demand — sized up.');
+        notes.push('With ' + state.ac + ' ACs, we suggest a larger solar system.');
       }
       if (state.ev === 'yes' && kw < 10) {
         kw = Math.min(10, kw + 2);
-        notes.push('Home EV charging — capacity increased.');
+        notes.push('Home EV charging needs extra solar capacity.');
       }
       if (state.water === 'electric') {
-        notes.push('Electric geyser: consider solar water heater alongside panels.');
+        notes.push('Electric geyser homes often pair well with a solar water heater too.');
       }
       if (state.daytime === 'home') {
         offset = Math.min(0.95, offset + 0.03);
-        notes.push('Daytime occupancy improves solar self-consumption.');
+        notes.push('Being home in the day helps you use more solar power directly.');
       } else if (state.daytime === 'away') {
         offset = Math.max(0.80, offset - 0.04);
-        notes.push('Mostly away daytime — net metering carries more of the benefit.');
+        notes.push('If you are away in the day, surplus solar goes back to KSEB for bill credit.');
       }
       if (state.inverter === 'yes' && state.ac >= 1 && kw >= 5) {
-        label = kw >= 10
-          ? '10 kW+ Hybrid / Three-Phase System'
-          : kw + ' kW Hybrid-ready System';
-        notes.push('Existing inverter/UPS — hybrid option can be discussed on site.');
-      } else if (kw >= 10) {
-        label = '10 kW+ Hybrid / Three-Phase System';
-      } else if (kw === 8) {
-        label = '8 kW High-Efficiency System';
-      } else {
-        label = kw + ' kW On-Grid System';
+        notes.push('You already have an inverter — a hybrid solar system can be discussed on site.');
       }
 
-      // Snap to allowed set: 3,5,8,10
       if (kw <= 3) kw = 3;
       else if (kw <= 5) kw = 5;
       else if (kw <= 8) kw = 8;
       else kw = 10;
 
-      if (kw === 3) label = '3 kW On-Grid System';
-      else if (kw === 5) label = state.inverter === 'yes' ? '5 kW Hybrid-ready System' : '5 kW On-Grid System';
-      else if (kw === 8) label = state.inverter === 'yes' ? '8 kW Hybrid-ready System' : '8 kW High-Efficiency System';
-      else label = '10 kW+ Hybrid / Three-Phase System';
+      if (kw === 3) label = '3 kW On-Grid Solar System';
+      else if (kw === 5) label = state.inverter === 'yes' ? '5 kW Hybrid Solar System' : '5 kW On-Grid Solar System';
+      else if (kw === 8) label = state.inverter === 'yes' ? '8 kW Hybrid Solar System' : '8 kW High-Efficiency Solar System';
+      else label = '10 kW+ Hybrid Solar System';
 
       var mod = roofMod(state.roof);
       var unitsMonth = Math.round(kw * UNITS_PER_KWP * mod);
@@ -910,14 +1005,13 @@
       state.roofSqft = Math.round(kw * SQFT_PER_KW);
       state.loadNote = notes.join(' ');
       state.loadSummary =
-        'Appliance profile ≈ ' + loadUnits + ' units/mo indicative · ' +
-        state.ac + ' AC · ' + state.fridge + ' fridge · fans×' + state.fans +
+        'Based on your home: about ' + loadUnits + ' units/month from appliances · ' +
+        state.ac + ' AC · ' + state.fridge + ' fridge · ' + state.fans + ' fans' +
         (state.mixer === 'yes' ? ' · mixer' : '') +
-        (state.washer === 'yes' ? ' · washer' : '') +
+        (state.washer === 'yes' ? ' · washing machine' : '') +
         (state.induction === 'yes' ? ' · induction' : '') +
-        (state.ev === 'yes' ? ' · EV charge' : '') +
-        (state.water === 'electric' ? ' · electric geyser' : '') +
-        ' · daytime: ' + state.daytime;
+        (state.ev === 'yes' ? ' · EV charger' : '') +
+        (state.water === 'electric' ? ' · electric geyser' : '');
     }
 
     function updateResults() {
@@ -929,26 +1023,43 @@
 
       document.getElementById('rec-system').textContent = state.label;
       document.getElementById('rec-units').textContent =
-        '~' + state.unitsMonth.toLocaleString('en-IN') + ' units / month · Kerala peak-sun model';
+        'About ' + state.unitsMonth.toLocaleString('en-IN') + ' units of solar power / month';
       document.getElementById('rec-note').textContent = state.loadNote;
       document.getElementById('stat-25y').textContent = formatLakhs(state.savings25);
       document.getElementById('stat-annual').textContent = formatINR(state.annualSavings);
-      document.getElementById('stat-offset').textContent = '~' + state.offsetPct + '% bill offset';
+      document.getElementById('stat-offset').textContent = '~' + state.offsetPct + '% of bill';
       document.getElementById('stat-co2').textContent = state.co2Tons.toFixed(1) + ' t/yr';
       document.getElementById('stat-roof').textContent = '~' + state.roofSqft.toLocaleString('en-IN') + ' ft²';
       document.getElementById('stat-trees').textContent =
-        'Green impact: ~' + state.trees.toLocaleString('en-IN') + ' trees equivalent / year';
+        'Equal to about ' + state.trees.toLocaleString('en-IN') + ' trees planted each year';
       document.getElementById('load-summary').textContent = state.loadSummary;
       document.getElementById('summary-line').textContent =
-        state.kw + ' kW · ' + formatINR(state.annualSavings) + '/yr · ' + state.ac + ' AC';
+        state.label + ' · ' + formatINR(state.annualSavings) + '/yr';
+    }
+
+    function renderDots(n) {
+      var root = document.getElementById('step-dots');
+      if (!root) return;
+      var flow = [0, 1, 2, 3, 4, 5, 6, 7];
+      var html = '';
+      for (var i = 0; i < flow.length; i++) {
+        var cls = i < n ? 'done' : (i === n ? 'now' : '');
+        html += '<span class="' + cls + '"></span>';
+      }
+      root.innerHTML = html;
+      root.style.display = n === 0 ? 'none' : 'flex';
     }
 
     function goStep(n) {
       state.step = n;
       document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
       var el = document.getElementById('step-' + n);
-      if (el) el.classList.add('is-on');
+      if (el) {
+        void el.offsetWidth;
+        el.classList.add('is-on');
+      }
       progressFill.style.width = Math.round((n / TOTAL_STEPS) * 100) + '%';
+      renderDots(n);
       if (n === 5 || n === 6) updateResults();
       window.scrollTo(0, 0);
     }
