@@ -6,8 +6,23 @@
   <title>My Home Energy Audit | FGE Solar × TESLA '26 CET</title>
   <meta name="description" content="Engineered for CETians. Audit your home's appliances, calculate KSEB solar savings, and gift parents a ₹5,000 Solar Grant — Official Energy Partner of TESLA '26.">
   <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://fgesolar.in/tesla26.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Home Energy Audit | FGE Solar × TESLA '26 CET">
+  <meta property="og:description" content="₹5,000 off rooftop solar for CETians' parents. 10-day voucher. Official Energy Partner of TESLA '26.">
+  <meta property="og:url" content="https://fgesolar.in/tesla26.html">
+  <meta property="og:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FGE Solar × TESLA '26 — My Home Energy Audit, ₹5,000 OFF rooftop solar">
+  <meta property="og:site_name" content="FGE Solar">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="My Home Energy Audit | FGE Solar × TESLA '26">
+  <meta name="twitter:description" content="₹5,000 Solar Grant · 10-day voucher · Engineered for CETians">
+  <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta name="theme-color" content="#0B0D0E">
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
+  <link rel="preload" as="image" href="/assets/images/campaigns/tesla26/hero-poster.webp" type="image/webp" fetchpriority="high">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -270,56 +285,126 @@
       font-size: 12px;
       font-weight: 500;
     }
+
+    /* Mobile-first hero */
+    .site-header {
+      padding: 10px 16px 12px;
+    }
+    @media (min-width: 480px) {
+      .site-header { padding: 14px 16px 14px; }
+    }
+    .lockup-logo {
+      width: 28px;
+      height: 28px;
+    }
+    @media (min-width: 480px) {
+      .lockup-logo { width: 36px; height: 36px; }
+    }
+    .hero-poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: min(48vh, 380px);
+      object-fit: cover;
+      object-position: center 18%;
+      border: 1px solid rgba(168,172,179,0.18);
+      background: #0B0D0E;
+    }
+    @media (min-width: 640px) {
+      .hero-poster {
+        max-height: none;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .hero-offer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid rgba(0,210,106,0.35);
+      background: rgba(0,210,106,0.08);
+    }
+    .hero-offer .amount {
+      font-size: clamp(1.35rem, 6vw, 1.6rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--solar);
+      line-height: 1;
+    }
+    .welcome-copy {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--ash);
+    }
+    @media (min-width: 480px) {
+      .welcome-copy { font-size: 15px; }
+    }
   </style>
 </head>
 <body class="grain bg-app">
 
-  <header class="border-b border-ash/15">
-    <div class="mx-auto max-w-lg px-4 py-4">
-      <div class="flex items-center justify-center gap-3 sm:gap-4">
-        <a href="/" class="flex items-center gap-2 no-underline" aria-label="FGE Solar">
-          <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="40" height="40" class="rounded-full bg-bone/5">
-          <span class="text-sm font-extrabold text-bone tracking-tight">FGE Solar</span>
+  <header class="site-header border-b border-ash/15">
+    <div class="mx-auto max-w-lg">
+      <div class="flex items-center justify-center gap-2.5 sm:gap-4">
+        <a href="/" class="flex items-center gap-1.5 sm:gap-2 no-underline" aria-label="FGE Solar">
+          <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="36" height="36" class="lockup-logo rounded-full bg-bone/5">
+          <span class="text-xs sm:text-sm font-extrabold text-bone tracking-tight">FGE Solar</span>
         </a>
-        <span class="text-ash/50 text-lg font-light" aria-hidden="true">×</span>
-        <div class="flex items-center gap-2">
-          <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26 CET" width="40" height="40" class="rounded-full">
-          <span class="text-sm font-extrabold text-bone tracking-tight">TESLA '26</span>
+        <span class="text-ash/50 text-base sm:text-lg font-light" aria-hidden="true">×</span>
+        <div class="flex items-center gap-1.5 sm:gap-2">
+          <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26 CET" width="36" height="36" class="lockup-logo rounded-full">
+          <span class="text-xs sm:text-sm font-extrabold text-bone tracking-tight">TESLA '26</span>
         </div>
       </div>
-      <p class="mt-2.5 text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-ash">
+      <p class="mt-1.5 sm:mt-2.5 text-center text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.1em] sm:tracking-[0.12em] text-ash leading-snug px-2">
         Official Energy Partner · Dept. of EEE, CET
       </p>
     </div>
-    <div class="progress-track" aria-hidden="true">
-      <div id="progress-fill" class="progress-fill"></div>
-    </div>
   </header>
+  <div class="progress-track" aria-hidden="true">
+    <div id="progress-fill" class="progress-fill"></div>
+  </div>
 
-  <main class="mx-auto max-w-lg px-4 py-6 sm:py-8 pb-10">
+  <main class="mx-auto max-w-lg px-4 pt-4 sm:pt-7 pb-10">
 
     <!-- 0 Welcome -->
     <section id="step-0" class="step is-on">
-      <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-ash mb-3">Campus Micro-App</p>
-      <h1 class="text-[clamp(2.1rem,8vw,2.75rem)] font-extrabold leading-[1.02] tracking-[-0.04em] text-bone">
+      <figure class="mb-4 sm:mb-5 -mx-0">
+        <picture>
+          <source srcset="/assets/images/campaigns/tesla26/hero-poster.webp" type="image/webp">
+          <img
+            class="hero-poster"
+            src="/assets/images/campaigns/tesla26/hero-poster.png"
+            alt="FGE Solar × TESLA '26 — My Home Energy Audit, ₹5,000 OFF rooftop solar grant valid 10 days"
+            width="1200"
+            height="1600"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </picture>
+      </figure>
+
+      <p class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em] text-ash mb-2">Campus Micro-App</p>
+      <h1 class="text-[clamp(1.75rem,7.2vw,2.55rem)] font-extrabold leading-[1.05] tracking-[-0.04em] text-bone">
         My Home Energy Audit
       </h1>
-      <p class="mt-4 text-[15px] leading-relaxed text-ash">
-        Engineered for CETians. Map your parents' home appliances, estimate KSEB solar savings, and unlock an exclusive
+      <p class="welcome-copy mt-3">
+        Map your parents' home appliances, estimate KSEB solar savings, and unlock an exclusive
         <span class="text-solar font-semibold">₹5,000 Solar Grant</span>.
       </p>
-      <div class="mt-6 border border-ash/20 bg-charcoal/70 px-4 py-4">
-        <p class="text-[10px] font-bold uppercase tracking-[0.12em] text-ash">Festival offer</p>
-        <p class="mt-1 text-xl font-extrabold text-bone tracking-tight">₹5,000 Off Rooftop Solar</p>
-        <p class="mt-1 text-xs text-ash">Valid 10 days after voucher unlock · Across Kerala</p>
+
+      <div class="hero-offer mt-4 sm:mt-5">
+        <div>
+          <p class="amount">₹5,000 OFF</p>
+          <p class="mt-1 text-[11px] sm:text-xs text-ash">Rooftop solar · Valid 10 days</p>
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-[0.08em] text-ash text-right leading-snug shrink-0">Across<br>Kerala</p>
       </div>
-      <ul class="mt-5 space-y-2 text-sm text-ash">
-        <li class="flex gap-2"><span class="text-solar">✓</span> Bill + appliance load check</li>
-        <li class="flex gap-2"><span class="text-solar">✓</span> Live kW recommendation</li>
-        <li class="flex gap-2"><span class="text-solar">✓</span> WhatsApp voucher for parents</li>
-      </ul>
-      <button type="button" class="btn btn-solar mt-8" data-next="1">Start Energy Audit →</button>
-      <p class="mt-3 text-center text-[11px] text-ash/70">~2 minutes · No login needed</p>
+
+      <button type="button" class="btn btn-solar mt-5 sm:mt-6" data-next="1">Start Energy Audit →</button>
+      <p class="mt-2.5 text-center text-[11px] text-ash/70">~2 min · Bill + appliances · WhatsApp voucher</p>
     </section>
 
     <!-- 1 Bill -->
