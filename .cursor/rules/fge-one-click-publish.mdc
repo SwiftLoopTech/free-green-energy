@@ -1,0 +1,74 @@
+---
+description: End-to-end FGE blog publish from Content Desk handoff (Drive MCP, HTML, images, deploy)
+globs: _publish/PUBLISH-NOW.md
+alwaysApply: false
+---
+
+# FGE one-click publish (Cursor)
+
+When the user tags `@_publish/PUBLISH-NOW.md` or asks to run the publish workflow, execute **fully in this repo** (`fgesolar.in`). Do not skip site-wide files.
+
+**Publish** (when the user says publish / deploy / push) means: **git commit + `git push origin main`** after the site files are ready — unless they say not to push today.
+
+---
+
+## Source of truth: Google Drive only (no PC drafts)
+
+**Never read bot drafts from the PC.** Do **not** use:
+
+- `C:\Users\Home\FGE-Content-Desk\data\library`
+- `draftJsonPath` in manifest when it points at `data\library`
+- Content Desk export that loaded from library without Drive
+
+Drafts live in **Google Drive** → **FGE-Content-Desk** → **inbox** (files like `2026-09-26__<slug>.json`). This machine often has **no** Google Drive for Desktop folder; that is expected.
+
+### Load drafts (every post)
+
+1. **Google Drive MCP** (required): `search_files` → folder **FGE-Content-Desk** → **inbox** → `read_file_content` for each today’s JSON.
+2. Optional: **POST** `http://127.0.0.1:8787/api/prepare-cursor-publish` with `{"syncDrive":true,"todayOnly":true}` only to refresh `_publish/PUBLISH-NOW.md` and `manifest.json` (queue/readiness). **Do not** treat desk sync `drive: false` as a blocker if MCP can read inbox.
+3. If Drive MCP cannot list inbox, **stop** and ask the user to connect Drive MCP — do not fall back to PC library.
+
+Settings context (optional, from Drive MCP): `settings/bot-settings.json`, `preferred-sources.json`, `site-catalog.json`.
+
+---
+
+## Encoding (mandatory)
+
+- All HTML/JSON edits: **UTF-8** (no BOM). Never use PowerShell `Set-Content` on HTML without UTF-8; prefer the editor, Node, or `utf8` writes.
+- Use real Unicode: **₹** (not `â‚¹`), **—** / **–** (not `â€"` / `â€“`).
+- After editing `blog/index.html`, grep for `â‚` or `â€` and fix before deploy.
+
+---
+
+## Per post
+
+Respect manifest `queue` / `readiness` unless the user explicitly overrides named draft ids.
+
+1. **Verify** — Title, meta 140–160 chars, ≥3 FAQs, `botPolicy` author/disclaimer, govt sources on factual blocks.
+2. **Images (one unique set per slug — never copy the same file to every post)**  
+   - Hero: `assets/images/blog/<slug>.webp` (1200×675)  
+   - OG: `assets/images/og/blog-<slug>.webp` (1200×630)  
+   - Use `GenerateImage` from draft `imagePrompts` (or desk `image-prompts.txt`).  
+   - **Image policy:** photoreal Kerala solar context; **no people**, **no text**, **no logos**, **no watermarks**, **no government seals**.  
+   - Hero and OG must both be produced per slug (OG may be a distinct crop or a second generation with open sky — not a duplicate placeholder across posts).
+3. **Article HTML** — `blog/<categoryFolder>/<slug>.html` from Drive draft body; chrome from `manifest.headerFooterCopyFrom` or newest same-category post. Canonical/OG URLs without `.html`.
+4. **Blog index** — New `.blog-card` at top of `#blog-grid`; `data-index` 1…n; update count badges; card date like `26 Sep 2026 · N min read` when `publishDate` is known.
+5. **Sitemap** — New `<url>` + bump `https://fgesolar.in/blog/` `lastmod`.
+6. **robots.txt** — Unchanged unless a new disallow is needed.
+
+---
+
+## Deploy (when user wants production)
+
+1. Grep each slug: one HTML, one index card, one sitemap entry.
+2. `git add` only site assets (not `_publish/PUBLISH-NOW.md` / `manifest.json` if gitignored).
+3. Commit with a clear message; **`git push origin main`**.
+4. Summarize: Drive file ids used, URLs live, blockers skipped, commit hash.
+
+---
+
+## Safety
+
+- Do not publish `sample` drafts unless the user names them.
+- Never commit API keys or Drive passwords.
+- Do not reuse one stock hero for multiple new posts in the same batch.
