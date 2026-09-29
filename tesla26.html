@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Home Solar Gift for Parents | FGE Solar × TESLA '26 CET</title>
-  <meta name="description" content="For TESLA '26 students — check your home bill, see how much Amma &amp; Achan can save on electricity, and share a personal gift card. Includes ₹5,000 off as a bonus.">
+  <meta name="description" content="For TESLA '26 students — check your home bill, see how much Amma &amp; Achan can save, and share a gift card. Includes ₹5,000 off as a bonus.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://fgesolar.in/tesla26.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="A gift for Amma &amp; Achan | FGE Solar × TESLA '26">
-  <meta property="og:description" content="Personal solar savings gift from TESLA '26 students to their parents. FGE Solar — Official Energy Partner.">
+  <meta property="og:description" content="Personal solar savings gift from TESLA '26 students to their parents.">
   <meta property="og:url" content="https://fgesolar.in/tesla26.html">
   <meta property="og:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta property="og:image:width" content="1200">
@@ -17,12 +17,11 @@
   <meta property="og:site_name" content="FGE Solar">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="A gift for Amma &amp; Achan | FGE Solar × TESLA '26">
-  <meta name="twitter:description" content="Personal solar savings gift for your parents · FGE Solar × TESLA '26">
+  <meta name="twitter:description" content="Solar savings gift for your parents · FGE Solar × TESLA '26">
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
-  <meta name="theme-color" content="#F7FBF8">
+  <meta name="theme-color" content="#FAFAFA">
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
   <link rel="preload" as="image" href="/assets/images/campaigns/tesla26/gift-hero.webp" type="image/webp" fetchpriority="high">
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R6VD39C55"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -37,189 +36,174 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xna10prts7");
   </script>
-
   <style>
     :root {
-      --bg: #F7FBF8;
-      --bg2: #EEF6F0;
-      --card: #FFFFFF;
-      --ink: #14201A;
-      --muted: #5A6B62;
-      --line: rgba(20,32,26,0.12);
-      --solar: #00A85A;
-      --solar-deep: #008A4A;
-      --solar-soft: rgba(0,168,90,0.1);
-      --navy: #1B3A4B;
-      --warn: #C45C26;
+      --bg: #FAFAFA;
+      --surface: #FFFFFF;
+      --ink: #0A0A0A;
+      --muted: #737373;
+      --line: #E5E5E5;
+      --line-strong: #D4D4D4;
+      --accent: #16A34A;
+      --accent-ink: #14532D;
+      --danger: #DC2626;
       --safe-b: env(safe-area-inset-bottom, 0px);
+      --r: 8px;
+      --max: 440px;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
       min-height: 100vh;
-      background:
-        radial-gradient(ellipse 80% 45% at 50% -8%, rgba(0,168,90,0.12), transparent 55%),
-        radial-gradient(ellipse 50% 30% at 100% 0%, rgba(27,58,75,0.06), transparent 50%),
-        var(--bg);
+      background: var(--bg);
       color: var(--ink);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
     img { max-width: 100%; height: auto; display: block; }
-    button, input, select { font: inherit; }
+    button, input, select { font: inherit; color: inherit; }
+    a { color: inherit; }
     .sr-only {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
 
-    /* Boot */
+    /* Boot — plain */
     .boot-splash {
       position: fixed; inset: 0; z-index: 100;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px; background: #FFFFFF;
-      transition: opacity 0.45s ease, visibility 0.45s ease;
+      gap: 12px; background: var(--surface);
     }
-    body:not(.is-booting) .boot-splash {
-      opacity: 0; visibility: hidden; pointer-events: none; display: none;
+    body:not(.is-booting) .boot-splash { display: none; }
+    .boot-lockup { display: flex; align-items: center; gap: 10px; }
+    .boot-brand { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+    .boot-brand img { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; }
+    .boot-x { color: var(--muted); font-weight: 400; }
+    .boot-sub { margin: 0; font-size: 11px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+    .boot-bar { width: 96px; height: 2px; background: var(--line); overflow: hidden; }
+    .boot-bar i { display: block; height: 100%; width: 40%; background: var(--ink); animation: boot 0.9s linear infinite; }
+    @keyframes boot { from { transform: translateX(-100%); } to { transform: translateX(280%); } }
+    @media (prefers-reduced-motion: reduce) { .boot-bar i { animation: none; width: 100%; } }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+      padding: 12px 16px;
     }
-    .boot-lockup { display: flex; align-items: center; gap: 12px; }
-    .boot-brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; }
-    .boot-brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-    .boot-x { color: var(--muted); font-weight: 300; font-size: 18px; }
-    .boot-sub { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-    .boot-bar { width: 120px; height: 3px; background: var(--line); border-radius: 99px; overflow: hidden; }
-    .boot-bar i { display: block; height: 100%; width: 40%; background: var(--solar); animation: bootLoad 1s ease-in-out infinite; }
-    @keyframes bootLoad { 0% { transform: translateX(-100%); } 100% { transform: translateX(300%); } }
+    .lockup { display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .lockup a, .lockup .brand {
+      display: flex; align-items: center; gap: 6px;
+      text-decoration: none; font-size: 13px; font-weight: 600;
+    }
+    .lockup img { width: 24px; height: 24px; border-radius: 999px; object-fit: cover; }
+    .lockup .x { color: var(--muted); font-weight: 400; }
+    .lockup-sub {
+      margin: 6px 0 0; text-align: center;
+      font-size: 11px; color: var(--muted); letter-spacing: 0.02em;
+    }
 
-    .site-header { padding: 12px 16px 10px; border-bottom: 1px solid var(--line); background: rgba(247,251,248,0.92); backdrop-filter: blur(8px); }
-    .lockup { display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .lockup a, .lockup .brand { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 800; }
-    .lockup img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
-    .lockup .x { color: var(--muted); font-weight: 300; }
-    .lockup-sub { margin: 6px 0 0; text-align: center; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .progress-track { height: 2px; background: var(--line); }
+    .progress-fill { height: 100%; width: 0; background: var(--ink); transition: width 0.15s ease; }
 
-    .progress-track { height: 3px; background: rgba(20,32,26,0.08); }
-    .progress-fill { height: 100%; width: 0; background: var(--solar); transition: width 0.2s ease; }
+    .app-main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 20px 16px calc(32px + var(--safe-b));
+    }
 
-    .app-main { max-width: 480px; margin: 0 auto; padding: 16px 16px calc(28px + var(--safe-b)); }
     .step { display: none; }
-    .step.is-on { display: block; animation: stepIn 0.28s cubic-bezier(0.22,1,0.36,1) both; }
-    @keyframes stepIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: translateX(0); } }
-    @media (prefers-reduced-motion: reduce) {
-      .step.is-on, .boot-bar i { animation: none; }
+    .step.is-on { display: block; }
+
+    .hero-poster {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--surface);
     }
 
-    .brand-hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-      border: 1px solid rgba(0,168,90,0.22);
-      background:
-        linear-gradient(165deg, #DDF3E6 0%, #FFFFFF 42%, #F0F7F2 100%);
-      box-shadow: 0 14px 36px rgba(20,32,26,0.1);
-      padding: 24px 18px 22px;
+    .eyebrow {
+      margin: 20px 0 8px;
+      font-size: 12px; font-weight: 500; color: var(--muted);
     }
-    .boot-splash .boot-brand span { color: var(--ink); }
-    .brand-hero-lockup {
-      display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+    .title {
+      margin: 0;
+      font-size: clamp(1.5rem, 5.5vw, 1.75rem);
+      font-weight: 650;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
     }
-    .brand-hero-lockup .bh {
-      display: flex; align-items: center; gap: 8px;
-      font-size: 13px; font-weight: 900; color: var(--ink);
-    }
-    .brand-hero-lockup img {
-      width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
-      background: #fff; border: 1px solid var(--line);
-    }
-    .brand-hero-lockup .x { color: var(--muted); font-weight: 300; font-size: 18px; }
-    .brand-hero-event {
-      margin: 12px 0 0; text-align: center;
-      font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
-    }
-    .brand-hero h2 {
-      margin: 14px 0 0; text-align: center;
-      font-size: clamp(1.55rem, 6.5vw, 1.95rem); font-weight: 900;
-      letter-spacing: -0.035em; line-height: 1.12;
-    }
-    .brand-hero .bh-copy {
-      margin: 10px auto 0; max-width: 28ch; text-align: center;
-      font-size: 14px; line-height: 1.45; color: var(--muted);
-    }
-    .brand-hero .bh-bonus {
-      margin: 16px auto 0; width: fit-content;
-      padding: 8px 12px; border-radius: 10px;
-      background: #fff; border: 1px solid rgba(0,168,90,0.28);
-      font-size: 12px; font-weight: 800; color: var(--solar-deep);
-    }
-    .welcome-kicker {
-      margin: 18px 0 6px;
-      font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--solar);
-    }
-    .welcome-title {
-      margin: 0; font-size: clamp(1.45rem, 5.8vw, 1.75rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15;
-    }
-    .welcome-copy { margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
-    .welcome-copy strong { color: var(--ink); font-weight: 800; }
+    .copy { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .copy strong { color: var(--ink); font-weight: 600; }
 
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; min-height: 52px; padding: 0 18px; border: 0; border-radius: 12px;
-      font-size: 15px; font-weight: 800; letter-spacing: -0.01em; cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 100%; min-height: 48px; padding: 0 16px;
+      border: 1px solid transparent; border-radius: var(--r);
+      font-size: 14px; font-weight: 600; letter-spacing: -0.01em;
+      cursor: pointer; text-decoration: none;
+      transition: background 0.12s ease, border-color 0.12s ease;
     }
-    .btn-solar { background: var(--solar); color: #fff; box-shadow: 0 8px 20px rgba(0,168,90,0.28); }
-    .btn-solar:hover { background: var(--solar-deep); }
-    .btn-solar:disabled { opacity: 0.55; cursor: wait; }
-    .btn-ghost { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+    .btn-solar { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .btn-solar:hover { background: #262626; }
+    .btn-solar:disabled { opacity: 0.5; cursor: wait; }
+    .btn-ghost { background: var(--surface); color: var(--ink); border-color: var(--line-strong); }
+    .btn-ghost:hover { background: var(--bg); }
     .btn-link {
-      width: 100%; min-height: 44px; border: 0; background: transparent;
-      color: var(--muted); font-size: 14px; font-weight: 700; cursor: pointer;
+      width: 100%; min-height: 40px; border: 0; background: transparent;
+      color: var(--muted); font-size: 13px; font-weight: 500; cursor: pointer;
     }
-    .btn-3d {
-      width: 100%; min-height: 56px; border: 0; border-radius: 14px;
-      background: linear-gradient(180deg, #22C97A 0%, #00A85A 55%, #008A4A 100%);
-      color: #fff; font-size: 16px; font-weight: 900; letter-spacing: -0.02em; cursor: pointer;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 10px 0 #006b36, 0 16px 28px rgba(0,107,54,0.25);
-      animation: ctaBob 2.2s ease-in-out infinite;
-    }
-    .btn-3d:active { transform: translateY(6px); animation: none; box-shadow: 0 2px 0 #006b36; }
-    @keyframes ctaBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-    @media (prefers-reduced-motion: reduce) { .btn-3d { animation: none; } }
-    .next-hint { margin: 10px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
-    .sticky-cta-wrap {
-      position: sticky; bottom: 0; z-index: 6; margin-top: 16px;
-      padding: 12px 0 calc(8px + var(--safe-b));
-      background: linear-gradient(180deg, rgba(247,251,248,0), var(--bg) 40%);
-    }
+    .btn-link:hover { color: var(--ink); }
+    .hint { margin: 10px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
 
-    .step-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-    .step-top .lbl { font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-    .step-top .back { border: 0; background: none; color: var(--muted); font-size: 13px; font-weight: 700; cursor: pointer; }
-    .step h2 { margin: 0 0 6px; font-size: clamp(1.35rem, 5.5vw, 1.65rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; }
-    .step .lead { margin: 0 0 20px; font-size: 14px; line-height: 1.45; color: var(--muted); }
+    .step-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .step-top .lbl { font-size: 12px; font-weight: 500; color: var(--muted); }
+    .step-top .back {
+      border: 0; background: none; color: var(--muted);
+      font-size: 13px; font-weight: 500; cursor: pointer; padding: 0;
+    }
+    .step-top .back:hover { color: var(--ink); }
+    .step h2 {
+      margin: 0 0 6px;
+      font-size: clamp(1.35rem, 5vw, 1.55rem);
+      font-weight: 650; letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .step .lead { margin: 0 0 20px; font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .step .lead strong { color: var(--ink); font-weight: 600; }
 
     input[type="range"] {
-      -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px;
-      background: #D8E5DC; outline: none; cursor: pointer;
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 2px; border-radius: 0;
+      background: var(--line); outline: none; cursor: pointer;
     }
     input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; width: 28px; height: 28px; border-radius: 50%;
-      background: var(--solar); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: grab;
+      -webkit-appearance: none; width: 18px; height: 18px; border-radius: 999px;
+      background: var(--ink); border: 2px solid var(--surface); cursor: grab;
     }
     input[type="range"]::-moz-range-thumb {
-      width: 28px; height: 28px; border-radius: 50%; background: var(--solar); border: 3px solid #fff; cursor: grab;
+      width: 18px; height: 18px; border-radius: 999px;
+      background: var(--ink); border: 2px solid var(--surface); cursor: grab;
     }
-    .bill-row { display: flex; align-items: end; justify-content: space-between; margin-bottom: 10px; }
-    .bill-row label { font-size: 14px; font-weight: 800; }
-    .bill-row output { font-size: clamp(1.6rem, 7vw, 2rem); font-weight: 900; color: var(--solar); letter-spacing: -0.03em; }
+    .bill-row { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 12px; gap: 12px; }
+    .bill-row label { font-size: 13px; font-weight: 500; color: var(--muted); }
+    .bill-row output {
+      font-size: clamp(1.75rem, 7vw, 2rem);
+      font-weight: 650; letter-spacing: -0.04em; color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .range-ends { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11px; color: var(--muted); }
     .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .chip {
-      min-height: 44px; padding: 0 14px; border-radius: 999px;
-      border: 1px solid var(--line); background: var(--card); color: var(--muted);
-      font-size: 13px; font-weight: 800; cursor: pointer;
+      min-height: 36px; padding: 0 12px; border-radius: 999px;
+      border: 1px solid var(--line-strong); background: var(--surface);
+      color: var(--muted); font-size: 13px; font-weight: 500; cursor: pointer;
     }
-    .chip.is-on { border-color: var(--solar); background: var(--solar); color: #fff; }
+    .chip.is-on { border-color: var(--ink); background: var(--ink); color: #fff; }
 
     .choice-grid { display: grid; gap: 8px; }
     .choice-grid.cols-2 { grid-template-columns: 1fr 1fr; }
@@ -227,233 +211,199 @@
     .choice-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
     .choice input { position: absolute; opacity: 0; pointer-events: none; }
     .choice label {
-      display: flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 52px; padding: 10px 12px; border-radius: 12px;
-      border: 1px solid var(--line); background: var(--card); color: var(--muted);
-      font-size: 14px; font-weight: 700; cursor: pointer; text-align: center;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 10px 12px;
+      border: 1px solid var(--line-strong); border-radius: var(--r);
+      background: var(--surface); color: var(--muted);
+      font-size: 14px; font-weight: 500; cursor: pointer; text-align: center;
     }
     .choice input:checked + label {
-      border-color: var(--solar); color: var(--ink); background: var(--solar-soft);
-      box-shadow: inset 0 0 0 1px var(--solar);
+      border-color: var(--ink); color: var(--ink); background: var(--surface);
     }
     .q-block { margin-bottom: 18px; }
-    .q-label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 800; }
+    .q-label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; }
     .q-hint { display: block; margin: -4px 0 8px; font-size: 12px; color: var(--muted); }
 
     .field { margin-bottom: 14px; }
-    .field label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 800; }
+    .field label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; }
     .field .note { display: block; margin: -2px 0 8px; font-size: 12px; color: var(--muted); }
     .field input, .field select {
-      width: 100%; min-height: 52px; padding: 0 14px; border-radius: 12px;
-      border: 1px solid var(--line); background: var(--card); color: var(--ink); font-size: 15px; outline: none;
+      width: 100%; min-height: 48px; padding: 0 12px;
+      border: 1px solid var(--line-strong); border-radius: var(--r);
+      background: var(--surface); outline: none;
     }
-    .field input:focus, .field select:focus { border-color: var(--solar); box-shadow: 0 0 0 3px var(--solar-soft); }
-    .field .err { display: none; margin-top: 6px; color: #C0392B; font-size: 12px; font-weight: 600; }
-    .field.bad input, .field.bad select { border-color: #C0392B; }
+    .field input:focus, .field select:focus { border-color: var(--ink); }
+    .field .err { display: none; margin-top: 6px; color: var(--danger); font-size: 12px; }
+    .field.bad input, .field.bad select { border-color: var(--danger); }
     .field.bad .err { display: block; }
     .phone-row { display: flex; gap: 8px; }
     .phone-prefix {
       display: inline-flex; align-items: center; justify-content: center;
-      min-height: 52px; min-width: 64px; border-radius: 12px;
-      border: 1px solid var(--line); background: var(--bg2); color: var(--muted); font-size: 14px; font-weight: 800;
+      min-height: 48px; min-width: 60px;
+      border: 1px solid var(--line-strong); border-radius: var(--r);
+      background: var(--bg); color: var(--muted); font-size: 13px; font-weight: 600;
     }
 
-    .hero-poster {
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 28px rgba(20,32,26,0.08);
-      background: #fff;
+    /* Savings — editorial, not card soup */
+    .compare {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      margin: 0 0 20px; background: var(--line); border: 1px solid var(--line);
     }
+    .compare > div { background: var(--surface); padding: 14px 12px; }
+    .compare span {
+      display: block; font-size: 11px; font-weight: 500; color: var(--muted); margin-bottom: 4px;
+    }
+    .compare strong {
+      font-size: 1.125rem; font-weight: 650; letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+    .compare .after strong { color: var(--accent-ink); }
 
-    /* Results — direct sell */
-    .sell-bill {
-      display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: stretch;
-      margin: 0 0 14px;
-    }
-    .sell-bill .box {
-      padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); text-align: center;
-    }
-    .sell-bill .box span {
-      display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
-    }
-    .sell-bill .box strong { font-size: 1.05rem; font-weight: 900; letter-spacing: -0.02em; }
-    .sell-bill .box.good { border-color: rgba(0,168,90,0.35); background: var(--solar-soft); }
-    .sell-bill .box.good strong { color: var(--solar-deep); }
-    .sell-bill .arrow {
-      align-self: center; color: var(--muted); font-size: 18px; font-weight: 300;
-    }
-
-    .money-stack {
-      margin: 0 0 14px; border-radius: 16px; border: 1px solid rgba(0,168,90,0.25);
-      background: #fff; overflow: hidden;
+    .money {
+      margin: 0 0 20px;
+      border-top: 1px solid var(--line);
     }
     .money-row {
-      display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
-      padding: 14px 16px; border-bottom: 1px solid var(--line);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+      padding: 14px 0; border-bottom: 1px solid var(--line);
     }
-    .money-row:last-child { border-bottom: 0; }
-    .money-row .when { font-size: 13px; font-weight: 700; color: var(--muted); }
-    .money-row .amt { font-size: 1.15rem; font-weight: 900; letter-spacing: -0.03em; color: var(--ink); text-align: right; }
-    .money-row.is-main {
-      padding: 18px 16px;
-      background: linear-gradient(160deg, #E8F8EF, #FFFFFF);
+    .money-row .when { font-size: 13px; color: var(--muted); font-weight: 500; }
+    .money-row .amt {
+      font-size: 1.125rem; font-weight: 650; letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums; text-align: right;
     }
-    .money-row.is-main .when { color: var(--solar-deep); font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
-    .money-row.is-main .amt { font-size: clamp(1.7rem, 7vw, 2.15rem); color: var(--ink); }
-    .money-row.is-main .hint { display: block; margin-top: 4px; font-size: 12px; font-weight: 600; color: var(--muted); text-align: right; }
+    .money-row.is-main .when { color: var(--ink); font-weight: 600; }
+    .money-row.is-main .amt {
+      font-size: clamp(1.75rem, 7vw, 2.125rem); color: var(--ink);
+    }
 
-    .spec-list {
-      margin: 0 0 14px; padding: 0; list-style: none;
-      border: 1px solid var(--line); border-radius: 14px; background: var(--card); overflow: hidden;
+    .specs {
+      margin: 0 0 16px; padding: 0; list-style: none;
+      border-top: 1px solid var(--line);
     }
-    .spec-list li {
-      display: flex; justify-content: space-between; gap: 12px;
-      padding: 12px 14px; border-bottom: 1px solid var(--line);
+    .specs li {
+      display: flex; justify-content: space-between; gap: 16px;
+      padding: 11px 0; border-bottom: 1px solid var(--line);
       font-size: 13px;
     }
-    .spec-list li:last-child { border-bottom: 0; }
-    .spec-list .k { color: var(--muted); font-weight: 600; }
-    .spec-list .v { color: var(--ink); font-weight: 800; text-align: right; }
+    .specs .k { color: var(--muted); }
+    .specs .v { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
 
-    .results-cta {
-      margin: 4px 0 18px;
-      padding-bottom: 4px;
-    }
-    .results-cta .btn-3d { animation: none; }
     .scroll-cue {
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-      margin: 0 0 18px; color: var(--muted); font-size: 12px; font-weight: 700;
-      transition: opacity 0.25s ease;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin: 8px 0 24px; padding: 10px 0;
+      font-size: 12px; font-weight: 500; color: var(--muted);
+      border-bottom: 1px dashed var(--line-strong);
+      transition: opacity 0.2s ease;
     }
-    .scroll-cue i {
-      display: block; width: 18px; height: 18px;
-      border-right: 2px solid var(--solar); border-bottom: 2px solid var(--solar);
-      transform: rotate(45deg); margin-top: 2px;
-      animation: cueBob 1.2s ease-in-out infinite;
-    }
-    @keyframes cueBob {
-      0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.45; }
-      50% { transform: rotate(45deg) translateY(4px); opacity: 1; }
-    }
-    @media (prefers-reduced-motion: reduce) { .scroll-cue i { animation: none; } }
+    .scroll-cue::after { content: "↓"; font-size: 12px; }
 
-    .detail-block {
-      margin: 0 0 14px; padding: 14px; border-radius: 14px;
-      border: 1px solid var(--line); background: var(--bg2);
-    }
-    .detail-block h3 {
-      margin: 0 0 8px; font-size: 12px; font-weight: 800;
-      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
-    }
-    .detail-block p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--ink); }
-    .addon-strip {
-      display: flex; align-items: flex-start; gap: 10px;
-      padding: 12px 14px; border-radius: 14px; margin-bottom: 14px;
-      border: 1px dashed rgba(0,168,90,0.4); background: rgba(0,168,90,0.06);
-    }
-    .addon-strip .plus {
-      flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px;
-      display: grid; place-items: center; background: var(--solar); color: #fff;
-      font-size: 12px; font-weight: 900;
-    }
-    .addon-strip p { margin: 0; font-size: 13px; line-height: 1.4; }
-    .addon-strip strong { color: var(--ink); }
-    .addon-strip span { color: var(--muted); font-size: 12px; }
-
-    body.is-results .carousel-shell {
-      padding-bottom: calc(28px + var(--safe-b));
-    }
-
-    /* Brochure voucher */
-    .brochure {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 16px 40px rgba(20,32,26,0.1);
-    }
-    .brochure-top {
-      padding: 18px 16px 16px;
-      background: linear-gradient(165deg, #E7F7EE 0%, #FFFFFF 70%);
+    .detail {
+      margin: 0 0 16px; padding: 0 0 16px;
       border-bottom: 1px solid var(--line);
     }
-    .brochure-logos { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
-    .brochure-logos img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-    .brochure-logos .x { color: var(--muted); font-weight: 300; }
+    .detail h3 {
+      margin: 0 0 6px; font-size: 12px; font-weight: 500; color: var(--muted);
+    }
+    .detail p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
+
+    .bonus {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+      margin: 0 0 20px; padding: 14px 0;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .bonus p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.4; }
+    .bonus strong { display: block; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
+    .bonus .off { font-size: 14px; font-weight: 650; color: var(--accent-ink); white-space: nowrap; }
+
+    .results-cta { margin: 8px 0 8px; padding-bottom: 8px; }
+
+    .plan-box {
+      margin-bottom: 16px; padding: 12px 0;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .plan-box .tiny { margin: 0 0 4px; font-size: 11px; color: var(--muted); font-weight: 500; }
+    .plan-box .line { margin: 0; font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+
+    /* Gift card / brochure */
+    .brochure {
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+    .brochure-top { padding: 20px 16px; border-bottom: 1px solid var(--line); }
+    .brochure-logos { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+    .brochure-logos img { width: 28px; height: 28px; border-radius: 999px; object-fit: cover; }
+    .brochure-logos .x { color: var(--muted); }
     .brochure-kicker {
-      margin: 0 0 4px; font-size: 11px; font-weight: 800; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--solar-deep);
+      margin: 0 0 6px; font-size: 11px; font-weight: 500; color: var(--muted);
+      letter-spacing: 0.04em; text-transform: uppercase;
     }
     .brochure-title {
-      margin: 0; font-size: clamp(1.4rem, 6vw, 1.75rem); font-weight: 900;
-      letter-spacing: -0.03em; line-height: 1.15;
+      margin: 0; font-size: 1.35rem; font-weight: 650; letter-spacing: -0.03em; line-height: 1.2;
     }
     .brochure-fromto {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px;
-    }
-    .brochure-fromto div {
-      padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.8); border: 1px solid var(--line);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;
     }
     .brochure-fromto span {
-      display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 2px;
+      display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; font-weight: 500;
     }
-    .brochure-fromto strong { font-size: 14px; font-weight: 800; word-break: break-word; }
+    .brochure-fromto strong { font-size: 14px; font-weight: 600; word-break: break-word; }
     .brochure-body { padding: 16px; }
     .brochure-save {
-      padding: 16px; border-radius: 16px; margin-bottom: 12px;
-      background: linear-gradient(160deg, #14201A, #1B3A4B);
-      color: #fff;
+      padding: 0 0 16px; margin-bottom: 4px;
+      border-bottom: 1px solid var(--line);
     }
     .brochure-save .tag {
-      margin: 0 0 6px; font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #7CFFB2; opacity: 0.95;
+      margin: 0 0 6px; font-size: 11px; font-weight: 500; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.04em;
     }
     .brochure-save .amt {
-      margin: 0; font-size: clamp(1.8rem, 8vw, 2.35rem); font-weight: 900;
-      letter-spacing: -0.04em; line-height: 1;
+      margin: 0; font-size: clamp(1.75rem, 7vw, 2.25rem);
+      font-weight: 650; letter-spacing: -0.04em; line-height: 1;
+      font-variant-numeric: tabular-nums;
     }
-    .brochure-save .sub { margin: 8px 0 0; font-size: 13px; line-height: 1.4; color: rgba(255,255,255,0.78); }
+    .brochure-save .sub { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
     .brochure-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      margin: 0 0 12px;
     }
     .brochure-cell {
-      padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg);
+      padding: 12px 0; border-bottom: 1px solid var(--line);
     }
+    .brochure-cell:nth-child(odd) { padding-right: 12px; }
+    .brochure-cell:nth-child(even) { padding-left: 12px; border-left: 1px solid var(--line); }
     .brochure-cell span {
-      display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
+      display: block; font-size: 11px; color: var(--muted); margin-bottom: 3px; font-weight: 500;
     }
-    .brochure-cell strong { font-size: 15px; font-weight: 900; letter-spacing: -0.02em; word-break: break-word; }
+    .brochure-cell strong { font-size: 14px; font-weight: 600; word-break: break-word; }
     .brochure-bonus {
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
-      padding: 12px 14px; border-radius: 12px; margin-bottom: 12px;
-      background: var(--solar-soft); border: 1px solid rgba(0,168,90,0.25);
+      display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+      padding: 12px 0; margin-bottom: 8px;
+      border-bottom: 1px solid var(--line);
     }
-    .brochure-bonus p { margin: 0; font-size: 13px; font-weight: 700; line-height: 1.35; }
-    .brochure-bonus .off { font-size: 18px; font-weight: 900; color: var(--solar-deep); white-space: nowrap; }
+    .brochure-bonus p { margin: 0; font-size: 13px; font-weight: 500; }
+    .brochure-bonus .off { font-size: 14px; font-weight: 650; color: var(--accent-ink); }
     .brochure-code {
       display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 10px;
-      padding-top: 12px; border-top: 1px dashed var(--line);
+      padding-top: 12px;
     }
     .brochure-code span {
-      display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--muted); margin-bottom: 2px;
+      display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; font-weight: 500;
     }
     .brochure-code strong {
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 14px; font-weight: 800; letter-spacing: 0.04em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
     }
-    .brochure-code .cd { color: var(--warn); font-variant-numeric: tabular-nums; }
+    .brochure-code .cd { color: var(--ink); font-variant-numeric: tabular-nums; }
     .brochure-foot {
-      margin: 12px 0 0; font-size: 11px; line-height: 1.4; color: var(--muted); text-align: center;
+      margin: 14px 0 0; font-size: 11px; line-height: 1.4; color: var(--muted);
     }
-
+    .voucher-intro { margin-bottom: 14px; }
+    .voucher-intro h2 { margin: 4px 0 0; font-size: 1.35rem; font-weight: 650; letter-spacing: -0.03em; }
+    .voucher-intro p { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
     .voucher-actions { display: grid; gap: 8px; margin-top: 14px; }
 
-    /* Audit modal */
+    /* Audit shell */
     body.is-audit { overflow: hidden; height: 100dvh; }
     body.is-audit .site-header,
     body.is-audit .site-footer,
@@ -464,16 +414,16 @@
     .audit-chrome { display: none; }
     body.is-audit .audit-chrome {
       display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      position: fixed; top: 3px; left: 0; right: 0; z-index: 55;
-      padding: 10px 16px 8px;
-      background: linear-gradient(180deg, var(--bg) 70%, transparent);
+      position: fixed; top: 2px; left: 0; right: 0; z-index: 55;
+      padding: 10px 16px 8px; background: var(--bg);
     }
-    .audit-chrome .mini { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; }
-    .audit-chrome .mini img { width: 24px; height: 24px; border-radius: 50%; object-fit: cover; }
-    .audit-chrome .mini .x { color: var(--muted); font-weight: 300; }
+    .audit-chrome .mini { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; }
+    .audit-chrome .mini img { width: 20px; height: 20px; border-radius: 999px; object-fit: cover; }
+    .audit-chrome .mini .x { color: var(--muted); font-weight: 400; }
     .audit-chrome .close-x {
-      min-width: 40px; min-height: 40px; border-radius: 10px;
-      border: 1px solid var(--line); background: var(--card); color: var(--muted); font-size: 18px; cursor: pointer;
+      min-width: 36px; min-height: 36px; border-radius: var(--r);
+      border: 1px solid var(--line-strong); background: var(--surface);
+      color: var(--muted); font-size: 18px; cursor: pointer;
     }
     body.is-audit main.app-main {
       position: fixed; inset: 0; z-index: 50; max-width: none; margin: 0;
@@ -481,120 +431,81 @@
     }
     .carousel-shell {
       flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
-      padding: 56px 16px calc(20px + var(--safe-b));
-      max-width: 480px; width: 100%; margin: 0 auto;
+      padding: 52px 16px calc(24px + var(--safe-b));
+      max-width: var(--max); width: 100%; margin: 0 auto;
     }
     body.is-audit .carousel-shell { display: block; }
     body:not(.is-audit) .carousel-shell { display: contents; }
-    body:not(.is-audit) .solar-stage,
     body:not(.is-audit) .step-dots { display: none !important; }
 
-    .solar-stage { width: 100px; height: 60px; margin: 0 auto 10px; }
-    .solar-stage svg { width: 100%; height: 100%; }
-    .sp-ray { stroke: var(--solar); stroke-width: 1.4; stroke-linecap: round; opacity: 0.35; }
-    .sp-sun-core { fill: var(--solar); }
-    .sp-frame { fill: #E8F2EB; stroke: rgba(0,168,90,0.35); stroke-width: 1; }
-    .sp-cell { fill: #C6E8D4; stroke: rgba(0,168,90,0.35); stroke-width: 0.5; }
-    .sp-glow { fill: #00A85A; opacity: 0.35; }
-    .sp-beam { fill: rgba(0,168,90,0.2); }
-
-    .step-dots { display: none; justify-content: center; gap: 6px; padding: 0 0 10px; }
+    .solar-stage { display: none !important; }
+    .step-dots { display: none; justify-content: center; gap: 5px; padding: 0 0 12px; }
     body.is-audit .step-dots { display: flex; }
-    .step-dots span { width: 7px; height: 7px; border-radius: 50%; background: #D0DDD4; }
-    .step-dots span.done { background: rgba(0,168,90,0.45); }
-    .step-dots span.now { background: var(--solar); box-shadow: 0 0 0 3px rgba(0,168,90,0.18); }
+    .step-dots span { width: 5px; height: 5px; border-radius: 999px; background: var(--line-strong); }
+    .step-dots span.done { background: #A3A3A3; }
+    .step-dots span.now { background: var(--ink); }
 
-    /* Brochure step — scroll freely, no cut-off */
-    body.is-voucher .solar-stage,
     body.is-voucher .step-dots { display: none !important; }
-    body.is-voucher .carousel-shell {
-      padding-top: 52px;
-      padding-bottom: calc(12px + var(--safe-b));
-    }
-    body.is-voucher #step-7.is-on {
-      display: block;
-      padding-bottom: 8px;
-    }
-    .voucher-intro { margin-bottom: 12px; }
-    .voucher-intro h2 {
-      margin: 4px 0 0; font-size: clamp(1.25rem, 5vw, 1.5rem); font-weight: 900; letter-spacing: -0.03em;
-    }
-    .voucher-intro p { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+    body.is-voucher .carousel-shell { padding-top: 52px; }
+    body.is-results .carousel-shell { padding-bottom: calc(32px + var(--safe-b)); }
 
-    /* Congrats */
     .congrats-layer {
       position: fixed; inset: 0; z-index: 90; display: none;
-      align-items: center; justify-content: center; pointer-events: none;
-      background: rgba(20,32,26,0.35);
+      align-items: center; justify-content: center;
+      background: rgba(10,10,10,0.4); pointer-events: none;
     }
-    .congrats-layer.is-on { display: flex; animation: congratsFade 2.4s ease forwards; }
+    .congrats-layer.is-on { display: flex; }
     .congrats-card {
-      text-align: center; padding: 22px 26px; border-radius: 18px;
-      background: #fff; border: 1px solid rgba(0,168,90,0.3);
-      box-shadow: 0 20px 50px rgba(20,32,26,0.2);
-      animation: congratsPop 0.5s cubic-bezier(0.22,1,0.36,1) both;
+      text-align: left; padding: 20px 22px; max-width: 280px; width: calc(100% - 48px);
+      background: var(--surface); border: 1px solid var(--line);
     }
-    .congrats-card .pop { font-size: 32px; margin-bottom: 6px; }
-    .congrats-card h3 { margin: 0; font-size: 1.35rem; font-weight: 900; letter-spacing: -0.03em; }
-    .congrats-card p { margin: 6px 0 0; color: var(--solar-deep); font-size: 14px; font-weight: 800; }
-    .confetti { position: absolute; inset: 0; overflow: hidden; }
-    .confetti i {
-      position: absolute; top: -12px; width: 8px; height: 10px; border-radius: 1px;
-      animation: confettiFall linear forwards;
-    }
-    @keyframes congratsPop { from { opacity: 0; transform: scale(0.8) translateY(12px); } to { opacity: 1; transform: none; } }
-    @keyframes congratsFade { 0%,70% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
-    @keyframes confettiFall {
-      0% { transform: translateY(0) rotate(0); opacity: 1; }
-      100% { transform: translateY(110vh) rotate(720deg); opacity: 0.1; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .congrats-layer.is-on, .congrats-card { animation: none; }
-      .confetti i { display: none; }
-    }
+    .congrats-card .pop { display: none; }
+    .congrats-card h3 { margin: 0; font-size: 1.125rem; font-weight: 650; letter-spacing: -0.02em; }
+    .congrats-card p { margin: 6px 0 0; color: var(--muted); font-size: 13px; font-weight: 500; }
+    .confetti { display: none; }
 
-    /* My gifts home list */
-    .my-vouchers { display: none; margin: 0 0 18px; }
+    .my-vouchers { display: none; margin: 0 0 20px; }
     .my-vouchers.is-visible { display: block; }
     .my-vouchers .mv-title {
-      display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+      margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--line);
     }
-    .my-vouchers .mv-title h2 { margin: 0; font-size: 15px; font-weight: 900; }
-    .mv-count { font-size: 12px; font-weight: 800; color: var(--solar-deep); }
+    .my-vouchers .mv-title h2 { margin: 0; font-size: 14px; font-weight: 650; }
+    .mv-count { font-size: 12px; color: var(--muted); font-weight: 500; }
     .mv-card {
-      width: 100%; text-align: left; margin-bottom: 10px; padding: 14px; border-radius: 14px;
-      border: 1px solid var(--line); background: var(--card); cursor: pointer;
+      width: 100%; text-align: left; margin-bottom: 8px; padding: 14px 0;
+      border: 0; border-bottom: 1px solid var(--line); background: transparent; cursor: pointer;
     }
-    .mv-card:hover { border-color: rgba(0,168,90,0.45); background: var(--solar-soft); }
-    .mv-card.is-expired { opacity: 0.55; }
-    .mv-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-    .mv-card .code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; font-weight: 800; }
-    .mv-card .off { color: var(--solar-deep); font-size: 14px; font-weight: 900; }
-    .mv-card .meta { margin-top: 8px; font-size: 12px; color: var(--muted); line-height: 1.4; }
+    .mv-card:hover .code { color: var(--accent-ink); }
+    .mv-card.is-expired { opacity: 0.45; }
+    .mv-card-top { display: flex; justify-content: space-between; gap: 10px; }
+    .mv-card .code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; }
+    .mv-card .off { font-size: 13px; font-weight: 650; }
+    .mv-card .meta { margin-top: 6px; font-size: 12px; color: var(--muted); line-height: 1.4; }
     .mv-card .days {
-      margin-top: 8px; display: inline-flex; padding: 5px 8px; border-radius: 999px;
-      font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
-      border: 1px solid var(--line); color: var(--muted);
+      margin-top: 8px; display: inline-block; font-size: 11px; font-weight: 500; color: var(--muted);
     }
-    .mv-card .days.ok { color: var(--solar-deep); border-color: rgba(0,168,90,0.35); background: var(--solar-soft); }
-    .mv-card .days.soon { color: var(--warn); border-color: rgba(196,92,38,0.35); }
-    .mv-card .days.dead { color: #C0392B; border-color: rgba(192,57,43,0.35); }
-    .mv-actions { display: grid; gap: 8px; margin-top: 12px; }
+    .mv-card .days.ok { color: var(--accent-ink); }
+    .mv-card .days.soon { color: #B45309; }
+    .mv-card .days.dead { color: var(--danger); }
+    .mv-actions { display: grid; gap: 8px; margin-top: 14px; }
     @media (min-width: 420px) { .mv-actions { grid-template-columns: 1fr 1fr; } }
 
-    .site-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); }
-    .site-footer .brand-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-    .site-footer .brand-row img { width: 36px; height: 36px; border-radius: 50%; }
-    .site-footer p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
-    .site-footer .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; }
-    .site-footer a { color: var(--solar-deep); font-size: 13px; font-weight: 800; text-decoration: none; }
-
-    .plan-box {
-      margin-bottom: 16px; padding: 12px 14px; border-radius: 12px;
-      border: 1px solid var(--line); background: var(--bg2);
+    .site-footer {
+      margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);
     }
-    .plan-box .tiny { margin: 0 0 4px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-    .plan-box .line { margin: 0; font-size: 14px; font-weight: 800; }
+    .site-footer .brand-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .site-footer .brand-row img { width: 28px; height: 28px; border-radius: 999px; }
+    .site-footer p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+    .site-footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; }
+    .site-footer a { font-size: 13px; font-weight: 600; text-decoration: none; color: var(--ink); }
+    .site-footer a:hover { color: var(--accent-ink); }
+
+    /* legacy class aliases used by older markup bits */
+    .welcome-kicker { margin: 20px 0 8px; font-size: 12px; font-weight: 500; color: var(--muted); }
+    .welcome-title { margin: 0; font-size: clamp(1.5rem, 5.5vw, 1.75rem); font-weight: 650; letter-spacing: -0.035em; line-height: 1.15; }
+    .welcome-copy { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .next-hint { margin: 10px 0 0; text-align: center; font-size: 12px; color: var(--muted); }
   </style>
 </head>
 <body class="is-booting">
@@ -602,12 +513,12 @@
   <div class="boot-splash" id="boot-splash" role="status" aria-live="polite" aria-label="Loading">
     <div class="boot-lockup">
       <div class="boot-brand">
-        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="44" height="44">
+        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="28" height="28">
         <span>FGE Solar</span>
       </div>
       <span class="boot-x" aria-hidden="true">×</span>
       <div class="boot-brand">
-        <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="44" height="44">
+        <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="" width="28" height="28">
         <span>TESLA '26</span>
       </div>
     </div>
@@ -618,16 +529,16 @@
   <header class="site-header">
     <div class="lockup">
       <a href="/" aria-label="FGE Solar">
-        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="32" height="32">
+        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="24" height="24">
         <span>FGE Solar</span>
       </a>
       <span class="x" aria-hidden="true">×</span>
       <div class="brand">
-        <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="" width="32" height="32">
+        <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="" width="24" height="24">
         <span>TESLA '26</span>
       </div>
     </div>
-    <p class="lockup-sub">Official Energy Partner of TESLA '26 · CET</p>
+    <p class="lockup-sub">Official Energy Partner · CET</p>
   </header>
 
   <div class="progress-track" aria-hidden="true">
@@ -637,9 +548,9 @@
   <div class="congrats-layer" id="congrats-layer" aria-live="polite">
     <div class="confetti" aria-hidden="true"></div>
     <div class="congrats-card">
-      <div class="pop" aria-hidden="true">✓</div>
+      <div class="pop" aria-hidden="true"></div>
       <h3>Gift card ready</h3>
-      <p>You can send it to your parents now</p>
+      <p>Send it to your parents on WhatsApp.</p>
     </div>
   </div>
 
@@ -653,18 +564,17 @@
   </div>
 
   <main class="app-main">
-
     <section id="step-0" class="step is-on">
-      <h1 class="sr-only">A Gift for Amma &amp; Achan — Home Solar Savings</h1>
+      <h1 class="sr-only">Solar gift for Amma and Achan</h1>
 
       <div id="my-vouchers" class="my-vouchers" aria-live="polite">
         <div class="mv-title">
-          <h2>My parent gifts</h2>
+          <h2>Saved gifts</h2>
           <span class="mv-count" id="mv-count"></span>
         </div>
         <div id="mv-list"></div>
         <div class="mv-actions">
-          <button type="button" class="btn btn-solar" data-next="1">Create another gift</button>
+          <button type="button" class="btn btn-solar" data-next="1">New gift</button>
           <button type="button" class="btn btn-ghost" id="mv-clear-expired">Clear expired</button>
         </div>
       </div>
@@ -678,95 +588,74 @@
               src="/assets/images/campaigns/tesla26/gift-hero.jpg"
               alt="FGE Solar × TESLA '26 — A gift for Amma and Achan"
               width="720"
-              height="960"
+              height="900"
               fetchpriority="high"
               decoding="async"
             >
           </picture>
         </figure>
 
-        <p class="welcome-kicker">For students at TESLA '26</p>
-        <h2 class="welcome-title">Make a solar gift card for your parents</h2>
-        <p class="welcome-copy">
-          Answer a few questions about home. We’ll show clear rupee savings you can WhatsApp to Amma &amp; Achan.
-          ₹5,000 off is a bonus on top.
+        <p class="eyebrow">TESLA '26 · CET</p>
+        <h2 class="title">Make a solar gift card for your parents</h2>
+        <p class="copy">
+          A few questions about the home bill and appliances. You’ll get clear rupee savings
+          to WhatsApp Amma &amp; Achan — with <strong>₹5,000 off</strong> as a bonus.
         </p>
-
-        <button type="button" class="btn btn-solar" style="margin-top:20px" data-next="1">Start →</button>
-        <p class="next-hint">About 2 minutes · Offer valid 10 days</p>
+        <button type="button" class="btn btn-solar" style="margin-top:20px" data-next="1">Start</button>
+        <p class="hint">About 2 minutes · Valid 10 days</p>
       </div>
     </section>
 
     <div class="carousel-shell">
-      <div class="solar-stage" aria-hidden="true">
-        <svg viewBox="0 0 120 72" fill="none">
-          <line class="sp-ray" x1="60" y1="2" x2="60" y2="8"/>
-          <line class="sp-ray" x1="48" y1="5" x2="52" y2="10"/>
-          <line class="sp-ray" x1="72" y1="5" x2="68" y2="10"/>
-          <circle class="sp-sun-core" cx="60" cy="14" r="5"/>
-          <path class="sp-beam" d="M48 20 L72 20 L78 30 L42 30 Z"/>
-          <rect class="sp-frame" x="22" y="30" width="76" height="34" rx="3"/>
-          <rect class="sp-cell" x="26" y="34" width="20" height="12" rx="1"/>
-          <rect class="sp-cell" x="50" y="34" width="20" height="12" rx="1"/>
-          <rect class="sp-cell" x="74" y="34" width="20" height="12" rx="1"/>
-          <rect class="sp-cell" x="26" y="48" width="20" height="12" rx="1"/>
-          <rect class="sp-cell" x="50" y="48" width="20" height="12" rx="1"/>
-          <rect class="sp-cell" x="74" y="48" width="20" height="12" rx="1"/>
-          <rect class="sp-glow" x="26" y="34" width="20" height="12" rx="1"/>
-          <rect class="sp-glow" x="50" y="48" width="20" height="12" rx="1"/>
-        </svg>
-      </div>
+      <div class="solar-stage" aria-hidden="true"></div>
       <div id="step-dots" class="step-dots" aria-hidden="true"></div>
 
       <section id="step-1" class="step">
         <div class="step-top">
-          <p class="lbl">Step 1 · Bill</p>
-          <button type="button" class="back" data-back="0">← Back</button>
+          <p class="lbl">1 · Bill</p>
+          <button type="button" class="back" data-back="0">Back</button>
         </div>
-        <h2>What’s the monthly KSEB bill at home?</h2>
-        <p class="lead">Rough monthly amount is fine — check last month’s bill if you can.</p>
+        <h2>Monthly KSEB bill?</h2>
+        <p class="lead">Use last month’s amount — a close estimate is fine.</p>
         <div class="bill-row">
           <label for="bill-slider">Monthly bill</label>
           <output id="bill-display">₹5,000</output>
         </div>
         <input id="bill-slider" type="range" min="1500" max="25000" step="100" value="5000" aria-label="Monthly KSEB bill">
-        <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--muted)"><span>₹1,500</span><span>₹25,000+</span></div>
+        <div class="range-ends"><span>₹1,500</span><span>₹25,000+</span></div>
         <div class="chip-row">
           <button type="button" class="chip" data-bill="2500">₹2,500</button>
           <button type="button" class="chip is-on" data-bill="5000">₹5,000</button>
           <button type="button" class="chip" data-bill="8500">₹8,500</button>
           <button type="button" class="chip" data-bill="12000">₹12,000+</button>
         </div>
-        <button type="button" class="btn btn-solar" style="margin-top:28px" data-next="2">Next →</button>
-        <p class="next-hint">Next: roof type</p>
+        <button type="button" class="btn btn-solar" style="margin-top:28px" data-next="2">Continue</button>
       </section>
 
       <section id="step-2" class="step">
         <div class="step-top">
-          <p class="lbl">Step 2 · Roof</p>
-          <button type="button" class="back" data-back="1">← Back</button>
+          <p class="lbl">2 · Roof</p>
+          <button type="button" class="back" data-back="1">Back</button>
         </div>
-        <h2>What type of roof at home?</h2>
-        <p class="lead">Helps us plan how panels can be fixed for Amma &amp; Achan.</p>
+        <h2>Roof type</h2>
+        <p class="lead">Affects how panels are mounted.</p>
         <div class="choice-grid" role="radiogroup" aria-label="Roof type">
           <div class="choice"><input type="radio" name="roof" id="roof-flat" value="flat" checked><label for="roof-flat">Flat concrete</label></div>
           <div class="choice"><input type="radio" name="roof" id="roof-tile" value="tile"><label for="roof-tile">Sloped tile</label></div>
           <div class="choice"><input type="radio" name="roof" id="roof-metal" value="metal"><label for="roof-metal">Metal sheet</label></div>
         </div>
-        <button type="button" class="btn btn-solar" style="margin-top:28px" data-next="3">Next →</button>
-        <p class="next-hint">Next: main appliances</p>
+        <button type="button" class="btn btn-solar" style="margin-top:28px" data-next="3">Continue</button>
       </section>
 
       <section id="step-3" class="step">
         <div class="step-top">
-          <p class="lbl">Step 3 · Appliances</p>
-          <button type="button" class="back" data-back="2">← Back</button>
+          <p class="lbl">3 · Appliances</p>
+          <button type="button" class="back" data-back="2">Back</button>
         </div>
-        <h2>Main appliances at home</h2>
-        <p class="lead">These usually decide how big a solar system they need.</p>
-
+        <h2>Main appliances</h2>
+        <p class="lead">These drive most of the bill.</p>
         <div class="q-block">
-          <span class="q-label">How many ACs?</span>
+          <span class="q-label">ACs</span>
           <div class="choice-grid cols-4" role="radiogroup">
             <div class="choice"><input type="radio" name="ac" id="ac-0" value="0" checked><label for="ac-0">0</label></div>
             <div class="choice"><input type="radio" name="ac" id="ac-1" value="1"><label for="ac-1">1</label></div>
@@ -775,7 +664,7 @@
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">How many refrigerators?</span>
+          <span class="q-label">Refrigerators</span>
           <div class="choice-grid cols-3" role="radiogroup">
             <div class="choice"><input type="radio" name="fridge" id="fridge-1" value="1" checked><label for="fridge-1">1</label></div>
             <div class="choice"><input type="radio" name="fridge" id="fridge-2" value="2"><label for="fridge-2">2</label></div>
@@ -783,7 +672,7 @@
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">How do you heat water?</span>
+          <span class="q-label">Water heating</span>
           <div class="choice-grid" role="radiogroup">
             <div class="choice"><input type="radio" name="water" id="water-electric" value="electric" checked><label for="water-electric">Electric geyser</label></div>
             <div class="choice"><input type="radio" name="water" id="water-gas" value="gas"><label for="water-gas">Gas / LPG</label></div>
@@ -791,26 +680,24 @@
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">Is someone usually home during the day?</span>
-          <span class="q-hint">Solar power is strongest from about 10am–4pm</span>
+          <span class="q-label">Someone home in the day?</span>
+          <span class="q-hint">Solar peaks roughly 10am–4pm</span>
           <div class="choice-grid" role="radiogroup">
-            <div class="choice"><input type="radio" name="daytime" id="day-home" value="home"><label for="day-home">Yes, mostly home</label></div>
+            <div class="choice"><input type="radio" name="daytime" id="day-home" value="home"><label for="day-home">Mostly home</label></div>
             <div class="choice"><input type="radio" name="daytime" id="day-mixed" value="mixed" checked><label for="day-mixed">Sometimes</label></div>
             <div class="choice"><input type="radio" name="daytime" id="day-away" value="away"><label for="day-away">Mostly away</label></div>
           </div>
         </div>
-        <button type="button" class="btn btn-solar" style="margin-top:12px" data-next="4">Next →</button>
-        <p class="next-hint">Next: kitchen &amp; other devices</p>
+        <button type="button" class="btn btn-solar" data-next="4">Continue</button>
       </section>
 
       <section id="step-4" class="step">
         <div class="step-top">
-          <p class="lbl">Step 4 · More details</p>
-          <button type="button" class="back" data-back="3">← Back</button>
+          <p class="lbl">4 · More</p>
+          <button type="button" class="back" data-back="3">Back</button>
         </div>
-        <h2>Other home devices</h2>
-        <p class="lead">Quick yes / no — makes the savings number more real.</p>
-
+        <h2>Other devices</h2>
+        <p class="lead">Quick yes / no.</p>
         <div class="q-block">
           <span class="q-label">Mixer / grinder</span>
           <div class="choice-grid cols-2" role="radiogroup">
@@ -833,7 +720,7 @@
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">How many fans?</span>
+          <span class="q-label">Fans</span>
           <div class="choice-grid cols-4" role="radiogroup">
             <div class="choice"><input type="radio" name="fans" id="fans-2" value="2"><label for="fans-2">1–2</label></div>
             <div class="choice"><input type="radio" name="fans" id="fans-4" value="4" checked><label for="fans-4">3–4</label></div>
@@ -842,44 +729,42 @@
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">EV charger at home?</span>
+          <span class="q-label">EV charger</span>
           <div class="choice-grid cols-2" role="radiogroup">
             <div class="choice"><input type="radio" name="ev" id="ev-yes" value="yes"><label for="ev-yes">Yes</label></div>
             <div class="choice"><input type="radio" name="ev" id="ev-no" value="no" checked><label for="ev-no">No</label></div>
           </div>
         </div>
         <div class="q-block">
-          <span class="q-label">Inverter backup at home?</span>
+          <span class="q-label">Inverter backup</span>
           <div class="choice-grid cols-2" role="radiogroup">
             <div class="choice"><input type="radio" name="inverter" id="inv-yes" value="yes"><label for="inv-yes">Yes</label></div>
             <div class="choice"><input type="radio" name="inverter" id="inv-no" value="no" checked><label for="inv-no">No</label></div>
           </div>
         </div>
-        <button type="button" class="btn btn-solar" style="margin-top:8px" data-next="5">See savings →</button>
-        <p class="next-hint">Next: what they could save</p>
+        <button type="button" class="btn btn-solar" data-next="5">See savings</button>
       </section>
 
       <section id="step-5" class="step">
         <div class="step-top">
-          <p class="lbl">Your numbers</p>
-          <button type="button" class="back" data-back="4">← Back</button>
+          <p class="lbl">Savings</p>
+          <button type="button" class="back" data-back="4">Back</button>
         </div>
-        <h2>Money your home can keep</h2>
+        <h2>What they can keep</h2>
         <p class="lead">Sized for this house: <strong id="rec-system">5 kW On-Grid Solar System</strong></p>
 
-        <div class="sell-bill" aria-label="Bill comparison">
-          <div class="box">
+        <div class="compare" aria-label="Bill comparison">
+          <div>
             <span>KSEB now</span>
             <strong id="stat-bill">₹5,000/mo</strong>
           </div>
-          <div class="arrow" aria-hidden="true">→</div>
-          <div class="box good">
+          <div class="after">
             <span>With solar</span>
             <strong id="stat-bill-after">₹500/mo</strong>
           </div>
         </div>
 
-        <div class="money-stack">
+        <div class="money">
           <div class="money-row">
             <span class="when">Every year</span>
             <span class="amt" id="stat-annual">₹54,000</span>
@@ -894,70 +779,64 @@
           </div>
         </div>
 
-        <ul class="spec-list">
+        <ul class="specs">
           <li><span class="k">Solar units / month</span><span class="v" id="rec-units">~600</span></li>
           <li><span class="k">Bill cut</span><span class="v" id="stat-offset">~90%</span></li>
           <li><span class="k">Roof needed</span><span class="v" id="stat-roof">~500 ft²</span></li>
           <li><span class="k">CO₂ cut / year</span><span class="v" id="stat-co2">5.9 t</span></li>
         </ul>
 
-        <div class="scroll-cue" id="results-scroll-cue" aria-hidden="true">
-          <span>Scroll for full breakdown</span>
-          <i></i>
-        </div>
+        <div class="scroll-cue" id="results-scroll-cue">Scroll for breakdown</div>
 
-        <div class="detail-block">
+        <div class="detail">
           <h3>Why this size</h3>
           <p id="rec-note">Sized from your bill and appliances.</p>
         </div>
-        <div class="detail-block">
-          <h3>Your home load</h3>
+        <div class="detail">
+          <h3>Home load</h3>
           <p id="load-summary">—</p>
         </div>
-        <div class="detail-block">
-          <h3>Climate impact</h3>
-          <p id="stat-trees">Equal to about 295 trees planted each year.</p>
+        <div class="detail">
+          <h3>Climate</h3>
+          <p id="stat-trees">—</p>
         </div>
 
-        <div class="addon-strip">
-          <div class="plus">+₹5k</div>
-          <p>
-            <strong>TESLA '26 bonus</strong><br>
-            <span>₹5,000 off installation with your gift code · 10 days</span>
-          </p>
+        <div class="bonus">
+          <p><strong>TESLA '26 bonus</strong>Use your gift code when booking · 10 days</p>
+          <div class="off">₹5,000 off</div>
         </div>
 
         <div class="results-cta">
-          <button type="button" class="btn-3d" data-next="6">Make gift card →</button>
+          <button type="button" class="btn btn-solar" data-next="6">Make gift card</button>
           <button type="button" class="btn-link" data-back="1">Change answers</button>
         </div>
       </section>
 
       <section id="step-6" class="step">
         <div class="step-top">
-          <p class="lbl">Gift details</p>
-          <button type="button" class="back" data-back="5">← Back</button>
+          <p class="lbl">Details</p>
+          <button type="button" class="back" data-back="5">Back</button>
         </div>
-        <h2>Put their names on the card</h2>
-        <p class="lead">Your name as “from”, parent name as “for”. WhatsApp is so FGE can call for the free visit.</p>
+        <h2>Who is this for?</h2>
+        <p class="lead">Your name as from. Parent WhatsApp for the free site visit.</p>
         <div class="plan-box">
-          <p class="tiny">What you’re gifting</p>
+          <p class="tiny">You’re gifting</p>
           <p class="line" id="summary-line">5 kW · ₹2.7 L in 5 years</p>
         </div>
         <form id="claim-form" novalidate>
           <div class="field">
-            <label for="student-name">Your name (student)</label>
-            <input id="student-name" type="text" autocomplete="name" required maxlength="80" placeholder="Your name">
-            <span class="err">Please enter your name.</span>
+            <label for="student-name">Your name</label>
+            <input id="student-name" type="text" autocomplete="name" required maxlength="80" placeholder="Student name">
+            <span class="err">Enter your name.</span>
           </div>
           <div class="field">
             <label for="parent-name">Parent name</label>
-            <span class="note">Who receives this gift</span>
-            <input id="parent-name" type="text" required maxlength="80" placeholder="Amma / Achan full name">
-            <span class="err">Please enter the parent name.</span>
+            <span class="note">Who receives the gift</span>
+            <input id="parent-name" type="text" required maxlength="80" placeholder="Parent full name">
+            <span class="err">Enter the parent name.</span>
           </div>
           <div class="field">
-            <label for="district">Kerala District</label>
+            <label for="district">District</label>
             <select id="district" required>
               <option value="" disabled selected>Select district</option>
               <option>Thiruvananthapuram</option>
@@ -976,35 +855,34 @@
               <option>Kasaragod</option>
               <option>Other</option>
             </select>
-            <span class="err">Please select a district.</span>
+            <span class="err">Select a district.</span>
           </div>
           <div class="field">
-            <label for="whatsapp">Parent WhatsApp number</label>
-            <span class="note">10-digit mobile for follow-up</span>
+            <label for="whatsapp">Parent WhatsApp</label>
+            <span class="note">10-digit mobile</span>
             <div class="phone-row">
               <span class="phone-prefix">+91</span>
-              <input id="whatsapp" type="tel" inputmode="numeric" required maxlength="10" placeholder="Parent mobile" style="flex:1">
+              <input id="whatsapp" type="tel" inputmode="numeric" required maxlength="10" placeholder="Mobile" style="flex:1">
             </div>
-            <span class="err">Enter a valid 10-digit Indian mobile number.</span>
+            <span class="err">Enter a valid 10-digit number.</span>
           </div>
-          <button type="submit" id="submit-claim" class="btn btn-solar" style="margin-top:8px">Make gift card →</button>
-          <p class="next-hint">Next: send on WhatsApp</p>
+          <button type="submit" id="submit-claim" class="btn btn-solar" style="margin-top:8px">Make gift card</button>
         </form>
       </section>
 
       <section id="step-7" class="step">
         <div class="voucher-intro">
-          <p class="welcome-kicker" style="margin:0">Your gift card</p>
-          <h2>Ready to send home</h2>
-          <p>Full card below — scroll freely on any phone, then share the link or WhatsApp FGE.</p>
+          <p class="eyebrow" style="margin:0">Gift card</p>
+          <h2>Ready to send</h2>
+          <p>Full card below. Share the link or WhatsApp FGE.</p>
         </div>
 
         <article class="brochure" id="voucher-card">
           <div class="brochure-top">
             <div class="brochure-logos">
-              <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="36" height="36">
+              <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="28" height="28">
               <span class="x" aria-hidden="true">×</span>
-              <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="36" height="36">
+              <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="28" height="28">
             </div>
             <p class="brochure-kicker">FGE Solar × TESLA '26 · CET</p>
             <h3 class="brochure-title">Solar gift for our home</h3>
@@ -1015,9 +893,9 @@
           </div>
           <div class="brochure-body">
             <div class="brochure-save">
-              <p class="tag">In 5 years your home can keep</p>
+              <p class="tag">In 5 years</p>
               <p class="amt" id="v-5y">₹2.7 L</p>
-              <p class="sub">Estimated KSEB bill money that stays in the family.</p>
+              <p class="sub">Estimated bill money kept at home.</p>
             </div>
             <div class="brochure-row">
               <div class="brochure-cell"><span>In 25 years</span><strong id="v-25y">₹13.5 L</strong></div>
@@ -1026,32 +904,32 @@
               <div class="brochure-cell"><span>System</span><strong id="v-system">—</strong></div>
             </div>
             <div class="brochure-bonus">
-              <p>TESLA '26 bonus<br><span style="font-weight:600;color:var(--muted);font-size:12px">Use this code when booking</span></p>
+              <p>TESLA '26 bonus</p>
               <div class="off">₹5,000 OFF</div>
             </div>
             <div class="brochure-code">
               <div>
-                <span>Gift code</span>
+                <span>Code</span>
                 <strong id="voucher-code">TESLA26-CET-0000</strong>
               </div>
               <div style="text-align:right">
-                <span>Valid for</span>
+                <span>Valid</span>
                 <strong id="voucher-countdown" class="cd">10d 00h 00m</strong>
               </div>
             </div>
-            <p class="brochure-foot">Estimates only · Free site visit for final size &amp; price · Kerala · Valid 10 days</p>
+            <p class="brochure-foot">Estimates only. Free site visit for final size and price. Kerala · 10 days.</p>
           </div>
         </article>
 
         <div class="voucher-actions">
-          <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar">WhatsApp FGE with this gift</a>
-          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy gift card link</button>
+          <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar">WhatsApp FGE</a>
+          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy gift link</button>
           <button type="button" id="wa-share-native" class="btn btn-ghost">Share gift card</button>
-          <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy WhatsApp message</button>
+          <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy message</button>
           <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
-          <button type="button" class="btn btn-ghost" id="voucher-home">My parent gifts</button>
-          <button type="button" class="btn-link" data-next="1">Make another gift</button>
-          <p id="copy-toast" style="display:none;text-align:center;font-size:12px;color:var(--solar-deep);font-weight:700;margin:0">Copied</p>
+          <button type="button" class="btn btn-ghost" id="voucher-home">Saved gifts</button>
+          <button type="button" class="btn-link" data-next="1">Make another</button>
+          <p id="copy-toast" style="display:none;text-align:center;font-size:12px;color:var(--accent-ink);font-weight:600;margin:0">Copied</p>
           <p id="gift-link-preview" style="display:none;word-break:break-all;font-size:11px;color:var(--muted);text-align:center;margin:0;line-height:1.4"></p>
         </div>
       </section>
@@ -1059,18 +937,18 @@
 
     <footer class="site-footer">
       <div class="brand-row">
-        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="36" height="36">
+        <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="" width="28" height="28">
         <div>
-          <p style="font-weight:900;color:var(--ink);font-size:14px;margin:0">FGE Solar</p>
-          <p style="font-size:10px;letter-spacing:0.1em;text-transform:uppercase;margin:2px 0 0">Future. Green. Energy.</p>
+          <p style="font-weight:650;color:var(--ink);font-size:13px;margin:0">FGE Solar</p>
+          <p style="font-size:11px;color:var(--muted);margin:2px 0 0">Future. Green. Energy.</p>
         </div>
       </div>
       <p>
-        FGE Solar helps Kerala homes install rooftop solar — site visit, subsidy help, and switch-on.
+        Rooftop solar for Kerala homes — site visit, subsidy help, switch-on.
         Official Energy Partner of TESLA '26 at CET.
       </p>
-      <p style="margin-top:10px;font-size:11px">
-        Savings shown are estimates. Final size and price need a free site visit. Gift bonus valid 10 days from today.
+      <p style="margin-top:10px;font-size:12px">
+        Savings are estimates. Final size and price need a free site visit. Bonus valid 10 days.
       </p>
       <div class="links">
         <a href="/">fgesolar.in</a>
@@ -1081,7 +959,8 @@
 
   <iframe name="fge-tesla26-gf" title="Google Forms" hidden aria-hidden="true"></iframe>
 
-  <script>
+
+<script>
   (function () {
     'use strict';
 
@@ -1432,7 +1311,7 @@
       billDisplay.textContent = formatINR(state.bill) + (state.bill >= 25000 ? '+' : '');
       var pct = ((state.bill - 1500) / (25000 - 1500)) * 100;
       billSlider.style.background =
-        'linear-gradient(90deg,#008A4A 0%,#00A85A ' + pct + '%,#D8E5DC ' + pct + '%)';
+        'linear-gradient(90deg,#16A34A 0%,#16A34A ' + pct + '%,#E5E5E5 ' + pct + '%)';
 
       var billAfter = Math.max(0, Math.round(state.bill * (1 - state.offsetPct / 100)));
       document.getElementById('rec-system').textContent = state.label;
@@ -1506,7 +1385,7 @@
       var confetti = layer.querySelector('.confetti');
       if (confetti) {
         confetti.innerHTML = '';
-        var colors = ['#00A85A', '#1B3A4B', '#7CFFB2', '#C45C26', '#EEF6F0'];
+        var colors = ['#16A34A', '#0A0A0A', '#A3A3A3'];
         for (var i = 0; i < 36; i++) {
           var bit = document.createElement('i');
           bit.style.left = Math.random() * 100 + '%';
