@@ -81,7 +81,9 @@
       gap: 14px; background: #FFFFFF;
       transition: opacity 0.45s ease, visibility 0.45s ease;
     }
-    body:not(.is-booting) .boot-splash { opacity: 0; visibility: hidden; pointer-events: none; }
+    body:not(.is-booting) .boot-splash {
+      opacity: 0; visibility: hidden; pointer-events: none; display: none;
+    }
     .boot-lockup { display: flex; align-items: center; gap: 12px; }
     .boot-brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; }
     .boot-brand img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
