@@ -21,7 +21,7 @@
   <meta name="twitter:image" content="https://fgesolar.in/assets/images/og/tesla26-og.webp">
   <meta name="theme-color" content="#F7FBF8">
   <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
-  <link rel="preload" as="image" href="/assets/images/campaigns/tesla26/fge-logo.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/campaigns/tesla26/gift-hero.webp" type="image/webp" fetchpriority="high">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R6VD39C55"></script>
   <script>
@@ -258,44 +258,99 @@
       border: 1px solid var(--line); background: var(--bg2); color: var(--muted); font-size: 14px; font-weight: 800;
     }
 
-    /* Results — savings psychology */
-    .gift-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-bottom: 10px; padding: 6px 10px; border-radius: 999px;
-      background: rgba(27,58,75,0.08); color: var(--navy);
-      font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+    .hero-poster {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(20,32,26,0.08);
+      background: #fff;
     }
-    .savings-hero {
-      margin: 0 0 14px; padding: 18px 16px; border-radius: 18px;
-      background: linear-gradient(160deg, #E8F8EF 0%, #FFFFFF 55%, #F3F8F5 100%);
-      border: 1px solid rgba(0,168,90,0.22);
-      box-shadow: 0 10px 28px rgba(0,168,90,0.08);
+
+    /* Results — direct sell */
+    .sell-bill {
+      display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: stretch;
+      margin: 0 0 14px;
     }
-    .savings-hero .tag {
-      margin: 0 0 6px; font-size: 11px; font-weight: 800; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--solar-deep);
+    .sell-bill .box {
+      padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); text-align: center;
     }
-    .savings-hero .big {
-      margin: 0; font-size: clamp(2rem, 9vw, 2.6rem); font-weight: 900;
-      letter-spacing: -0.04em; line-height: 1; color: var(--ink);
+    .sell-bill .box span {
+      display: block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 4px;
     }
-    .savings-hero .why {
-      margin: 8px 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); font-weight: 600;
+    .sell-bill .box strong { font-size: 1.05rem; font-weight: 900; letter-spacing: -0.02em; }
+    .sell-bill .box.good { border-color: rgba(0,168,90,0.35); background: var(--solar-soft); }
+    .sell-bill .box.good strong { color: var(--solar-deep); }
+    .sell-bill .arrow {
+      align-self: center; color: var(--muted); font-size: 18px; font-weight: 300;
     }
-    .savings-hero .why em { font-style: normal; color: var(--navy); font-weight: 800; }
-    .savings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
-    .stat {
-      padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--card);
+
+    .money-stack {
+      margin: 0 0 14px; border-radius: 16px; border: 1px solid rgba(0,168,90,0.25);
+      background: #fff; overflow: hidden;
     }
-    .stat .lbl { display: block; margin-bottom: 6px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-    .stat .val { font-size: 1.2rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; }
-    .stat.hi { border-color: rgba(0,168,90,0.35); background: var(--solar-soft); }
-    .stat.hi .val { color: var(--solar-deep); }
-    .plan-line { margin: 0 0 12px; font-size: 14px; color: var(--muted); line-height: 1.45; }
-    .plan-line strong { color: var(--ink); }
+    .money-row {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+      padding: 14px 16px; border-bottom: 1px solid var(--line);
+    }
+    .money-row:last-child { border-bottom: 0; }
+    .money-row .when { font-size: 13px; font-weight: 700; color: var(--muted); }
+    .money-row .amt { font-size: 1.15rem; font-weight: 900; letter-spacing: -0.03em; color: var(--ink); text-align: right; }
+    .money-row.is-main {
+      padding: 18px 16px;
+      background: linear-gradient(160deg, #E8F8EF, #FFFFFF);
+    }
+    .money-row.is-main .when { color: var(--solar-deep); font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+    .money-row.is-main .amt { font-size: clamp(1.7rem, 7vw, 2.15rem); color: var(--ink); }
+    .money-row.is-main .hint { display: block; margin-top: 4px; font-size: 12px; font-weight: 600; color: var(--muted); text-align: right; }
+
+    .spec-list {
+      margin: 0 0 14px; padding: 0; list-style: none;
+      border: 1px solid var(--line); border-radius: 14px; background: var(--card); overflow: hidden;
+    }
+    .spec-list li {
+      display: flex; justify-content: space-between; gap: 12px;
+      padding: 12px 14px; border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+    .spec-list li:last-child { border-bottom: 0; }
+    .spec-list .k { color: var(--muted); font-weight: 600; }
+    .spec-list .v { color: var(--ink); font-weight: 800; text-align: right; }
+
+    .results-cta {
+      margin: 4px 0 18px;
+      padding-bottom: 4px;
+    }
+    .results-cta .btn-3d { animation: none; }
+    .scroll-cue {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      margin: 0 0 18px; color: var(--muted); font-size: 12px; font-weight: 700;
+      transition: opacity 0.25s ease;
+    }
+    .scroll-cue i {
+      display: block; width: 18px; height: 18px;
+      border-right: 2px solid var(--solar); border-bottom: 2px solid var(--solar);
+      transform: rotate(45deg); margin-top: 2px;
+      animation: cueBob 1.2s ease-in-out infinite;
+    }
+    @keyframes cueBob {
+      0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.45; }
+      50% { transform: rotate(45deg) translateY(4px); opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) { .scroll-cue i { animation: none; } }
+
+    .detail-block {
+      margin: 0 0 14px; padding: 14px; border-radius: 14px;
+      border: 1px solid var(--line); background: var(--bg2);
+    }
+    .detail-block h3 {
+      margin: 0 0 8px; font-size: 12px; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    }
+    .detail-block p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--ink); }
     .addon-strip {
       display: flex; align-items: flex-start; gap: 10px;
-      padding: 12px 14px; border-radius: 14px;
+      padding: 12px 14px; border-radius: 14px; margin-bottom: 14px;
       border: 1px dashed rgba(0,168,90,0.4); background: rgba(0,168,90,0.06);
     }
     .addon-strip .plus {
@@ -306,6 +361,10 @@
     .addon-strip p { margin: 0; font-size: 13px; line-height: 1.4; }
     .addon-strip strong { color: var(--ink); }
     .addon-strip span { color: var(--muted); font-size: 12px; }
+
+    body.is-results .carousel-shell {
+      padding-bottom: calc(28px + var(--safe-b));
+    }
 
     /* Brochure voucher */
     .brochure {
@@ -611,29 +670,26 @@
       </div>
 
       <div id="welcome-fresh">
-        <div class="brand-hero" role="img" aria-label="FGE Solar times TESLA 26 — a gift for Amma and Achan">
-          <div class="brand-hero-lockup">
-            <div class="bh">
-              <img src="/assets/images/campaigns/tesla26/fge-logo.png" alt="FGE Solar" width="44" height="44">
-              <span>FGE Solar</span>
-            </div>
-            <span class="x" aria-hidden="true">×</span>
-            <div class="bh">
-              <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="44" height="44">
-              <span>TESLA '26</span>
-            </div>
-          </div>
-          <p class="brand-hero-event">Official Energy Partner · CET</p>
-          <h2>A gift for Amma &amp; Achan</h2>
-          <p class="bh-copy">Show them how much your home can save on the electricity bill.</p>
-          <p class="bh-bonus">Bonus: ₹5,000 off installation</p>
-        </div>
+        <figure>
+          <picture>
+            <source srcset="/assets/images/campaigns/tesla26/gift-hero.webp" type="image/webp">
+            <img
+              class="hero-poster"
+              src="/assets/images/campaigns/tesla26/gift-hero.jpg"
+              alt="FGE Solar × TESLA '26 — A gift for Amma and Achan"
+              width="720"
+              height="960"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </picture>
+        </figure>
 
         <p class="welcome-kicker">For students at TESLA '26</p>
         <h2 class="welcome-title">Make a solar gift card for your parents</h2>
         <p class="welcome-copy">
-          Quick questions about the bill and appliances at home. You’ll get a clear savings number for Amma &amp; Achan,
-          on a card you can send them on WhatsApp.
+          Answer a few questions about home. We’ll show clear rupee savings you can WhatsApp to Amma &amp; Achan.
+          ₹5,000 off is a bonus on top.
         </p>
 
         <button type="button" class="btn btn-solar" style="margin-top:20px" data-next="1">Start →</button>
@@ -805,42 +861,82 @@
 
       <section id="step-5" class="step">
         <div class="step-top">
-          <p class="lbl">Savings</p>
+          <p class="lbl">Your numbers</p>
           <button type="button" class="back" data-back="4">← Back</button>
         </div>
-        <div class="gift-badge">For your parents</div>
-        <h2>What your home could keep</h2>
-        <p class="lead" id="rec-units">About 600 units of solar power / month</p>
+        <h2>Money your home can keep</h2>
+        <p class="lead">Based on a <strong id="rec-system">5 kW</strong> system for this house.</p>
 
-        <div class="savings-hero">
-          <p class="tag">In 5 years</p>
-          <p class="big" id="stat-5y">₹2.7 L</p>
-          <p class="why">Same stretch as a college degree — money that can stay at home instead of going to KSEB.</p>
+        <div class="sell-bill" aria-label="Bill comparison">
+          <div class="box">
+            <span>KSEB now</span>
+            <strong id="stat-bill">₹5,000/mo</strong>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="box good">
+            <span>With solar</span>
+            <strong id="stat-bill-after">₹500/mo</strong>
+          </div>
         </div>
 
-        <div class="savings-grid">
-          <div class="stat hi"><span class="lbl">Over 25 years</span><span id="stat-25y" class="val">₹13.5 L</span></div>
-          <div class="stat"><span class="lbl">Each year</span><span id="stat-annual" class="val">₹54,000</span><span id="stat-offset" style="display:block;margin-top:4px;font-size:11px;color:var(--muted)">~90% of bill</span></div>
-          <div class="stat"><span class="lbl">CO₂ cut</span><span id="stat-co2" class="val">5.9 t/yr</span></div>
-          <div class="stat"><span class="lbl">Roof needed</span><span id="stat-roof" class="val">~500 ft²</span></div>
+        <div class="money-stack">
+          <div class="money-row">
+            <span class="when">Every year</span>
+            <span class="amt" id="stat-annual">₹54,000</span>
+          </div>
+          <div class="money-row is-main">
+            <span class="when">In 5 years</span>
+            <span>
+              <span class="amt" id="stat-5y">₹2.7 L</span>
+              <span class="hint">About one college course of bills</span>
+            </span>
+          </div>
+          <div class="money-row">
+            <span class="when">In 25 years</span>
+            <span class="amt" id="stat-25y">₹13.5 L</span>
+          </div>
         </div>
 
-        <p class="plan-line">Suggested for this home: <strong id="rec-system">5 kW On-Grid Solar System</strong></p>
-        <p class="plan-line" id="rec-note" style="font-size:12px"></p>
-        <div id="load-summary" class="plan-line" style="font-size:12px;padding:10px 12px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)"></div>
-        <p id="stat-trees" class="plan-line" style="margin-top:10px">Equal to about 295 trees planted each year</p>
+        <ul class="spec-list">
+          <li><span class="k">Solar units / month</span><span class="v" id="rec-units">~600</span></li>
+          <li><span class="k">Bill cut</span><span class="v" id="stat-offset">~90%</span></li>
+          <li><span class="k">Roof needed</span><span class="v" id="stat-roof">~500 ft²</span></li>
+          <li><span class="k">CO₂ cut / year</span><span class="v" id="stat-co2">5.9 t</span></li>
+        </ul>
 
-        <div class="addon-strip" style="margin-top:14px">
+        <div class="results-cta">
+          <button type="button" class="btn-3d" data-next="6">Make gift card →</button>
+          <button type="button" class="btn-link" data-back="1">Change answers</button>
+        </div>
+
+        <div class="scroll-cue" id="results-scroll-cue" aria-hidden="true">
+          <span>More details below</span>
+          <i></i>
+        </div>
+
+        <div class="detail-block">
+          <h3>Why this size</h3>
+          <p id="rec-note">Sized from your bill and appliances.</p>
+        </div>
+        <div class="detail-block">
+          <h3>Your home load</h3>
+          <p id="load-summary">—</p>
+        </div>
+        <div class="detail-block">
+          <h3>Climate impact</h3>
+          <p id="stat-trees">Equal to about 295 trees planted each year.</p>
+        </div>
+
+        <div class="addon-strip">
           <div class="plus">+₹5k</div>
           <p>
-            <strong>Extra for TESLA '26:</strong> ₹5,000 off if they book with your gift code.<br>
-            <span>The real gift is the savings — this is just a bonus · 10 days</span>
+            <strong>TESLA '26 bonus</strong><br>
+            <span>₹5,000 off installation with your gift code · 10 days</span>
           </p>
         </div>
 
-        <div class="sticky-cta-wrap">
-          <button type="button" class="btn-3d" data-next="6">Make their gift card →</button>
-          <button type="button" class="btn-link" data-back="1">Change answers</button>
+        <div class="results-cta">
+          <button type="button" class="btn btn-solar" data-next="6">Make gift card →</button>
         </div>
       </section>
 
@@ -926,15 +1022,15 @@
           </div>
           <div class="brochure-body">
             <div class="brochure-save">
-              <p class="tag">In 5 years</p>
+              <p class="tag">In 5 years your home can keep</p>
               <p class="amt" id="v-5y">₹2.7 L</p>
-              <p class="sub">Estimated bill money your home can keep — about as long as one degree.</p>
+              <p class="sub">Estimated KSEB bill money that stays in the family.</p>
             </div>
             <div class="brochure-row">
-              <div class="brochure-cell"><span>Over 25 years</span><strong id="v-25y">₹13.5 L</strong></div>
-              <div class="brochure-cell"><span>Each year</span><strong id="v-annual">₹54,000</strong></div>
+              <div class="brochure-cell"><span>In 25 years</span><strong id="v-25y">₹13.5 L</strong></div>
+              <div class="brochure-cell"><span>Every year</span><strong id="v-annual">₹54,000</strong></div>
               <div class="brochure-cell"><span>District</span><strong id="v-district">—</strong></div>
-              <div class="brochure-cell"><span>Suggested system</span><strong id="v-system">—</strong></div>
+              <div class="brochure-cell"><span>System</span><strong id="v-system">—</strong></div>
             </div>
             <div class="brochure-bonus">
               <p>TESLA '26 bonus<br><span style="font-weight:600;color:var(--muted);font-size:12px">Use this code when booking</span></p>
@@ -1345,19 +1441,24 @@
       billSlider.style.background =
         'linear-gradient(90deg,#008A4A 0%,#00A85A ' + pct + '%,#D8E5DC ' + pct + '%)';
 
+      var billAfter = Math.max(0, Math.round(state.bill * (1 - state.offsetPct / 100)));
       document.getElementById('rec-system').textContent = state.label;
-      document.getElementById('rec-units').textContent =
-        'About ' + state.unitsMonth.toLocaleString('en-IN') + ' units of solar power / month';
-      document.getElementById('rec-note').textContent = state.loadNote;
+      document.getElementById('stat-bill').textContent = formatINR(state.bill) + '/mo';
+      document.getElementById('stat-bill-after').textContent = formatINR(billAfter) + '/mo';
+      document.getElementById('stat-annual').textContent = formatINR(state.annualSavings);
       document.getElementById('stat-5y').textContent = formatLakhs(state.savings5);
       document.getElementById('stat-25y').textContent = formatLakhs(state.savings25);
-      document.getElementById('stat-annual').textContent = formatINR(state.annualSavings);
-      document.getElementById('stat-offset').textContent = '~' + state.offsetPct + '% of bill';
-      document.getElementById('stat-co2').textContent = state.co2Tons.toFixed(1) + ' t/yr';
-      document.getElementById('stat-roof').textContent = '~' + state.roofSqft.toLocaleString('en-IN') + ' ft²';
-      document.getElementById('stat-trees').textContent =
-        'Equal to about ' + state.trees.toLocaleString('en-IN') + ' trees planted each year';
+      document.getElementById('rec-units').textContent =
+        '~' + state.unitsMonth.toLocaleString('en-IN') + ' units';
+      document.getElementById('stat-offset').textContent = '~' + state.offsetPct + '%';
+      document.getElementById('stat-roof').textContent =
+        '~' + state.roofSqft.toLocaleString('en-IN') + ' ft²';
+      document.getElementById('stat-co2').textContent = state.co2Tons.toFixed(1) + ' t';
+      document.getElementById('rec-note').textContent =
+        state.loadNote || ('Sized from your ₹' + state.bill.toLocaleString('en-IN') + '/mo bill and appliance list.');
       document.getElementById('load-summary').textContent = state.loadSummary;
+      document.getElementById('stat-trees').textContent =
+        'About ' + state.trees.toLocaleString('en-IN') + ' trees worth of CO₂ avoided each year.';
       document.getElementById('summary-line').textContent =
         state.label + ' · ' + formatLakhs(state.savings5) + ' in 5 years';
     }
@@ -1388,6 +1489,7 @@
       state.step = n;
       document.body.classList.toggle('is-audit', n > 0);
       document.body.classList.toggle('is-voucher', n === 7);
+      document.body.classList.toggle('is-results', n === 5);
       document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
       var el = document.getElementById('step-' + n);
       if (el) {
@@ -1401,6 +1503,8 @@
       window.scrollTo(0, 0);
       var shell = document.querySelector('.carousel-shell');
       if (shell && n > 0) shell.scrollTop = 0;
+      var cue = document.getElementById('results-scroll-cue');
+      if (cue) cue.style.display = n === 5 ? 'flex' : 'none';
     }
 
     function showCongrats() {
@@ -1771,6 +1875,15 @@
       goStep(7);
       showCongrats();
     });
+
+    var shellEl = document.querySelector('.carousel-shell');
+    if (shellEl) {
+      shellEl.addEventListener('scroll', function () {
+        if (state.step !== 5) return;
+        var cue = document.getElementById('results-scroll-cue');
+        if (cue && shellEl.scrollTop > 24) cue.style.opacity = '0';
+      }, { passive: true });
+    }
 
     updateResults();
     startHomeTicker();
