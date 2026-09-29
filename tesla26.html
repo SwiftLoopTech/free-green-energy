@@ -78,7 +78,7 @@
     .boot-splash {
       position: fixed; inset: 0; z-index: 100;
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px; background: var(--bg);
+      gap: 14px; background: #FFFFFF;
       transition: opacity 0.45s ease, visibility 0.45s ease;
     }
     body:not(.is-booting) .boot-splash { opacity: 0; visibility: hidden; pointer-events: none; }
@@ -113,12 +113,13 @@
       position: relative;
       overflow: hidden;
       border-radius: 20px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(0,168,90,0.22);
       background:
-        linear-gradient(165deg, #E7F6EE 0%, #FFFFFF 48%, #F4FAF6 100%);
-      box-shadow: 0 14px 36px rgba(20,32,26,0.08);
-      padding: 22px 18px 20px;
+        linear-gradient(165deg, #DDF3E6 0%, #FFFFFF 42%, #F0F7F2 100%);
+      box-shadow: 0 14px 36px rgba(20,32,26,0.1);
+      padding: 24px 18px 22px;
     }
+    .boot-splash .boot-brand span { color: var(--ink); }
     .brand-hero-lockup {
       display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
     }
@@ -629,8 +630,8 @@
         <p class="welcome-kicker">For students at TESLA '26</p>
         <h2 class="welcome-title">Make a solar gift card for your parents</h2>
         <p class="welcome-copy">
-          Tell us about the KSEB bill and appliances at home. We’ll estimate what they could save —
-          over the next few years, and across the life of the system — then put it on a card you can WhatsApp them.
+          Quick questions about the bill and appliances at home. You’ll get a clear savings number for Amma &amp; Achan,
+          on a card you can send them on WhatsApp.
         </p>
 
         <button type="button" class="btn btn-solar" style="margin-top:20px" data-next="1">Start →</button>
