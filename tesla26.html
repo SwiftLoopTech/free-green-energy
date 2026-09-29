@@ -549,8 +549,8 @@
     <div class="confetti" aria-hidden="true"></div>
     <div class="congrats-card">
       <div class="pop" aria-hidden="true"></div>
-      <h3>Gift card ready</h3>
-      <p>Send it to your parents on WhatsApp.</p>
+      <h3>Offer claimed</h3>
+      <p>You can share it with your parents now.</p>
     </div>
   </div>
 
@@ -569,12 +569,12 @@
 
       <div id="my-vouchers" class="my-vouchers" aria-live="polite">
         <div class="mv-title">
-          <h2>Saved gifts</h2>
+          <h2>Saved offers</h2>
           <span class="mv-count" id="mv-count"></span>
         </div>
         <div id="mv-list"></div>
         <div class="mv-actions">
-          <button type="button" class="btn btn-solar" data-next="1">New gift</button>
+          <button type="button" class="btn btn-solar" data-next="1">Claim another</button>
           <button type="button" class="btn btn-ghost" id="mv-clear-expired">Clear expired</button>
         </div>
       </div>
@@ -596,13 +596,13 @@
         </figure>
 
         <p class="eyebrow">TESLA '26 · CET</p>
-        <h2 class="title">Make a solar gift card for your parents</h2>
+        <h2 class="title">A simple solar check for Amma &amp; Achan</h2>
         <p class="copy">
-          A few questions about the home bill and appliances. You’ll get clear rupee savings
-          to WhatsApp Amma &amp; Achan — with <strong>₹5,000 off</strong> as a bonus.
+          Answer a few questions about the home bill. We’ll show a quiet estimate of savings,
+          then you can claim the TESLA '26 <strong>₹5,000</strong> offer and share it home.
         </p>
         <button type="button" class="btn btn-solar" style="margin-top:20px" data-next="1">Start</button>
-        <p class="hint">About 2 minutes · Valid 10 days</p>
+        <p class="hint">About 2 minutes · Offer valid 10 days</p>
       </div>
     </section>
 
@@ -742,85 +742,85 @@
             <div class="choice"><input type="radio" name="inverter" id="inv-no" value="no" checked><label for="inv-no">No</label></div>
           </div>
         </div>
-        <button type="button" class="btn btn-solar" data-next="5">See savings</button>
+        <button type="button" class="btn btn-solar" data-next="5">See estimate</button>
       </section>
 
       <section id="step-5" class="step">
         <div class="step-top">
-          <p class="lbl">Savings</p>
+          <p class="lbl">Estimate</p>
           <button type="button" class="back" data-back="4">Back</button>
         </div>
-        <h2>What they can keep</h2>
-        <p class="lead">Sized for this house: <strong id="rec-system">5 kW On-Grid Solar System</strong></p>
+        <h2>Rough savings for this home</h2>
+        <p class="lead">Suggested size: <strong id="rec-system">5 kW On-Grid Solar System</strong></p>
 
         <div class="compare" aria-label="Bill comparison">
           <div>
-            <span>KSEB now</span>
+            <span>Typical bill now</span>
             <strong id="stat-bill">₹5,000/mo</strong>
           </div>
           <div class="after">
-            <span>With solar</span>
+            <span>After solar (est.)</span>
             <strong id="stat-bill-after">₹500/mo</strong>
           </div>
         </div>
 
         <div class="money">
           <div class="money-row">
-            <span class="when">Every year</span>
+            <span class="when">Per year (est.)</span>
             <span class="amt" id="stat-annual">₹54,000</span>
           </div>
           <div class="money-row is-main">
-            <span class="when">In 5 years</span>
+            <span class="when">Over 5 years (est.)</span>
             <span class="amt" id="stat-5y">₹2.7 L</span>
           </div>
           <div class="money-row">
-            <span class="when">In 25 years</span>
+            <span class="when">Over 25 years (est.)</span>
             <span class="amt" id="stat-25y">₹13.5 L</span>
           </div>
         </div>
 
         <ul class="specs">
-          <li><span class="k">Solar units / month</span><span class="v" id="rec-units">~600</span></li>
-          <li><span class="k">Bill cut</span><span class="v" id="stat-offset">~90%</span></li>
-          <li><span class="k">Roof needed</span><span class="v" id="stat-roof">~500 ft²</span></li>
-          <li><span class="k">CO₂ cut / year</span><span class="v" id="stat-co2">5.9 t</span></li>
+          <li><span class="k">Generation / month</span><span class="v" id="rec-units">~600</span></li>
+          <li><span class="k">Bill offset</span><span class="v" id="stat-offset">~90%</span></li>
+          <li><span class="k">Roof space</span><span class="v" id="stat-roof">~500 ft²</span></li>
+          <li><span class="k">CO₂ / year</span><span class="v" id="stat-co2">5.9 t</span></li>
         </ul>
 
-        <div class="scroll-cue" id="results-scroll-cue">Scroll for breakdown</div>
+        <div class="scroll-cue" id="results-scroll-cue">More detail below</div>
 
         <div class="detail">
-          <h3>Why this size</h3>
-          <p id="rec-note">Sized from your bill and appliances.</p>
+          <h3>Notes</h3>
+          <p id="rec-note">Based on the bill and appliances you entered.</p>
         </div>
         <div class="detail">
-          <h3>Home load</h3>
+          <h3>Appliances used</h3>
           <p id="load-summary">—</p>
         </div>
         <div class="detail">
-          <h3>Climate</h3>
+          <h3>CO₂</h3>
           <p id="stat-trees">—</p>
         </div>
 
         <div class="bonus">
-          <p><strong>TESLA '26 bonus</strong><br>Use your gift code when booking · 10 days</p>
+          <p><strong>TESLA '26 offer</strong><br>₹5,000 off with your code · valid 10 days</p>
           <div class="off">₹5,000 off</div>
         </div>
 
         <div class="results-cta">
-          <button type="button" class="btn btn-solar" data-next="6">Make gift card</button>
-          <button type="button" class="btn-link" data-back="1">Change answers</button>
+          <button type="button" class="btn btn-solar" data-next="6">Claim the offer</button>
+          <button type="button" class="btn-link" data-back="1">Edit answers</button>
         </div>
       </section>
 
       <section id="step-6" class="step">
         <div class="step-top">
-          <p class="lbl">Details</p>
+          <p class="lbl">Claim</p>
           <button type="button" class="back" data-back="5">Back</button>
         </div>
-        <h2>Who is this for?</h2>
-        <p class="lead">Your name as from. Parent WhatsApp for the free site visit.</p>
+        <h2>Claim details</h2>
+        <p class="lead">Your name, parent name, and WhatsApp for a free site visit.</p>
         <div class="plan-box">
-          <p class="tiny">You’re gifting</p>
+          <p class="tiny">Summary</p>
           <p class="line" id="summary-line">5 kW · ₹2.7 L in 5 years</p>
         </div>
         <form id="claim-form" novalidate>
@@ -866,15 +866,15 @@
             </div>
             <span class="err">Enter a valid 10-digit number.</span>
           </div>
-          <button type="submit" id="submit-claim" class="btn btn-solar" style="margin-top:8px">Make gift card</button>
+          <button type="submit" id="submit-claim" class="btn btn-solar" style="margin-top:8px">Claim the offer</button>
         </form>
       </section>
 
       <section id="step-7" class="step">
         <div class="voucher-intro">
-          <p class="eyebrow" style="margin:0">Gift card</p>
-          <h2>Ready to send</h2>
-          <p>Full card below. Share the link or WhatsApp FGE.</p>
+          <p class="eyebrow" style="margin:0">Your offer</p>
+          <h2>Ready to share</h2>
+          <p>Card below — send on WhatsApp or copy the link.</p>
         </div>
 
         <article class="brochure" id="voucher-card">
@@ -885,7 +885,7 @@
               <img src="/assets/images/campaigns/tesla26/tesla26-delta-t.png" alt="TESLA '26" width="28" height="28">
             </div>
             <p class="brochure-kicker">FGE Solar × TESLA '26 · CET</p>
-            <h3 class="brochure-title">Solar gift for our home</h3>
+            <h3 class="brochure-title">Home solar estimate</h3>
             <div class="brochure-fromto">
               <div><span>From</span><strong id="v-student">—</strong></div>
               <div><span>For</span><strong id="v-parent">—</strong></div>
@@ -895,7 +895,7 @@
             <div class="brochure-save">
               <p class="tag">In 5 years</p>
               <p class="amt" id="v-5y">₹2.7 L</p>
-              <p class="sub">Estimated bill money kept at home.</p>
+              <p class="sub">Indicative savings vs today’s bill.</p>
             </div>
             <div class="brochure-row">
               <div class="brochure-cell"><span>In 25 years</span><strong id="v-25y">₹13.5 L</strong></div>
@@ -923,12 +923,12 @@
 
         <div class="voucher-actions">
           <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar">WhatsApp FGE</a>
-          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy gift link</button>
-          <button type="button" id="wa-share-native" class="btn btn-ghost">Share gift card</button>
+          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy offer link</button>
+          <button type="button" id="wa-share-native" class="btn btn-ghost">Share offer</button>
           <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy message</button>
           <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
-          <button type="button" class="btn btn-ghost" id="voucher-home">Saved gifts</button>
-          <button type="button" class="btn-link" data-next="1">Make another</button>
+          <button type="button" class="btn btn-ghost" id="voucher-home">Saved offers</button>
+          <button type="button" class="btn-link" data-next="1">Claim another</button>
           <p id="copy-toast" style="display:none;text-align:center;font-size:12px;color:var(--accent-ink);font-weight:600;margin:0">Copied</p>
           <p id="gift-link-preview" style="display:none;word-break:break-all;font-size:11px;color:var(--muted);text-align:center;margin:0;line-height:1.4"></p>
         </div>
@@ -1670,16 +1670,16 @@
 
     document.getElementById('copy-gift-link').addEventListener('click', function () {
       if (!state.voucherCode) {
-        toast('Make the gift card first');
+        toast('Claim the offer first');
         return;
       }
       syncGiftUrl();
-      copyText(giftShareUrl(), 'Gift card link copied');
+      copyText(giftShareUrl(), 'Offer link copied');
     });
 
     document.getElementById('wa-share-native').addEventListener('click', function () {
       if (!state.voucherCode) {
-        toast('Make the gift card first');
+        toast('Claim the offer first');
         return;
       }
       syncGiftUrl();
@@ -1743,7 +1743,7 @@
       if (typeof window.clarity === 'function') window.clarity('event', 'tesla26_parent_gift');
 
       btn.disabled = false;
-      btn.textContent = 'Make gift card →';
+      btn.textContent = 'Claim the offer';
       goStep(7);
       showCongrats();
     });
