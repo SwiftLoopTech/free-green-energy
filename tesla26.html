@@ -445,9 +445,48 @@
     .step-dots span.done { background: #A3A3A3; }
     .step-dots span.now { background: var(--ink); }
 
-    body.is-voucher .step-dots { display: none !important; }
-    body.is-voucher .carousel-shell { padding-top: 52px; }
+    body.is-voucher .step-dots,
+    body.is-parent .step-dots { display: none !important; }
+    body.is-voucher .carousel-shell,
+    body.is-parent .carousel-shell { padding-top: 52px; }
     body.is-results .carousel-shell { padding-bottom: calc(32px + var(--safe-b)); }
+    body.is-parent .progress-track { display: none; }
+    body.is-parent .audit-chrome .close-x { display: none; }
+
+    .parent-hero {
+      margin: 0 0 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line);
+    }
+    .parent-hero .from {
+      margin: 0 0 8px; font-size: 13px; color: var(--muted); line-height: 1.45;
+    }
+    .parent-hero .from strong { color: var(--ink); font-weight: 600; }
+    .parent-hero h2 {
+      margin: 0 0 8px; font-size: clamp(1.4rem, 5.5vw, 1.65rem);
+      font-weight: 650; letter-spacing: -0.03em; line-height: 1.15;
+    }
+    .parent-hero p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    .benefits {
+      margin: 0 0 18px; padding: 0; list-style: none;
+      border-top: 1px solid var(--line);
+    }
+    .benefits li {
+      display: grid; grid-template-columns: 18px 1fr; gap: 10px;
+      padding: 12px 0; border-bottom: 1px solid var(--line);
+      font-size: 14px; line-height: 1.4;
+    }
+    .benefits li::before {
+      content: ""; width: 6px; height: 6px; margin-top: 7px;
+      border-radius: 999px; background: var(--accent, #16A34A);
+    }
+    .benefits strong { display: block; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+    .benefits span { color: var(--muted); font-size: 13px; }
+
+    .parent-nums {
+      margin: 0 0 18px; border-top: 1px solid var(--line);
+    }
+    .parent-nums .money-row { padding: 12px 0; }
+    .parent-actions { display: grid; gap: 8px; margin-top: 8px; }
 
     .congrats-layer {
       position: fixed; inset: 0; z-index: 90; display: none;
@@ -923,14 +962,102 @@
 
         <div class="voucher-actions">
           <a id="wa-send" href="#" target="_blank" rel="noopener" class="btn btn-solar">WhatsApp FGE</a>
-          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy offer link</button>
-          <button type="button" id="wa-share-native" class="btn btn-ghost">Share offer</button>
+          <button type="button" id="copy-gift-link" class="btn btn-ghost">Copy gift link</button>
+          <button type="button" id="wa-share-native" class="btn btn-ghost">Share gift link</button>
           <button type="button" id="wa-share-copy" class="btn btn-ghost">Copy message</button>
           <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
           <button type="button" class="btn btn-ghost" id="voucher-home">Saved offers</button>
           <button type="button" class="btn-link" data-next="1">Claim another</button>
           <p id="copy-toast" style="display:none;text-align:center;font-size:12px;color:var(--accent-ink);font-weight:600;margin:0">Copied</p>
           <p id="gift-link-preview" style="display:none;word-break:break-all;font-size:11px;color:var(--muted);text-align:center;margin:0;line-height:1.4"></p>
+        </div>
+      </section>
+
+      <section id="step-8" class="step">
+        <div class="parent-hero">
+          <p class="from">
+            From <strong id="p-student">—</strong>
+            for <strong id="p-parent">—</strong>
+          </p>
+          <h2>A solar plan for your home</h2>
+          <p>
+            Your child checked the home electricity use at TESLA '26 (CET) with FGE Solar.
+            Here is a simple estimate — no pressure, just the numbers.
+          </p>
+        </div>
+
+        <div class="parent-nums">
+          <div class="money-row is-main">
+            <span class="when">Over 5 years (est.)</span>
+            <span class="amt" id="p-5y">₹2.7 L</span>
+          </div>
+          <div class="money-row">
+            <span class="when">Over 25 years (est.)</span>
+            <span class="amt" id="p-25y">₹13.5 L</span>
+          </div>
+          <div class="money-row">
+            <span class="when">Per year (est.)</span>
+            <span class="amt" id="p-annual">₹54,000</span>
+          </div>
+        </div>
+
+        <ul class="benefits">
+          <li>
+            <div>
+              <strong>Lower KSEB bills</strong>
+              <span id="p-bill-note">Solar can cover a large share of daytime use.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Right-sized system</strong>
+              <span id="p-system-note">Suggested from your home’s bill and appliances.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Free site visit</strong>
+              <span>FGE checks the roof and confirms size and price on site — across Kerala.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>TESLA '26 offer · ₹5,000 off</strong>
+              <span id="p-offer-note">Use the code below when you book. Valid for a limited time.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Subsidy help &amp; setup</strong>
+              <span>Paperwork support through to switch-on, if you choose to go ahead.</span>
+            </div>
+          </li>
+        </ul>
+
+        <article class="brochure" style="margin-bottom:14px">
+          <div class="brochure-body" style="padding-top:16px">
+            <div class="brochure-row">
+              <div class="brochure-cell"><span>District</span><strong id="p-district">—</strong></div>
+              <div class="brochure-cell"><span>System</span><strong id="p-system">—</strong></div>
+            </div>
+            <div class="brochure-bonus">
+              <p>Offer code</p>
+              <div class="off" id="p-code">TESLA26-CET-0000</div>
+            </div>
+            <div class="brochure-code">
+              <div>
+                <span>Valid for</span>
+                <strong id="p-countdown" class="cd">10d 00h 00m</strong>
+              </div>
+            </div>
+            <p class="brochure-foot">Estimates only. Final size and price after a free site visit.</p>
+          </div>
+        </article>
+
+        <div class="parent-actions">
+          <a id="p-wa-fge" href="#" target="_blank" rel="noopener" class="btn btn-solar">Contact FGE now</a>
+          <a href="tel:+918089073029" class="btn btn-ghost">Call +91 80890 73029</a>
+          <a href="/" class="btn-link">Visit fgesolar.in</a>
         </div>
       </section>
     </div>
@@ -1361,6 +1488,7 @@
       state.step = n;
       document.body.classList.toggle('is-audit', n > 0);
       document.body.classList.toggle('is-voucher', n === 7);
+      document.body.classList.toggle('is-parent', n === 8);
       document.body.classList.toggle('is-results', n === 5);
       document.querySelectorAll('.step').forEach(function (el) { el.classList.remove('is-on'); });
       var el = document.getElementById('step-' + n);
@@ -1368,7 +1496,7 @@
         void el.offsetWidth;
         el.classList.add('is-on');
       }
-      progressFill.style.width = Math.round((n / TOTAL_STEPS) * 100) + '%';
+      progressFill.style.width = n === 8 ? '100%' : Math.round((n / TOTAL_STEPS) * 100) + '%';
       renderDots(n);
       if (n === 5 || n === 6) updateResults();
       if (n === 0) renderHomeVouchers();
@@ -1414,14 +1542,68 @@
         var d = Math.floor(diff / 86400000);
         var h = Math.floor((diff % 86400000) / 3600000);
         var m = Math.floor((diff % 3600000) / 60000);
-        document.getElementById('voucher-countdown').textContent =
+        var label =
           String(d).padStart(2, '0') + 'd ' +
           String(h).padStart(2, '0') + 'h ' +
           String(m).padStart(2, '0') + 'm';
+        var a = document.getElementById('voucher-countdown');
+        var b = document.getElementById('p-countdown');
+        if (a) a.textContent = label;
+        if (b) b.textContent = label;
         if (diff <= 0) clearInterval(countdownTimer);
       }
       tick();
       countdownTimer = setInterval(tick, 30000);
+    }
+
+    function parentWaText() {
+      return (
+        "Hello FGE Solar — I opened the TESLA '26 solar gift from " +
+        (state.studentName || 'my child') +
+        ' for ' + (state.parentName || 'our home') +
+        (state.district ? (' in ' + state.district) : '') +
+        '. Suggested system: ' + (state.label || (state.kw + ' kW')) +
+        '. Estimate ~' + formatLakhs(state.savings5) + ' in 5 years, ~' +
+        formatLakhs(state.savings25) + ' in 25 years. Offer code: ' +
+        state.voucherCode +
+        '. Please help with a free site visit.'
+      );
+    }
+
+    function updateParentWaLink() {
+      var el = document.getElementById('p-wa-fge');
+      if (!el) return;
+      el.href = 'https://wa.me/' + FGE_WA + '?text=' + encodeURIComponent(parentWaText());
+    }
+
+    function fillParentUI() {
+      var set = function (id, val) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+      set('p-student', state.studentName || '—');
+      set('p-parent', state.parentName || '—');
+      set('p-5y', formatLakhs(state.savings5));
+      set('p-25y', formatLakhs(state.savings25));
+      set('p-annual', formatINR(state.annualSavings));
+      set('p-district', state.district || '—');
+      set('p-system', state.label || (state.kw + ' kW'));
+      set('p-code', state.voucherCode || '—');
+      set(
+        'p-bill-note',
+        state.bill
+          ? ('Your typical bill is about ' + formatINR(state.bill) + '/month. Solar can offset much of that.')
+          : 'Solar can cover a large share of daytime use.'
+      );
+      set(
+        'p-system-note',
+        (state.label || (state.kw + ' kW')) + ' suggested from the home bill and appliances entered.'
+      );
+      set(
+        'p-offer-note',
+        'Code ' + state.voucherCode + ' · ₹5,000 off installation · valid while the timer runs.'
+      );
+      updateParentWaLink();
     }
 
     function giftPayload() {
@@ -1502,9 +1684,11 @@
       state.savings25 = Number(data.s25) || state.annualSavings * LIFE;
 
       fillBrochureUI();
+      fillParentUI();
       updateWaLink();
       startCountdown(state.expiresAt);
-      goStep(7);
+      goStep(8);
+      track('tesla26_parent_view', { district: state.district, kw: state.kw });
       return true;
     }
 
@@ -1674,7 +1858,7 @@
         return;
       }
       syncGiftUrl();
-      copyText(giftShareUrl(), 'Offer link copied');
+      copyText(giftShareUrl(), 'Gift link copied');
     });
 
     document.getElementById('wa-share-native').addEventListener('click', function () {
@@ -1684,19 +1868,14 @@
       }
       syncGiftUrl();
       var url = giftShareUrl();
-      var text =
-        'Solar gift for ' + (state.parentName || 'our parents') +
-        ' — about ' + formatLakhs(state.savings5) + ' in 5 years, ' +
-        formatLakhs(state.savings25) + ' in 25 years. ' +
-        'Code ' + state.voucherCode + '. Open card: ' + url;
       if (navigator.share) {
         navigator.share({
-          title: "Gift for Amma & Achan — FGE Solar × TESLA '26",
-          text: text,
+          title: "FGE Solar × TESLA '26 offer",
+          text: 'Open this gift link: ' + url,
           url: url
-        }).catch(function () { copyText(text, 'Share text copied'); });
+        }).catch(function () { copyText(url, 'Gift link copied'); });
       } else {
-        copyText(text, 'Share text copied');
+        copyText(url, 'Gift link copied');
       }
     });
 
