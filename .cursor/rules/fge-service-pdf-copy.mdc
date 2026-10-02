@@ -1,0 +1,31 @@
+---
+description: Service pages must use SEO PDF copy verbatim — no rephrasing or merging
+globs: services/on-grid.html,services/off-grid.html,services/hybrid.html
+alwaysApply: false
+---
+
+# FGE service pages — PDF is canonical copy
+
+When editing on-grid, off-grid, or hybrid service HTML:
+
+## Source of truth
+
+- **On-grid**: `On Grid Solar System in Kerala for Homes & Businesses.pdf` (user Downloads folder or `_publish/pdf-extract-on.txt` after extract).
+- **Off-grid**: `Off Grid Solar System in Kerala for Homes & Remote Properties.pdf` (or `_publish/pdf-extract-off.txt`).
+
+## Non-negotiables
+
+1. **Verbatim wording** — Do not polish, shorten, synonym-swap, or “improve” SEO phrases. Headings, body sentences, list items, table labels, FAQ answers, and CTA labels must match the PDF (punctuation and en/em dashes included).
+2. **Structure matches PDF** — Separate paragraphs where the PDF has separate paragraphs. Bullet lists where the PDF has bullets — never merge lists into comma/semicolon prose.
+3. **Layout-only changes OK** — Grids, cards, tables, and CSS are fine as long as visible text stays PDF-exact.
+4. **Do not reintroduce** old marketing lines not in the PDF (e.g. “70–85% bill cut”, tribal cards, “zero monthly bills”).
+5. **Keep** testimonials, Microsoft Clarity, and existing site chrome unless the user says otherwise.
+
+## Before finishing
+
+- Section-by-section diff: extracted PDF text vs `<main class="service-seo-page">` body (ignore nav/footer/testimonials/plan hub link labels if they match PDF H3 + blurb pairs).
+- Re-check FAQs and Ready CTAs — common places where lists were collapsed into one sentence.
+
+Extract PDF text when needed:
+
+`python -c "from pypdf import PdfReader; ..."` → write `_publish/pdf-extract-{on|off}.txt` (local only; do not commit unless user asks).
