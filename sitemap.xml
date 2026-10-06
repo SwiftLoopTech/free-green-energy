@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://fgesolar.in/blog/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -288,6 +288,18 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/govt/pm-surya-ghar-vendor-agreement-approval</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/govt/phase-ii-solar-subsidy-claim-deadline-kerala</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://fgesolar.in/blog/govt/kseb-new-connection-charges-kerala</loc>
