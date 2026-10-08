@@ -460,7 +460,7 @@
     const today   = document.getElementById('proj-today');
     const yr5     = document.getElementById('proj-5yr');
     if (!card || !today || !yr5) return;
-    const bill5yr = Math.round(bill * Math.pow(1.08, 5));
+    const bill5yr = Math.round(bill * Math.pow(1.05, 5));
     const fmt = n => '₹' + n.toLocaleString('en-IN');
     today.textContent = fmt(bill) + '/mo';
     yr5.textContent   = fmt(bill5yr) + '/mo';
