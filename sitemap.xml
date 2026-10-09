@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://fgesolar.in/blog/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -76,6 +76,12 @@
   <url>
     <loc>https://fgesolar.in/blog/savings/solar-panel-installation-cost-kerala</loc>
     <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/savings/bee-star-rating-explained</loc>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
