@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://fgesolar.in/blog/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -112,6 +112,12 @@
   <url>
     <loc>https://fgesolar.in/blog/govt/kseb-solar-bill-explained</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fgesolar.in/blog/how-solar/solar-generation-per-day-kerala</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
